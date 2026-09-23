@@ -1,0 +1,187 @@
+{
+  "official_checks": {
+    "check1": null,
+    "check2": null,
+    "check3": null,
+    "check4": null,
+    "check5": null,
+    "check6": null,
+    "check7": null
+  },
+  "infra_smoke_test": {
+    "forward_pass": {
+      "name": "check1_forward_pass",
+      "passed": true,
+      "detail": "HLS-reference: forward pass succeeded, 24 layers returned.",
+      "numbers": {}
+    },
+    "finite": {
+      "name": "check2_finite",
+      "passed": true,
+      "detail": "HLS-reference: all finite"
+    },
+    "block_coverage": {
+      "name": "check6_block_coverage",
+      "passed": true,
+      "detail": "HLS-reference: all blocks present with expected shape",
+      "numbers": {
+        "shapes": [
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ],
+          [
+            1,
+            981,
+            1024
+          ]
+        ]
+      }
+    },
+    "reference_layer_norms": [
+      45.85741424560547,
+      49.97812271118164,
+      51.21299362182617,
+      51.63779830932617,
+      49.886253356933594,
+      51.65592956542969,
+      53.22758865356445,
+      55.544498443603516,
+      55.05906677246094,
+      56.66753387451172,
+      59.321598052978516,
+      59.7687873840332,
+      57.35361099243164,
+      59.48861312866211,
+      58.26103210449219,
+      58.622650146484375,
+      60.539119720458984,
+      60.86049270629883,
+      62.89487075805664,
+      63.72848129272461,
+      64.87911987304688,
+      67.69956970214844,
+      72.54515838623047,
+      28.892608642578125
+    ]
+  },
+  "blockers": [
+    "Potsdam and/or Vaihingen IRRG data not present at /Users/siva/Documents/Major project/dssa/data/potsdam_irrg / /Users/siva/Documents/Major project/dssa/data/vaihingen_irrg. The seven official pre-registered checks CANNOT be executed. No substitute dataset was used. Stopping official-check execution per instruction."
+  ],
+  "model_load": {
+    "total_params": 303886336,
+    "trainable_params": 0,
+    "device": "mps"
+  }
+}

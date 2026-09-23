@@ -1,0 +1,63 @@
+# DSSA Sanity-Check Configuration
+# Every value here mirrors DSSA_IMPLEMENTATION_FREEZE.md exactly. Do not edit
+# without a corresponding update to the frozen documents.
+
+checkpoint:
+  repo_id: ibm-nasa-geospatial/Prithvi-EO-2.0-300M
+  revision_sha: 9eb1b1102806593963daa333bcc491b1c6f8562f
+  local_dir: ../checkpoint
+  weights_file: Prithvi_EO_V2_300M.pt
+  weights_sha256: faab2c8b776f0723f93431747603a7ec586a54fc45473613b4322c29752486e7
+
+model:
+  img_size: 224
+  patch_size: [1, 16, 16]
+  in_chans: 6
+  embed_dim: 1024
+  depth: 24
+  num_heads: 16
+  mlp_ratio: 4
+  coords_encoding: []          # date/location encoding disabled, matches released config
+  num_frames: 1                 # FROZEN temporal contract - true num_frames=1, not replication
+
+bands:
+  order: [Blue, Green, Red, NarrowNIR, SWIR1, SWIR2]
+  mean: [1087.0, 1342.0, 1433.0, 2734.0, 1958.0, 1363.0]
+  std:  [2248.0, 2179.0, 2178.0, 1850.0, 1242.0, 1049.0]
+  # FROZEN band mapping (DSSA_PRITHVI_COMPATIBILITY_AUDIT.md):
+  #   Green (Potsdam/Vaihingen) -> Green slot (index 1)
+  #   Red   (Potsdam/Vaihingen) -> Red slot   (index 2)
+  #   IR    (Potsdam/Vaihingen) -> NarrowNIR slot (index 3), approximate correspondence
+  #   Blue (0), SWIR1 (4), SWIR2 (5) -> zero-filled in normalized space (fed as each band's own mean)
+
+dataset:
+  name: ISPRS Potsdam (IRRG) -> ISPRS Vaihingen (IRRG)
+  source_local_dir: null        # NOT AVAILABLE in this environment - see DSSA_SANITY_EXECUTION_REPORT.md
+  target_local_dir: null        # NOT AVAILABLE in this environment
+  labels_used: false            # must remain false for the sanity phase - no labels permitted
+
+radiometric_strategy:
+  name: "Strategy C - source-fit-only affine transform"
+  fit_on: potsdam_source_only
+  apply_to: [potsdam, vaihingen]
+  refit_per_dataset: false
+  coefficients_path: ../artifacts/radiometric_transform.json   # not yet produced - requires Potsdam data
+
+reference_sample:
+  purpose: "Known-good, natively-scaled HLS reference for Check 3"
+  repo_id: ibm-nasa-geospatial/Prithvi-EO-2.0-300M
+  file: examples/Mexico_HLS.S30.T13REM.2018026T173609.v2.0_cropped.tif
+  local_path: ../reference_sample/examples/Mexico_HLS.S30.T13REM.2018026T173609.v2.0_cropped.tif
+  selection_rule: "first file chronologically among the 4 official example tiles shipped in the model repo; chosen before any check was run"
+  band_order: [Blue, Green, Red, NarrowNIR, SWIR1, SWIR2]  # matches config bands, channel-last in the TIFF
+  dtype: int16
+  shape_hw_c: [448, 560, 6]
+
+sanity_criteria:
+  check2_max_nonfinite: 0
+  check3_tolerance_orders_of_magnitude: 2   # DO NOT CHANGE
+  check4_min_cross_sample_variance: 1.0e-6  # DO NOT CHANGE
+  check5_require_raw_dss_nonzero: true
+  check5_require_raw_dss_finite: true
+  check5_require_normalized_dss_finite: true
+  check5_meaningful_magnitude_threshold: null  # intentionally undefined - see DSSA_PREIMPLEMENTATION_CALIBRATION.md Sec 7
