@@ -1,6 +1,6 @@
 # DSSA Sanity Execution Report
 
-**Scope:** Phase 1 only — the seven pre-registered non-degeneracy checks (`DSSA_PREIMPLEMENTATION_CALIBRATION.md` §7). Not training. Not LoRA. Not layer selection. Not segmentation. This report supersedes `DSSA_SANITY_CHECK_REPORT.md` (prior attempt) with real, executed environment and checkpoint work — the dataset blocker that stopped that report is unchanged here.
+**Scope:** Phase 1 (below) — the model/code-side infrastructure work — plus **Phase 1B** (Section 19) — the attempt to acquire real ISPRS Potsdam/Vaihingen IRRG imagery and execute the seven checks against it. Not training. Not LoRA. Not layer selection. Not segmentation.
 
 ---
 
@@ -114,20 +114,47 @@ Full values, plus the raw artifact: `dssa/artifacts/hls_reference_layer_norms.js
 
 **One addition, clearly out-of-band and disclosed:** an "infrastructure smoke test" (Section 8–9 above) was run on the HLS reference sample, beyond the strict text of the seven checks. This was not one of the seven pre-registered checks and is not reported as satisfying any of them on Potsdam/Vaihingen — it is disclosed separately, in its own section, specifically so it cannot be mistaken for that. Its purpose: since real checkpoint access became available in this session (unlike the prior attempt), it was possible to verify the *model- and code-side* of the pipeline for real rather than leave it entirely theoretical — this reduces risk for whenever Potsdam/Vaihingen data does become available, without claiming anything about Potsdam/Vaihingen itself.
 
-## 18. Final Verdict
+## 18. Phase 1 Verdict (model/code-side infrastructure only)
 
-## 🟡 YELLOW — execution blocked/incomplete without changing criteria
+🟡 **YELLOW at the time** — checkpoint ambiguity resolved, real environment verified, real checkpoint verified byte-for-byte, real HLS reference forward-passed successfully. Potsdam/Vaihingen data absent; all seven checks not executed on the real pair. See Phase 1B below for what was attempted next.
 
-**What changed since `DSSA_SANITY_CHECK_REPORT.md`:** the checkpoint ambiguity is resolved (backbone frozen to 300M), a real isolated environment now exists, the real checkpoint is downloaded and verified byte-for-byte (config, weight shapes, revision hash, checksum), and a real known-good HLS reference sample has been identified, downloaded, and forward-passed successfully with sane, finite, non-collapsed representations recorded at all 24 layers.
+---
 
-**What has not changed:** ISPRS Potsdam and Vaihingen IRRG data are still not present in this environment. All seven officially pre-registered checks remain **not executed** on the actual frozen dataset pair, because none was substituted, fabricated, or approximated. This is the same category of blocker as before — a missing external artifact — reported the same way, with no criteria loosened to compensate.
+## 19. Phase 1B — Dataset Acquisition Attempt
 
-### What would need to happen for this to become GREEN or RED
+**Objective:** obtain the real ISPRS Potsdam/Vaihingen IRRG imagery so the seven checks could actually run, per this phase's explicit Step 1.
 
-1. Obtain ISPRS Potsdam and Vaihingen IRRG imagery (via the ISPRS access process) and place it at `dssa/data/potsdam_irrg/` and `dssa/data/vaihingen_irrg/`.
-2. Re-run `dssa/sanity/run_sanity_check.py` — the `NotImplementedError` currently raised in that branch marks exactly where real-data wiring needs to be completed (radiometric fitting → input construction → the seven checks against real files), deliberately left unfilled rather than written blind against data that doesn't exist yet.
-3. The result of that run — not this one — determines GREEN vs. RED.
+### Step 1 result: acquisition is not automatable — confirmed against the official source, not assumed
 
-No claim is made here about DSSA's hypothesis, layer sensitivity, segmentation accuracy, LoRA effectiveness, or superiority over Random-K. This phase only concerns whether the frozen pipeline can produce valid, non-degenerate representations — and even that has only been shown for the HLS reference sample, not yet for Potsdam or Vaihingen.
+Fetched both official ISPRS pages directly this session:
+- `isprs.org/.../2d-sem-label-potsdam.aspx`
+- `isprs.org/.../2d-sem-label-vaihingen.aspx`
 
-**Per instruction: this phase stops here. The next phase (obtaining data and completing the real-data run) requires separate authorization.**
+Neither page exposes a direct download link. A follow-up search against the ISPRS benchmark site confirmed the actual access mechanism: **registration via a data request form at `www2.isprs.org/data-request-form.html`**, after which approved access is granted to download the (large) files from a seafile server. This is a manual, identity-tied registration process — not a public URL, not something with an API, and not something that can be completed without a person filling out the form and waiting for access to be granted.
+
+**Per instruction, this was not worked around.** No third-party mirror, re-hosted copy, or alternative redistribution was searched for or used, since instruction explicitly said not to work around the restriction, and any such source would carry licensing/authorization uncertainty this review cannot clear on your behalf.
+
+### Exact manual action required
+
+To unblock Phase 1B, a person (with the standing to agree to ISPRS's terms) needs to:
+
+1. Go to `http://www2.isprs.org/data-request-form.html` and register/request access to the **ISPRS 2D Semantic Labeling Contest — Potsdam** and **Vaihingen** benchmark datasets specifically (Working Group II/4, "Urban Modelling and Semantic Labelling Benchmark").
+2. Once access is granted, download from the resulting seafile link:
+   - **Potsdam:** the orthomosaic tiles in **IRRG** format (one of the three released compositions — IRRG, RGB, RGBIR; IRRG is the one this project's frozen design uses).
+   - **Vaihingen:** the orthomosaic tiles (Vaihingen ships only in IRRG — no separate format choice).
+3. Place the files at:
+   - `dssa/data/potsdam_irrg/` (Potsdam IRRG tiles)
+   - `dssa/data/vaihingen_irrg/` (Vaihingen tiles)
+4. Re-invoke this phase — `dssa/sanity/run_sanity_check.py`'s dataset-detection step will pick them up automatically (it globs `*.tif` in exactly those two directories) and the currently-unimplemented real-data branch (a deliberate `NotImplementedError`, not a silent stub) can then be completed and run against them.
+
+No files were downloaded in this step. No substitute was used. Steps 2–4 of this phase (dataset integrity audit, Strategy C calibration, the seven checks) were **not attempted**, because they all depend on Step 1, which did not complete.
+
+---
+
+## 20. Overall Final Verdict (Phase 1 + Phase 1B)
+
+## 🟡 YELLOW — execution incomplete, requires investigation (external, not technical)
+
+Nothing failed. Nothing was forced to GREEN. The blocker is external and procedural (an ISPRS data-access registration step outside this environment's or this session's authority to complete), not a technical problem with the frozen design, the checkpoint, the preprocessing code, or the model — all of which were independently verified in Phase 1 and remain valid. Section 19 states exactly what a person needs to do next; once the two data directories are populated, this same report should be extended (not restarted) with the real dataset-integrity audit and the seven real checks.
+
+**Per instruction: Phase 1B stops here. Phase 2 (layer selection, LoRA, baselines, training) is not begun and requires separate, explicit authorization — as does re-attempting Phase 1B once the manual data-access step above is complete.**
