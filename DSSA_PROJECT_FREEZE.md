@@ -1,8 +1,8 @@
 # DSSA Project Freeze
 
-**Status: NOT READY TO FREEZE — one decision remains open (the dataset pair).** All three previously-flagged research decisions from the first review round are now **APPROVED** (Section N-1). All ten remaining methodological decisions (A–J) have been resolved with a single defensible default each (Section O). The dataset question was investigated with live verification (not memory) and **cannot be silently resolved** — see Section P, `DATASET DECISION REQUIRED`.
+**Status: FROZEN DESIGN — PENDING SANITY EXECUTION.** All three previously-flagged research decisions are **APPROVED** (Section N-1). All ten methodological decisions (A–J) are resolved (Section O). The dataset question raised in Section P below was subsequently resolved through a dedicated process — see Section P-1 for the final, current dataset decision; Section P is retained below **as historical record only** and is superseded. The backbone/checkpoint decision is now also frozen — see Section W. The only remaining item before implementation is executing the already-designed, not-yet-run non-degeneracy sanity check (`DSSA_PREIMPLEMENTATION_CALIBRATION.md` §7 / `DSSA_SANITY_CHECK_REPORT.md`).
 
-Companion documents: `DSSA_ABSTRACT_GAP_ANALYSIS.md` (original 16-gap register), this document (current state of record).
+Companion documents: `DSSA_ABSTRACT_GAP_ANALYSIS.md` (original 16-gap register), `DSSA_DATASET_SELECTION_AUDIT.md`, `DSSA_PRITHVI_COMPATIBILITY_AUDIT.md`, `DSSA_PREIMPLEMENTATION_CALIBRATION.md`, `DSSA_SANITY_CHECK_REPORT.md`, and — as the single-source-of-truth consolidated view — `DSSA_IMPLEMENTATION_FREEZE.md`.
 
 Every implementation-critical line below is tagged **[FROZEN]** or **[DECISION REQUIRED]**.
 
@@ -172,7 +172,13 @@ Given O-A and O-B, for layer *l*:
 
 ---
 
-## P. Dataset Verification — LoveDA → DeepGlobe
+## P-1. Dataset — RESOLVED `[FROZEN]`
+
+**Final decision: ISPRS Potsdam (IRRG) → ISPRS Vaihingen (IRRG).**
+
+This supersedes Section P below (LoveDA → DeepGlobe), which is retained only as historical record of the original candidate and the reasoning that ruled it out. The resolution process: `DSSA_DATASET_SELECTION_AUDIT.md` evaluated Potsdam→Vaihingen alongside LoveDA Urban→Rural and DynamicEarthNet cross-region without selecting a winner; the team selected Potsdam→Vaihingen; `DSSA_PRITHVI_COMPATIBILITY_AUDIT.md` and `DSSA_PREIMPLEMENTATION_CALIBRATION.md` then verified and specified exactly how to make this pair usable with the backbone (band handling, radiometric strategy, temporal strategy — see `DSSA_IMPLEMENTATION_FREEZE.md` for the consolidated contract). Status of that pair: 🟡 YELLOW per the calibration audit — compatible via documented transformations, not disqualified, pending only the not-yet-executed sanity check.
+
+## P. Dataset Verification — LoveDA → DeepGlobe *(historical — superseded by P-1, retained for record)*
 
 Checked against the O-J checklist using live, sourced verification (not memory) in this review.
 
@@ -245,16 +251,32 @@ Unchanged list from the prior review (source-vs-source null; random-K; lowest-DS
 
 Unchanged from prior review, **plus**: the dataset-specific risk that a class-taxonomy remapping (if path (a) in Section P is chosen) introduces its own label noise, separate from any noise the model itself contributes.
 
+## W. Frozen Backbone / Checkpoint `[FROZEN]`
+
+**Backbone:** Prithvi-EO-2.0-300M
+**Exact checkpoint:** `ibm-nasa-geospatial/Prithvi-EO-2.0-300M`
+
+**Reason:** the research question concerns DSS-based layer selection, not backbone-scale comparison. The 300M checkpoint shares the same relevant input contract as the 600M variant investigated in `DSSA_PRITHVI_COMPATIBILITY_AUDIT.md` (identical `in_chans=6`, band order, `num_frames=4` default, band-adaptation mechanism), while reducing memory and compute for the primary experiment. Model size is not the variable under study; introducing it would add an unplanned second dimension to every result.
+
+**Explicitly recorded:**
+- **600M is not part of the primary experiment.**
+- **100M is not part of the primary experiment.**
+- **300M vs. 600M is not an experimental comparison in this project.** No planned ablation (Section T) varies backbone size.
+- **Changing the backbone after implementation begins constitutes a research-design change and requires an explicit freeze review** — it is not a routine implementation detail, since it changes `patch_size` (`[1,16,16]` for 300M vs. `[1,14,14]` for 600M) and therefore the exact tiling geometry of the entire preprocessing contract (`DSSA_PREIMPLEMENTATION_CALIBRATION.md` §9).
+
+This resolves the checkpoint ambiguity `DSSA_SANITY_CHECK_REPORT.md` §2 stopped on.
+
 ## V. Decisions Still Requiring Human Approval
 
-Only one remains implementation-blocking:
+**None remain implementation-blocking.** Both items previously listed here are now resolved:
 
-1. 🚨 **Dataset pair — Section P.** Must be resolved before implementation: fix LoveDA→DeepGlobe with explicit remapping/band/resolution decisions (path a), substitute a cleaner same-sensor first-phase pair (path b), or find an alternative (path c).
+- ~~Dataset pair~~ — resolved, Section P-1.
+- ~~Backbone/checkpoint~~ — resolved, Section W.
 
 Non-blocking, but should be resolved before any public novelty claim (unchanged from prior review):
 
-2. Whether the two-paper novelty comparison (SPECTRA, CrossEarth-Gate) is sufficient, or a broader/refreshed literature search is needed before publication-facing novelty language is used.
+1. Whether the two-paper novelty comparison (SPECTRA, CrossEarth-Gate) is sufficient, or a broader/refreshed literature search is needed before publication-facing novelty language is used.
 
 ---
 
-**This project is NOT READY TO FREEZE until item 1 above is resolved.** Every other implementation-critical decision (A–J, plus the three original flags) is now `[FROZEN]`. See `DSSA_FREEZE_FINAL_REVIEW.md` for the consolidated final statement.
+**Status: FROZEN DESIGN — PENDING SANITY EXECUTION.** Every implementation-critical decision (A–J, the three original flags, the dataset pair, and the backbone/checkpoint) is now `[FROZEN]`. The only remaining item before implementation proper is executing the non-degeneracy sanity check (`DSSA_PREIMPLEMENTATION_CALIBRATION.md` §7), which `DSSA_SANITY_CHECK_REPORT.md` confirms has **not** yet been run. See `DSSA_IMPLEMENTATION_FREEZE.md` for the consolidated, single-source-of-truth statement of the full frozen design.
