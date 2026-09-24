@@ -12,3 +12,8 @@ __pycache__/
 # ISPRS raw downloads and staged imagery - large binary data, not source
 dssa/Data/
 dssa/data/
+
+# Phase 2C training checkpoints (trainable-parameter-only .pt files) - large
+# generated artifacts, not source. Run metrics/manifests/reports (JSON/.md)
+# are still tracked.
+dssa/artifacts/phase2c/**/*.pt

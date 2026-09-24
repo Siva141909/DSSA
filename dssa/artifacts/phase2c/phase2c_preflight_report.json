@@ -1,0 +1,337 @@
+{
+  "label": "IMPLEMENTATION PREFLIGHT - NOT EXPERIMENTAL RESULT",
+  "device": "mps",
+  "n_checks": 13,
+  "n_pass": 13,
+  "n_fail": 0,
+  "checks": [
+    {
+      "check": "experiment manifest matches frozen 42-slot/39-run accounting",
+      "status": "PASS",
+      "detail": "42 slots -> 39 unique runs, 3 collisions",
+      "seconds": 0.0
+    },
+    {
+      "check": "decoder parameter count = 2,766,726",
+      "status": "PASS",
+      "detail": "2766726 params",
+      "seconds": 0.004
+    },
+    {
+      "check": "LoRA parameter count per selected block = 32,768",
+      "status": "PASS",
+      "detail": "32768 params/block",
+      "seconds": 0.004
+    },
+    {
+      "check": "K=0 model contains decoder parameters only",
+      "status": "PASS",
+      "detail": "trainable=2766726 (decoder-only, matches frozen K=0 accounting)",
+      "seconds": 1.031
+    },
+    {
+      "check": "K=8 model: LoRA only on selected Q/V slices, params match frozen accounting",
+      "status": "PASS",
+      "detail": "total=306915206 trainable=3028870 (decoder=2766726, lora=262144), backbone_frozen=303886336",
+      "seconds": 0.876
+    },
+    {
+      "check": "forward pass shape correct, loss finite, backward finite",
+      "status": "PASS",
+      "detail": "logits shape (4,6,224,224), loss=2.7069, 50 trainable tensors received finite grads",
+      "seconds": 0.504
+    },
+    {
+      "check": "optimizer updates only intended trainable params; frozen backbone unchanged",
+      "status": "PASS",
+      "detail": "frozen backbone params bit-identical after optimizer.step(); decoder and LoRA params changed as expected",
+      "seconds": 0.263
+    },
+    {
+      "check": "checkpoint save/load reproduces predictions exactly",
+      "status": "PASS",
+      "detail": "max abs diff = 0.00e+00",
+      "seconds": 2.407
+    },
+    {
+      "check": "target-train/validation partitions disjoint from target-test (test not loaded)",
+      "status": "PASS",
+      "detail": "train=20 val=5 test=8 (test filenames only diffed, never loaded)",
+      "seconds": 0.001
+    },
+    {
+      "check": "tiny end-to-end training run (K=0, decoder-only path)",
+      "status": "PASS",
+      "detail": {
+        "run_id": "preflight_K0",
+        "condition_labels": [
+          "K0_decoder_only"
+        ],
+        "K": 0,
+        "layer_indices": [],
+        "training_seed": 1000,
+        "preflight": true,
+        "total_steps_executed": 2,
+        "checkpoint_every": 2,
+        "parameter_counts": {
+          "total_params": 306653062,
+          "trainable_params": 2766726,
+          "decoder_params": 2766726,
+          "lora_params": 0,
+          "trainable_percentage": 0.9022332866840899
+        },
+        "validation_history": [
+          {
+            "step": 2,
+            "train_loss": 2.3537912368774414,
+            "lr": 0.001,
+            "val_mean_iou": 0.12695518575603687,
+            "val_macro_f1": 0.14057257145300586,
+            "val_pixel_accuracy": 0.3833506058673469,
+            "val_per_class_iou": [
+              0.5769508033897762,
+              0.0,
+              0.015160022459292532,
+              0.042665102931115674,
+              0.0,
+              null
+            ]
+          }
+        ],
+        "best_val_mean_iou": 0.12695518575603687,
+        "best_step": 2,
+        "best_checkpoint_path": "/Users/siva/Documents/Major project/dssa/artifacts/phase2c/preflight_checkpoints/preflight_K0_best.pt",
+        "training_wall_clock_seconds": 4.792531967163086,
+        "peak_memory_mb": 1225.40966796875,
+        "hardware": {
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "processor": "arm",
+          "python_version": "3.12.13",
+          "torch_version": "2.14.0",
+          "mps_available": true,
+          "cuda_available": false
+        }
+      },
+      "seconds": 6.177
+    },
+    {
+      "check": "tiny end-to-end training run (K=8, LoRA path, includes checkpointing)",
+      "status": "PASS",
+      "detail": {
+        "run_id": "preflight_K8",
+        "condition_labels": [
+          "DSSA@K8",
+          "Late@K8"
+        ],
+        "K": 8,
+        "layer_indices": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "training_seed": 1000,
+        "preflight": true,
+        "total_steps_executed": 4,
+        "checkpoint_every": 2,
+        "parameter_counts": {
+          "total_params": 306915206,
+          "trainable_params": 3028870,
+          "decoder_params": 2766726,
+          "lora_params": 262144,
+          "trainable_percentage": 0.986875182717405
+        },
+        "validation_history": [
+          {
+            "step": 2,
+            "train_loss": 2.3261399269104004,
+            "lr": 0.001,
+            "val_mean_iou": 0.017239438508107104,
+            "val_macro_f1": 0.032680126710113576,
+            "val_pixel_accuracy": 0.06848393654336735,
+            "val_per_class_iou": [
+              0.0,
+              0.0651398762184044,
+              0.0,
+              0.03829675483023823,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "step": 4,
+            "train_loss": 2.35498046875,
+            "lr": 0.0002500000000000001,
+            "val_mean_iou": 0.0330041190399784,
+            "val_macro_f1": 0.050251521668554976,
+            "val_pixel_accuracy": 0.11353535554846939,
+            "val_per_class_iou": [
+              0.0,
+              0.11521535336701214,
+              0.0,
+              0.049805241832879876,
+              0.0,
+              null
+            ]
+          }
+        ],
+        "best_val_mean_iou": 0.0330041190399784,
+        "best_step": 4,
+        "best_checkpoint_path": "/Users/siva/Documents/Major project/dssa/artifacts/phase2c/preflight_checkpoints/preflight_K8_best.pt",
+        "training_wall_clock_seconds": 8.64911413192749,
+        "peak_memory_mb": 1229.75341796875,
+        "hardware": {
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "processor": "arm",
+          "python_version": "3.12.13",
+          "torch_version": "2.14.0",
+          "mps_available": true,
+          "cuda_available": false
+        }
+      },
+      "seconds": 10.2
+    },
+    {
+      "check": "validation metrics finite and valid across tiny runs",
+      "status": "PASS",
+      "detail": "all validation metrics finite and in-range across both tiny runs",
+      "seconds": 0.0
+    },
+    {
+      "check": "confusion matrix is valid (6x6, non-negative, correct pixel count)",
+      "status": "PASS",
+      "detail": "confusion matrix shape=(6,6), sum=2500, all metrics finite",
+      "seconds": 0.0
+    }
+  ],
+  "tiny_run_k0": {
+    "run_id": "preflight_K0",
+    "condition_labels": [
+      "K0_decoder_only"
+    ],
+    "K": 0,
+    "layer_indices": [],
+    "training_seed": 1000,
+    "preflight": true,
+    "total_steps_executed": 2,
+    "checkpoint_every": 2,
+    "parameter_counts": {
+      "total_params": 306653062,
+      "trainable_params": 2766726,
+      "decoder_params": 2766726,
+      "lora_params": 0,
+      "trainable_percentage": 0.9022332866840899
+    },
+    "validation_history": [
+      {
+        "step": 2,
+        "train_loss": 2.3537912368774414,
+        "lr": 0.001,
+        "val_mean_iou": 0.12695518575603687,
+        "val_macro_f1": 0.14057257145300586,
+        "val_pixel_accuracy": 0.3833506058673469,
+        "val_per_class_iou": [
+          0.5769508033897762,
+          0.0,
+          0.015160022459292532,
+          0.042665102931115674,
+          0.0,
+          null
+        ]
+      }
+    ],
+    "best_val_mean_iou": 0.12695518575603687,
+    "best_step": 2,
+    "best_checkpoint_path": "/Users/siva/Documents/Major project/dssa/artifacts/phase2c/preflight_checkpoints/preflight_K0_best.pt",
+    "training_wall_clock_seconds": 4.792531967163086,
+    "peak_memory_mb": 1225.40966796875,
+    "hardware": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python_version": "3.12.13",
+      "torch_version": "2.14.0",
+      "mps_available": true,
+      "cuda_available": false
+    }
+  },
+  "tiny_run_k8": {
+    "run_id": "preflight_K8",
+    "condition_labels": [
+      "DSSA@K8",
+      "Late@K8"
+    ],
+    "K": 8,
+    "layer_indices": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "training_seed": 1000,
+    "preflight": true,
+    "total_steps_executed": 4,
+    "checkpoint_every": 2,
+    "parameter_counts": {
+      "total_params": 306915206,
+      "trainable_params": 3028870,
+      "decoder_params": 2766726,
+      "lora_params": 262144,
+      "trainable_percentage": 0.986875182717405
+    },
+    "validation_history": [
+      {
+        "step": 2,
+        "train_loss": 2.3261399269104004,
+        "lr": 0.001,
+        "val_mean_iou": 0.017239438508107104,
+        "val_macro_f1": 0.032680126710113576,
+        "val_pixel_accuracy": 0.06848393654336735,
+        "val_per_class_iou": [
+          0.0,
+          0.0651398762184044,
+          0.0,
+          0.03829675483023823,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "step": 4,
+        "train_loss": 2.35498046875,
+        "lr": 0.0002500000000000001,
+        "val_mean_iou": 0.0330041190399784,
+        "val_macro_f1": 0.050251521668554976,
+        "val_pixel_accuracy": 0.11353535554846939,
+        "val_per_class_iou": [
+          0.0,
+          0.11521535336701214,
+          0.0,
+          0.049805241832879876,
+          0.0,
+          null
+        ]
+      }
+    ],
+    "best_val_mean_iou": 0.0330041190399784,
+    "best_step": 4,
+    "best_checkpoint_path": "/Users/siva/Documents/Major project/dssa/artifacts/phase2c/preflight_checkpoints/preflight_K8_best.pt",
+    "training_wall_clock_seconds": 8.64911413192749,
+    "peak_memory_mb": 1229.75341796875,
+    "hardware": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python_version": "3.12.13",
+      "torch_version": "2.14.0",
+      "mps_available": true,
+      "cuda_available": false
+    }
+  }
+}
