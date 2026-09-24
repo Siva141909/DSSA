@@ -2,9 +2,32 @@
 
 **No LoRA trained. No segmentation trained. No optimizer instantiated. No gradients computed. No frozen methodology modified. No final K selected. No method ranked.**
 
-**This phase stopped early, correctly, at two explicit, pre-specified stop conditions.** What follows documents exactly what was checked, what stopped and why, and what genuinely could still be done independently of those two blockers.
+**This phase stopped early, correctly, at explicit, pre-specified stop conditions.** What follows documents exactly what was checked, what stopped and why, and what genuinely could still be done independently of those blockers.
 
 Status vocabulary used throughout: **VERIFIED** / **UNSPECIFIED — REQUIRES DECISION** / **BLOCKER** / **NOT APPLICABLE**.
+
+---
+
+## Addendum — Continuation Attempt (Decisions 1 & 2 Received, Stopped at a Third Gap)
+
+Two of the two original blockers were resolved by explicit team decision:
+
+- **K-sweep grid, newly authorized:** `{2, 4, 6, 8, 12}`. **This was not part of the original frozen specification** — the original freeze required a sweep but specified no values; this grid is a new experimental decision, recorded as such, not attributed to the earlier freeze.
+- **Outer Vaihingen split, newly authorized:** all 33 staged files, sorted **lexicographically by filename**, partitioned deterministically into target-train=20 / target-validation=5 / target-test=8 (20+5+8=33). **This ordering rule is also a new experimental decision** — the original freeze specified the 60/15/25 *ratios* and the probe-from-train relationship, but no seed, no ordering rule, and no exact integer counts. Lexicographic order was not previously specified anywhere.
+
+**Before executing either, the target-probe count was checked, per instruction, against the exact frozen wording — not a paraphrase:**
+
+> `DSSA_PROJECT_FREEZE.md` §O-I, quoted verbatim: *"target-probe (unlabeled) is a slice of target-train, sized at roughly 10–20% of **the total target pool** (capped at a few hundred images for compute reasons)"*
+
+The stated basis is **the total target pool** (33 files, not the 20-file target-train subset). 10% of 33 = 3.3; 20% of 33 = 6.6. This is a range spanning several valid integers (at minimum 4, 5, 6; arguably 3 or 7 depending on rounding convention), further softened by the word "roughly." **No single integer count is uniquely determined by this wording.**
+
+```
+TARGET-PROBE INTEGER COUNT UNSPECIFIED — REQUIRES DECISION
+```
+
+Per the explicit stop condition for this continuation, execution stopped **immediately** at this check. No split manifest was created. No files were assigned to any partition. No final DSS computation was run. No K-sweep was executed. `dssa/sanity/run_phase2b_final_dss.py` was not created — there is nothing yet to implement it against. Sections 4 onward of this report (below) remain as they were before this continuation attempt; they are not restated here since nothing about them changed.
+
+**What is needed to unblock:** a single, explicit integer (or an explicit rule that resolves to one, e.g., "the midpoint of the 10–20% range, rounded to nearest integer" or "the same absolute count as Phase 2A's illustrative probes") for how many of the 20 target-train files become target-probe. Per instruction, this was not chosen here.
 
 ---
 
