@@ -8,3 +8,7 @@ dssa/reference_sample/
 dssa/data/
 __pycache__/
 *.pyc
+
+# ISPRS raw downloads and staged imagery - large binary data, not source
+dssa/Data/
+dssa/data/
