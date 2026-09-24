@@ -1,0 +1,22 @@
+{
+  "strategy": "Strategy C - source-fit-only affine (DSSA_PREIMPLEMENTATION_CALIBRATION.md Sec 3)",
+  "fit_on": "potsdam_source_only",
+  "n_potsdam_files_used": 38,
+  "n_vaihingen_files_used": 0,
+  "offset_IR_R_G": [
+    44.078086163510335,
+    69.2734170392942,
+    63.265727375010414
+  ],
+  "scale_IR_R_G": [
+    51.04383240892715,
+    61.576643977107445,
+    59.24882681713489
+  ],
+  "frozen": true,
+  "applied_to": [
+    "potsdam",
+    "vaihingen"
+  ],
+  "refit_per_dataset": false
+}

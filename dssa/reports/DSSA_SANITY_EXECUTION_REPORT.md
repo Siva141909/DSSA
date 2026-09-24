@@ -147,14 +147,74 @@ To unblock Phase 1B, a person (with the standing to agree to ISPRS's terms) need
    - `dssa/data/vaihingen_irrg/` (Vaihingen tiles)
 4. Re-invoke this phase — `dssa/sanity/run_sanity_check.py`'s dataset-detection step will pick them up automatically (it globs `*.tif` in exactly those two directories) and the currently-unimplemented real-data branch (a deliberate `NotImplementedError`, not a silent stub) can then be completed and run against them.
 
-No files were downloaded in this step. No substitute was used. Steps 2–4 of this phase (dataset integrity audit, Strategy C calibration, the seven checks) were **not attempted**, because they all depend on Step 1, which did not complete.
+No files were downloaded in this step. No substitute was used. Steps 2–4 of this phase (dataset integrity audit, Strategy C calibration, the seven checks) were **not attempted at that time**, because they all depend on Step 1, which had not yet completed. (They have since been completed — see Sections 20–27 below. The data was obtained by the user through the official ISPRS registration process, per Section 19's exact instructions, and staged per `DSSA_DATASET_INTEGRITY_REPORT.md`.)
 
 ---
 
-## 20. Overall Final Verdict (Phase 1 + Phase 1B)
+## 20. Phase 1B Completion — A. Previous Model/Code Infrastructure Evidence
 
-## 🟡 YELLOW — execution incomplete, requires investigation (external, not technical)
+Unchanged from Sections 1–18 above: real environment, real checkpoint (verified byte-for-byte, `Prithvi-EO-2.0-300M`, revision `9eb1b1102806593963daa333bcc491b1c6f8562f`), real HLS reference forward pass, 0 trainable parameters. All of it reused as-is in this run — the same `load_frozen_encoder()` code path, unmodified.
 
-Nothing failed. Nothing was forced to GREEN. The blocker is external and procedural (an ISPRS data-access registration step outside this environment's or this session's authority to complete), not a technical problem with the frozen design, the checkpoint, the preprocessing code, or the model — all of which were independently verified in Phase 1 and remain valid. Section 19 states exactly what a person needs to do next; once the two data directories are populated, this same report should be extended (not restarted) with the real dataset-integrity audit and the seven real checks.
+## 21. B. Dataset Integrity Evidence
 
-**Per instruction: Phase 1B stops here. Phase 2 (layer selection, LoRA, baselines, training) is not begun and requires separate, explicit authorization — as does re-attempting Phase 1B once the manual data-access step above is complete.**
+Full detail in `DSSA_DATASET_INTEGRITY_REPORT.md`. Summary: 38/38 Potsdam IRRG files and 33/33 Vaihingen TOP files verified individually (shape, dtype, value range, no corrupted files, no accidental label files), staged at `dssa/data/potsdam_irrg/` and `dssa/data/vaihingen_irrg/`.
+
+## 22. C. Strategy C Calibration — Executed
+
+**Fit exclusively on Potsdam.** All 38 Potsdam files were streamed through a memory-safe accumulator (see Section 26, deviation) — **zero Vaihingen files were opened during fitting**, verified both by the code path (the fitting generator iterates `potsdam_files` only) and by an explicit log line printed before fitting began: `"Vaihingen files referenced in this step: 0"`.
+
+**Fitted, frozen coefficients** (written to `dssa/artifacts/radiometric_transform.json`):
+
+| Channel | Offset | Scale |
+|---|---|---|
+| IR | 44.078086 | 51.043832 |
+| R | 69.273417 | 61.576644 |
+| G | 63.265727 | 59.248827 |
+
+These coefficients were computed once and applied **identically, unchanged**, to both the Potsdam and Vaihingen crops used in every subsequent check — no refitting, no per-image adjustment, no target-derived scaling.
+
+## 23. D. Real Potsdam/Vaihingen Sanity Results
+
+**Sample selection (fixed before running, not results-based):** 16 Potsdam files as the "source" group, 16 Vaihingen files as the "target" group, plus two disjoint 8-file Potsdam groups ("null_a", "null_b") for the source-vs-source baseline required by Check 5 — 38 Potsdam files exactly cover 16 (source) + 8 + 8 (null) = 32, leaving 6 unused. One deterministic 224×224 top-left crop (native pixels, no resizing) was extracted per file — the same fixed-window tiling geometry the checkpoint's own official `inference.py` uses, adapted because full 6000×6000 attention is computationally intractable on this hardware (quadratic cost in token count, not a memory limit an implementation choice can work around) and because the frozen sanity-check spec (`DSSA_PREIMPLEMENTATION_CALIBRATION.md` §7) itself only calls for "a small batch (order 8–16 tiles)."
+
+All 32 real-data forward passes (16 Potsdam + 16 Vaihingen) succeeded, plus 16 more (8+8 null-baseline Potsdam crops) — 48 total, all logged individually in `dssa/artifacts/real_data_sanity_run.log`.
+
+## 24. E. Each of the Seven Checks
+
+| Check | Result | Evidence |
+|---|---|---|
+| **1 — Forward pass** | ✅ PASS | 16/16 Potsdam-source crops, 16/16 Vaihingen-target crops, all 24 layers returned each time |
+| **2 — No NaN/Inf** | ✅ PASS | Checked across all 48 crops (source+target+null_a+null_b) × 24 layers = 1,152 tensors; zero non-finite values |
+| **3 — Activation magnitude vs. HLS reference** | ✅ PASS | Every layer, every real-data sample, within the frozen 2-orders-of-magnitude tolerance band (observed ratios ≈1.7–2.1× the reference norm on inspected layers — comfortably inside `10⁻² ≤ ratio ≤ 10²`) |
+| **4 — Cross-sample variance > 1e-6** | ✅ PASS | Source group: layer-wise variance from 0.103 (layer 23) to 1.354 (layer 0). Target group: 0.076 to 1.164. Both groups, all 24 layers, orders of magnitude above the 1e-6 floor |
+| **5 — DSS diagnostic (finite, non-zero raw; finite normalized)** | ✅ PASS | All 24 layers: raw cosine DSS finite and non-zero (range ≈0.14–0.24 across the layers inspected), null-baseline value finite, normalized (raw − null) value finite. **No threshold for "meaningful" magnitude was applied or checked — none was defined, per the frozen spec** |
+| **6 — All 24 blocks produce output** | ✅ PASS | Confirmed on a representative real sample: 24/24 blocks, `embed_dim=1024` at every layer, none skipped |
+| **7 — Procedural/leakage audit** | ✅ PASS | No label file was ever opened by this script (verified by code inspection — no `*_label.tif` / `gts_for_participants` path appears anywhere in `run_real_data_sanity.py`'s I/O); no `torch.optim` constructed; all forward passes under `torch.no_grad()`; backbone confirmed frozen (0 trainable params, asserted); Strategy C fit exclusively on Potsdam (Section 22); no layer ranking or selection performed — the DSS diagnostic values were computed and logged, never sorted, thresholded, or used to choose anything |
+
+**Important, explicit note on Check 5's numbers:** the raw DSS values are *reported*, not *interpreted*. This run does not claim, and this document does not claim, that these numbers show DSSA "works," that any layer is more or less suitable for adaptation, or anything about relative layer sensitivity. That analysis is explicitly out of scope for this phase (see the Critical Stop Condition below).
+
+## 25. F. Artifacts Produced
+
+| Artifact | Contents |
+|---|---|
+| `dssa/artifacts/radiometric_transform.json` | Frozen Strategy C coefficients, fit metadata (38 Potsdam files, 0 Vaihingen files) |
+| `dssa/artifacts/real_data_sanity_metrics.json` | Full structured results for all seven checks, including every per-layer/per-sample number |
+| `dssa/artifacts/real_data_sanity_run.log` | Line-by-line execution log (file lists used, every forward pass, every check result) |
+| `dssa/artifacts/hls_reference_layer_norms.json` | Reused unchanged from Phase 1 (Check 3's reference baseline) |
+| `dssa/sanity/run_real_data_sanity.py` | The exact, inspectable code that produced this run — reproducible given the same staged data and checkpoint |
+
+## 26. G. Deviations
+
+**One, disclosed precisely, and it is an engineering fix, not a methodology change:** the first execution attempt was killed by the operating system (exit code 137, out-of-memory) because the original `fit_source_affine` implementation concatenated all 38 full-resolution Potsdam images into a single float64 array (≈33 GB) before computing statistics. Per the task's own explicit "Important Compute Rule" ("process tiles/chunks sequentially or in a memory-safe manner while preserving the frozen mathematical definition"), this was fixed by replacing the concatenate-then-reduce implementation with a mathematically identical streaming sum/sum-of-squares accumulation (one image in memory at a time). **The formula, inputs, and outputs of Strategy C are unchanged** — same per-channel global mean/std computed over the same 38 Potsdam files, same resulting affine coefficients — only how that arithmetic is computed in memory changed. No threshold, band mapping, checkpoint, T value, or DSS definition was touched. This is recorded here rather than silently fixed.
+
+No other deviation occurred. No tiles were discarded. No preprocessing method was changed. No thresholds were adjusted. Nothing was retried with different parameters after a failure — the one failure (the OOM) occurred before any check ran, was diagnosed precisely, fixed at the level the compute rule authorized, and the corrected run then executed cleanly on the first attempt.
+
+## 27. H. Final Verdict
+
+## 🟢 GREEN — all seven registered checks passed on the real, frozen Potsdam→Vaihingen dataset pair
+
+This means, precisely: the frozen input pipeline (Strategy C, band mapping, T=1, normalization) and the frozen Prithvi-EO-2.0-300M backbone, applied to real ISPRS Potsdam and Vaihingen imagery, produce forward passes that succeed, are fully finite, are not collapsed, fall within expected activation-magnitude ranges, and yield a computable, finite, non-zero DSS diagnostic at every layer.
+
+**This does not mean DSSA works.** No claim is made here — and none should be inferred — about layer sensitivity, which layers are "important," segmentation accuracy, LoRA effectiveness, or superiority over Random-K selection. Those are exactly the questions Phase 2 exists to test, and Phase 2 has not begun.
+
+**Per the critical stop condition: no DSS layer ranking, no Random-K experiment, no LoRA, no segmentation training, no baseline training, and no evaluation occurred or is authorized by this result. Stopping here.**

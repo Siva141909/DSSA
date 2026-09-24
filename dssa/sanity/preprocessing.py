@@ -41,7 +41,7 @@ class SourceFitAffine:
         return (irrg_8bit.astype(np.float64) - offset) * scale
 
 
-def fit_source_affine(potsdam_irrg_samples: list[np.ndarray]) -> SourceFitAffine:
+def fit_source_affine(potsdam_irrg_samples) -> SourceFitAffine:
     """
     Fit the frozen affine transform using ONLY Potsdam (source) pixel statistics.
 
@@ -51,15 +51,34 @@ def fit_source_affine(potsdam_irrg_samples: list[np.ndarray]) -> SourceFitAffine
     transform lands the *source* distribution where the model expects a
     *typically-scaled* input to be, without ever looking at Vaihingen.
 
-    Requires real Potsdam imagery - cannot be exercised in this environment
-    (DSSA_SANITY_EXECUTION_REPORT.md records this as a blocked artifact).
+    potsdam_irrg_samples: an iterable (list or generator) of (H, W, 3) arrays.
+    Computed via streaming sum/sum-of-squares accumulation, one array at a
+    time - NOT by concatenating every array into one float64 buffer, which
+    is memory-unsafe at real ISPRS tile resolution (a naive concatenation of
+    38 full 6000x6000 Potsdam tiles as float64 requires ~33 GB and will be
+    OOM-killed on typical hardware). This streaming form computes the exact
+    same global per-channel mean/std as the naive form - it is a memory-safe
+    implementation of the same statistic, not a different statistic, per the
+    frozen Strategy C definition and the explicit compute-safety instruction.
     """
-    if not potsdam_irrg_samples:
+    count = 0
+    ch_sum = np.zeros(3, dtype=np.float64)
+    ch_sumsq = np.zeros(3, dtype=np.float64)
+    n_arrays = 0
+    for arr in potsdam_irrg_samples:
+        if arr.shape[-1] != 3:
+            raise ValueError(f"expected 3-channel IRRG array, got shape {arr.shape}")
+        flat = arr.reshape(-1, 3).astype(np.float64)  # one array's worth at a time, freed each iteration
+        ch_sum += flat.sum(axis=0)
+        ch_sumsq += (flat ** 2).sum(axis=0)
+        count += flat.shape[0]
+        n_arrays += 1
+    if n_arrays == 0:
         raise ValueError("fit_source_affine requires at least one Potsdam IRRG sample; none provided.")
 
-    stacked = np.concatenate([s.reshape(-1, 3).astype(np.float64) for s in potsdam_irrg_samples], axis=0)
-    src_mean = stacked.mean(axis=0)  # (IR, R, G)
-    src_std = stacked.std(axis=0) + 1e-8
+    src_mean = ch_sum / count  # (IR, R, G) - identical formula to the naive global mean
+    src_var = ch_sumsq / count - src_mean ** 2
+    src_std = np.sqrt(np.maximum(src_var, 0.0)) + 1e-8
 
     target_mean = np.array([BAND_MEAN[NARROW_NIR], BAND_MEAN[RED], BAND_MEAN[GREEN]])
     target_std = np.array([BAND_STD[NARROW_NIR], BAND_STD[RED], BAND_STD[GREEN]])
