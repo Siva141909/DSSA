@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "phase": "2B-B",
+    "purpose": "Pre-registered training/evaluation protocol - design only, no training executed",
+    "status": "PHASE 2B-B COMPLETE - TRAINING NOT AUTHORIZED",
+    "checkpoint": "ibm-nasa-geospatial/Prithvi-EO-2.0-300M",
+    "checkpoint_revision": "9eb1b1102806593963daa333bcc491b1c6f8562f",
+    "backbone_trainable_params": 0
+  },
+  "architecture": {
+    "backbone": {
+      "model": "Prithvi-EO-2.0-300M",
+      "frozen": true,
+      "embed_dim": 1024,
+      "depth": 24,
+      "num_heads": 16,
+      "patch_size": [1, 16, 16],
+      "num_frames": 1
+    },
+    "decoder_feature_source": {
+      "rule": "final transformer layer only (layer index 23, post-model-closing-LayerNorm)",
+      "rationale": "Deliberately decouples 'which layers produce segmentation features' (fixed, identical across all conditions) from 'which layers receive LoRA' (the experimental variable). Using multiple/variable backbone layers as decoder input would confound the two.",
+      "cls_token": "excluded",
+      "patch_grid_reshape": "(B, num_patches, 1024) -> (B, 1024, H/16, W/16)"
+    },
+    "decoder": {
+      "type": "progressive upsampling convolutional head (SETR-PUP-style, simplified)",
+      "num_classes": 6,
+      "class_names": ["impervious_surfaces", "building", "low_vegetation", "tree", "car", "clutter_background"],
+      "class_color_palette_rgb": {
+        "impervious_surfaces": [255, 255, 255],
+        "building": [0, 0, 255],
+        "low_vegetation": [0, 255, 255],
+        "tree": [0, 255, 0],
+        "car": [255, 255, 0],
+        "clutter_background": [255, 0, 0]
+      },
+      "blocks": [
+        {"name": "block1", "conv_in": 1024, "conv_out": 256, "kernel": 3, "norm": "GroupNorm(32,256)", "activation": "ReLU", "upsample": "bilinear x2"},
+        {"name": "block2", "conv_in": 256, "conv_out": 128, "kernel": 3, "norm": "GroupNorm(32,128)", "activation": "ReLU", "upsample": "bilinear x2"},
+        {"name": "block3", "conv_in": 128, "conv_out": 64, "kernel": 3, "norm": "GroupNorm(32,64)", "activation": "ReLU", "upsample": "bilinear x2"},
+        {"name": "block4", "conv_in": 64, "conv_out": 64, "kernel": 3, "norm": "GroupNorm(32,64)", "activation": "ReLU", "upsample": "bilinear x2"}
+      ],
+      "final_layer": {"conv_in": 64, "conv_out": 6, "kernel": 1, "activation": "none (raw logits)"},
+      "total_upsample_factor": 16,
+      "bias": true,
+      "initialization": "PyTorch default (Kaiming-uniform for Conv2d, ones/zeros for GroupNorm) - standard framework default, not a special scheme",
+      "trainable_parameters_exact": 2766726,
+      "always_trainable": true,
+      "identical_across_all_conditions": true
+    },
+    "lora": {
+      "rank": 8,
+      "target_modules_intent": "W_q and W_v only",
+      "actual_module_structure_finding": "timm.models.vision_transformer.Attention (used by Prithvi's Block) implements a SINGLE FUSED 'qkv: Linear(1024, 3072, bias=qkv_bias)' layer, not separate W_q/W_k/W_v matrices. Verified by direct source inspection this phase.",
+      "resolution": "LoRA (rank 8) applied to the Q-slice (output rows 0:1024) and V-slice (output rows 2048:3072) of the fused qkv weight's output space; the K-slice (rows 1024:2048) receives zero LoRA contribution. Mathematically equivalent to separate-matrix W_q/W_v-only LoRA. This is a standard, well-precedented technique for fused-qkv architectures, not an invented one.",
+      "resolution_status": "NEW Phase 2B-B implementation decision - the original freeze's 'W_q/W_v' language predates this architectural inspection",
+      "output_projection_touched": false,
+      "mlp_touched": false,
+      "alpha": 16,
+      "alpha_rationale": "alpha = 2 x rank is a widely-used LoRA convention (effective scale = alpha/rank = 2.0); chosen as the standard default rather than tuned",
+      "dropout": 0.0,
+      "dropout_rationale": "No LoRA dropout - dataset is already small (20 target-train images); additional stochastic regularization was not judged necessary and is not tuned post-hoc",
+      "A_initialization": "Kaiming-uniform (standard LoRA convention, same as the original LoRA paper)",
+      "B_initialization": "zeros (standard LoRA convention - guarantees the adapted model is initially identical to the frozen backbone before any training)",
+      "original_qkv_bias": "frozen, untouched",
+      "original_qkv_weight": "frozen, untouched (LoRA adds a parallel low-rank delta, does not modify the original weight in place)",
+      "trainable_parameters_per_selected_block": 32768,
+      "parameter_accounting": {
+        "K=0": {"lora_params": 0, "decoder_params": 2766726, "total_trainable": 2766726},
+        "K=2": {"lora_params": 65536, "decoder_params": 2766726, "total_trainable": 2832262},
+        "K=4": {"lora_params": 131072, "decoder_params": 2766726, "total_trainable": 2897798},
+        "K=6": {"lora_params": 196608, "decoder_params": 2766726, "total_trainable": 2963334},
+        "K=8": {"lora_params": 262144, "decoder_params": 2766726, "total_trainable": 3028870},
+        "K=12": {"lora_params": 393216, "decoder_params": 2766726, "total_trainable": 3159942},
+        "K=24_all": {"lora_params": 786432, "decoder_params": 2766726, "total_trainable": 3553158}
+      },
+      "backbone_frozen_params": 303886336
+    }
+  },
+  "experimental_conditions": {
+    "K_sweep": [2, 4, 6, 8, 12],
+    "conditions_per_K": ["DSSA", "Early", "Middle", "Late", "LowestDSS"],
+    "degenerate_controls": ["K=0 (decoder-only)", "K=24/all (uniform LoRA)"],
+    "random_K": {
+      "num_seeds": 3,
+      "seed_list": [101, 202, 303],
+      "rationale": "3 seeds is the minimal number that permits a non-degenerate mean+/-std report (n=2 gives an unstable std estimate); kept minimal given Kaggle/Colab-scale compute stated in the original project abstract. This is a limitation, not a claim of full statistical robustness.",
+      "selection_method": "random.Random(seed).sample(range(24), K) - same deterministic mechanism already used in Phase 2A"
+    },
+    "layer_sets": {
+      "K=2": {"DSSA": [19,23], "Early": [0,1], "Middle": [11,12], "Late": [22,23], "LowestDSS": [0,3],
+              "RandomK_seed101": [6,18], "RandomK_seed202": [12,20], "RandomK_seed303": [1,7]},
+      "K=4": {"DSSA": [18,19,22,23], "Early": [0,1,2,3], "Middle": [10,11,12,13], "Late": [20,21,22,23], "LowestDSS": [0,3,4,5],
+              "RandomK_seed101": [6,11,17,18], "RandomK_seed202": [12,13,15,20], "RandomK_seed303": [1,6,7,23]},
+      "K=6": {"DSSA": [17,18,19,20,22,23], "Early": [0,1,2,3,4,5], "Middle": [9,10,11,12,13,14], "Late": [18,19,20,21,22,23], "LowestDSS": [0,1,2,3,4,5],
+              "RandomK_seed101": [1,6,11,14,17,18], "RandomK_seed202": [6,12,13,15,19,20], "RandomK_seed303": [1,2,6,7,8,18]},
+      "K=8": {"DSSA": [16,17,18,19,20,21,22,23], "Early": [0,1,2,3,4,5,6,7], "Middle": [8,9,10,11,12,13,14,15], "Late": [16,17,18,19,20,21,22,23], "LowestDSS": [0,1,2,3,4,5,6,7],
+              "RandomK_seed101": [1,6,11,14,16,17,18,22], "RandomK_seed202": [1,6,12,13,15,19,20,23], "RandomK_seed303": [1,2,6,7,8,12,16,18]},
+      "K=12": {"DSSA": [10,11,14,15,16,17,18,19,20,21,22,23], "Early": [0,1,2,3,4,5,6,7,8,9,10,11], "Middle": [6,7,8,9,10,11,12,13,14,15,16,17], "Late": [12,13,14,15,16,17,18,19,20,21,22,23], "LowestDSS": [0,1,2,3,4,5,6,7,8,9,12,13],
+               "RandomK_seed101": [1,4,6,7,11,14,15,16,17,18,19,22], "RandomK_seed202": [1,6,7,12,13,14,15,19,20,21,22,23], "RandomK_seed303": [1,2,5,6,7,8,12,16,17,18,21,22]}
+    },
+    "identified_collisions": [
+      {"K": 6, "conditions": ["Early", "LowestDSS"], "shared_layers": [0,1,2,3,4,5], "treatment": "train once, report under both labels"},
+      {"K": 8, "conditions": ["DSSA", "Late"], "shared_layers": [16,17,18,19,20,21,22,23], "treatment": "train once, report under both labels"},
+      {"K": 8, "conditions": ["Early", "LowestDSS"], "shared_layers": [0,1,2,3,4,5,6,7], "treatment": "train once, report under both labels"}
+    ],
+    "total_condition_slots": 42,
+    "deduplicated_shared_runs": 3,
+    "unique_training_runs_required": 39
+  },
+  "data_roles": {
+    "source_potsdam": {"role": "source domain, per frozen mechanism", "labels_used": "as already established in frozen methodology"},
+    "target_train": {"count": 20, "role": "supervised adaptation/training", "labels_used": true},
+    "target_probe": {"count": 5, "subset_of": "target_train", "role": "unsupervised DSS layer selection (already executed, frozen)", "labels_used_for_selection": false, "labels_used_for_training": true, "note": "same 5 files participate in supervised training using their labels, in the same role as the other 15 target-train files - this is not leakage because label information never influenced the already-fixed layer-selection decision"},
+    "target_validation": {"count": 5, "role": "model/epoch/hyperparameter selection only", "labels_used_for_selection": false, "labels_used_for_model_selection": true},
+    "target_test": {"count": 8, "role": "final evaluation only, single pass, after full experimental configuration is locked", "labels_used": "not until final evaluation"}
+  },
+  "class_distribution_target_train": {
+    "source": "ISPRS_semantic_labeling_Vaihingen_ground_truth_COMPLETE.zip, target-train files only (20 files)",
+    "total_pixels": 102504699,
+    "unmapped_pixels": 0,
+    "counts": {
+      "tree": 26763260,
+      "impervious_surfaces": 26252732,
+      "low_vegetation": 23876011,
+      "building": 23703019,
+      "car": 1036170,
+      "clutter_background": 873507
+    },
+    "percentages": {
+      "tree": 26.109,
+      "impervious_surfaces": 25.611,
+      "low_vegetation": 23.293,
+      "building": 23.124,
+      "car": 1.011,
+      "clutter_background": 0.852
+    }
+  },
+  "loss": {
+    "primary_loss": "CrossEntropy + Dice, unweighted 1:1 sum",
+    "formula": "L = L_CE + L_Dice, L_Dice computed per-class (macro-averaged) on softmax probabilities",
+    "class_weights_used_in_primary": false,
+    "rationale": "Verified real class imbalance (car 1.011%, clutter_background 0.852% vs ~23-26% for the four dominant classes) rules out assuming balance. Dice loss is inherently robust to class imbalance (set-overlap based, not pixel-frequency based); combined with CE for stable pixel-wise gradients. This avoids introducing an additional, separately-tuned class-weight hyperparameter as a hidden free parameter.",
+    "ignore_index": null,
+    "ignore_index_rationale": "Not needed - all pixels in target-train ground truth map cleanly to one of the 6 known classes (0 unmapped pixels found)"
+  },
+  "training_hyperparameters": {
+    "optimizer": "AdamW",
+    "betas": [0.9, 0.999],
+    "weight_decay": 0.01,
+    "learning_rate": 0.001,
+    "lr_rationale": "Single shared LR for decoder + LoRA parameters (one param group) - avoids a second LR-ratio hyperparameter that would itself be a garden-of-forking-paths risk; standard AdamW default-scale LR for a from-scratch small decoder + LoRA adapters",
+    "scheduler": "cosine decay to 0",
+    "warmup_steps": 100,
+    "total_steps": 2000,
+    "batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "precision": "fp32 (full precision)",
+    "precision_rationale": "MPS (Apple Silicon) mixed-precision/autocast support is less mature and less deterministic than CUDA's; fp32 chosen for reliability and reproducibility on this specific hardware, not as a general prohibition on mixed precision",
+    "gradient_clipping_max_norm": 1.0,
+    "checkpoint_frequency_steps": 200,
+    "best_checkpoint_rule": "highest mean IoU on target-validation, evaluated every checkpoint_frequency_steps",
+    "early_stopping": "none - fixed 2000-step budget, best checkpoint by validation mIoU is kept regardless of whether it occurs before step 2000",
+    "device": "mps (Apple M5) with cpu fallback if unavailable at execution time"
+  },
+  "crop_and_tiling": {
+    "crop_size": 224,
+    "training_crop_sampling": "random crop per training step from a randomly-selected target-train image, uniform over image and over file",
+    "validation_test_tiling": "sliding window, stride 112 (50% overlap), reflect-padded to a multiple of 224 at image borders",
+    "overlap_aggregation": "average overlapping logits (not majority vote), then argmax over the 6 classes",
+    "augmentation": ["random horizontal flip (p=0.5)", "random vertical flip (p=0.5)", "random 90-degree rotation (k in {0,1,2,3})"],
+    "augmentation_rationale": "Geometric-only augmentation (no color/intensity jitter) - color-space augmentation was judged inappropriate given Strategy C's frozen, source-fit-only radiometric calibration; adding independent color jitter on top of an already-fixed calibration is not authorized by any frozen decision and was not introduced here",
+    "normalization": "identical to the frozen DSS input pipeline (Strategy C affine, then per-band mean/std, zero-fill for Blue/SWIR1/SWIR2) - unchanged"
+  },
+  "seeds": {
+    "python_random_seed": 1000,
+    "numpy_seed": 1000,
+    "pytorch_seed": 1000,
+    "dataloader_worker_seed": "not applicable - single-process data loading planned given small dataset size",
+    "per_condition_policy": "one fixed seed (1000) per non-Random-K condition; Random-K conditions use the 3 pre-registered seeds (101,202,303) for layer selection, combined with the same training seed (1000) for the training process itself",
+    "mps_determinism_caveat": "Bit-exact determinism on MPS across training runs (with active gradient computation, dropout if any, and data shuffling) has NOT been empirically verified in this project - only the frozen, no_grad(), no-dropout DSS forward pass was verified bit-exact (Phase 2B-A). This is recorded as a limitation, not assumed."
+  },
+  "evaluation": {
+    "metrics": ["mean_IoU", "per_class_IoU", "macro_F1", "pixel_accuracy"],
+    "confusion_matrix_accumulation": "accumulated per-image over the full tiled/stitched prediction before computing metrics, then summed across all images in the split",
+    "validation_use": "every checkpoint_frequency_steps, for best-checkpoint selection only",
+    "test_use": "exactly once per condition, only after that condition's training is fully complete and the best validation checkpoint is fixed",
+    "test_evaluation_timing": "not before Phase 2C training is authorized and executed"
+  },
+  "efficiency_measurement_plan": {
+    "metrics_to_measure": ["total_parameters", "trainable_parameters", "trainable_parameter_percentage", "lora_parameters", "decoder_parameters", "peak_training_memory_mb", "training_wall_clock_time_seconds"],
+    "flops_claim_policy": "Trainable parameter count reductions will NOT be presented as implying proportional FLOPs or wall-clock training-time reductions unless both are actually measured - the frozen backbone runs its full forward pass regardless of how many layers carry LoRA",
+    "hardware_to_report": "Apple M5, 10-core GPU, 16GB unified memory, MPS backend, PyTorch 2.14.0, Python 3.12.13"
+  },
+  "no_post_hoc_change_list": [
+    "decoder architecture", "LoRA rank", "LoRA target modules (Q/V slice convention)", "LoRA initialization",
+    "optimizer", "learning rate", "scheduler", "loss function", "augmentation", "total_steps",
+    "all seeds (training seed 1000, Random-K seeds 101/202/303)", "K grid {2,4,6,8,12}",
+    "baseline/control definitions", "target-test protocol", "evaluation metrics"
+  ]
+}
