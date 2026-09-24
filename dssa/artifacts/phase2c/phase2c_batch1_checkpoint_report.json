@@ -1,0 +1,120 @@
+{
+  "label": "PHASE 2C — FIRST 5-RUN BATCH CHECKPOINT (implementation/integrity review, not a scientific interpretation)",
+  "batch_size_requested": 5,
+  "runs_completed_this_batch": [
+    "run000_K0_K0_decoder_only",
+    "run001_K2_DSSA",
+    "run002_K2_Early",
+    "run003_K2_Late",
+    "run004_K2_LowestDSS"
+  ],
+  "next_run_pending": "run005_K2_Middle",
+  "total_unique_runs_in_matrix": 39,
+  "runs_remaining_after_batch": 34,
+  "integrity_summary": {
+    "all_5_backbone_unchanged": true,
+    "all_5_have_valid_config_hash": true,
+    "all_5_checkpoints_exist_on_disk": true,
+    "target_test_filenames_found_in_log": 0,
+    "protocol_hash": "0ed5b376032a"
+  },
+  "timing": {
+    "per_run_wall_clock_seconds": {
+      "run000_K0_K0_decoder_only": 1466.88,
+      "run001_K2_DSSA": 1618.11,
+      "run002_K2_Early": 2303.14,
+      "run003_K2_Late": 1570.42,
+      "run004_K2_LowestDSS": 2309.37
+    },
+    "batch_total_wall_clock_seconds": 9267.92,
+    "batch_total_wall_clock_hours": 2.575,
+    "mean_seconds_per_run": 1853.58,
+    "mean_minutes_per_run": 30.89,
+    "note": "training + validation are timed together (single WallClockTimer around the full step loop, which includes the 10 checkpoint-validation passes); no separate train-only/val-only breakdown was instrumented at this granularity."
+  },
+  "memory": {
+    "peak_memory_mb_per_run": {
+      "run000_K0_K0_decoder_only": 1226.63,
+      "run001_K2_DSSA": 1226.82,
+      "run002_K2_Early": 1226.97,
+      "run003_K2_Late": 1227.22,
+      "run004_K2_LowestDSS": 1226.85
+    },
+    "note": "essentially flat across K=0 and K=2 conditions (~1.23 GB MPS allocated) - expected, since LoRA at K=2 adds only 65,536 parameters against a 300M-parameter frozen backbone."
+  },
+  "runtime_estimate_revision": {
+    "original_preflight_estimate_hours": "55-60 (based on isolated K=8 calibration extrapolated naively)",
+    "observed_batch1_mean_minutes_per_run": 30.89,
+    "revised_full_matrix_estimate_hours": 20.06,
+    "revision_reason": "the original estimate over-weighted validation cost (extrapolated from a single K=8 full-image timing without averaging across conditions/K values); observed real per-run cost across 5 completed runs (K=0 and K=2, four conditions) averages ~31 min/run, not ~90 min/run. Later K values (more LoRA layers, marginally larger backward graph) may run slightly slower, but the dominant cost is the frozen backbone's forward/backward pass, which is nearly K-independent - so this revised estimate is expected to hold within a modest margin across the remaining 34 runs."
+  },
+  "numerical_issues": "none observed - no NaN/Inf loss, no non-finite gradient, all validation metrics finite across all 5 runs and all 50 checkpoint-evaluation points (10 per run x 5 runs)",
+  "per_run_detail": [
+    {
+      "run_id": "run000_K0_K0_decoder_only",
+      "condition_labels": ["K0_decoder_only"],
+      "K": 0,
+      "layer_indices": [],
+      "trainable_params": 2766726,
+      "decoder_params": 2766726,
+      "lora_params": 0,
+      "best_val_mean_iou": 0.5272,
+      "best_step": 1600,
+      "final_step_val_mean_iou": 0.5264,
+      "checkpoint_path": "dssa/artifacts/phase2c/runs/run000_K0_K0_decoder_only/run000_K0_K0_decoder_only_best.pt"
+    },
+    {
+      "run_id": "run001_K2_DSSA",
+      "condition_labels": ["DSSA@K2"],
+      "K": 2,
+      "layer_indices": [19, 23],
+      "trainable_params": 2832262,
+      "decoder_params": 2766726,
+      "lora_params": 65536,
+      "best_val_mean_iou": 0.5528,
+      "best_step": 1600,
+      "final_step_val_mean_iou": 0.5520,
+      "checkpoint_path": "dssa/artifacts/phase2c/runs/run001_K2_DSSA/run001_K2_DSSA_best.pt"
+    },
+    {
+      "run_id": "run002_K2_Early",
+      "condition_labels": ["Early@K2"],
+      "K": 2,
+      "layer_indices": [0, 1],
+      "trainable_params": 2832262,
+      "decoder_params": 2766726,
+      "lora_params": 65536,
+      "best_val_mean_iou": 0.5268,
+      "best_step": 1600,
+      "final_step_val_mean_iou": 0.5258,
+      "checkpoint_path": "dssa/artifacts/phase2c/runs/run002_K2_Early/run002_K2_Early_best.pt"
+    },
+    {
+      "run_id": "run003_K2_Late",
+      "condition_labels": ["Late@K2"],
+      "K": 2,
+      "layer_indices": [22, 23],
+      "trainable_params": 2832262,
+      "decoder_params": 2766726,
+      "lora_params": 65536,
+      "best_val_mean_iou": 0.5465,
+      "best_step": 1600,
+      "final_step_val_mean_iou": 0.5442,
+      "checkpoint_path": "dssa/artifacts/phase2c/runs/run003_K2_Late/run003_K2_Late_best.pt"
+    },
+    {
+      "run_id": "run004_K2_LowestDSS",
+      "condition_labels": ["LowestDSS@K2"],
+      "K": 2,
+      "layer_indices": [0, 3],
+      "trainable_params": 2832262,
+      "decoder_params": 2766726,
+      "lora_params": 65536,
+      "best_val_mean_iou": 0.5323,
+      "best_step": 1600,
+      "final_step_val_mean_iou": 0.5294,
+      "checkpoint_path": "dssa/artifacts/phase2c/runs/run004_K2_LowestDSS/run004_K2_LowestDSS_best.pt"
+    }
+  ],
+  "explicit_non_interpretation_notice": "The best_val_mean_iou values above are recorded for completeness and integrity review ONLY. Per this batch's authorization: these 5 results are NOT interpreted, NOT ranked, and NOT used to modify any later run, seed, K value, or protocol setting. All 5 conditions used seed=1000 (a single training seed, no repeats), so no result here supports any claim about DSSA vs. Early vs. Late vs. Lowest-DSS at K=2 - that requires the full matrix plus the statistical caveats already frozen in the protocol."
+}

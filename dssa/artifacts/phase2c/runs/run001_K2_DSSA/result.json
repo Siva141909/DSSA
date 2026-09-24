@@ -1,0 +1,226 @@
+{
+  "status": "completed",
+  "run": {
+    "run_id": "run001_K2_DSSA",
+    "K": 2,
+    "layer_indices": [
+      19,
+      23
+    ],
+    "condition_labels": [
+      "DSSA@K2"
+    ],
+    "is_collision": false,
+    "training_seed": 1000
+  },
+  "train_result": {
+    "run_id": "run001_K2_DSSA",
+    "condition_labels": [
+      "DSSA@K2"
+    ],
+    "K": 2,
+    "layer_indices": [
+      19,
+      23
+    ],
+    "training_seed": 1000,
+    "preflight": false,
+    "total_steps_executed": 2000,
+    "checkpoint_every": 200,
+    "parameter_counts": {
+      "total_params": 306718598,
+      "trainable_params": 2832262,
+      "decoder_params": 2766726,
+      "lora_params": 65536,
+      "trainable_percentage": 0.9234073246513731
+    },
+    "validation_history": [
+      {
+        "step": 200,
+        "train_loss": 1.1653821468353271,
+        "lr": 0.000993316053564413,
+        "val_mean_iou": 0.4469421874806346,
+        "val_macro_f1": 0.5654396526149285,
+        "val_pixel_accuracy": 0.7580784960148826,
+        "val_per_class_iou": [
+          0.6841817542854911,
+          0.6398099079796131,
+          0.523916799074981,
+          0.6288890136602637,
+          0.20485564988345872,
+          0.0
+        ]
+      },
+      {
+        "step": 400,
+        "train_loss": 0.9953489303588867,
+        "lr": 0.0009401297566366318,
+        "val_mean_iou": 0.4917920322231845,
+        "val_macro_f1": 0.6072834742960346,
+        "val_pixel_accuracy": 0.7914185856168616,
+        "val_per_class_iou": [
+          0.7140296669925852,
+          0.6913492508802275,
+          0.5489558287379807,
+          0.6930316626647005,
+          0.3033857840636134,
+          0.0
+        ]
+      },
+      {
+        "step": 600,
+        "train_loss": 0.9254228472709656,
+        "lr": 0.0008392485712604482,
+        "val_mean_iou": 0.5034934669565375,
+        "val_macro_f1": 0.618418326546451,
+        "val_pixel_accuracy": 0.7985342030252991,
+        "val_per_class_iou": [
+          0.7254871251668198,
+          0.6873050555325679,
+          0.5877539470490794,
+          0.68697389199683,
+          0.3334407819939277,
+          0.0
+        ]
+      },
+      {
+        "step": 800,
+        "train_loss": 0.8114737272262573,
+        "lr": 0.0007016045392042452,
+        "val_mean_iou": 0.5033713397223951,
+        "val_macro_f1": 0.6161198359321237,
+        "val_pixel_accuracy": 0.8044981215499065,
+        "val_per_class_iou": [
+          0.7356320580583587,
+          0.7074819039837578,
+          0.5944363423012194,
+          0.6789551820741985,
+          0.30372255191683645,
+          0.0
+        ]
+      },
+      {
+        "step": 1000,
+        "train_loss": 1.0412728786468506,
+        "lr": 0.0005421135271085249,
+        "val_mean_iou": 0.5197105540337611,
+        "val_macro_f1": 0.6316425234310226,
+        "val_pixel_accuracy": 0.8136101700068714,
+        "val_per_class_iou": [
+          0.7502830757361197,
+          0.7518020692895111,
+          0.5923397195072333,
+          0.655667628355661,
+          0.3681708313140417,
+          0.0
+        ]
+      },
+      {
+        "step": 1200,
+        "train_loss": 0.8567099571228027,
+        "lr": 0.0003780588608918947,
+        "val_mean_iou": 0.5337449410496788,
+        "val_macro_f1": 0.6424555679064473,
+        "val_pixel_accuracy": 0.8251418981902247,
+        "val_per_class_iou": [
+          0.763543222769021,
+          0.7545283425052812,
+          0.6069112982134375,
+          0.7088247431791826,
+          0.3631871037170162,
+          0.0054749359141347915
+        ]
+      },
+      {
+        "step": 1400,
+        "train_loss": 0.8366233110427856,
+        "lr": 0.00022721840920935187,
+        "val_mean_iou": 0.5427249226996074,
+        "val_macro_f1": 0.6512081735366962,
+        "val_pixel_accuracy": 0.829271650851217,
+        "val_per_class_iou": [
+          0.7721437288652975,
+          0.7767942631543567,
+          0.6119937577655848,
+          0.6944354456262665,
+          0.3904280820295422,
+          0.010554258756596411
+        ]
+      },
+      {
+        "step": 1600,
+        "train_loss": 0.7886992692947388,
+        "lr": 0.00010593807553146128,
+        "val_mean_iou": 0.5527982745914011,
+        "val_macro_f1": 0.6620816012251586,
+        "val_pixel_accuracy": 0.8350213193152454,
+        "val_per_class_iou": [
+          0.7783748121248982,
+          0.7807459852745087,
+          0.6183537639826492,
+          0.7093251807497724,
+          0.40405511095206076,
+          0.02593479446451701
+        ]
+      },
+      {
+        "step": 1800,
+        "train_loss": 0.7323343753814697,
+        "lr": 2.73604658704939e-05,
+        "val_mean_iou": 0.5506134089759166,
+        "val_macro_f1": 0.6610307129022299,
+        "val_pixel_accuracy": 0.8329227278361843,
+        "val_per_class_iou": [
+          0.776960322735733,
+          0.7703894728573116,
+          0.6202434396536868,
+          0.7108440545832513,
+          0.3952638819168958,
+          0.029979282108620945
+        ]
+      },
+      {
+        "step": 2000,
+        "train_loss": 0.6928565502166748,
+        "lr": 6.834904537900144e-10,
+        "val_mean_iou": 0.5519887898046433,
+        "val_macro_f1": 0.663963259943953,
+        "val_pixel_accuracy": 0.8328981916809459,
+        "val_per_class_iou": [
+          0.7783508097001964,
+          0.7741381409979916,
+          0.6189571003634817,
+          0.7034580471627496,
+          0.3972016458476868,
+          0.03982699475575312
+        ]
+      }
+    ],
+    "best_val_mean_iou": 0.5527982745914011,
+    "best_step": 1600,
+    "best_checkpoint_path": "/Users/siva/Documents/Major project/dssa/artifacts/phase2c/runs/run001_K2_DSSA/run001_K2_DSSA_best.pt",
+    "training_wall_clock_seconds": 1615.9932160377502,
+    "peak_memory_mb": 1226.81591796875,
+    "hardware": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python_version": "3.12.13",
+      "torch_version": "2.14.0",
+      "mps_available": true,
+      "cuda_available": false
+    }
+  },
+  "backbone_fingerprint_after_training": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "wall_clock_total_seconds": 1618.1122691631317,
+  "hardware": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python_version": "3.12.13",
+    "torch_version": "2.14.0",
+    "mps_available": true,
+    "cuda_available": false
+  },
+  "completed_at": 1790249783.637795,
+  "config_hash": "1427f70731343241d74770138ddf8f0d097e0793419eeb2030e744d39c75c9a0",
+  "backbone_unchanged": true
+}

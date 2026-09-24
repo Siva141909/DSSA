@@ -1,0 +1,118 @@
+[matrix] device=mps protocol_hash=0ed5b376032a... total_unique_runs=39
+[matrix] === full frozen matrix (from phase2b_training_protocol.json) ===
+  run000_K0_K0_decoder_only           K= 0 layers=[] labels=['K0_decoder_only'] seed=1000
+  run001_K2_DSSA                      K= 2 layers=[19, 23] labels=['DSSA@K2'] seed=1000
+  run002_K2_Early                     K= 2 layers=[0, 1] labels=['Early@K2'] seed=1000
+  run003_K2_Late                      K= 2 layers=[22, 23] labels=['Late@K2'] seed=1000
+  run004_K2_LowestDSS                 K= 2 layers=[0, 3] labels=['LowestDSS@K2'] seed=1000
+  run005_K2_Middle                    K= 2 layers=[11, 12] labels=['Middle@K2'] seed=1000
+  run006_K2_RandomK_seed101           K= 2 layers=[6, 18] labels=['RandomK_seed101@K2'] seed=1000
+  run007_K2_RandomK_seed202           K= 2 layers=[12, 20] labels=['RandomK_seed202@K2'] seed=1000
+  run008_K2_RandomK_seed303           K= 2 layers=[1, 7] labels=['RandomK_seed303@K2'] seed=1000
+  run009_K4_DSSA                      K= 4 layers=[18, 19, 22, 23] labels=['DSSA@K4'] seed=1000
+  run010_K4_Early                     K= 4 layers=[0, 1, 2, 3] labels=['Early@K4'] seed=1000
+  run011_K4_Late                      K= 4 layers=[20, 21, 22, 23] labels=['Late@K4'] seed=1000
+  run012_K4_LowestDSS                 K= 4 layers=[0, 3, 4, 5] labels=['LowestDSS@K4'] seed=1000
+  run013_K4_Middle                    K= 4 layers=[10, 11, 12, 13] labels=['Middle@K4'] seed=1000
+  run014_K4_RandomK_seed101           K= 4 layers=[6, 11, 17, 18] labels=['RandomK_seed101@K4'] seed=1000
+  run015_K4_RandomK_seed202           K= 4 layers=[12, 13, 15, 20] labels=['RandomK_seed202@K4'] seed=1000
+  run016_K4_RandomK_seed303           K= 4 layers=[1, 6, 7, 23] labels=['RandomK_seed303@K4'] seed=1000
+  run017_K6_DSSA                      K= 6 layers=[17, 18, 19, 20, 22, 23] labels=['DSSA@K6'] seed=1000
+  run018_K6_Early_LowestDSS           K= 6 layers=[0, 1, 2, 3, 4, 5] labels=['Early@K6', 'LowestDSS@K6'] seed=1000 (COLLISION - trained once, shared by all listed labels)
+  run019_K6_Late                      K= 6 layers=[18, 19, 20, 21, 22, 23] labels=['Late@K6'] seed=1000
+  run020_K6_Middle                    K= 6 layers=[9, 10, 11, 12, 13, 14] labels=['Middle@K6'] seed=1000
+  run021_K6_RandomK_seed101           K= 6 layers=[1, 6, 11, 14, 17, 18] labels=['RandomK_seed101@K6'] seed=1000
+  run022_K6_RandomK_seed202           K= 6 layers=[6, 12, 13, 15, 19, 20] labels=['RandomK_seed202@K6'] seed=1000
+  run023_K6_RandomK_seed303           K= 6 layers=[1, 2, 6, 7, 8, 18] labels=['RandomK_seed303@K6'] seed=1000
+  run024_K8_DSSA_Late                 K= 8 layers=[16, 17, 18, 19, 20, 21, 22, 23] labels=['DSSA@K8', 'Late@K8'] seed=1000 (COLLISION - trained once, shared by all listed labels)
+  run025_K8_Early_LowestDSS           K= 8 layers=[0, 1, 2, 3, 4, 5, 6, 7] labels=['Early@K8', 'LowestDSS@K8'] seed=1000 (COLLISION - trained once, shared by all listed labels)
+  run026_K8_Middle                    K= 8 layers=[8, 9, 10, 11, 12, 13, 14, 15] labels=['Middle@K8'] seed=1000
+  run027_K8_RandomK_seed101           K= 8 layers=[1, 6, 11, 14, 16, 17, 18, 22] labels=['RandomK_seed101@K8'] seed=1000
+  run028_K8_RandomK_seed202           K= 8 layers=[1, 6, 12, 13, 15, 19, 20, 23] labels=['RandomK_seed202@K8'] seed=1000
+  run029_K8_RandomK_seed303           K= 8 layers=[1, 2, 6, 7, 8, 12, 16, 18] labels=['RandomK_seed303@K8'] seed=1000
+  run030_K12_DSSA                     K=12 layers=[10, 11, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] labels=['DSSA@K12'] seed=1000
+  run031_K12_Early                    K=12 layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] labels=['Early@K12'] seed=1000
+  run032_K12_Late                     K=12 layers=[12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] labels=['Late@K12'] seed=1000
+  run033_K12_LowestDSS                K=12 layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13] labels=['LowestDSS@K12'] seed=1000
+  run034_K12_Middle                   K=12 layers=[6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17] labels=['Middle@K12'] seed=1000
+  run035_K12_RandomK_seed101          K=12 layers=[1, 4, 6, 7, 11, 14, 15, 16, 17, 18, 19, 22] labels=['RandomK_seed101@K12'] seed=1000
+  run036_K12_RandomK_seed202          K=12 layers=[1, 6, 7, 12, 13, 14, 15, 19, 20, 21, 22, 23] labels=['RandomK_seed202@K12'] seed=1000
+  run037_K12_RandomK_seed303          K=12 layers=[1, 2, 5, 6, 7, 8, 12, 16, 17, 18, 21, 22] labels=['RandomK_seed303@K12'] seed=1000
+  run038_K24_K24_all                  K=24 layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] labels=['K24_all'] seed=1000
+[matrix] === end matrix ===
+
+[matrix] frozen-backbone baseline fingerprint: 2d31df5dd8a9e986...
+
+
+[run] starting run000_K0_K0_decoder_only K=0 layers=[] labels=['K0_decoder_only']
+[run000_K0_K0_decoder_only] layers=[] trainable=2766726 (decoder=2766726, lora=0) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[run000_K0_K0_decoder_only] step=200 loss=1.2931 val_mIoU=0.3887
+[run000_K0_K0_decoder_only] step=400 loss=1.0551 val_mIoU=0.4607
+[run000_K0_K0_decoder_only] step=600 loss=1.0195 val_mIoU=0.4486
+[run000_K0_K0_decoder_only] step=800 loss=0.8787 val_mIoU=0.4903
+[run000_K0_K0_decoder_only] step=1000 loss=1.3035 val_mIoU=0.4899
+[run000_K0_K0_decoder_only] step=1200 loss=0.9550 val_mIoU=0.5151
+[run000_K0_K0_decoder_only] step=1400 loss=0.8774 val_mIoU=0.5137
+[run000_K0_K0_decoder_only] step=1600 loss=0.9397 val_mIoU=0.5272
+[run000_K0_K0_decoder_only] step=1800 loss=0.8124 val_mIoU=0.5246
+[run000_K0_K0_decoder_only] step=2000 loss=0.7328 val_mIoU=0.5264
+[done] run000_K0_K0_decoder_only: best_val_mIoU=0.5272 best_step=1600 wall_clock=1466.9s backbone_unchanged=True
+
+[run] starting run001_K2_DSSA K=2 layers=[19, 23] labels=['DSSA@K2']
+[run001_K2_DSSA] layers=[19, 23] trainable=2832262 (decoder=2766726, lora=65536) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[run001_K2_DSSA] step=200 loss=1.1654 val_mIoU=0.4469
+[run001_K2_DSSA] step=400 loss=0.9953 val_mIoU=0.4918
+[run001_K2_DSSA] step=600 loss=0.9254 val_mIoU=0.5035
+[run001_K2_DSSA] step=800 loss=0.8115 val_mIoU=0.5034
+[run001_K2_DSSA] step=1000 loss=1.0413 val_mIoU=0.5197
+[run001_K2_DSSA] step=1200 loss=0.8567 val_mIoU=0.5337
+[run001_K2_DSSA] step=1400 loss=0.8366 val_mIoU=0.5427
+[run001_K2_DSSA] step=1600 loss=0.7887 val_mIoU=0.5528
+[run001_K2_DSSA] step=1800 loss=0.7323 val_mIoU=0.5506
+[run001_K2_DSSA] step=2000 loss=0.6929 val_mIoU=0.5520
+[done] run001_K2_DSSA: best_val_mIoU=0.5528 best_step=1600 wall_clock=1618.1s backbone_unchanged=True
+
+[run] starting run002_K2_Early K=2 layers=[0, 1] labels=['Early@K2']
+[run002_K2_Early] layers=[0, 1] trainable=2832262 (decoder=2766726, lora=65536) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[run002_K2_Early] step=200 loss=1.1569 val_mIoU=0.3850
+[run002_K2_Early] step=400 loss=0.9959 val_mIoU=0.4807
+[run002_K2_Early] step=600 loss=0.8961 val_mIoU=0.4773
+[run002_K2_Early] step=800 loss=0.8541 val_mIoU=0.4864
+[run002_K2_Early] step=1000 loss=1.1454 val_mIoU=0.4869
+[run002_K2_Early] step=1200 loss=0.9193 val_mIoU=0.5159
+[run002_K2_Early] step=1400 loss=0.7987 val_mIoU=0.5118
+[run002_K2_Early] step=1600 loss=0.8683 val_mIoU=0.5268
+[run002_K2_Early] step=1800 loss=0.7273 val_mIoU=0.5268
+[run002_K2_Early] step=2000 loss=0.6683 val_mIoU=0.5258
+[done] run002_K2_Early: best_val_mIoU=0.5268 best_step=1600 wall_clock=2303.1s backbone_unchanged=True
+
+[run] starting run003_K2_Late K=2 layers=[22, 23] labels=['Late@K2']
+[run003_K2_Late] layers=[22, 23] trainable=2832262 (decoder=2766726, lora=65536) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[run003_K2_Late] step=200 loss=1.1787 val_mIoU=0.4382
+[run003_K2_Late] step=400 loss=1.0025 val_mIoU=0.4876
+[run003_K2_Late] step=600 loss=0.9297 val_mIoU=0.4826
+[run003_K2_Late] step=800 loss=0.8177 val_mIoU=0.4999
+[run003_K2_Late] step=1000 loss=1.2604 val_mIoU=0.5205
+[run003_K2_Late] step=1200 loss=0.8780 val_mIoU=0.5358
+[run003_K2_Late] step=1400 loss=0.8645 val_mIoU=0.5356
+[run003_K2_Late] step=1600 loss=0.8793 val_mIoU=0.5465
+[run003_K2_Late] step=1800 loss=0.7569 val_mIoU=0.5450
+[run003_K2_Late] step=2000 loss=0.6701 val_mIoU=0.5442
+[done] run003_K2_Late: best_val_mIoU=0.5465 best_step=1600 wall_clock=1570.4s backbone_unchanged=True
+
+[run] starting run004_K2_LowestDSS K=2 layers=[0, 3] labels=['LowestDSS@K2']
+[run004_K2_LowestDSS] layers=[0, 3] trainable=2832262 (decoder=2766726, lora=65536) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[run004_K2_LowestDSS] step=200 loss=1.1684 val_mIoU=0.4459
+[run004_K2_LowestDSS] step=400 loss=1.0500 val_mIoU=0.4831
+[run004_K2_LowestDSS] step=600 loss=0.8779 val_mIoU=0.4704
+[run004_K2_LowestDSS] step=800 loss=0.8108 val_mIoU=0.4725
+[run004_K2_LowestDSS] step=1000 loss=1.0564 val_mIoU=0.4918
+[run004_K2_LowestDSS] step=1200 loss=0.8552 val_mIoU=0.5072
+[run004_K2_LowestDSS] step=1400 loss=0.7833 val_mIoU=0.5179
+[run004_K2_LowestDSS] step=1600 loss=0.8680 val_mIoU=0.5323
+[run004_K2_LowestDSS] step=1800 loss=0.7124 val_mIoU=0.5307
+[run004_K2_LowestDSS] step=2000 loss=0.6563 val_mIoU=0.5294
+[done] run004_K2_LowestDSS: best_val_mIoU=0.5323 best_step=1600 wall_clock=2309.4s backbone_unchanged=True
+[matrix] reached --max-new-runs=5; stopping before starting run005_K2_Middle
+
+[matrix] session complete: 5 new run(s) completed this invocation.
