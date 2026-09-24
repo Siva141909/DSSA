@@ -1,0 +1,58 @@
+{
+  "dataset": "ISPRS Vaihingen (TOP/IRRG)",
+  "source_directory": "dssa/data/vaihingen_irrg/",
+  "total_files": 33,
+  "methodology": {
+    "outer_split": {
+      "status": "NEW Phase 2B experimental design decision - NOT part of the original frozen specification",
+      "ordering_rule": "lexicographic_filename_order",
+      "ordering_note": "Python default string sort on basename, e.g. 'area1' < 'area10' < 'area11' < ... < 'area17' < 'area2' - lexicographic, not numeric.",
+      "randomization": "none - no shuffle, no seed, purely positional after lexicographic sort",
+      "partition_sizes": {"target_train": 20, "target_validation": 5, "target_test": 8}
+    },
+    "target_probe": {
+      "status": "NEW Phase 2B experimental design decision - NOT part of the original frozen specification",
+      "count": 5,
+      "rule": "first 5 files (by lexicographic order) of the target_train partition",
+      "rationale": "The original freeze (DSSA_PROJECT_FREEZE.md Sec O-I) specifies target-probe as 'roughly 10-20% of the total target pool' (33 files), not a unique integer. 10% of 33 = 3.3, 20% of 33 = 6.6. Five files is approximately 15.15% of the 33-file total target pool, near the midpoint of the stated range. This integer (5) was not specified by the original freeze and is recorded here as a new, explicit decision.",
+      "subset_of": "target_train"
+    }
+  },
+  "labels_accessed": false,
+  "checkpoint": "ibm-nasa-geospatial/Prithvi-EO-2.0-300M",
+  "checkpoint_revision": "9eb1b1102806593963daa333bcc491b1c6f8562f",
+  "created_by_phase": "Phase 2B-A",
+  "immutable": true,
+  "partitions": {
+    "target_train": [
+      "top_mosaic_09cm_area1.tif", "top_mosaic_09cm_area10.tif", "top_mosaic_09cm_area11.tif",
+      "top_mosaic_09cm_area12.tif", "top_mosaic_09cm_area13.tif", "top_mosaic_09cm_area14.tif",
+      "top_mosaic_09cm_area15.tif", "top_mosaic_09cm_area16.tif", "top_mosaic_09cm_area17.tif",
+      "top_mosaic_09cm_area2.tif", "top_mosaic_09cm_area20.tif", "top_mosaic_09cm_area21.tif",
+      "top_mosaic_09cm_area22.tif", "top_mosaic_09cm_area23.tif", "top_mosaic_09cm_area24.tif",
+      "top_mosaic_09cm_area26.tif", "top_mosaic_09cm_area27.tif", "top_mosaic_09cm_area28.tif",
+      "top_mosaic_09cm_area29.tif", "top_mosaic_09cm_area3.tif"
+    ],
+    "target_probe": [
+      "top_mosaic_09cm_area1.tif", "top_mosaic_09cm_area10.tif", "top_mosaic_09cm_area11.tif",
+      "top_mosaic_09cm_area12.tif", "top_mosaic_09cm_area13.tif"
+    ],
+    "target_validation": [
+      "top_mosaic_09cm_area30.tif", "top_mosaic_09cm_area31.tif", "top_mosaic_09cm_area32.tif",
+      "top_mosaic_09cm_area33.tif", "top_mosaic_09cm_area34.tif"
+    ],
+    "target_test": [
+      "top_mosaic_09cm_area35.tif", "top_mosaic_09cm_area37.tif", "top_mosaic_09cm_area38.tif",
+      "top_mosaic_09cm_area4.tif", "top_mosaic_09cm_area5.tif", "top_mosaic_09cm_area6.tif",
+      "top_mosaic_09cm_area7.tif", "top_mosaic_09cm_area8.tif"
+    ]
+  },
+  "counts": {
+    "target_train_total": 20,
+    "target_probe": 5,
+    "target_train_remainder_not_in_probe": 15,
+    "target_validation": 5,
+    "target_test": 8,
+    "sum_check": 33
+  }
+}
