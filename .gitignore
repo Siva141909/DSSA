@@ -28,3 +28,20 @@ DSSA_Mid_Phase_Review_Final.pptx
 
 # Phase 2D per-step training telemetry (generated; kept in the private release backup, not in Git)
 dssa/artifacts/phase2d/**/telemetry.jsonl
+
+# Phase 3 generated binaries (checkpoints, logits, feature arrays) and per-step
+# telemetry. Run metrics, manifests, test results and reports (JSON/.md) stay tracked.
+dssa/artifacts/phase3/**/*.pt
+dssa/artifacts/phase3/**/*.npy
+dssa/artifacts/phase3/**/*.npz
+dssa/artifacts/phase3/**/telemetry.jsonl
+
+# Report build outputs and imagery (ISPRS crops, rendered PDFs); LaTeX sources stay tracked
+docs/report/*.pdf
+docs/report/*.log
+docs/report/potsdam_top_3_13.png
+docs/report/vaihingen_area12.png
+docs/report/dssa_architecture.png
+
+# Image-bearing final review deck (contains ISPRS crops); the image-free version is tracked
+DSSA_Final_Review.pptx
