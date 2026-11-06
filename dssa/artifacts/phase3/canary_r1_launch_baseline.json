@@ -1,0 +1,72 @@
+{
+ "samples": [
+  {
+   "t": 1793980355.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980360.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980365.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980370.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980375.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980380.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980385.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980390.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980395.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980400.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980405.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980410.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  },
+  {
+   "t": 1793980415.9,
+   "swap_used_mb": 0.0,
+   "pressure": 1
+  }
+ ],
+ "baseline_swap_used_mb": 0.0,
+ "launch_ok": true,
+ "reason": "ok"
+}

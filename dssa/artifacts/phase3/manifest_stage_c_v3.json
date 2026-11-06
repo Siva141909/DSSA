@@ -1,0 +1,1531 @@
+{
+ "authorization": "Phase 3 Stage C, approved 2026-11-06: 75 runs (K0 + 24 single blocks x 3 seeds), budget 48.8 h +-10%. No Stage D, no test openings, no LoveDA, no commit or push.",
+ "approved_decisions": [
+  "D3",
+  "D4",
+  "D5",
+  "D6",
+  "D8 (Stage C only)",
+  "D9",
+  "D10",
+  "D11",
+  "D13",
+  "D14",
+  "D15",
+  "D16",
+  "D17",
+  "D20",
+  "D22",
+  "D25",
+  "D27"
+ ],
+ "amendments": [
+  "Potsdam label decoding: threshold snap for lossy tiles (4_12), approved by the user 2026-11-06 after Stage A found it; see stage_a_record.json",
+  "Evaluation memory (approved by the user 2026-11-06): K0 evaluation processes reached 10.14 GB against the 10.5 GB stop rule. eval_tile.py now uses p3eval.eval_tile_u8 (uint8 padding, per-window calibration, in-place division, row-chunked CE). Verified on all 24 K0 tile evaluations: confusion matrices identical, CE relative difference <= 1.7e-7, peak 10,146 -> 6,007 MB. Limits unchanged.",
+  "v3: canary p3_L00_s1000 stopped at optimizer step 4 by the swap-growth guard (717 MB > 512 MB; process peak 9,431 MB). Restart under a new run ID with every limit unchanged."
+ ],
+ "version": 3,
+ "created": 1793979991.131349,
+ "runs": [
+  {
+   "run_id": "p3_K0_s1000",
+   "K": 0,
+   "layer_indices": [],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 911,
+   "config_hash": "b6d6f0ec26731a025dd7310fe669278ba568b92ddbfb02bb1f3c183d7f5474a2"
+  },
+  {
+   "run_id": "p3_K0_s2000",
+   "K": 0,
+   "layer_indices": [],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 911,
+   "config_hash": "e4e76255036428827ac3a8e69bcb93a487e6833bda89daa9ad84e630c75b29cf"
+  },
+  {
+   "run_id": "p3_K0_s3000",
+   "K": 0,
+   "layer_indices": [],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 911,
+   "config_hash": "e19c122e8a5fd24d08e6ecb3cea23479249a05ed5ad4ceb207cc8215b88132be"
+  },
+  {
+   "run_id": "p3_L00_s1000_r1",
+   "K": 1,
+   "layer_indices": [
+    0
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L00"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1671,
+   "config_hash": "97317070734f915c66f42ccf629a8e76f7e154719a570fb7de8703da4d33d4c1"
+  },
+  {
+   "run_id": "p3_L01_s1000",
+   "K": 1,
+   "layer_indices": [
+    1
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L01"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1633,
+   "config_hash": "dac11b25b5b5fc4a9258e66371f83a30f7515aa877b7c4fbc9f215d9434f2f36"
+  },
+  {
+   "run_id": "p3_L02_s1000",
+   "K": 1,
+   "layer_indices": [
+    2
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L02"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1614,
+   "config_hash": "a515441ae7d8de7897cc465f2ec4b71d806b987fabc60664bd1ea87790386dc0"
+  },
+  {
+   "run_id": "p3_L03_s1000",
+   "K": 1,
+   "layer_indices": [
+    3
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L03"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1576,
+   "config_hash": "4f6172f3d5187d6fb67932d8d4cf564af7d826c693667756c852b553a83f1eea"
+  },
+  {
+   "run_id": "p3_L04_s1000",
+   "K": 1,
+   "layer_indices": [
+    4
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L04"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1551,
+   "config_hash": "261fbdf1805a8076d0e105f642e0c961aa40ce6140cfd97c99e93e56850af325"
+  },
+  {
+   "run_id": "p3_L05_s1000",
+   "K": 1,
+   "layer_indices": [
+    5
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L05"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1525,
+   "config_hash": "14c7fffe1d29d3d363ed8417f3bdec37a5297dfb7bf77d4f5f82021cbe772e8f"
+  },
+  {
+   "run_id": "p3_L06_s1000",
+   "K": 1,
+   "layer_indices": [
+    6
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L06"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1505,
+   "config_hash": "0c0cd178101137e1fc663a1c3db60a56a3b51d89d471dae9df549d9008a412e9"
+  },
+  {
+   "run_id": "p3_L07_s1000",
+   "K": 1,
+   "layer_indices": [
+    7
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L07"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1442,
+   "config_hash": "cd74ca17f1a34bc2c27f1acd7c6fda0df4e41388fa06f4ca12d066fcaee684bb"
+  },
+  {
+   "run_id": "p3_L08_s1000",
+   "K": 1,
+   "layer_indices": [
+    8
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L08"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1404,
+   "config_hash": "489e9eeb481efd0e855894a2f6be90a72a5068e50c969e25c51697937ab64990"
+  },
+  {
+   "run_id": "p3_L09_s1000",
+   "K": 1,
+   "layer_indices": [
+    9
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L09"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1369,
+   "config_hash": "26b905dd9d237bea7ff4e67bdd68dc08fa678d2b7e6aed0469301df2cabaf5ac"
+  },
+  {
+   "run_id": "p3_L10_s1000",
+   "K": 1,
+   "layer_indices": [
+    10
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L10"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1334,
+   "config_hash": "2a7b39bba6eec5437578d6b5c74eda5f7b5b924b83030af2f28ff541f54bfe9a"
+  },
+  {
+   "run_id": "p3_L11_s1000",
+   "K": 1,
+   "layer_indices": [
+    11
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L11"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1307,
+   "config_hash": "c6d3990bbd785c411f53d47e89596316f36231444d4d372c0c72de781182a27f"
+  },
+  {
+   "run_id": "p3_L12_s1000",
+   "K": 1,
+   "layer_indices": [
+    12
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L12"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1268,
+   "config_hash": "eeb54271fd1a485b710337059e6c3fade01d83bc4a6031cf9eb5cb0da150e561"
+  },
+  {
+   "run_id": "p3_L13_s1000",
+   "K": 1,
+   "layer_indices": [
+    13
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L13"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1250,
+   "config_hash": "47ab5602d84d2835bf9c051b2c1ae08151c7ee042041155b5da82366d6d5d061"
+  },
+  {
+   "run_id": "p3_L14_s1000",
+   "K": 1,
+   "layer_indices": [
+    14
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L14"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1211,
+   "config_hash": "7f014b83c9448f31cfacab4cf1c655f0a7a73bcc54ba1c59ba135d85e5b71e3c"
+  },
+  {
+   "run_id": "p3_L15_s1000",
+   "K": 1,
+   "layer_indices": [
+    15
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L15"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1185,
+   "config_hash": "dda093b7f4f5e283501f188997bf7686cbd4954de30909d195e29b7d773d36e3"
+  },
+  {
+   "run_id": "p3_L16_s1000",
+   "K": 1,
+   "layer_indices": [
+    16
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L16"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1146,
+   "config_hash": "da1c7c95661ac5bab62df10f32f183c9b5a091fff0c78c4fda54837613612c39"
+  },
+  {
+   "run_id": "p3_L17_s1000",
+   "K": 1,
+   "layer_indices": [
+    17
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L17"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1113,
+   "config_hash": "1b7ad52df70c6b3ade126bb4ea5b3b426306dd14ffe528b68a16b2eaf4384fe8"
+  },
+  {
+   "run_id": "p3_L18_s1000",
+   "K": 1,
+   "layer_indices": [
+    18
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L18"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1085,
+   "config_hash": "cbf9d0e556c6bdc0819102cf13e05066a877aaa54a216a8902d2d80ae79d15e0"
+  },
+  {
+   "run_id": "p3_L19_s1000",
+   "K": 1,
+   "layer_indices": [
+    19
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L19"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1050,
+   "config_hash": "ef1d1f2197a105d1e2013560b3597863f15780e544c743cea3c3e401631ea2f0"
+  },
+  {
+   "run_id": "p3_L20_s1000",
+   "K": 1,
+   "layer_indices": [
+    20
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L20"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1012,
+   "config_hash": "dfc763c26cbe9737200426a74d3110030a0636f81ccd8bd31cabefc45e5c2330"
+  },
+  {
+   "run_id": "p3_L21_s1000",
+   "K": 1,
+   "layer_indices": [
+    21
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L21"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 979,
+   "config_hash": "3adb662dec36646b58ff3eede361efe11ec90b3a680857502c134f103654b35f"
+  },
+  {
+   "run_id": "p3_L22_s1000",
+   "K": 1,
+   "layer_indices": [
+    22
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L22"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 947,
+   "config_hash": "ba803eafdc68732cb34c3714a52505a11cdf70e3f82cd1f76cb5bc910ca21131"
+  },
+  {
+   "run_id": "p3_L23_s1000",
+   "K": 1,
+   "layer_indices": [
+    23
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L23"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 909,
+   "config_hash": "7834386aa7a310683f3f573acc9d2c7ffb86d652b8978ec868ca5d9e53cd030f"
+  },
+  {
+   "run_id": "p3_L00_s2000",
+   "K": 1,
+   "layer_indices": [
+    0
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L00"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1671,
+   "config_hash": "170666e2196afa2e8f078c2a2ec6cc0f3b124f322848c66f572ea889406bc7bf"
+  },
+  {
+   "run_id": "p3_L01_s2000",
+   "K": 1,
+   "layer_indices": [
+    1
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L01"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1633,
+   "config_hash": "eb8415ce7860cfde7a9ffecab9e77401690b4f5e2662e78cb9a1e2a56131d63a"
+  },
+  {
+   "run_id": "p3_L02_s2000",
+   "K": 1,
+   "layer_indices": [
+    2
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L02"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1614,
+   "config_hash": "6e88cad038fe23ac654131a56f02634b5fbc41a0723ff646e4c258ce8a95cdde"
+  },
+  {
+   "run_id": "p3_L03_s2000",
+   "K": 1,
+   "layer_indices": [
+    3
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L03"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1576,
+   "config_hash": "a8942b2fa759e24e792739f1c6e8a86bf4be8ea9d06e1298cdb410e7fde1ec10"
+  },
+  {
+   "run_id": "p3_L04_s2000",
+   "K": 1,
+   "layer_indices": [
+    4
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L04"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1551,
+   "config_hash": "c0eb3cd2a607802a6f0d8ea241f90f56869004bcec49e5e38fe56116e4a4e1ab"
+  },
+  {
+   "run_id": "p3_L05_s2000",
+   "K": 1,
+   "layer_indices": [
+    5
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L05"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1525,
+   "config_hash": "5b0480f2f47785864210513f8eb48adc44e93c5f2abfe6934e3c3ede3d1651d1"
+  },
+  {
+   "run_id": "p3_L06_s2000",
+   "K": 1,
+   "layer_indices": [
+    6
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L06"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1505,
+   "config_hash": "90eee64451e813a7514b18a19ab11291ccc0ae82f044e050c4bf0ced3d36518d"
+  },
+  {
+   "run_id": "p3_L07_s2000",
+   "K": 1,
+   "layer_indices": [
+    7
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L07"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1442,
+   "config_hash": "b1214f9bf0c01b8a6637151f66c0678c36cd89abad4820a9db16c7433a4ca87e"
+  },
+  {
+   "run_id": "p3_L08_s2000",
+   "K": 1,
+   "layer_indices": [
+    8
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L08"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1404,
+   "config_hash": "14cdd2291d063bdf61f1ef7ccd00b3cca2e679597e38076510d05036239c2720"
+  },
+  {
+   "run_id": "p3_L09_s2000",
+   "K": 1,
+   "layer_indices": [
+    9
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L09"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1369,
+   "config_hash": "52b85e8c32fb6be53292bc483ae5788a8380b93f52fd19c253cffc637cf0c345"
+  },
+  {
+   "run_id": "p3_L10_s2000",
+   "K": 1,
+   "layer_indices": [
+    10
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L10"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1334,
+   "config_hash": "87f081c34cb60f321ed15837ba1673ff7600543f80a17b04d6d83f4376045418"
+  },
+  {
+   "run_id": "p3_L11_s2000",
+   "K": 1,
+   "layer_indices": [
+    11
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L11"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1307,
+   "config_hash": "68d18b0119ae1b14474c930605b67681ea3797416cd78c2a02e5df295a56ccf6"
+  },
+  {
+   "run_id": "p3_L12_s2000",
+   "K": 1,
+   "layer_indices": [
+    12
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L12"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1268,
+   "config_hash": "a4616d7f24e9ff4ff625e5fcdcb3e00e77732eabe9cc22f6cd1478176b5e7474"
+  },
+  {
+   "run_id": "p3_L13_s2000",
+   "K": 1,
+   "layer_indices": [
+    13
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L13"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1250,
+   "config_hash": "f5b109ddecb573b882e09d4706e24d14ef371e9d9c4df7c4006e9d9300bcdd3e"
+  },
+  {
+   "run_id": "p3_L14_s2000",
+   "K": 1,
+   "layer_indices": [
+    14
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L14"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1211,
+   "config_hash": "4941f5c58ca2bf2fab2f249000a8e521547eda314de7c3dfbcc183c9c08c3769"
+  },
+  {
+   "run_id": "p3_L15_s2000",
+   "K": 1,
+   "layer_indices": [
+    15
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L15"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1185,
+   "config_hash": "4496411aacc7c7e61997a81436f9eadd04828db341d9c9c00e0544567ee48e37"
+  },
+  {
+   "run_id": "p3_L16_s2000",
+   "K": 1,
+   "layer_indices": [
+    16
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L16"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1146,
+   "config_hash": "a06f485ff0cf58c35be03b971eb830a85d6867bacf21e8f4295840bf7287016d"
+  },
+  {
+   "run_id": "p3_L17_s2000",
+   "K": 1,
+   "layer_indices": [
+    17
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L17"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1113,
+   "config_hash": "11dc6bb1c2b6dc66e8424faa032c2330ce75d480f8448bbac5659ea990d03495"
+  },
+  {
+   "run_id": "p3_L18_s2000",
+   "K": 1,
+   "layer_indices": [
+    18
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L18"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1085,
+   "config_hash": "f457e2cd3ee1c2ec472fbcdf5ca94590f46a2193e4b365d5711b78beec9d80fc"
+  },
+  {
+   "run_id": "p3_L19_s2000",
+   "K": 1,
+   "layer_indices": [
+    19
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L19"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1050,
+   "config_hash": "54ae9698ed900e4d732b5c671e5f967a5c810c14dd088a1db15a1e94263ca067"
+  },
+  {
+   "run_id": "p3_L20_s2000",
+   "K": 1,
+   "layer_indices": [
+    20
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L20"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1012,
+   "config_hash": "731967a653b8365af75212fded8475863d26f8873dca1aad0f45353020b89cc8"
+  },
+  {
+   "run_id": "p3_L21_s2000",
+   "K": 1,
+   "layer_indices": [
+    21
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L21"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 979,
+   "config_hash": "6341402ab7a40c117d33a1fef32fb7233c52a831c2ba9a13a1f80f4a0ef1704a"
+  },
+  {
+   "run_id": "p3_L22_s2000",
+   "K": 1,
+   "layer_indices": [
+    22
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L22"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 947,
+   "config_hash": "bb69cae8a6de094b9de611f2c800fa14338025aeec9b64c348c82254595dd713"
+  },
+  {
+   "run_id": "p3_L23_s2000",
+   "K": 1,
+   "layer_indices": [
+    23
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L23"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 909,
+   "config_hash": "d800185ce0c504ad05f5e01868671f98b8928a0d9cb34468c0bbaabbc67310ad"
+  },
+  {
+   "run_id": "p3_L00_s3000",
+   "K": 1,
+   "layer_indices": [
+    0
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L00"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1671,
+   "config_hash": "eb3a90758450e502df1d64bba772327f41686639ce927eec011b827e889d5d56"
+  },
+  {
+   "run_id": "p3_L01_s3000",
+   "K": 1,
+   "layer_indices": [
+    1
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L01"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1633,
+   "config_hash": "82372b2a5277c83eb1c892e62220619722e048fcc1335a5faf354892908711c3"
+  },
+  {
+   "run_id": "p3_L02_s3000",
+   "K": 1,
+   "layer_indices": [
+    2
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L02"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1614,
+   "config_hash": "5176d7f8fcbdb4cd5fc90fb99850f63ebccfda2257938c9dc0b3f303eab3fbca"
+  },
+  {
+   "run_id": "p3_L03_s3000",
+   "K": 1,
+   "layer_indices": [
+    3
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L03"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1576,
+   "config_hash": "0d083f6731f65be7533c27576bfbc0fced146686d7a44addf823957cd1bd2a8c"
+  },
+  {
+   "run_id": "p3_L04_s3000",
+   "K": 1,
+   "layer_indices": [
+    4
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L04"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1551,
+   "config_hash": "d23cf7242b87fa7ea7b3aabbf2f7fed2e0a675b6355641e64abeec490d509de3"
+  },
+  {
+   "run_id": "p3_L05_s3000",
+   "K": 1,
+   "layer_indices": [
+    5
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L05"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1525,
+   "config_hash": "65cc33810a0cf30e34084d227be5f97a1ea4db1351dca0dc442b4f8280cf43e2"
+  },
+  {
+   "run_id": "p3_L06_s3000",
+   "K": 1,
+   "layer_indices": [
+    6
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L06"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1505,
+   "config_hash": "4b62254467555d3c31830ff2f0d8a46e3f0dacfad7775f4ca51458477b9b293d"
+  },
+  {
+   "run_id": "p3_L07_s3000",
+   "K": 1,
+   "layer_indices": [
+    7
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L07"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1442,
+   "config_hash": "bf4ecdc3236fca4d5f7cfd13b245092cfd20c024bff392bfd13753bd34b95317"
+  },
+  {
+   "run_id": "p3_L08_s3000",
+   "K": 1,
+   "layer_indices": [
+    8
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L08"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1404,
+   "config_hash": "35360c4112f99e61d57ef0b875f40587c37c4d8a255f8bbc7feb2cae681e6d08"
+  },
+  {
+   "run_id": "p3_L09_s3000",
+   "K": 1,
+   "layer_indices": [
+    9
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L09"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1369,
+   "config_hash": "7b273fd05c14ce52a2d89d5d4f552a9a8cb92cd103d0086bca465241be7a00a1"
+  },
+  {
+   "run_id": "p3_L10_s3000",
+   "K": 1,
+   "layer_indices": [
+    10
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L10"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1334,
+   "config_hash": "f4ab54f95d903eba0b89fbff66e3b2372c366db608f196ebaabdd2bfa42f1f6c"
+  },
+  {
+   "run_id": "p3_L11_s3000",
+   "K": 1,
+   "layer_indices": [
+    11
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L11"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1307,
+   "config_hash": "8c3450ea31563d67cfcb1f38d4bee62865e8d7e5ced06d4929187f8fb2f78e66"
+  },
+  {
+   "run_id": "p3_L12_s3000",
+   "K": 1,
+   "layer_indices": [
+    12
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L12"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1268,
+   "config_hash": "a25c379c87872b25aa257f28fffaad63e1598f00dd5060141b19a863803e3911"
+  },
+  {
+   "run_id": "p3_L13_s3000",
+   "K": 1,
+   "layer_indices": [
+    13
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L13"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1250,
+   "config_hash": "cf343d46e047388730a56c7b5128c02ccaf716dc826b296b4cb4d5e9fc56f1db"
+  },
+  {
+   "run_id": "p3_L14_s3000",
+   "K": 1,
+   "layer_indices": [
+    14
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L14"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1211,
+   "config_hash": "5f9d24313c1d00dda8e193a6e036d129d04fb6c28ff655dfd49da2083f37d4e8"
+  },
+  {
+   "run_id": "p3_L15_s3000",
+   "K": 1,
+   "layer_indices": [
+    15
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L15"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1185,
+   "config_hash": "2d8754b34a49d380d3f20ea1e0d8b9a558414b43a7e16ef19b4766ade7dc274d"
+  },
+  {
+   "run_id": "p3_L16_s3000",
+   "K": 1,
+   "layer_indices": [
+    16
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L16"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1146,
+   "config_hash": "bc0d056b5d8f8ce30a8cc553511c1cc16f74d6573ea9a549f04eb4c69f8e305c"
+  },
+  {
+   "run_id": "p3_L17_s3000",
+   "K": 1,
+   "layer_indices": [
+    17
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L17"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1113,
+   "config_hash": "4ed195e019a9aded063824ee3f1c1a15de2df0d64bf23f02d6c4d20fef223067"
+  },
+  {
+   "run_id": "p3_L18_s3000",
+   "K": 1,
+   "layer_indices": [
+    18
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L18"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1085,
+   "config_hash": "2a88997ce2dbc1b6bf1f9fbaa5912844e8622668788c76bf1bf956bf4639ad95"
+  },
+  {
+   "run_id": "p3_L19_s3000",
+   "K": 1,
+   "layer_indices": [
+    19
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L19"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1050,
+   "config_hash": "1374374def115cd9d34d82b12bfc21b5cb89640a6e95384d86ae462a403f198f"
+  },
+  {
+   "run_id": "p3_L20_s3000",
+   "K": 1,
+   "layer_indices": [
+    20
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L20"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1012,
+   "config_hash": "8c581a34737459b20ecdfb59380023f11c40423f1f59a728a0f3514a71abf277"
+  },
+  {
+   "run_id": "p3_L21_s3000",
+   "K": 1,
+   "layer_indices": [
+    21
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L21"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 979,
+   "config_hash": "7abeec1a9c9cc78fd42f91a245e5e5d659f933a8fca3088b1141a7b70f7bd6d8"
+  },
+  {
+   "run_id": "p3_L22_s3000",
+   "K": 1,
+   "layer_indices": [
+    22
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L22"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 947,
+   "config_hash": "bf375c644168220c1628b59f9cc8809ea07939377e9765adb0cd6226a6bf4834"
+  },
+  {
+   "run_id": "p3_L23_s3000",
+   "K": 1,
+   "layer_indices": [
+    23
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L23"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 909,
+   "config_hash": "a2054135fb2cca7f4dd532f09445b5e6569ee86143264d651b716dff783209bb"
+  }
+ ],
+ "code_hash": {
+  "eval_tile.py": "47e6027b33b901fa646f5192455cd041f2eee59259318289d8998f84f298e599",
+  "make_manifest.py": "bd6e1e9c1c41aa382049ae441327396daf1b73b32d5631c27e8c3237baafd7e5",
+  "p3common.py": "0b911cd02a11336596470970a515ff6f59054e73d2d332aaeadbe55a545c1ce2",
+  "p3eval.py": "0e8328271700b12fcfd34082bb0856509ddaddc7ade4795670f4977cb982d880",
+  "p3run.py": "37be133ac9c5e4f4b2796bcf3e2b6f33a903a9bbe69e490473d1356aacb1b57e",
+  "reload_check.py": "b1dee4b0b1dcbe74cfbd8ebcf6366ddede9748f4291722ff5b03c16ce33881aa",
+  "run_sequence.py": "49ae93c34156b0c2de00d22062e61fa2d3c6bf020d6956c393961e7f2e84a648",
+  "run_train.py": "415b6115e46cb64c8f40ec475d11134f40fbaa26975bcec01f67daff9e32148b",
+  "stage_a.py": "4cf375be15eab879375222b58581e65d727ee4bf81eb8731a661320a78eaddab",
+  "stage_b_scores.py": "b887fa0092bda0e174b504ccb20421c9fa68b3b36cbcfdaf22e11775968d0253",
+  "verify_eval.py": "347a5257904bbb50f3e852cdbe53d0aedaff2d29c183eda42130089a9ffd60d8"
+ },
+ "phase2d_code_hash": {
+  "PHASE2D_ADDENDUM.md": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+  "PHASE2D_ADDENDUM_V2.md": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+  "common.py": "082622147ee899c8660e78bc777e18a799c7af2b4f8f5f7e9f44bf3ac02acb8e",
+  "dataset_u8.py": "55744d1325fcb29a6dd1084133a0140c7c1c50518abf63ee68ac5cfd6b8717bf",
+  "evaluation.py": "21b56f052e3f213a07179adac2df5eaa778bf5d00489dbb32646cdc3c6d2ea6e",
+  "gate0_dss.py": "4681e66965eeac6e9cd04cf4c37c9921b709162047f235bebd907a286d536c23",
+  "gate0_setup.py": "b214529b79591e9f379249d12d6d95947d6bd81753d35126f784b6dbd194daf4",
+  "gate2_analysis.py": "a687d57632d0e0289469c0126b5d8c847a3a4e333d7b7557bf1182cd6d175cba",
+  "gate2_analysis_v10.py": "be8c3cad77caac734628467b69de4c150ddcad7af59d81307ba38db1a7e88deb",
+  "gate2_analysis_v11.py": "7a7df1b1ee96e3a4d0c936612cf230195b48b679da005d947884983812364017",
+  "gate2_analysis_v12.py": "ba227c258aad682b588b172f19f97abe75e0c0ba60ab3a3e31542b7edb4840b7",
+  "gate2_analysis_v5.py": "0335856c2cec4a2d3a94da4bb3d7508aed2b8bb44b1bb3d6b5b31085e8dda963",
+  "gate2_analysis_v6.py": "28e1445a7f4c365ac1b988b059090c5a637e8e8ccd658a2284cd84c20e1cb471",
+  "gate2_analysis_v7.py": "48857c4240a92d4365c47ec9a5979e2dbffa96aab75e5e98003e4abaf857cf41",
+  "gate2_analysis_v8.py": "8b8a3ef6d0603987c58ee15dfa218d1065ffd8550e304ed4a34f3f8c53cd1957",
+  "gate2_analysis_v9.py": "d9378b87e04e7ee12bf23f79bf2510c2e32bb2d1e8af4de6d16a943c0a0d19f9",
+  "gate2_setup.py": "25f3463409127c01f59f7da1e95c28641d6ae40b357e103a183974047730f182",
+  "gate_v10.py": "d43e526ac5767b1db639a2b009f2807775442c1378c93bc43babd3692fa20cdd",
+  "gate_v11.py": "095243f595d90e28e6343b20091a1ca39406b759b88eb9a7f7e7b78fd56ffec1",
+  "gate_v12.py": "148ed3a58e04f0db897445223f712324be1081bd9c142a965977343ddd55e492",
+  "gate_v2.py": "eac87e97f349b9761deee58532f173e8ab6f7ea24eebb935c2dab6498a28a32b",
+  "gate_v3.py": "5c64bfb1677193b174118bcd52623a78d26ed3058c9217ba3593f75369d5c489",
+  "gate_v5.py": "618db818b97a3c6e6a724c78d8d41cd327ffaec2952e2a14be2fe118c7558e2d",
+  "gate_v6.py": "0b164083d8f4b8304086a4c9074490d706b5233577b26d20d352c094977475de",
+  "gate_v7.py": "3fce036fda13de103b44fce5864175878c9c6a5ed47657033cbcfd22ff260619",
+  "gate_v8.py": "011361f77f761313221e70ffbecdeed4fc1539466a3880167f2e728c38e07549",
+  "gate_v9.py": "6f7cc04d7a4556fd7900451a7e231f173fb62c243fbabe34049986a388992f8b",
+  "models.py": "0b317077978334ea4f4ec2381d076051fc157a1c085ee04287aa0579e2428cba",
+  "oracle_analysis.py": "31ede6fec9f0a958dc4e53510dbf3c8079261c861374c5848d593addbf413e7e",
+  "pilot_analysis.py": "e37cf9beb3ed60f12f0a92ffb46aaebaf4e7119e04b48e6af3be66b29dfd8776",
+  "pilot_analysis_v3.py": "644243cfb179f68d764c60c24ea8192ad12f684b06549c96cced0b4b765b9bb5",
+  "pilot_stats_audit.py": "fcf91876077c1bdb6566d30a43ce338a1ecc5914599c1d01734d899ba1c69835",
+  "run_gate2.py": "151a653935dcacd7a9b08ce7a39bb19a8d90791503bf3059ee6dedf3fee59acf",
+  "run_gate2_v10.py": "5129c64aed69bbce007062431fdcc53f0c16b32be482c8975dacdde4a44f0669",
+  "run_gate2_v11.py": "df23b909b9f51836738ca4a91ecbdc7ece1bbec3a90fc15ddd9ecb0e41bc412f",
+  "run_gate2_v12.py": "bded41d4d7fd6e4cde68fdf41e1a1b84bcaca42f267cc1ce7ed2d53379a5c68a",
+  "run_gate2_v5.py": "091bf3c06a8eff95fdee92dfc225f9b03769edb040538463a6a32ccefb85c4b4",
+  "run_gate2_v6.py": "d4599e6ee0af4e7c75c2fa729adeb4cf006ef5ffc1015a1678352aa3d544dbe6",
+  "run_gate2_v7.py": "f251e9d2d4fa9059e23328ac2c63dc0bae80280aa4c06a623dc5b23329adee00",
+  "run_gate2_v8.py": "7caa514cdb9cc2d46e58b6e3a2a266ac9c50f44cb95ad5a00c7b542c32046c6a",
+  "run_gate2_v9.py": "a954cabfcb679eb127a7b63f2d0a1593522b08253e6038032bbce416c81e4f10",
+  "run_one.py": "53d305c12b0abb6ae9b51bd3153645714470c2924b36acee5e4e13b82062a7f7",
+  "run_one_v10.py": "e51e8b676bd70400db930038c477124c1fd1acc0c6787b4856c0d6bb1d81c43e",
+  "run_one_v11.py": "92abcc5cfbbeed9d6fa06b99579e41136cd2d213d4c81c710a231cd0001fcd0d",
+  "run_one_v12.py": "8220d7ee5bae7417ee322da85c83411dfd83346d823fd4a24ac0f0a3f76f63a8",
+  "run_one_v2.py": "62484988dba47cf29e35ac64c5011082c207164681c0e59bb80e4b5ebe8ea70a",
+  "run_one_v3.py": "029d9f8413346189e8c3c1470400b29dc5bb79f3c184b044e943fd9159028205",
+  "run_one_v4.py": "96ec14400509588191b18942f69253a42dcad8b912a82bc4c2661078905b016e",
+  "run_one_v5.py": "a05c9e3237c87dad75930df2e6c7f927bd8a33728f3fe24231b42cc90cff5499",
+  "run_one_v6.py": "c7cf9a5618c6c7f7d65a5638ae3706a33b99c115d9bc674b51d55eb3269e9adf",
+  "run_one_v7.py": "7ab0aada1eef7c0ce5f1d1158a1d1143e4351033551a451f7e45ab2b06ec989c",
+  "run_one_v8.py": "6ecec2bef43c15f49b5ff1285bf65a182e63a13988d4f6335c80b176cfe87dee",
+  "run_one_v9.py": "5a6e6d4a61ea7aac0a07b0da90c006a2d67dba3a46709267095c2bb08a8d831e",
+  "run_pilot.py": "07a785521780be900a9936450ef4cbc9e7a0e52f1330c863af06f8c239f4ff25",
+  "run_pilot_v3.py": "3fdf084f8b1b4c526103f091adf530a4f831958987af6891816535a5767517f6",
+  "sigsafe.py": "07a79495255eac77ec7dceda0b72ab3c7754aa41dbf00bb6d45b056235af64e3",
+  "tstat.py": "52435adff181bac21c8095ade04d933a1a45156c7c100f2b27517b7843d180d9",
+  "verify_reload.py": "a6ddbe412c4c9d90e3f08e8c53b8d9c611b2027a378ba3d03ddd5aa445196e9a",
+  "verify_reload_v8.py": "398f498412d547399667b143a28a2c180420edafb682a250c4847d9787ad7d9b"
+ },
+ "git_head": "807b18760c0833746086c37321b5ddb2dd8d0004",
+ "split_sha256": "37043c5357c81187ec0a84fc14df265002e9cb6b649824cad588a1c1e069ef8b",
+ "transform_sha256": "8bb7102c9fe2038cab404d6a2ac939e8429bcf7ee8b670c4c60324a790644517",
+ "stage_a_record_sha256": "4a869d103f49d922b4234ff570d07e0160b3c19e776b230cc8a333c1797fbd0c",
+ "limits": {
+  "stop_rule_mb": 10752.0,
+  "early_abort_mb": 11264.0,
+  "hard_guard_mb": 11776.0,
+  "swap_growth_mb": 512,
+  "runtime": "1.5 x est_seconds (training)",
+  "eval_watchdog_s": 400,
+  "reload_watchdog_s": 300,
+  "guards": "sleep 30 s, charger 2 polls, thermal, critical pressure, telemetry stale 60 s, no optimizer step 300 s; no retry"
+ },
+ "budget_hours": {
+  "stage_c": 48.8,
+  "tolerance": 0.1
+ },
+ "supersedes": {
+  "manifest_stage_c_v2.json": "757f3034f2479e04052f05ab9f0832ac675cd8a2518a6eb57c1dfe651202a4ed",
+  "v2_code_hash": {
+   "eval_tile.py": "47e6027b33b901fa646f5192455cd041f2eee59259318289d8998f84f298e599",
+   "make_manifest.py": "1bf00d3fe907d78e8b920f4e5c3da4b8ca2e832676c4c1f37fb9d87d04b69c07",
+   "p3common.py": "21e60d25918647a5ba1b44cd634fd2b8948cdfd8348139b03786cc29ed865a41",
+   "p3eval.py": "0e8328271700b12fcfd34082bb0856509ddaddc7ade4795670f4977cb982d880",
+   "p3run.py": "37be133ac9c5e4f4b2796bcf3e2b6f33a903a9bbe69e490473d1356aacb1b57e",
+   "reload_check.py": "b1dee4b0b1dcbe74cfbd8ebcf6366ddede9748f4291722ff5b03c16ce33881aa",
+   "run_sequence.py": "907c88ae8506484d920628f9ca7d5ce634f14baebe169cadb28052263119bab5",
+   "run_train.py": "415b6115e46cb64c8f40ec475d11134f40fbaa26975bcec01f67daff9e32148b",
+   "stage_a.py": "4cf375be15eab879375222b58581e65d727ee4bf81eb8731a661320a78eaddab",
+   "stage_b_scores.py": "b887fa0092bda0e174b504ccb20421c9fa68b3b36cbcfdaf22e11775968d0253",
+   "verify_eval.py": "347a5257904bbb50f3e852cdbe53d0aedaff2d29c183eda42130089a9ffd60d8"
+  },
+  "manifest_stage_c.json": "3f5e0e74188b89cde07a7cc16a84941f99f316faff424c67ca566a5a2e75a3d0"
+ },
+ "evaluator_verification": {
+  "files": {
+   "p3_K0_s1000_5_14.json": "0e115f0c887d8f9aeaa8d29a42f620532ca4188e031c68e8d1c72e27bc3a9960",
+   "p3_K0_s1000_5_15.json": "30b2f52a5b915c777e126637a9e0c5f9a41f371071d402abac0483ea5df5643a",
+   "p3_K0_s1000_6_10.json": "66d100752279e8c15e6c5d886e0d87c47c282e99ae0880b8b068f88e4fbea1cd",
+   "p3_K0_s1000_6_11.json": "9b6f1b2614e638e31f053e9775c5cfcba31a5992edccc7eeb5170d77b1d8ea2c",
+   "p3_K0_s1000_6_12.json": "e61bf035966ce7c627c8d6f8cb4a8a6eac7540be14a3cf5fc24c2bdcc7861791",
+   "p3_K0_s1000_6_13.json": "eb64043ca348570b6f15f721c0b11b52b5e66ebd8cf34ce0c859777b2ae6ce2f",
+   "p3_K0_s1000_6_14.json": "5d42b62ac2bf5b47a35c59152dccd0a3802da1380c06df1a3c267f1bb26d1efc",
+   "p3_K0_s1000_6_15.json": "070dfaf7e416d32811b2c091c42fdc5f88472de0991df8034886cc33138a643f",
+   "p3_K0_s2000_5_14.json": "c735edd83b824cc9cce4c524c57323df0945168434ee3372d0cacb67f2a94184",
+   "p3_K0_s2000_5_15.json": "ceb5742f5c41a033f0507f70b2ea9e4ecc93e8c468c3d999e28164fd5bd1a4e9",
+   "p3_K0_s2000_6_10.json": "266b74757b939c52c9356ff1c0fff3933de62777fd323fc049425b130b608473",
+   "p3_K0_s2000_6_11.json": "3c4c4555f6d3737e7c116360e7c6c44f9f17e87651c8477764b59687244cad67",
+   "p3_K0_s2000_6_12.json": "b286c9350c0bc6543484eedf03d57fd2e09c8c0eda27cdcb1d477297ba408302",
+   "p3_K0_s2000_6_13.json": "a63652ada775f2136ea594b7b5e908b854bdf1f22c8d44b9cbb74ae59b441d37",
+   "p3_K0_s2000_6_14.json": "9a8bac7f60d343e73d4fb328002d550ca5edebf68b3e263fb6de44a5f20f0681",
+   "p3_K0_s2000_6_15.json": "1db3e61c0a98f26188d0bd78f9a04b9049826992b940004f699ab1a7c39922fe",
+   "p3_K0_s3000_5_14.json": "e6fde3fca0c64cf585e56d821e31b8876e3d77fc3a9b692e3c7d7af26d9d10bc",
+   "p3_K0_s3000_5_15.json": "b441a0e7f829fc7fb2d46b2972c896e83ad2bb779531a9903b5a3e2ae20556fa",
+   "p3_K0_s3000_6_10.json": "a6ed815afe9522bf7c442e9bdbe540a3a901fb145c305a4d0911af298f21afa7",
+   "p3_K0_s3000_6_11.json": "483fcb3edc05304f5a7faab7a589bceef5b4dbda4c3d631621559722a01b6229",
+   "p3_K0_s3000_6_12.json": "de67a202831cab5eff0fc5d39062c977ee7d91e5f57bf477441948d994017ac1",
+   "p3_K0_s3000_6_13.json": "c35ca2c65b00b9b9bd6f05c2fec88893263b32f195f65d938ba510fbe7eeae78",
+   "p3_K0_s3000_6_14.json": "ae90a918ccfdd342b0e8e9046b55d4cb9863f03d9943b03c0fbc1c46adeeba1f",
+   "p3_K0_s3000_6_15.json": "46abc0d2c76bb8da8838ad407f821377a55aa8124a74300ede842858b7b33664"
+  },
+  "all_pass": true,
+  "max_ce_rel_diff": 1.7006958081055357e-07,
+  "max_new_peak_mb": 6006.738265991211,
+  "max_old_peak_mb": 10146.241149902344
+ },
+ "interrupted_runs": {
+  "p3_L00_s1000": {
+   "files": {
+    "IN_PROGRESS": "a4a0a51d9f3a227a28670462c094822d74be20d78c5d053e8ddf8e9b9e5b77ff",
+    "incident.json": "89c8006aef8c6637f8b243f8eaecbf34a748c6ab9f6c07817a081254cd1f702a",
+    "telemetry.jsonl": "d9fa54a4e021f8cfbabb61b3b8e5a546cf71836abaf36f8b3088cb352df63661"
+   },
+   "error": "RuntimeError('STOP: swap growth 717 MB above limit')",
+   "stage": "train",
+   "optimizer_steps_completed": 4,
+   "kernel_lifetime_max_mb": 9431.160118103027,
+   "preserved": "never overwritten or reused"
+  }
+ },
+ "authorization_v3": "Exactly one controlled canary restart (p3_L00_s1000_r1), approved by the user 2026-11-06. Launch only with normal memory pressure and stable swap (baseline recorded). Run only the canary; no automatic continuation; any guard trip stops with evidence and no second retry without explicit approval."
+}
