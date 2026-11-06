@@ -1,0 +1,601 @@
+{
+ "started": 1793968441.193619,
+ "split": {
+  "sha256": "37043c5357c81187ec0a84fc14df265002e9cb6b649824cad588a1c1e069ef8b",
+  "frozen_at": 1793968293.043944,
+  "counts": {
+   "train": 20,
+   "probe": 5,
+   "validation": 8,
+   "test": 10
+  },
+  "note": "frozen by the first Stage A attempt, which then stopped at the 4_12 colour check; verified here, not rewritten"
+ },
+ "label_archive": {
+  "sha256": "1ae9947e4b79a8bf288f471bfdf678fd2ba7c3a2017fc696a38d7ebeb6e03a93",
+  "n_members": 38,
+  "all_38_members_present": true,
+  "train_val_member_crc": {
+   "top_potsdam_2_10_label.tif": {
+    "size": 108035480,
+    "crc": "83d206f6"
+   },
+   "top_potsdam_2_11_label.tif": {
+    "size": 108037944,
+    "crc": "6c6bd3b9"
+   },
+   "top_potsdam_2_12_label.tif": {
+    "size": 108030728,
+    "crc": "a4873241"
+   },
+   "top_potsdam_2_13_label.tif": {
+    "size": 108035200,
+    "crc": "b09ef6c7"
+   },
+   "top_potsdam_2_14_label.tif": {
+    "size": 108031524,
+    "crc": "f92be1a4"
+   },
+   "top_potsdam_3_10_label.tif": {
+    "size": 108035652,
+    "crc": "2ced22ef"
+   },
+   "top_potsdam_3_11_label.tif": {
+    "size": 108036444,
+    "crc": "7ce6bdb1"
+   },
+   "top_potsdam_3_12_label.tif": {
+    "size": 108038200,
+    "crc": "149b47bd"
+   },
+   "top_potsdam_3_13_label.tif": {
+    "size": 108038980,
+    "crc": "43e4949a"
+   },
+   "top_potsdam_3_14_label.tif": {
+    "size": 108037476,
+    "crc": "aff01ff6"
+   },
+   "top_potsdam_4_10_label.tif": {
+    "size": 108036084,
+    "crc": "6c1cd238"
+   },
+   "top_potsdam_4_11_label.tif": {
+    "size": 108036912,
+    "crc": "868c3f61"
+   },
+   "top_potsdam_4_12_label.tif": {
+    "size": 108037328,
+    "crc": "a52d7fc4"
+   },
+   "top_potsdam_4_13_label.tif": {
+    "size": 108040656,
+    "crc": "48baa396"
+   },
+   "top_potsdam_4_14_label.tif": {
+    "size": 108037972,
+    "crc": "b3da7901"
+   },
+   "top_potsdam_4_15_label.tif": {
+    "size": 108036972,
+    "crc": "e0b876fa"
+   },
+   "top_potsdam_5_10_label.tif": {
+    "size": 108036004,
+    "crc": "8f0ab369"
+   },
+   "top_potsdam_5_11_label.tif": {
+    "size": 108035236,
+    "crc": "b1781f6f"
+   },
+   "top_potsdam_5_12_label.tif": {
+    "size": 108037468,
+    "crc": "e330aebf"
+   },
+   "top_potsdam_5_13_label.tif": {
+    "size": 108036968,
+    "crc": "882c15f3"
+   },
+   "top_potsdam_5_14_label.tif": {
+    "size": 108038888,
+    "crc": "cfb0a94f"
+   },
+   "top_potsdam_5_15_label.tif": {
+    "size": 108039696,
+    "crc": "1305d675"
+   },
+   "top_potsdam_6_10_label.tif": {
+    "size": 108036532,
+    "crc": "d68db8ec"
+   },
+   "top_potsdam_6_11_label.tif": {
+    "size": 108036652,
+    "crc": "4280e0f7"
+   },
+   "top_potsdam_6_12_label.tif": {
+    "size": 108035580,
+    "crc": "1914a626"
+   },
+   "top_potsdam_6_13_label.tif": {
+    "size": 108034400,
+    "crc": "e1b1531b"
+   },
+   "top_potsdam_6_14_label.tif": {
+    "size": 108035772,
+    "crc": "41ebe450"
+   },
+   "top_potsdam_6_15_label.tif": {
+    "size": 108038592,
+    "crc": "18ae4000"
+   }
+  }
+ },
+ "training_labels": {
+  "tiles": {
+   "top_potsdam_2_10_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "22694724de291a1ce9e365976e11efe0113d20c04b9b02b343502ff356235192",
+    "class_counts": [
+     7433797,
+     5447007,
+     15182061,
+     2679388,
+     313148,
+     4944599
+    ]
+   },
+   "top_potsdam_2_11_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "edd2d371b9be895a3eff398bbce00b2efae086f610bbdf7b9feb07e2a5c4c1b3",
+    "class_counts": [
+     8179469,
+     3639401,
+     13233674,
+     7772916,
+     290622,
+     2883918
+    ]
+   },
+   "top_potsdam_2_12_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "5da46acef7824bfe872e294dd95b6a378955b00102f545302d721bb072c74a6a",
+    "class_counts": [
+     6912828,
+     3571645,
+     18322600,
+     6633002,
+     326262,
+     233663
+    ]
+   },
+   "top_potsdam_2_13_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "ba8e492a0d82232f68bfe8fca19da6b8e101ed2f37833943a507cb8937915893",
+    "class_counts": [
+     8882718,
+     6659996,
+     10948401,
+     8392517,
+     421248,
+     695120
+    ]
+   },
+   "top_potsdam_2_14_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "cb5d56b00aae54d9291cc69dbd732bd251362fb114c7518a164523d8b62102d0",
+    "class_counts": [
+     5538723,
+     2479903,
+     14856280,
+     12779005,
+     216918,
+     129171
+    ]
+   },
+   "top_potsdam_3_10_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "fdafc9090f94cfddceb8c7eca930cc758e494fe0c3a701f94a16f538635bdaf9",
+    "class_counts": [
+     8338198,
+     5128149,
+     11428326,
+     8780245,
+     434615,
+     1890467
+    ]
+   },
+   "top_potsdam_3_11_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "9893b008ff789f8c4583c6db946a0801b601131ae71ba29df7ff5923fa38c9a6",
+    "class_counts": [
+     9628526,
+     6346450,
+     11839249,
+     6359149,
+     410366,
+     1416260
+    ]
+   },
+   "top_potsdam_3_12_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "01123887df1c862534e7e65c1524e697d04753000d9fe89a79fd1d6cfe4987ca",
+    "class_counts": [
+     10554635,
+     8766924,
+     7629351,
+     7534216,
+     628926,
+     885948
+    ]
+   },
+   "top_potsdam_3_13_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "a52f41f23cd61354bb0764e9fc43a5cf1c3ba733f4ac835ba8db74c9fe295617",
+    "class_counts": [
+     9036269,
+     8875720,
+     8306384,
+     8309987,
+     617800,
+     853840
+    ]
+   },
+   "top_potsdam_3_14_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "9939a0744f5938e4155ae7572b7d490d2ca258ac5e7728ccb50568e5feac5eb6",
+    "class_counts": [
+     7558153,
+     7905877,
+     9741747,
+     9276983,
+     430255,
+     1086985
+    ]
+   },
+   "top_potsdam_4_10_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "70e4a08368bb62511cd010d856e20711a2ee49c0a9cfccf67094eea89fadc541",
+    "class_counts": [
+     6806382,
+     8658500,
+     10730811,
+     7147886,
+     469987,
+     2186434
+    ]
+   },
+   "top_potsdam_4_11_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "f475b5ce93cb383edd6bdb066945ca9fac2c05d04bf65fa0ac0bbeb32ae09049",
+    "class_counts": [
+     8873888,
+     10842847,
+     8257913,
+     6774054,
+     458350,
+     792948
+    ]
+   },
+   "top_potsdam_4_12_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "9d4bddffcd585c248008383a9ead9b5a84a40dcfab4dcd80bd443417dfe62229",
+    "class_counts": [
+     11976195,
+     12069654,
+     7267176,
+     2752612,
+     914098,
+     1020265
+    ]
+   },
+   "top_potsdam_4_13_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "b29388c1c5d62f9b4d0384372bcbbd6a04a1126bda4516dc17b136df09a41a59",
+    "class_counts": [
+     10923638,
+     12002962,
+     5230373,
+     4616507,
+     785854,
+     2440666
+    ]
+   },
+   "top_potsdam_4_14_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "6c7192a5a973bc51b5809c1666fa0e41cd5f01bfec43dc48fe90670359b86258",
+    "class_counts": [
+     9203255,
+     7290358,
+     8304765,
+     6803285,
+     822665,
+     3575672
+    ]
+   },
+   "top_potsdam_4_15_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "1258846db5a95bb62fe113818e66f458e5034022ec7122e28c852861002c1faa",
+    "class_counts": [
+     12332933,
+     11205613,
+     5921137,
+     4635280,
+     860844,
+     1044193
+    ]
+   },
+   "top_potsdam_5_10_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "a5ce554d85e0ecf7520a51f94001a376476512edd84380cdbe38b1800202e3db",
+    "class_counts": [
+     9762272,
+     8142358,
+     8656839,
+     7788191,
+     384255,
+     1266085
+    ]
+   },
+   "top_potsdam_5_11_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "a539889970472b6b8f70556568fae9c82bc49ae84d865fd1a145dc50e24efd14",
+    "class_counts": [
+     11340224,
+     13469575,
+     4718219,
+     4493295,
+     900076,
+     1078611
+    ]
+   },
+   "top_potsdam_5_12_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "fb70c4596d557dc4bf443b04866f1126232670fa6732d66c69864c1ee59968dd",
+    "class_counts": [
+     11242036,
+     17501421,
+     3210596,
+     2132368,
+     1101541,
+     812038
+    ]
+   },
+   "top_potsdam_5_13_IRRG.tif": {
+    "shape": [
+     6000,
+     6000,
+     3
+    ],
+    "image_sha256": "5f1e4d79e8883832c2d60447082f03b6f6b796805e3cefa43ec43d0b1ccd6fd0",
+    "class_counts": [
+     12100202,
+     10352897,
+     6951451,
+     4496994,
+     929932,
+     1168524
+    ]
+   }
+  },
+  "class_counts_total": [
+   186624341,
+   170357257,
+   190737353,
+   130157880,
+   11717762,
+   30405407
+  ],
+  "class_fraction": [
+   0.2592,
+   0.23661,
+   0.26491,
+   0.18077,
+   0.01627,
+   0.04223
+  ],
+  "colour_table": "frozen ISPRS table; exact match, except tiles listed in snapped_tiles",
+  "snapped_tiles": {
+   "4_12": {
+    "pixels": 36000000,
+    "exact_pixels": 0,
+    "max_nearest_distance": 70.44,
+    "min_margin": 151.09,
+    "class_counts": [
+     11976195,
+     12069654,
+     7267176,
+     2752612,
+     914098,
+     1020265
+    ]
+   }
+  },
+  "snap_rule": "label-decoding amendment approved by the user 2026-11-06 after the first Stage A attempt found 4_12 to be a lossy copy: per-channel threshold at 128, only if every pixel's nearest ISPRS colour is <= 100 away and the second nearest >= 100 further and the threshold equals the nearest colour; otherwise hard stop. Applies to every Potsdam label tile; fixed before any validation label is decoded."
+ },
+ "validation_image_shapes": {
+  "top_potsdam_5_14_IRRG.tif": [
+   6000,
+   6000,
+   3
+  ],
+  "top_potsdam_5_15_IRRG.tif": [
+   6000,
+   6000,
+   3
+  ],
+  "top_potsdam_6_10_IRRG.tif": [
+   6000,
+   6000,
+   3
+  ],
+  "top_potsdam_6_11_IRRG.tif": [
+   6000,
+   6000,
+   3
+  ],
+  "top_potsdam_6_12_IRRG.tif": [
+   6000,
+   6000,
+   3
+  ],
+  "top_potsdam_6_13_IRRG.tif": [
+   6000,
+   6000,
+   3
+  ],
+  "top_potsdam_6_14_IRRG.tif": [
+   6000,
+   6000,
+   3
+  ],
+  "top_potsdam_6_15_IRRG.tif": [
+   6000,
+   6000,
+   3
+  ]
+ },
+ "radiometric_transform": {
+  "sha256": "8bb7102c9fe2038cab404d6a2ac939e8429bcf7ee8b670c4c60324a790644517",
+  "offset": [
+   39.38799975434448,
+   53.65644360133358,
+   56.046618515167694
+  ],
+  "scale": [
+   34.081642288484474,
+   60.23619161373627,
+   62.82469312861844
+  ]
+ },
+ "gate0_crops_reproduced": {
+  "tiles": 25,
+  "all_match": true
+ },
+ "finished": 1793968488.9959512,
+ "opened": {
+  "potsdam_images": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "potsdam_labels": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ]
+ },
+ "code_hash": {
+  "p3common.py": "9313d80b78d48a744c1150d183f9525a18d42b43544842e424e74ea5debca46a",
+  "stage_a.py": "4cf375be15eab879375222b58581e65d727ee4bf81eb8731a661320a78eaddab"
+ }
+}
