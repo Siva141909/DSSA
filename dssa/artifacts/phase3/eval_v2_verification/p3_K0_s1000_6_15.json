@@ -1,0 +1,25 @@
+{
+ "run_id": "p3_K0_s1000",
+ "tile": "top_potsdam_6_15_IRRG.tif",
+ "cm_cells_differing_total": 0,
+ "ce_rel_diff": 6.5509564839916e-08,
+ "pass": true,
+ "new_peak_mb": 5527.144172668457,
+ "old_peak_mb": 8108.052276611328,
+ "eval_s": 120.88098406791687,
+ "process_s": 124.0261161327362,
+ "memory": {
+  "kernel_lifetime_max_footprint_mb": 5527.144172668457,
+  "sampled_max": {
+   "driver_mb": 2122.6875,
+   "current_mb": 1349.058349609375,
+   "phys_mb": 5466.925354003906,
+   "swap_growth_mb": 0.0,
+   "pressure": 1
+  },
+  "samples": 487,
+  "pressure_warn_samples": 0,
+  "swap_at_start_mb": 1046.0625,
+  "above_stop_rule": false
+ }
+}
