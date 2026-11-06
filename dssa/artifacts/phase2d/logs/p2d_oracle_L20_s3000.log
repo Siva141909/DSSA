@@ -1,0 +1,15 @@
+[signals] {"pid": 92456, "ppid": 68698, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x104570680>"}}
+[p2d_oracle_L20_s3000] layers=[20] trainable=2799494 (decoder=2766726, lora=32768) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[p2d_oracle_L20_s3000] step=200 loss=1.2915 val_mIoU=0.3556
+[p2d_oracle_L20_s3000] step=400 loss=1.0236 val_mIoU=0.4670
+[p2d_oracle_L20_s3000] step=600 loss=1.0976 val_mIoU=0.4652
+[p2d_oracle_L20_s3000] step=800 loss=0.8305 val_mIoU=0.4922
+[p2d_oracle_L20_s3000] step=1000 loss=0.9589 val_mIoU=0.5122
+[p2d_oracle_L20_s3000] step=1200 loss=1.1162 val_mIoU=0.5238
+[p2d_oracle_L20_s3000] step=1400 loss=0.7958 val_mIoU=0.5257
+[p2d_oracle_L20_s3000] step=1600 loss=0.7870 val_mIoU=0.5378
+[p2d_oracle_L20_s3000] step=1800 loss=0.7675 val_mIoU=0.5309
+[p2d_oracle_L20_s3000] step=2000 loss=0.8348 val_mIoU=0.5379
+[done] p2d_oracle_L20_s3000 best=0.5379@2000 final=0.5379 loop=1595s val=725s peak=5962MB swapgrow=0MB
+[signals] {"pid": 93861, "ppid": 68698, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x10410c680>"}}
+[reload ok] p2d_oracle_L20_s3000

@@ -1,0 +1,1 @@
+{"t": 1793800391.407, "run": "p2d_oracle_L16_s2000", "cause": "p2d_oracle_L16_s2000: run failed; see runs/p2d_oracle_L16_s2000/incident.json", "error": "KeyboardInterrupt()", "stage": "train", "optimizer_steps_completed": 11, "incident_written": true, "completed_before": 1}

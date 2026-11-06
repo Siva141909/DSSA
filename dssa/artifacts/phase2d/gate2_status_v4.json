@@ -1,0 +1,8 @@
+{
+ "state": "stopped",
+ "reason": "p2d_oracle_L02_s1000: run failed; see runs/p2d_oracle_L02_s1000/incident.json",
+ "completed": [
+  "p2d_oracle_L01_s1000"
+ ],
+ "time": 1793692653.974755
+}

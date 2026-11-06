@@ -1,0 +1,18 @@
+{
+ "checkpoints": {
+  "best": {
+   "sha256": "1269488ce344e9840d530d7a8583412004fda61c0cb873c03170fc273c486368",
+   "step": 1800,
+   "cm_diff": 0,
+   "size": 11206809
+  },
+  "final": {
+   "sha256": "b1adb2dd858a03efa7fc9e8ef1c841221f3dd4875eccb7336d2300cc2ab6c233",
+   "step": 2000,
+   "cm_diff": 0,
+   "size": 11206389
+  },
+  "result_sha256_before_verify": "e9068c6935ce92d2a6c69fa3468a29b85aa45ac65b61033558704ffb3d29debb"
+ },
+ "result_sha256": "d788e7093c79db7fc8c4fd557b55d559659872fa12c77828e95eb13d5545d48f"
+}

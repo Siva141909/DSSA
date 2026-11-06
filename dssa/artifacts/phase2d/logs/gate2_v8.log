@@ -1,0 +1,6 @@
+[gate2-v8] 1/41 p2d_oracle_L02_s2000_a2 est 37.2 min
+ p2d_oracle_L02_s2000_a2 best=0.5482@1800 final=0.5434 loop=2165s val=713s peak=8174MB swapgrow=0MB
+[gate2-v8] 2/41 p2d_oracle_L03_s2000 est 36.6 min
+ p2d_oracle_L03_s2000 best=0.5292@1400 final=0.5237 loop=2126s val=712s peak=8210MB swapgrow=0MB
+[gate2-v8] 3/41 p2d_oracle_L04_s2000 est 36.1 min
+[GATE 2 RECOVERY STOPPED] p2d_oracle_L04_s2000: safety guard stopped the run (lid closed); see runs/p2d_oracle_L04_s2000/incident.json and logs/gate2_guard_v8.jsonl

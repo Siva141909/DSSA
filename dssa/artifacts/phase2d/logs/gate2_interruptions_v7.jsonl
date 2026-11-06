@@ -1,0 +1,1 @@
+{"t": 1793759334.86, "run": "p2d_oracle_L02_s2000", "cause": "p2d_oracle_L02_s2000: safety guard stopped the run (charger disconnected); see runs/p2d_oracle_L02_s2000/incident.json and logs/gate2_guard_v7.jsonl", "error": null, "stage": null, "optimizer_steps_completed": null, "completed_before": 16}

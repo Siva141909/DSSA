@@ -1,0 +1,67 @@
+{
+ "error": "KeyboardInterrupt()",
+ "traceback": "Traceback (most recent call last):\n  File \"/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py\", line 171, in main\n    train_result, model, mods = T.run_training(spec, device=\"mps\", out_dir=out, log=print, **kw)\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace2f9678da/scratchpad/v10test/code/run_one_v10.py\", line 36, in dummy_training\n    time.sleep(0.05)\nKeyboardInterrupt\n",
+ "time": 1793800390.1795971,
+ "elapsed_s": 0.6549561023712158,
+ "optimizer_steps_completed": 11,
+ "batches_drawn": 11,
+ "stage": "train",
+ "evals_completed": 0,
+ "memory_final": {
+  "resident_mb": 329.1875,
+  "phys_footprint_mb": 269.70404052734375,
+  "lifetime_max_phys_footprint_mb": 269.71966552734375
+ },
+ "swap_used_mb": 453.5625,
+ "swap_at_start_mb": 453.5625,
+ "pressure": 1,
+ "sampled_max": {
+  "driver_mb": 0.4375,
+  "current_mb": 0.0,
+  "phys_mb": 269.70404052734375,
+  "swap_growth_mb": 0.0,
+  "pressure": 1
+ },
+ "telemetry_tail": [
+  {
+   "t": 1793800389.565,
+   "opt_step": 0,
+   "stage": "startup",
+   "phys_mb": 265.2,
+   "life_max_mb": 265.2,
+   "resident_mb": 315.8,
+   "driver_mb": 0.4,
+   "current_mb": 0.0,
+   "pressure": 1,
+   "swap_used_mb": 453.6,
+   "swap_growth_mb": 0.0
+  },
+  {
+   "t": 1793800389.821,
+   "opt_step": 5,
+   "stage": "train",
+   "phys_mb": 269.1,
+   "life_max_mb": 269.2,
+   "resident_mb": 328.6,
+   "driver_mb": 0.4,
+   "current_mb": 0.0,
+   "pressure": 1,
+   "swap_used_mb": 453.6,
+   "swap_growth_mb": 0.0
+  },
+  {
+   "t": 1793800390.074,
+   "opt_step": 9,
+   "stage": "train",
+   "phys_mb": 269.7,
+   "life_max_mb": 269.7,
+   "resident_mb": 329.2,
+   "driver_mb": 0.4,
+   "current_mb": 0.0,
+   "pressure": 1,
+   "swap_used_mb": 453.6,
+   "swap_growth_mb": 0.0
+  }
+ ],
+ "tiles_opened": []
+}

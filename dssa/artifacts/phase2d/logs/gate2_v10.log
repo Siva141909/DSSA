@@ -1,0 +1,12 @@
+[gate2-v10] 1/29 p2d_oracle_L15_s2000_a2 est 29.7 min
+ p2d_oracle_L15_s2000_a2 best=0.5565@1800 final=0.5555 loop=1770s val=725s peak=6139MB swapgrow=0MB
+[gate2-v10] 2/29 p2d_oracle_L16_s2000 est 29.1 min
+ p2d_oracle_L16_s2000 best=0.5605@1800 final=0.5585 loop=1732s val=725s peak=6131MB swapgrow=0MB
+[gate2-v10] 3/29 p2d_oracle_L17_s2000 est 28.6 min
+ p2d_oracle_L17_s2000 best=0.5510@1800 final=0.5485 loop=1707s val=729s peak=5699MB swapgrow=0MB
+[gate2-v10] 4/29 p2d_oracle_L18_s2000 est 28.0 min
+ p2d_oracle_L18_s2000 best=0.5481@1800 final=0.5468 loop=1666s val=727s peak=5689MB swapgrow=0MB
+[gate2-v10] 5/29 p2d_oracle_L19_s2000 est 27.4 min
+ p2d_oracle_L19_s2000 best=0.5608@1800 final=0.5599 loop=1637s val=728s peak=6102MB swapgrow=0MB
+[gate2-v10] 6/29 p2d_oracle_L20_s2000 est 26.8 min
+[GATE 2 RECOVERY STOPPED] p2d_oracle_L20_s2000: safety guard stopped the run (system sleep detected (286 s suspended)); see runs/p2d_oracle_L20_s2000/incident.json and logs/gate2_guard_v10.jsonl

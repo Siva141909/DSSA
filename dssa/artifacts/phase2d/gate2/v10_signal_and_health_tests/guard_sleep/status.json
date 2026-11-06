@@ -1,0 +1,8 @@
+{
+ "state": "stopped",
+ "reason": "p2d_oracle_L16_s2000: safety guard stopped the run (system sleep detected (100 s suspended)); see runs/p2d_oracle_L16_s2000/incident.json and logs/gate2_guard_v10.jsonl",
+ "completed": [
+  "p2d_oracle_L15_s2000_a2"
+ ],
+ "time": 1793800628.5516312
+}

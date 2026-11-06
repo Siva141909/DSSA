@@ -1,0 +1,78 @@
+{
+ "frozen": {
+  "dssa/artifacts/phase2c/runs/run000_K0_K0_decoder_only/run000_K0_K0_decoder_only_best.pt": "122dd9100d893b01434eff6180c026eceee8dcaf451aa3fac7e2ad2500371d1f",
+  "dssa/artifacts/phase2c/runs/run000_K0_K0_decoder_only/result.json": "82d4b91e1c1285401edddcd7299f920c32b3b0dbc533d5cf6626eef2f8e776d3",
+  "dssa/artifacts/phase2c/runs/run001_K2_DSSA/run001_K2_DSSA_best.pt": "46c3b50b87e9f1ff35138292ea31f1e49cd470f0af59e5ad321801489365bc59",
+  "dssa/artifacts/phase2c/runs/run001_K2_DSSA/result.json": "21a3148324cc0471001480610280e957789fbc2c2fb9d7a21c120cb1c174ed87",
+  "dssa/artifacts/phase2c/runs/run002_K2_Early/run002_K2_Early_best.pt": "33ac709ef4149c69c1a7a7b51e05219cda7c9033903b47adeb7fe0b7b5e9613d",
+  "dssa/artifacts/phase2c/runs/run002_K2_Early/result.json": "63798f91efd399f188acd42a233555538f62b374fa7465e35faf4ca1b6f2a8ee",
+  "dssa/artifacts/phase2c/runs/run003_K2_Late/run003_K2_Late_best.pt": "c62046331b76c21c5665d5d0beb37b8fcf8f51f758d5e4ff79acbebfdcb26b3a",
+  "dssa/artifacts/phase2c/runs/run003_K2_Late/result.json": "653f652cb8210e67d2637e5320fab2b4c3b6b223bfd35fed2de74ec07d38f97c",
+  "dssa/artifacts/phase2c/runs/run004_K2_LowestDSS/run004_K2_LowestDSS_best.pt": "efc16d94f778b21615f3dd5be7df87f1c4930bc83d61635aedb43ab251ceec5d",
+  "dssa/artifacts/phase2c/runs/run004_K2_LowestDSS/result.json": "65a490483d2c8f036ddb4248f67991bd3f7c711b596df4a01e3a9620ac282379",
+  "dssa/config/phase2b_training_protocol.json": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+  "dssa/artifacts/splits/vaihingen_target_split_manifest.json": "8b58c463d6c8ff1e33ebea6f4723ec974103f5d9babfce5e21eceea8f610c305",
+  "dssa/artifacts/dss/phase2b_final_dss_results.json": "c4461218182621a1755a08467415c47f89598c92342f6793389e1a7d8abb28fe",
+  "dssa/artifacts/radiometric_transform.json": "a51f00526f758e58ed9011f07bc380d75e1ba70b8c93af21fb0bef35a55c1ea5",
+  "dssa/artifacts/phase2c/phase2c_batch1_checkpoint_report.json": "0a819fb1a50ed823cce0da5d0b92c7b4e965587d842af6c13632308a041384e4"
+ },
+ "expected": {
+  "1000": {
+   "decoder_hash": "ac1d85437aef511a3c7a97136ae440f90558d2d39036ed1a1879bcbdf18405f9",
+   "torch_rng_hash": "cb54b917a1a168a9bfa69d0b431b43ab10a62ad19e5d6e319d2a06c277b90947",
+   "lora_A_hash": "6c2a50e8e74ffccd7b9119c7722a53f5b64d781a37efd7897d60c1a157a72109",
+   "data_stream_final": "a387f38494ff17cea85223c353f4e968d3dab4c87377ae29051145623820a229"
+  },
+  "2000": {
+   "decoder_hash": "940541d75cc2c5f4b6cf1dd1e22e989d1c2097f324881dea43f8f7c11278e28b",
+   "torch_rng_hash": "e56fcdcb0b8149f49d4217d3eed8f4f2a057380aa29cba7444dd48fd3af8d899",
+   "lora_A_hash": "8c6e72b6e3bec4f31ab501da976c99dad1d3cc87219ee8d83cfb1efc4572fcc6",
+   "data_stream_final": "98af1a1b7eaa883e8d3360ac7adaee4474c3fc7768dd3fbb20a20a32fc9e0623"
+  },
+  "3000": {
+   "decoder_hash": "27deed08616aff18a9753e70362619f6f7fecbffdb641b2ab1a0e7ced27ac5c9",
+   "torch_rng_hash": "b0ccbb1fe72afd3c1e2adcc86128ce71e395f9879ccfc2d9cb2b608358aa62ac",
+   "lora_A_hash": "1a3cd5f6276b696066662c9b9e3c06c010e4dbf1069ce5fc2aaa5c8b6d00b989",
+   "data_stream_final": "56dd587a82b1db34b11a006ef0ea1b88a0dca79cfcf75c747c62c0ba827f950d"
+  }
+ },
+ "expected_common": {
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff"
+ },
+ "k0_vs_run000": {
+  "code_identical_to_HEAD": {
+   "train.py": true,
+   "dataset.py": true,
+   "decoder.py": true,
+   "losses.py": true,
+   "metrics.py": true,
+   "tiling.py": true,
+   "model_wrapper.py": true,
+   "checkpoint.py": true,
+   "lora.py": true
+  },
+  "training_seed": true,
+  "steps": true,
+  "checkpoint_every": true,
+  "trainable_params": true,
+  "optimizer": {
+   "lr": 0.001,
+   "betas": [
+    0.9,
+    0.999
+   ],
+   "wd": 0.01,
+   "warmup": 100,
+   "batch": 8,
+   "clip": 1.0
+  },
+  "torch_version_same": true,
+  "python_version_same": true,
+  "run000_platform": "macOS-26.6.2-arm64-arm-64bit",
+  "now_platform": "macOS-26.7.1-arm64-arm-64bit",
+  "training_code_path": "train.run_training called unchanged; K=0 uses model_wrapper.build_model unchanged"
+ },
+ "evaluator_replica_identical_on": "top_mosaic_09cm_area34.tif",
+ "git_head": "3551dbff5083e2d67df6a01139e5d5a4ee84271a"
+}

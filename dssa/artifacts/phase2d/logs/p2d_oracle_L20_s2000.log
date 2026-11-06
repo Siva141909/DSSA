@@ -1,0 +1,22 @@
+[signals] {"pid": 48282, "ppid": 38257, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x102f8c680>"}}
+[p2d_oracle_L20_s2000] layers=[20] trainable=2799494 (decoder=2766726, lora=32768) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[p2d_oracle_L20_s2000] step=200 loss=1.0520 val_mIoU=0.3941
+[p2d_oracle_L20_s2000] step=400 loss=1.1676 val_mIoU=0.4773
+[p2d_oracle_L20_s2000] step=600 loss=0.8186 val_mIoU=0.4946
+[p2d_oracle_L20_s2000] step=800 loss=1.0273 val_mIoU=0.4730
+[p2d_oracle_L20_s2000] step=1000 loss=0.8826 val_mIoU=0.5182
+[p2d_oracle_L20_s2000] step=1200 loss=1.0825 val_mIoU=0.5232
+[p2d_oracle_L20_s2000] step=1400 loss=0.8696 val_mIoU=0.5434
+[incident] KeyboardInterrupt() at optimizer step 1508 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v10.py", line 17, in <module>
+    R.main()
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 171, in main
+    train_result, model, mods = T.run_training(spec, device="mps", out_dir=out, log=print, **kw)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/train/train.py", line 150, in run_training
+    loss.backward()
+  File "/Users/siva/Documents/Major project/dssa/venv/lib/python3.12/site-packages/torch/_tensor.py", line 566, in backward
+    def backward(
+
+KeyboardInterrupt

@@ -1,0 +1,19 @@
+{
+ "result": "PASS",
+ "release_id": 431538319,
+ "tag": "backup-2026-11-02-gate0",
+ "repo_private": true,
+ "assets_downloaded": 11,
+ "checksum_files_verified": {
+  "SHA256SUMS": 4,
+  "SHA256SUMS_v2": 1,
+  "SHA256SUMS_v3": 1,
+  "SHA256SUMS_final": 1,
+  "all_ok": true
+ },
+ "pilot_final_sha256": "8490d5330e92a4a3cfdfb1e577bdb6b3edc07a60757372c559f2dac8edca5592",
+ "pilot_final_restored_files": 117,
+ "mismatches_vs_originals": 0,
+ "restore_dir": "scratchpad/backup/restore_gate2_113226",
+ "date": "2026-11-03"
+}

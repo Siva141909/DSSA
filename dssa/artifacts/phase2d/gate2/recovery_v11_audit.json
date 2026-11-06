@@ -1,0 +1,168 @@
+{
+ "manifest_v11_sha256": "7c60dee4490ef828a33b0fe54df500375b513a063b0df211ce6e7e765ae77538",
+ "real_interruption_evidence": [
+  {
+   "manifest": "manifest_gate2_recovery_v8.json",
+   "run": "p2d_oracle_L04_s2000",
+   "sequence_signals": {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   },
+   "run_pid": 13214,
+   "run_signals": {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   },
+   "guard_child_pid": 13214,
+   "hazard": "lid closed",
+   "action": "SIGINT",
+   "child_returncode": -2,
+   "stop_latency_s": 0.429,
+   "sigkill_used": false,
+   "incident": {
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 850,
+    "batches_drawn": 851,
+    "evals_completed": 4,
+    "elapsed_s": 877.6719377040863
+   },
+   "incident_fields_complete": true,
+   "sequence_state": "stopped",
+   "completed_in_sequence": 2,
+   "interruption_logged": true,
+   "later_runs_started": []
+  },
+  {
+   "manifest": "manifest_gate2_recovery_v9.json",
+   "run": "p2d_oracle_L15_s2000",
+   "sequence_signals": {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   },
+   "run_pid": 32541,
+   "run_signals": {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   },
+   "guard_child_pid": 32541,
+   "hazard": "lid closed",
+   "action": "SIGINT",
+   "child_returncode": -2,
+   "stop_latency_s": 0.441,
+   "sigkill_used": false,
+   "incident": {
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 1289,
+    "batches_drawn": 1290,
+    "evals_completed": 6,
+    "elapsed_s": 1102.859475851059
+   },
+   "incident_fields_complete": true,
+   "sequence_state": "stopped",
+   "completed_in_sequence": 10,
+   "interruption_logged": true,
+   "later_runs_started": []
+  },
+  {
+   "manifest": "manifest_gate2_recovery_v10.json",
+   "run": "p2d_oracle_L20_s2000",
+   "sequence_signals": {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   },
+   "run_pid": 48282,
+   "run_signals": {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   },
+   "guard_child_pid": 48282,
+   "hazard": "system sleep detected (286 s suspended)",
+   "action": "SIGINT",
+   "child_returncode": -2,
+   "stop_latency_s": 0.605,
+   "sigkill_used": false,
+   "incident": {
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 1508,
+    "batches_drawn": 1509,
+    "evals_completed": 7,
+    "elapsed_s": 1454.2374639511108
+   },
+   "incident_fields_complete": true,
+   "sequence_state": "stopped",
+   "completed_in_sequence": 5,
+   "interruption_logged": true,
+   "later_runs_started": []
+  }
+ ],
+ "locked_test_set": {
+  "records_checked": 57,
+  "forbidden_tiles_opened": 0,
+  "locked_test_tiles": 8
+ },
+ "environment_at_manifest_time": {
+  "time": "2026-11-04 23:13:57 IST",
+  "swapusage": "total = 2048.00M  used = 429.56M  free = 1618.44M  (encrypted)",
+  "memory_pressure_level": 1,
+  "docker_or_vm_processes": [
+   "577 /Library/PrivilegedHelperTools/com.docker.vmnetd"
+  ],
+  "virtual_machine_running": false
+ },
+ "completed_runs": [
+  "p2d_oracle_L01_s1000",
+  "p2d_oracle_L02_s1000_a2",
+  "p2d_oracle_L03_s1000",
+  "p2d_oracle_L04_s1000",
+  "p2d_oracle_L05_s1000",
+  "p2d_oracle_L06_s1000_a2",
+  "p2d_oracle_L07_s1000_a2",
+  "p2d_oracle_L08_s1000",
+  "p2d_oracle_L09_s1000",
+  "p2d_oracle_L10_s1000",
+  "p2d_oracle_L11_s1000",
+  "p2d_oracle_L13_s1000",
+  "p2d_oracle_L14_s1000",
+  "p2d_oracle_L15_s1000",
+  "p2d_oracle_L16_s1000",
+  "p2d_oracle_L17_s1000",
+  "p2d_oracle_L18_s1000",
+  "p2d_oracle_L19_s1000",
+  "p2d_oracle_L20_s1000",
+  "p2d_oracle_L21_s1000",
+  "p2d_oracle_L22_s1000",
+  "p2d_oracle_L01_s2000",
+  "p2d_oracle_L02_s2000_a2",
+  "p2d_oracle_L03_s2000",
+  "p2d_oracle_L04_s2000_a2",
+  "p2d_oracle_L05_s2000",
+  "p2d_oracle_L06_s2000",
+  "p2d_oracle_L07_s2000",
+  "p2d_oracle_L08_s2000",
+  "p2d_oracle_L09_s2000",
+  "p2d_oracle_L10_s2000",
+  "p2d_oracle_L11_s2000",
+  "p2d_oracle_L13_s2000",
+  "p2d_oracle_L14_s2000",
+  "p2d_oracle_L15_s2000_a2",
+  "p2d_oracle_L16_s2000",
+  "p2d_oracle_L17_s2000",
+  "p2d_oracle_L18_s2000",
+  "p2d_oracle_L19_s2000"
+ ],
+ "failed_partial_runs": [
+  "p2d_oracle_L02_s1000",
+  "p2d_oracle_L06_s1000",
+  "p2d_oracle_L07_s1000",
+  "p2d_oracle_L02_s2000",
+  "p2d_oracle_L04_s2000",
+  "p2d_oracle_L15_s2000",
+  "p2d_oracle_L20_s2000"
+ ],
+ "pending_runs": 24,
+ "frozen_artifacts_unchanged": true,
+ "data_stream_replay_ok": true
+}

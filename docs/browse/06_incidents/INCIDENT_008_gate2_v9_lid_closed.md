@@ -1,0 +1,1 @@
+../../../dssa/artifacts/phase2d/logs/INCIDENT_008_gate2_v9_lid_closed.md

@@ -1,0 +1,5 @@
+./p2d_oracle_L15_s2000_a2/result.json
+./p2d_oracle_L16_s2000/IN_PROGRESS
+./p2d_oracle_L16_s2000/p2d_oracle_L16_s2000_best.pt
+./p2d_oracle_L16_s2000/telemetry.jsonl
+./TRAINING_STARTED

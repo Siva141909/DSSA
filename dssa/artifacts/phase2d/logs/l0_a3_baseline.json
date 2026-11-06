@@ -1,0 +1,12 @@
+{
+ "time": 1793632258.654048,
+ "swap_used_mb": 1487.25,
+ "memory_pressure_level": 1,
+ "this_process_footprint_mb": 10.922286987304688,
+ "load": "{ 1.79 2.14 2.51 }",
+ "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   426496.\nPages active:                                 150968.\nPages inactive:                               192992.\nPages speculative:                             45690.\nPages throttled:                                   0.\nPages wired down:                             126345.\nPages purgeable:                                2066.\n\"Translation faults\":                       11279853.\nPages copy-on-write:                          374420.\nPages zero filled:                           8712142.\nPages reactivated:                           2008272.\nPages purged:                                 226244.\nFile-backed pages:                            257030.\nAnonymous pages:                              132620.\nPages stored in compressor:                   336173.\nPages occupied by compressor:                  53963.\nDecompressions:                              1502797.\nCompressions:                                2731009.\nPageins:                                     1098317.\nPageouts:                                       2964.\nSwapins:                                      107170.\nSwapouts:                                     351426.\nPages tagged:                                  77123.\nPages tagged resident:                         59495.\nPages tagged compressed:                       17628.\nPages tag-storage:                             32768.\nPages tag-storage holding tags:                 2319.\nPages tag-storage free:                         8416.\nPages tag-storage non-tag pageable:            21961.\nPages tag-storage non-tag wired:                  72.\nBytes of compressed tags:                    2786688.\nTagged compressions:                           66835.\nTagged decompressions:                         47424.\n",
+ "limits": {
+  "footprint_mb": 11776.0,
+  "swap_growth_mb": 512
+ }
+}

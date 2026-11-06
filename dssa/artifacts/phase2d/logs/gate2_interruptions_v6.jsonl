@@ -1,0 +1,1 @@
+{"t": 1793713027.069, "run": "p2d_oracle_L07_s1000", "cause": "p2d_oracle_L07_s1000: run failed; see runs/p2d_oracle_L07_s1000/incident.json", "error": "RuntimeError('STOP: swap growth 564 MB above limit')", "stage": "validation", "optimizer_steps_completed": 400, "completed_before": 1}

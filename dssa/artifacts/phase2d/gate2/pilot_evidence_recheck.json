@@ -1,0 +1,75 @@
+{
+ "all_ok": true,
+ "bad": [],
+ "runs": {
+  "p2d_ctrl_K0_s1000": {
+   "ok": true,
+   "best": "4f579ed3fdc5c7c1715cf1e919702b7cd9c293d51263da8e7684040796f105a6",
+   "final": "a20b2f7edd1883bf3a9685ebe6b90ab67756437ee69f5faab39359cf8d6a7629"
+  },
+  "p2d_ctrl_K0_s2000": {
+   "ok": true,
+   "best": "c152b903cdac49469a08f6e67b9e0b5089cc72eca978825c31d51d19e84238b3",
+   "final": "dc3e7cd787e3a0b07fc573b9492c4edb4cfe6c6bb3090f40823e80c709194232"
+  },
+  "p2d_ctrl_K0_s3000": {
+   "ok": true,
+   "best": "20f4fcd9b7e81f1a125f20a57fa528efd55254a7a3a97ac95f133a12b4f288d7",
+   "final": "c38ed8323ea03bb0d995421c58ec73f7e2e37914db32ab1cf0209b22ec43c788"
+  },
+  "p2d_oracle_L00_s1000_a3": {
+   "ok": true,
+   "best": "bc293b41825f46b72bd824d3345a850060338425e41d0e7849428d70b7f06207",
+   "final": "1be1d40a6f1846d73ba47dfb5cceb20b9824d624657b855dab746e789f0ec28f"
+  },
+  "p2d_oracle_L00_s2000": {
+   "ok": true,
+   "best": "821e6f3d1ed87f77e6c157de6cd21130057cfd3ea35ac0105332a8497b32b659",
+   "final": "2c28a57883b933382872688cc2ab7bff5be9c7c6648400c4ed335e8be3533733"
+  },
+  "p2d_oracle_L00_s3000": {
+   "ok": true,
+   "best": "7b6307d0d7eb83123c7077ae0f74a1f2a82f83c10f27bec41ed0bb75ca099bbd",
+   "final": "fefde1a86d35f920d1a7131d067bf75d90538a8e3391fac27fea3d343b73a654"
+  },
+  "p2d_oracle_L12_s1000": {
+   "ok": true,
+   "best": "fd0bfc48881a74bd9f5ddd8ca58956d47a4976c8011b0513288259d3b8faaa4c",
+   "final": "4275b2f7d4ed88bcaec004983129fd70cd1b8f1752e4a996cc0947c9f16f9f74"
+  },
+  "p2d_oracle_L12_s2000": {
+   "ok": true,
+   "best": "e3c9c95485cf31d4b8e218a0d9e3144ca6ef5b21d4551a48787886f87ec31443",
+   "final": "d05827168b5c934cce875dc75aa4147542ec2abdfb8dc99ff65e46f5800cfd92"
+  },
+  "p2d_oracle_L12_s3000": {
+   "ok": true,
+   "best": "a27bd94e2bb9dbc2c7cc4ce5b80f7ff41feda9caab2d36a2694b6877cb07e3dc",
+   "final": "a09c759ef4e75bbbbfcc1d4d613236d5e90a6ad542cfc4ce6f78e75b553e11a7"
+  },
+  "p2d_oracle_L23_s1000": {
+   "ok": true,
+   "best": "2c76f72ffb5309760468955f1127ce8579e26e94410f75e009eb13df42f64f3f",
+   "final": "cb8801d15f74b98f613585f23d07881c6bd660bb9ed231a8a520c303b1f8cad6"
+  },
+  "p2d_oracle_L23_s2000": {
+   "ok": true,
+   "best": "1269488ce344e9840d530d7a8583412004fda61c0cb873c03170fc273c486368",
+   "final": "b1adb2dd858a03efa7fc9e8ef1c841221f3dd4875eccb7336d2300cc2ab6c233"
+  },
+  "p2d_oracle_L23_s3000": {
+   "ok": true,
+   "best": "21defd48e5364e9502ac1eaa7528a30fd19c40562e2f2accafb0903dee5bb532",
+   "final": "4f062c252a87312ceb887933d5c7e0fd94167acab62c87d0e58fdca77ad1938d"
+  }
+ },
+ "completion_record_sha256": "90d477b2d91909e621493ea0db4bf9946a03f38644e62cb863702bd6db79ae0a",
+ "completion_record_keys": [
+  "state",
+  "manifest_v3_sha256",
+  "pilot_analysis_sha256",
+  "runs",
+  "frozen",
+  "code_hash_matches_v3"
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "manifest_v9_sha256": "7e77b72c5b8b91847e948eb171dfed05f16a8e83e43e2095d590ed42751533db",
+ "v8_real_interruption_evidence": {
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "run_pid": 13214,
+  "run_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "guard_child_pid": 13214,
+  "hazard": "lid closed",
+  "action": "SIGINT",
+  "child_returncode": -2,
+  "stop_latency_s": 0.429,
+  "sigkill_used": false,
+  "incident": {
+   "error": "KeyboardInterrupt()",
+   "stage": "train",
+   "optimizer_steps_completed": 850,
+   "batches_drawn": 851,
+   "evals_completed": 4,
+   "elapsed_s": 877.6719377040863
+  },
+  "incident_fields_complete": true,
+  "sequence_state": "stopped",
+  "completed_in_v8": [
+   "p2d_oracle_L02_s2000_a2",
+   "p2d_oracle_L03_s2000"
+  ],
+  "interruption_logged": true,
+  "later_v8_runs_started": []
+ },
+ "locked_test_set": {
+  "records_checked": 40,
+  "forbidden_tiles_opened": 0,
+  "locked_test_tiles": 8
+ },
+ "environment_at_manifest_time": {
+  "time": "2026-11-04 13:26:07 IST",
+  "swapusage": "total = 2048.00M  used = 752.38M  free = 1295.62M  (encrypted)",
+  "memory_pressure_level": 1,
+  "docker_or_vm_processes": [
+   "577 /Library/PrivilegedHelperTools/com.docker.vmnetd"
+  ],
+  "virtual_machine_running": false
+ },
+ "completed_runs": [
+  "p2d_oracle_L01_s1000",
+  "p2d_oracle_L02_s1000_a2",
+  "p2d_oracle_L03_s1000",
+  "p2d_oracle_L04_s1000",
+  "p2d_oracle_L05_s1000",
+  "p2d_oracle_L06_s1000_a2",
+  "p2d_oracle_L07_s1000_a2",
+  "p2d_oracle_L08_s1000",
+  "p2d_oracle_L09_s1000",
+  "p2d_oracle_L10_s1000",
+  "p2d_oracle_L11_s1000",
+  "p2d_oracle_L13_s1000",
+  "p2d_oracle_L14_s1000",
+  "p2d_oracle_L15_s1000",
+  "p2d_oracle_L16_s1000",
+  "p2d_oracle_L17_s1000",
+  "p2d_oracle_L18_s1000",
+  "p2d_oracle_L19_s1000",
+  "p2d_oracle_L20_s1000",
+  "p2d_oracle_L21_s1000",
+  "p2d_oracle_L22_s1000",
+  "p2d_oracle_L01_s2000",
+  "p2d_oracle_L02_s2000_a2",
+  "p2d_oracle_L03_s2000"
+ ],
+ "failed_partial_runs": [
+  "p2d_oracle_L02_s1000",
+  "p2d_oracle_L06_s1000",
+  "p2d_oracle_L07_s1000",
+  "p2d_oracle_L02_s2000",
+  "p2d_oracle_L04_s2000"
+ ],
+ "pending_runs": 39,
+ "frozen_artifacts_unchanged": true,
+ "data_stream_replay_ok": true
+}

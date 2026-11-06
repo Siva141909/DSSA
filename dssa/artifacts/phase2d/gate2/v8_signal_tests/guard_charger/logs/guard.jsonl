@@ -1,0 +1,10 @@
+{"t": 1793771105.18, "stage": "sequence start", "signals": {"pid": 8078, "ppid": 8076, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x102a08680>"}}}
+{"t": 1793771105.223, "run": "p2d_oracle_L02_s2000_a2", "stage": "preflight", "checks": {"charger_connected": true, "lid_open": true, "no_thermal_warning": true, "memory_pressure_normal": true, "free_disk_ge_10gb": true, "required_files_local": true, "no_other_phase2d_run": true}, "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "free_gb": 186.3, "missing_or_cloud_only": [], "virtual_machine_running_advisory": false}
+{"t": 1793771105.225, "run": "p2d_oracle_L02_s2000_a2", "stage": "train", "action": "child started", "child_pid": 8086}
+{"t": 1793771106.279, "run": "p2d_oracle_L02_s2000_a2", "stage": "train", "action": "child exited", "child_pid": 8086, "returncode": 0}
+{"t": 1793771106.281, "run": "p2d_oracle_L02_s2000_a2", "stage": "reload", "action": "child started", "child_pid": 8090}
+{"t": 1793771107.319, "run": "p2d_oracle_L02_s2000_a2", "stage": "reload", "action": "child exited", "child_pid": 8090, "returncode": 0}
+{"t": 1793771107.382, "run": "p2d_oracle_L03_s2000", "stage": "preflight", "checks": {"charger_connected": true, "lid_open": true, "no_thermal_warning": true, "memory_pressure_normal": true, "free_disk_ge_10gb": true, "required_files_local": true, "no_other_phase2d_run": true}, "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "free_gb": 186.3, "missing_or_cloud_only": [], "virtual_machine_running_advisory": false}
+{"t": 1793771107.383, "run": "p2d_oracle_L03_s2000", "stage": "train", "action": "child started", "child_pid": 8112}
+{"t": 1793771110.497, "run": "p2d_oracle_L03_s2000", "stage": "train", "hazard": "charger disconnected", "state": {"pressure": 1, "ac": false, "lid_open": true, "thermal_ok": true}, "action": "SIGINT", "child_pid": 8112}
+{"t": 1793771110.683, "run": "p2d_oracle_L03_s2000", "stage": "train", "action": "child exited after interrupt", "child_pid": 8112, "returncode": -2, "incident_written": true}

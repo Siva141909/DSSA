@@ -1,0 +1,1 @@
+{"t": 1793814344.782, "run": "p2d_oracle_L21_s2000", "cause": "p2d_oracle_L21_s2000: safety guard stopped the run (system sleep detected (100 s suspended)); see runs/p2d_oracle_L21_s2000/incident.json and logs/gate2_guard_v11.jsonl", "error": "KeyboardInterrupt()", "stage": "train", "optimizer_steps_completed": 3, "incident_written": true, "completed_before": 1}

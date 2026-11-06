@@ -1,0 +1,220 @@
+{
+ "status": "completed",
+ "smoke": true,
+ "entry": {
+  "run_id": "p2d_oracle_L23_s1000",
+  "K": 1,
+  "layer_indices": [
+   23
+  ],
+  "training_seed": 1000,
+  "lora_init_seed": 7001000,
+  "condition_labels": [
+   "Oracle_L23"
+  ],
+  "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+  "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+  "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+  "phase": "2D-pilot",
+  "est_seconds": 1507,
+  "config_hash": "0a76519c2fdda4a2e28e0017770a731e79684167720568d2971e42fcc52a219b"
+ },
+ "manifest_sha": "5437ef3ae10e8a5ff39810846de9d06a4fc9ac6f7d810e264378725d553b1cd3",
+ "train_result": {
+  "run_id": "p2d_oracle_L23_s1000",
+  "condition_labels": [
+   "Oracle_L23"
+  ],
+  "K": 1,
+  "layer_indices": [
+   23
+  ],
+  "training_seed": 1000,
+  "preflight": true,
+  "total_steps_executed": 2,
+  "checkpoint_every": 2,
+  "parameter_counts": {
+   "total_params": 306685830,
+   "trainable_params": 2799494,
+   "decoder_params": 2766726,
+   "lora_params": 32768,
+   "trainable_percentage": 0.9128214368430391
+  },
+  "best_val_mean_iou": 0.1736765017652906,
+  "best_step": 2,
+  "best_checkpoint_path": "/Users/siva/Documents/Major project/dssa/artifacts/phase2d/gate0/smoke/p2d_oracle_L23_s1000/p2d_oracle_L23_s1000_best.pt",
+  "training_wall_clock_seconds": 5.3236329555511475,
+  "hardware": {
+   "platform": "macOS-26.7.1-arm64-arm-64bit",
+   "processor": "arm",
+   "python_version": "3.12.13",
+   "torch_version": "2.14.0",
+   "mps_available": true,
+   "cuda_available": false
+  }
+ },
+ "validation_history": [
+  {
+   "step": 2,
+   "train_loss": 2.35388445854187,
+   "lr": 0.001,
+   "val_mean_iou": 0.1736765017652906,
+   "val_macro_f1": 0.20143185073198033,
+   "val_pixel_accuracy": 0.5193219866071429,
+   "val_per_class_iou": [
+    0.49934710749968286,
+    0.0,
+    0.0036713415081870916,
+    0.365364059818583,
+    0.0,
+    null
+   ]
+  }
+ ],
+ "evals": [
+  {
+   "step": 2,
+   "seconds": 0.7296268939971924,
+   "mean_iou": 0.1736765017652906,
+   "val_ce": 1.50547743816765,
+   "tiles": {
+    "top_mosaic_09cm_area34.tif": [
+     [
+      66922,
+      0,
+      2498,
+      38862,
+      0,
+      0
+     ],
+     [
+      24261,
+      0,
+      3415,
+      12994,
+      0,
+      0
+     ],
+     [
+      23,
+      0,
+      50,
+      6691,
+      0,
+      0
+     ],
+     [
+      466,
+      0,
+      369,
+      37258,
+      0,
+      0
+     ],
+     [
+      987,
+      0,
+      573,
+      5335,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    ]
+   },
+   "per_class_iou": [
+    0.49934710749968286,
+    0.0,
+    0.0036713415081870916,
+    0.365364059818583,
+    0.0,
+    null
+   ]
+  }
+ ],
+ "pre_run_checks": {
+  "decoder_hash": "ac1d85437aef511a3c7a97136ae440f90558d2d39036ed1a1879bcbdf18405f9",
+  "torch_rng_hash": "cb54b917a1a168a9bfa69d0b431b43ab10a62ad19e5d6e319d2a06c277b90947",
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff",
+  "lora_params": 32768
+ },
+ "post_run_checks": {
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "data_stream_ok": true,
+  "tiles_opened": [
+   "top_mosaic_09cm_area12.tif",
+   "top_mosaic_09cm_area13.tif",
+   "top_mosaic_09cm_area14.tif",
+   "top_mosaic_09cm_area15.tif",
+   "top_mosaic_09cm_area16.tif",
+   "top_mosaic_09cm_area2.tif",
+   "top_mosaic_09cm_area20.tif",
+   "top_mosaic_09cm_area21.tif",
+   "top_mosaic_09cm_area22.tif",
+   "top_mosaic_09cm_area23.tif",
+   "top_mosaic_09cm_area34.tif"
+  ],
+  "steps": 2
+ },
+ "timing": {
+  "loop_seconds": 5.3236329555511475,
+  "validation_seconds": 0.7296268939971924,
+  "training_seconds": 4.594006061553955,
+  "process_seconds": 7.176142930984497
+ },
+ "memory": {
+  "kernel_lifetime_max_footprint_mb": 5465.9095458984375,
+  "sampled_max": {
+   "driver_mb": 2142.109375,
+   "current_mb": 1580.797119140625,
+   "phys_mb": 5465.8157958984375,
+   "swap_growth_mb": 0.0,
+   "pressure": 1
+  },
+  "pressure_warn_samples": 0,
+  "samples": 14,
+  "series": [
+   [
+    1793628006,
+    266,
+    0,
+    0,
+    1
+   ]
+  ]
+ },
+ "env": {
+  "torch": "2.14.0",
+  "hardware": {
+   "platform": "macOS-26.7.1-arm64-arm-64bit",
+   "processor": "arm",
+   "python_version": "3.12.13",
+   "torch_version": "2.14.0",
+   "mps_available": true,
+   "cuda_available": false
+  }
+ },
+ "reload_verification": {
+  "best": {
+   "sha256": "fda81b2ae2cae45bef3168746953508567d2f832306ec33c001c6f01cbd14cb4",
+   "step": 2,
+   "cm_diff": 0,
+   "size": 11206745
+  },
+  "final": {
+   "sha256": "927578854384eb34c9304860c7e7f813717e00f7142eb1c9578bdd1254345d67",
+   "step": 2,
+   "cm_diff": 0,
+   "size": 11206389
+  },
+  "result_sha256_before_verify": "3fea5f664c9a491474bbb2344cf26251e742d6cd1aec0d2518ab9b771ab0e30d"
+ }
+}

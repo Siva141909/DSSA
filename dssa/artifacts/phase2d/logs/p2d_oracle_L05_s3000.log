@@ -1,0 +1,15 @@
+[signals] {"pid": 64605, "ppid": 53171, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x102b78680>"}}
+[p2d_oracle_L05_s3000] layers=[5] trainable=2799494 (decoder=2766726, lora=32768) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[incident] KeyboardInterrupt() at optimizer step 152 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v11.py", line 17, in <module>
+    R.main()
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 171, in main
+    train_result, model, mods = T.run_training(spec, device="mps", out_dir=out, log=print, **kw)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/train/train.py", line 154, in run_training
+    optimizer.step()
+  File "/Users/siva/Documents/Major project/dssa/venv/lib/python3.12/site-packages/torch/optim/optimizer.py", line 528, in wrapper
+    @functools.wraps(func)
+
+KeyboardInterrupt

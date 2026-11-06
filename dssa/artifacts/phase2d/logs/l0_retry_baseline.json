@@ -1,0 +1,13 @@
+{
+ "time": 1793631304.336184,
+ "boot": "{ sec = 1793631057, usec = 960251 } Mon Nov  2 20:20:57 2026",
+ "swap_used_mb": 0.0,
+ "memory_pressure_level": 1,
+ "this_process_footprint_mb": 11.000411987304688,
+ "load": "{ 4.60 6.22 3.30 }",
+ "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    21709.\nPages active:                                 377059.\nPages inactive:                               373844.\nPages speculative:                              2199.\nPages throttled:                                   0.\nPages wired down:                             170620.\nPages purgeable:                               11209.\n\"Translation faults\":                        4441499.\nPages copy-on-write:                          257980.\nPages zero filled:                           2697756.\nPages reactivated:                            202011.\nPages purged:                                  15101.\nFile-backed pages:                            321547.\nAnonymous pages:                              431555.\nPages stored in compressor:                   159027.\nPages occupied by compressor:                  59164.\nDecompressions:                                23157.\nCompressions:                                 190430.\nPageins:                                      521800.\nPageouts:                                       1789.\nSwapins:                                           0.\nSwapouts:                                          0.\nPages tagged:                                  67143.\nPages tagged resident:                         55993.\nPages tagged compressed:                       11150.\nPages tag-storage:                             32768.\nPages tag-storage holding tags:                 2164.\nPages tag-storage free:                          296.\nPages tag-storage non-tag pageable:            30236.\nPages tag-storage non-tag wired:                  72.\nBytes of compressed tags:                    1803968.\nTagged compressions:                           12026.\nTagged decompressions:                           867.\n",
+ "limits": {
+  "footprint_mb": 11776.0,
+  "swap_growth_mb": 512
+ }
+}

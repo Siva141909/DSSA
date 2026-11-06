@@ -1,0 +1,22 @@
+[gate2-v9] 1/39 p2d_oracle_L04_s2000_a2 est 36.1 min
+ p2d_oracle_L04_s2000_a2 best=0.5479@1600 final=0.5443 loop=2126s val=721s peak=7779MB swapgrow=0MB
+[gate2-v9] 2/39 p2d_oracle_L05_s2000 est 35.5 min
+ p2d_oracle_L05_s2000 best=0.5569@1600 final=0.5552 loop=2080s val=720s peak=8192MB swapgrow=0MB
+[gate2-v9] 3/39 p2d_oracle_L06_s2000 est 34.9 min
+ p2d_oracle_L06_s2000 best=0.5471@1400 final=0.5455 loop=2075s val=725s peak=6781MB swapgrow=0MB
+[gate2-v9] 4/39 p2d_oracle_L07_s2000 est 34.3 min
+ p2d_oracle_L07_s2000 best=0.5411@1600 final=0.5366 loop=2019s val=719s peak=6689MB swapgrow=0MB
+[gate2-v9] 5/39 p2d_oracle_L08_s2000 est 33.8 min
+ p2d_oracle_L08_s2000 best=0.5569@1600 final=0.5472 loop=1982s val=719s peak=6769MB swapgrow=0MB
+[gate2-v9] 6/39 p2d_oracle_L09_s2000 est 33.2 min
+ p2d_oracle_L09_s2000 best=0.5518@1600 final=0.5424 loop=1936s val=714s peak=7218MB swapgrow=0MB
+[gate2-v9] 7/39 p2d_oracle_L10_s2000 est 32.6 min
+ p2d_oracle_L10_s2000 best=0.5543@1800 final=0.5508 loop=1895s val=712s peak=7119MB swapgrow=0MB
+[gate2-v9] 8/39 p2d_oracle_L11_s2000 est 32.0 min
+ p2d_oracle_L11_s2000 best=0.5672@2000 final=0.5672 loop=1896s val=726s peak=7043MB swapgrow=0MB
+[gate2-v9] 9/39 p2d_oracle_L13_s2000 est 30.9 min
+ p2d_oracle_L13_s2000 best=0.5562@1600 final=0.5487 loop=1823s val=722s peak=7117MB swapgrow=0MB
+[gate2-v9] 10/39 p2d_oracle_L14_s2000 est 30.3 min
+ p2d_oracle_L14_s2000 best=0.5525@1600 final=0.5466 loop=1793s val=724s peak=7060MB swapgrow=0MB
+[gate2-v9] 11/39 p2d_oracle_L15_s2000 est 29.7 min
+[GATE 2 RECOVERY STOPPED] p2d_oracle_L15_s2000: safety guard stopped the run (lid closed); see runs/p2d_oracle_L15_s2000/incident.json and logs/gate2_guard_v9.jsonl

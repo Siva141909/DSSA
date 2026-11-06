@@ -1,0 +1,8 @@
+{
+ "state": "stopped",
+ "reason": "p2d_oracle_L05_s2000: safety guard stopped the run (charger disconnected); see runs/p2d_oracle_L05_s2000/incident.json and logs/gate2_guard_v9.jsonl",
+ "completed": [
+  "p2d_oracle_L04_s2000_a2"
+ ],
+ "time": 1793779006.35231
+}

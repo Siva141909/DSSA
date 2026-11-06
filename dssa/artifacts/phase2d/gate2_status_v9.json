@@ -1,0 +1,17 @@
+{
+ "state": "stopped",
+ "reason": "p2d_oracle_L15_s2000: safety guard stopped the run (lid closed); see runs/p2d_oracle_L15_s2000/incident.json and logs/gate2_guard_v9.jsonl",
+ "completed": [
+  "p2d_oracle_L04_s2000_a2",
+  "p2d_oracle_L05_s2000",
+  "p2d_oracle_L06_s2000",
+  "p2d_oracle_L07_s2000",
+  "p2d_oracle_L08_s2000",
+  "p2d_oracle_L09_s2000",
+  "p2d_oracle_L10_s2000",
+  "p2d_oracle_L11_s2000",
+  "p2d_oracle_L13_s2000",
+  "p2d_oracle_L14_s2000"
+ ],
+ "time": 1793800217.911336
+}

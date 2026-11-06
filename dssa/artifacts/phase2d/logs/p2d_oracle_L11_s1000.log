@@ -1,0 +1,13 @@
+[p2d_oracle_L11_s1000] layers=[11] trainable=2799494 (decoder=2766726, lora=32768) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[p2d_oracle_L11_s1000] step=200 loss=1.1586 val_mIoU=0.4342
+[p2d_oracle_L11_s1000] step=400 loss=1.0138 val_mIoU=0.4897
+[p2d_oracle_L11_s1000] step=600 loss=0.8996 val_mIoU=0.4831
+[p2d_oracle_L11_s1000] step=800 loss=0.7956 val_mIoU=0.4818
+[p2d_oracle_L11_s1000] step=1000 loss=1.1966 val_mIoU=0.4907
+[p2d_oracle_L11_s1000] step=1200 loss=0.9071 val_mIoU=0.5265
+[p2d_oracle_L11_s1000] step=1400 loss=0.8431 val_mIoU=0.5322
+[p2d_oracle_L11_s1000] step=1600 loss=0.8749 val_mIoU=0.5467
+[p2d_oracle_L11_s1000] step=1800 loss=0.7583 val_mIoU=0.5491
+[p2d_oracle_L11_s1000] step=2000 loss=0.6709 val_mIoU=0.5470
+[done] p2d_oracle_L11_s1000 best=0.5491@1800 final=0.5470 loop=1864s val=714s peak=7002MB swapgrow=0MB
+[reload ok] p2d_oracle_L11_s1000

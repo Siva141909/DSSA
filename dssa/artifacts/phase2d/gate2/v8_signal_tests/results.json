@@ -1,0 +1,791 @@
+[
+ {
+  "mode": "guard_charger",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8078,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8086
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8090
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8112
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [
+   "charger disconnected"
+  ],
+  "child_exit": [
+   [
+    8112,
+    -2,
+    true
+   ]
+  ],
+  "sigkill_used": false,
+  "incident": {
+   "error": "KeyboardInterrupt()",
+   "stage": "train",
+   "optimizer_steps_completed": 30,
+   "batches_drawn": 30,
+   "telemetry_tail_len": 7,
+   "all_required_keys": true
+  },
+  "stopped_run_files": [
+   "IN_PROGRESS",
+   "incident.json",
+   "p2d_oracle_L03_s2000_best.pt",
+   "telemetry.jsonl"
+  ],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 30,
+    "incident_written": true,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": true,
+  "run3_started": false
+ },
+ {
+  "mode": "guard_lid",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8156,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8164
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8168
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8190
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [
+   "lid closed"
+  ],
+  "child_exit": [
+   [
+    8190,
+    -2,
+    true
+   ]
+  ],
+  "sigkill_used": false,
+  "incident": {
+   "error": "KeyboardInterrupt()",
+   "stage": "train",
+   "optimizer_steps_completed": 15,
+   "batches_drawn": 15,
+   "telemetry_tail_len": 4,
+   "all_required_keys": true
+  },
+  "stopped_run_files": [
+   "IN_PROGRESS",
+   "incident.json",
+   "p2d_oracle_L03_s2000_best.pt",
+   "telemetry.jsonl"
+  ],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 15,
+    "incident_written": true,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": true,
+  "run3_started": false
+ },
+ {
+  "mode": "guard_thermal",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8216,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8224
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8228
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8250
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [
+   "thermal or performance warning recorded"
+  ],
+  "child_exit": [
+   [
+    8250,
+    -2,
+    true
+   ]
+  ],
+  "sigkill_used": false,
+  "incident": {
+   "error": "KeyboardInterrupt()",
+   "stage": "train",
+   "optimizer_steps_completed": 3,
+   "batches_drawn": 3,
+   "telemetry_tail_len": 1,
+   "all_required_keys": true
+  },
+  "stopped_run_files": [
+   "IN_PROGRESS",
+   "incident.json",
+   "telemetry.jsonl"
+  ],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 3,
+    "incident_written": true,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": true,
+  "run3_started": false
+ },
+ {
+  "mode": "guard_sleep",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8277,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8285
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8289
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8311
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [
+   "system sleep detected (100 s suspended)"
+  ],
+  "child_exit": [
+   [
+    8311,
+    -2,
+    true
+   ]
+  ],
+  "sigkill_used": false,
+  "incident": {
+   "error": "KeyboardInterrupt()",
+   "stage": "train",
+   "optimizer_steps_completed": 3,
+   "batches_drawn": 3,
+   "telemetry_tail_len": 1,
+   "all_required_keys": true
+  },
+  "stopped_run_files": [
+   "IN_PROGRESS",
+   "incident.json",
+   "telemetry.jsonl"
+  ],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 3,
+    "incident_written": true,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": true,
+  "run3_started": false
+ },
+ {
+  "mode": "manual_child_sigint",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8333,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8341
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8345
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8367
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [],
+  "child_exit": [],
+  "sigkill_used": false,
+  "incident": {
+   "error": "KeyboardInterrupt()",
+   "stage": "train",
+   "optimizer_steps_completed": 17,
+   "batches_drawn": 17,
+   "telemetry_tail_len": 4,
+   "all_required_keys": true
+  },
+  "stopped_run_files": [
+   "IN_PROGRESS",
+   "incident.json",
+   "p2d_oracle_L03_s2000_best.pt",
+   "telemetry.jsonl"
+  ],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 17,
+    "incident_written": true,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": true,
+  "run3_started": false
+ },
+ {
+  "mode": "child_sigterm",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8398,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8406
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8410
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8432
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [],
+  "child_exit": [],
+  "sigkill_used": false,
+  "incident": {
+   "error": "Terminated('received SIGTERM')",
+   "stage": "train",
+   "optimizer_steps_completed": 17,
+   "batches_drawn": 17,
+   "telemetry_tail_len": 4,
+   "all_required_keys": true
+  },
+  "stopped_run_files": [
+   "IN_PROGRESS",
+   "incident.json",
+   "p2d_oracle_L03_s2000_best.pt",
+   "telemetry.jsonl"
+  ],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": "Terminated('received SIGTERM')",
+    "stage": "train",
+    "optimizer_steps_completed": 17,
+    "incident_written": true,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": true,
+  "run3_started": false
+ },
+ {
+  "mode": "seq_sigint",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8463,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8471
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8475
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8497
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [
+   "sequence process received SIGINT (manual stop)"
+  ],
+  "child_exit": [
+   [
+    8497,
+    -2,
+    true
+   ]
+  ],
+  "sigkill_used": false,
+  "incident": {
+   "error": "KeyboardInterrupt()",
+   "stage": "train",
+   "optimizer_steps_completed": 17,
+   "batches_drawn": 17,
+   "telemetry_tail_len": 4,
+   "all_required_keys": true
+  },
+  "stopped_run_files": [
+   "IN_PROGRESS",
+   "incident.json",
+   "p2d_oracle_L03_s2000_best.pt",
+   "telemetry.jsonl"
+  ],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 17,
+    "incident_written": true,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": true,
+  "run3_started": false
+ },
+ {
+  "mode": "seq_sigterm",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8524,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8532
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8536
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8558
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [
+   "sequence process received SIGTERM (manual stop)"
+  ],
+  "child_exit": [
+   [
+    8558,
+    -2,
+    true
+   ]
+  ],
+  "sigkill_used": false,
+  "incident": {
+   "error": "KeyboardInterrupt()",
+   "stage": "train",
+   "optimizer_steps_completed": 18,
+   "batches_drawn": 18,
+   "telemetry_tail_len": 4,
+   "all_required_keys": true
+  },
+  "stopped_run_files": [
+   "IN_PROGRESS",
+   "incident.json",
+   "p2d_oracle_L03_s2000_best.pt",
+   "telemetry.jsonl"
+  ],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": "KeyboardInterrupt()",
+    "stage": "train",
+    "optimizer_steps_completed": 18,
+    "incident_written": true,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": true,
+  "run3_started": false
+ },
+ {
+  "mode": "reload_guard",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8581,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8589
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8593
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": null,
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [
+   "charger disconnected"
+  ],
+  "child_exit": [
+   [
+    8593,
+    -2,
+    false
+   ]
+  ],
+  "sigkill_used": false,
+  "incident": null,
+  "stopped_run_files": [
+   "result.json"
+  ],
+  "status": "stopped",
+  "completed": [],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L02_s2000_a2",
+    "error": null,
+    "stage": null,
+    "optimizer_steps_completed": null,
+    "incident_written": false,
+    "completed_before": 0
+   }
+  ],
+  "run1_result": true,
+  "run2_started": false,
+  "run3_started": false
+ },
+ {
+  "mode": "early_signal",
+  "sequence_signals": {
+   "SIGINT": "caught",
+   "SIGTERM": "caught"
+  },
+  "sequence_pid": 8636,
+  "children_started": [
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "train",
+    8644
+   ],
+   [
+    "p2d_oracle_L02_s2000_a2",
+    "reload",
+    8648
+   ],
+   [
+    "p2d_oracle_L03_s2000",
+    "train",
+    8671
+   ]
+  ],
+  "child_inherited_signals_from_sequence": {
+   "SIGINT": "caught",
+   "SIGTERM": "default"
+  },
+  "run_entry_signals_after_restore": null,
+  "reload_signals": [
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "default"
+   },
+   {
+    "SIGINT": "caught",
+    "SIGTERM": "caught"
+   }
+  ],
+  "hazard": [],
+  "child_exit": [],
+  "sigkill_used": false,
+  "incident": null,
+  "stopped_run_files": [],
+  "status": "stopped",
+  "completed": [
+   "p2d_oracle_L02_s2000_a2"
+  ],
+  "interruption_log": [
+   {
+    "run": "p2d_oracle_L03_s2000",
+    "error": null,
+    "stage": null,
+    "optimizer_steps_completed": null,
+    "incident_written": false,
+    "completed_before": 1
+   }
+  ],
+  "run1_result": true,
+  "run2_started": false,
+  "run3_started": false
+ }
+]

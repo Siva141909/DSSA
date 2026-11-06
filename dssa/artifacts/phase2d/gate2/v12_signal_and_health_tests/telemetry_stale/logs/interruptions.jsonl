@@ -1,0 +1,1 @@
+{"t": 1793865887.349, "run": "p2d_oracle_L06_s3000", "cause": "p2d_oracle_L06_s3000: safety guard stopped the run (training process unresponsive (telemetry not updated for 61 s)); see runs/p2d_oracle_L06_s3000/incident.json and logs/gate2_guard_v12.jsonl", "error": null, "stage": null, "optimizer_steps_completed": null, "incident_written": false, "completed_before": 1}

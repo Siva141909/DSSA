@@ -1,0 +1,9 @@
+{"t": 1793771139.939, "stage": "sequence start", "signals": {"pid": 8398, "ppid": 8395, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x102774680>"}}}
+{"t": 1793771139.978, "run": "p2d_oracle_L02_s2000_a2", "stage": "preflight", "checks": {"charger_connected": true, "lid_open": true, "no_thermal_warning": true, "memory_pressure_normal": true, "free_disk_ge_10gb": true, "required_files_local": true, "no_other_phase2d_run": true}, "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "free_gb": 186.3, "missing_or_cloud_only": [], "virtual_machine_running_advisory": false}
+{"t": 1793771139.979, "run": "p2d_oracle_L02_s2000_a2", "stage": "train", "action": "child started", "child_pid": 8406}
+{"t": 1793771141.032, "run": "p2d_oracle_L02_s2000_a2", "stage": "train", "action": "child exited", "child_pid": 8406, "returncode": 0}
+{"t": 1793771141.033, "run": "p2d_oracle_L02_s2000_a2", "stage": "reload", "action": "child started", "child_pid": 8410}
+{"t": 1793771142.07, "run": "p2d_oracle_L02_s2000_a2", "stage": "reload", "action": "child exited", "child_pid": 8410, "returncode": 0}
+{"t": 1793771142.134, "run": "p2d_oracle_L03_s2000", "stage": "preflight", "checks": {"charger_connected": true, "lid_open": true, "no_thermal_warning": true, "memory_pressure_normal": true, "free_disk_ge_10gb": true, "required_files_local": true, "no_other_phase2d_run": true}, "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "free_gb": 186.3, "missing_or_cloud_only": [], "virtual_machine_running_advisory": false}
+{"t": 1793771142.135, "run": "p2d_oracle_L03_s2000", "stage": "train", "action": "child started", "child_pid": 8432}
+{"t": 1793771145.245, "run": "p2d_oracle_L03_s2000", "stage": "train", "action": "child exited", "child_pid": 8432, "returncode": 1}

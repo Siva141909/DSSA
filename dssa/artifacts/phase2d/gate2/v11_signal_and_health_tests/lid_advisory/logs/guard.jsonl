@@ -1,0 +1,10 @@
+{"t": 1793814279.699, "stage": "sequence start", "signals": {"pid": 50357, "ppid": 50350, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x100964680>"}}}
+{"t": 1793814279.735, "run": "p2d_oracle_L20_s2000_a2", "stage": "preflight", "checks": {"charger_connected": true, "no_thermal_warning": true, "memory_pressure_normal": true, "free_disk_ge_10gb": true, "required_files_local": true, "no_other_phase2d_run": true}, "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "free_gb": 185.3, "missing_or_cloud_only": [], "virtual_machine_running_advisory": false, "lid_open_advisory": true}
+{"t": 1793814279.737, "run": "p2d_oracle_L20_s2000_a2", "stage": "train", "action": "child started", "child_pid": 50366}
+{"t": 1793814280.785, "run": "p2d_oracle_L20_s2000_a2", "stage": "train", "action": "child exited", "child_pid": 50366, "returncode": 0}
+{"t": 1793814280.786, "run": "p2d_oracle_L20_s2000_a2", "stage": "reload", "action": "child started", "child_pid": 50370}
+{"t": 1793814281.823, "run": "p2d_oracle_L20_s2000_a2", "stage": "reload", "action": "child exited", "child_pid": 50370, "returncode": 0}
+{"t": 1793814281.883, "run": "p2d_oracle_L21_s2000", "stage": "preflight", "checks": {"charger_connected": true, "no_thermal_warning": true, "memory_pressure_normal": true, "free_disk_ge_10gb": true, "required_files_local": true, "no_other_phase2d_run": true}, "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "free_gb": 185.3, "missing_or_cloud_only": [], "virtual_machine_running_advisory": false, "lid_open_advisory": true}
+{"t": 1793814281.884, "run": "p2d_oracle_L21_s2000", "stage": "train", "action": "child started", "child_pid": 50393}
+{"t": 1793814283.951, "run": "p2d_oracle_L21_s2000", "stage": "train", "event": "lid closed (logged only, not a stop condition)", "state": {"pressure": 1, "ac": true, "lid_open": false, "thermal_ok": true}}
+{"t": 1793814329.093, "run": "p2d_oracle_L21_s2000", "stage": "train", "action": "child exited", "child_pid": 50393, "returncode": -2}

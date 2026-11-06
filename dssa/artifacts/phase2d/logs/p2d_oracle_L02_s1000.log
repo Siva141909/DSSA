@@ -1,0 +1,25 @@
+[p2d_oracle_L02_s1000] layers=[2] trainable=2799494 (decoder=2766726, lora=32768) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[p2d_oracle_L02_s1000] step=200 loss=1.1511 val_mIoU=0.3877
+[p2d_oracle_L02_s1000] step=400 loss=0.9457 val_mIoU=0.4825
+[p2d_oracle_L02_s1000] step=600 loss=0.8820 val_mIoU=0.4768
+[p2d_oracle_L02_s1000] step=800 loss=0.8587 val_mIoU=0.4692
+[p2d_oracle_L02_s1000] step=1000 loss=1.1090 val_mIoU=0.4874
+[p2d_oracle_L02_s1000] step=1200 loss=0.8955 val_mIoU=0.5149
+[p2d_oracle_L02_s1000] step=1400 loss=0.8025 val_mIoU=0.5059
+[p2d_oracle_L02_s1000] step=1600 loss=0.8574 val_mIoU=0.5227
+[p2d_oracle_L02_s1000] step=1800 loss=0.7149 val_mIoU=0.5198
+[incident] RuntimeError('STOP: runtime above 1.5x estimate (3350s)') at optimizer step 1804 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v4.py", line 10, in <module>
+    R.main()
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 171, in main
+    train_result, model, mods = T.run_training(spec, device="mps", out_dir=out, log=print, **kw)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/train/train.py", line 143, in run_training
+    x_batch, y_batch = make_batch(train_ds, BATCH_SIZE, device)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 139, in p_batch
+    tick()
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 107, in tick
+    raise RuntimeError(f"STOP: runtime above 1.5x estimate ({limit_s:.0f}s)")
+RuntimeError: STOP: runtime above 1.5x estimate (3350s)

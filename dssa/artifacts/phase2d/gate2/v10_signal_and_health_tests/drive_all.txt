@@ -1,0 +1,30 @@
+== lid_advisory: caffeinate=34271 sequence=34269 child=34313
+-- process tree before action:
+-- action: lid reported closed; waiting 45 s, then documented manual stop
+-- run alive after 45 s with lid closed: yes
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 46.1
+== guard_charger: caffeinate=34533 sequence=34531 child=34570
+-- process tree before action:
+-- action: injected guard hazard (guard_charger)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 1.0
+== manual_child_sigint: caffeinate=34598 sequence=34596 child=34632
+-- process tree before action:
+-- action: documented manual stop: kill -INT $(pgrep -P 34596 -f 'run_one_v10.py|verify_reload_v8.py')
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 2.1
+== guard_sleep: caffeinate=34665 sequence=34663 child=
+-- process tree before action:
+-- action: injected guard hazard (guard_sleep)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 0.0
+== guard_thermal: caffeinate=34726 sequence=34724 child=
+-- process tree before action:
+-- action: injected guard hazard (guard_thermal)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 0.0
+== step_stall: caffeinate=34785 sequence=34783 child=34823
+-- process tree before action:
+-- action: injected guard hazard (step_stall)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 301.2
+== telemetry_stale: caffeinate=36213 sequence=36211 child=36257
+-- process tree before action:
+-- action: kill -STOP 36257 (frozen training process)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 241.2
+ALL_DONE

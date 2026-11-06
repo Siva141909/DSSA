@@ -1,0 +1,1 @@
+../../../dssa/artifacts/phase2d/gate2/GATE2_V6_LAUNCH.md

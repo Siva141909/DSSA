@@ -1,0 +1,1 @@
+{"t": 1793779006.352, "run": "p2d_oracle_L05_s2000", "cause": "p2d_oracle_L05_s2000: safety guard stopped the run (charger disconnected); see runs/p2d_oracle_L05_s2000/incident.json and logs/gate2_guard_v9.jsonl", "error": "KeyboardInterrupt()", "stage": "train", "optimizer_steps_completed": 20, "incident_written": true, "completed_before": 1}

@@ -1,0 +1,4 @@
+[gate2] 1/63 p2d_oracle_L01_s1000 est 37.8 min
+ p2d_oracle_L01_s1000 best=0.5226@1600 final=0.5206 loop=2867s val=1378s peak=8140MB swapgrow=0MB
+[gate2] 2/63 p2d_oracle_L02_s1000 est 37.2 min
+[GATE 2 STOPPED] p2d_oracle_L02_s1000: run failed; see runs/p2d_oracle_L02_s1000/incident.json

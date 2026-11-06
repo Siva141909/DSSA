@@ -1,0 +1,5 @@
+[dummy] inherited signals {"pid": 34732, "ppid": 34724, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "default", "python": "<Handlers.SIG_DFL: 0>"}}
+[done] dummy p2d_oracle_L15_s2000_a2
+[dummy reload] inherited signals {"pid": 34738, "ppid": 34724, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "default", "python": "<Handlers.SIG_DFL: 0>"}}
+[dummy reload] after restore {"pid": 34738, "ppid": 34724, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x1029c4680>"}}
+[reload ok] dummy

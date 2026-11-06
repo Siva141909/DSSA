@@ -1,0 +1,1 @@
+../../../dssa/artifacts/phase2d/logs/INCIDENT_004_gate2_v5_swap_growth_stop.md

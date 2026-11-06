@@ -1,0 +1,2 @@
+[dummy] inherited signals {"pid": 36257, "ppid": 36211, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "default", "python": "<Handlers.SIG_DFL: 0>"}}
+[signals] {"pid": 36257, "ppid": 36211, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x10797c680>"}}

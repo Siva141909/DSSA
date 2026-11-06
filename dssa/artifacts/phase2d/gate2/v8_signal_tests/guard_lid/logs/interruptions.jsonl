@@ -1,0 +1,1 @@
+{"t": 1793771125.636, "run": "p2d_oracle_L03_s2000", "cause": "p2d_oracle_L03_s2000: safety guard stopped the run (lid closed); see runs/p2d_oracle_L03_s2000/incident.json and logs/gate2_guard_v8.jsonl", "error": "KeyboardInterrupt()", "stage": "train", "optimizer_steps_completed": 15, "incident_written": true, "completed_before": 1}

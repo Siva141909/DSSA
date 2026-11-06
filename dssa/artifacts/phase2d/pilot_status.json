@@ -1,0 +1,5 @@
+{
+ "state": "stopped",
+ "reason": "p2d_oracle_L00_s1000: run_one failed; see logs/p2d_oracle_L00_s1000.log",
+ "time": 1793630521.022482
+}

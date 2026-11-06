@@ -1,0 +1,13 @@
+[p2d_oracle_L23_s3000] layers=[23] trainable=2799494 (decoder=2766726, lora=32768) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[p2d_oracle_L23_s3000] step=200 loss=1.2819 val_mIoU=0.3596
+[p2d_oracle_L23_s3000] step=400 loss=1.0235 val_mIoU=0.4657
+[p2d_oracle_L23_s3000] step=600 loss=1.0327 val_mIoU=0.4743
+[p2d_oracle_L23_s3000] step=800 loss=0.8534 val_mIoU=0.4930
+[p2d_oracle_L23_s3000] step=1000 loss=0.9141 val_mIoU=0.5074
+[p2d_oracle_L23_s3000] step=1200 loss=1.1446 val_mIoU=0.5178
+[p2d_oracle_L23_s3000] step=1400 loss=0.7989 val_mIoU=0.5233
+[p2d_oracle_L23_s3000] step=1600 loss=0.9020 val_mIoU=0.5275
+[p2d_oracle_L23_s3000] step=1800 loss=0.8356 val_mIoU=0.5221
+[p2d_oracle_L23_s3000] step=2000 loss=0.8337 val_mIoU=0.5272
+[done] p2d_oracle_L23_s3000 best=0.5275@1600 final=0.5272 loop=1475s val=716s peak=5521MB swapgrow=0MB
+[reload ok] p2d_oracle_L23_s3000

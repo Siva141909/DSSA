@@ -1,0 +1,7 @@
+{'seed': 1000, 'samples': 16000, 'mismatches': 0, 'final_rng_hash': 'a387f38494ff17cea85223c353f4e968d3dab4c87377ae29051145623820a229', 'order_hash': '5fab9156c4c0ea197c3be55c4d66add50ad95d9027c4cbe8778b6cdb89d7c208', 'cache_bytes_old': 3280150368, 'cache_bytes_new': 410018796, 'final_matches_replay': True} 50
+{'seed': 2000, 'samples': 16000, 'mismatches': 0, 'final_rng_hash': '98af1a1b7eaa883e8d3360ac7adaee4474c3fc7768dd3fbb20a20a32fc9e0623', 'order_hash': '36aeec91ebef04e9b971450ed83ded4bde12b2d34daf6fdf9bf5f35c3833b8ff', 'cache_bytes_old': 3280150368, 'cache_bytes_new': 410018796, 'final_matches_replay': True} 102
+{'seed': 3000, 'samples': 16000, 'mismatches': 0, 'final_rng_hash': '56dd587a82b1db34b11a006ef0ea1b88a0dca79cfcf75c747c62c0ba827f950d', 'order_hash': 'fa94071d9292f2f0a88197bc9167be83df11361e79eb7135ae0a84b948149158', 'cache_bytes_old': 3280150368, 'cache_bytes_new': 410018796, 'final_matches_replay': True} 154
+{'checkpoint': 'run000_K0_K0_decoder_only', 'layers': [], 'batches_identical': 8, 'modes': ['eval', 'train']}
+{'checkpoint': 'run001_K2_DSSA', 'layers': [19, 23], 'batches_identical': 8, 'modes': ['eval', 'train']}
+{'checkpoint': 'run002_K2_Early', 'layers': [0, 1], 'batches_identical': 8, 'modes': ['eval', 'train']}
+EQUIVALENCE PASS 198

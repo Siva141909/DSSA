@@ -1,0 +1,10 @@
+[gate2-v5] 1/62 p2d_oracle_L02_s1000_a2 est 37.2 min
+ p2d_oracle_L02_s1000_a2 best=0.5227@1600 final=0.5198 loop=2229s val=734s peak=7708MB swapgrow=0MB
+[gate2-v5] 2/62 p2d_oracle_L03_s1000 est 36.6 min
+ p2d_oracle_L03_s1000 best=0.5250@1600 final=0.5205 loop=2187s val=733s peak=7895MB swapgrow=0MB
+[gate2-v5] 3/62 p2d_oracle_L04_s1000 est 36.1 min
+ p2d_oracle_L04_s1000 best=0.5391@1600 final=0.5328 loop=2147s val=729s peak=8101MB swapgrow=0MB
+[gate2-v5] 4/62 p2d_oracle_L05_s1000 est 35.5 min
+ p2d_oracle_L05_s1000 best=0.5357@1600 final=0.5331 loop=2109s val=728s peak=8133MB swapgrow=0MB
+[gate2-v5] 5/62 p2d_oracle_L06_s1000 est 34.9 min
+[GATE 2 RECOVERY STOPPED] p2d_oracle_L06_s1000: run failed; see runs/p2d_oracle_L06_s1000/incident.json

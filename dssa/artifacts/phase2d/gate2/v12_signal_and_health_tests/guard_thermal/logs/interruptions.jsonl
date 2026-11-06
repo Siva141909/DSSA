@@ -1,0 +1,1 @@
+{"t": 1793865336.632, "run": "p2d_oracle_L06_s3000", "cause": "p2d_oracle_L06_s3000: safety guard stopped the run (thermal or performance warning recorded); see runs/p2d_oracle_L06_s3000/incident.json and logs/gate2_guard_v12.jsonl", "error": "KeyboardInterrupt()", "stage": "train", "optimizer_steps_completed": 1, "incident_written": true, "completed_before": 1}

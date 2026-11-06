@@ -1,0 +1,65 @@
+== lid_advisory: caffeinate=50359 sequence=50357 child=50393
+-- process tree before action:
+  PID  PPID  PGID STAT COMMAND
+50357 50350 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+50359 50357 50349 S    caffeinate -dims ../venv/bin/python -B /private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace
+50393 50357 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+-- action: lid reported closed; waiting 45 s, then documented manual stop
+-- run alive after 45 s with lid closed: yes
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 46.1
+-- leftover test processes: 
+
+== guard_charger: caffeinate=50610 sequence=50608 child=50642
+-- process tree before action:
+  PID  PPID  PGID STAT COMMAND
+50608 50606 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+50610 50608 50349 S    caffeinate -dims ../venv/bin/python -B /private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace
+50642 50608 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+-- action: injected guard hazard (guard_charger)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 1.0
+-- leftover test processes: 
+
+== manual_child_sigint: caffeinate=50669 sequence=50667 child=50701
+-- process tree before action:
+  PID  PPID  PGID STAT COMMAND
+50667 50665 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+50669 50667 50349 S    caffeinate -dims ../venv/bin/python -B /private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace
+50701 50667 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+-- action: documented manual stop: kill -INT $(pgrep -P 50667 -f 'run_one_v11.py|verify_reload_v8.py')
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 2.1
+-- leftover test processes: 
+
+== guard_sleep: caffeinate=50738 sequence=50736 child=
+-- process tree before action:
+  PID  PPID  PGID STAT COMMAND
+-- action: injected guard hazard (guard_sleep)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 0.0
+-- leftover test processes: 
+
+== guard_thermal: caffeinate=50793 sequence=50791 child=
+-- process tree before action:
+  PID  PPID  PGID STAT COMMAND
+-- action: injected guard hazard (guard_thermal)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 0.0
+-- leftover test processes: 
+
+== step_stall: caffeinate=50852 sequence=50850 child=50884
+-- process tree before action:
+  PID  PPID  PGID STAT COMMAND
+50850 50848 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+50852 50850 50349 S    caffeinate -dims ../venv/bin/python -B /private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace
+50884 50850 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+-- action: injected guard hazard (step_stall)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 300.9
+-- leftover test processes: 
+
+== telemetry_stale: caffeinate=52224 sequence=52222 child=52269
+-- process tree before action:
+  PID  PPID  PGID STAT COMMAND
+52222 52220 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+52224 52222 50349 S    caffeinate -dims ../venv/bin/python -B /private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace
+52269 52222 50349 S    /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python
+-- action: kill -STOP 52269 (frozen training process)
+-- sequence alive after wait: no; child alive: no; seconds from action to sequence exit: 240.8
+-- leftover test processes: 
+

@@ -1,0 +1,1 @@
+../../../dssa/artifacts/phase2d/gate0/backup/ISPRS_LICENSING_POSITION.md

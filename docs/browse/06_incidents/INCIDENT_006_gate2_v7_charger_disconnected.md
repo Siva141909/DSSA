@@ -1,0 +1,1 @@
+../../../dssa/artifacts/phase2d/logs/INCIDENT_006_gate2_v7_charger_disconnected.md

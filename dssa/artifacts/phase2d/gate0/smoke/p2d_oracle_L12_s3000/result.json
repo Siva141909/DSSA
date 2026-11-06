@@ -1,0 +1,214 @@
+{
+ "status": "completed",
+ "smoke": true,
+ "entry": {
+  "run_id": "p2d_oracle_L12_s3000",
+  "K": 1,
+  "layer_indices": [
+   12
+  ],
+  "training_seed": 3000,
+  "lora_init_seed": 7003000,
+  "condition_labels": [
+   "Oracle_L12"
+  ],
+  "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+  "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+  "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+  "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+  "cache": "TargetSegDatasetU8",
+  "phase": "2D-pilot-v3",
+  "est_seconds": 1887,
+  "config_hash": "67a1d290e4281152915a9e3bf60c14d35f24e1433555c06b7ec336918787cd32"
+ },
+ "manifest_sha": "3099ca82837a1959eea0a006edc8e8ae97ac1e8ad034cae4532d675d2f83d299",
+ "train_result": {
+  "run_id": "p2d_oracle_L12_s3000",
+  "condition_labels": [
+   "Oracle_L12"
+  ],
+  "K": 1,
+  "layer_indices": [
+   12
+  ],
+  "training_seed": 3000,
+  "preflight": true,
+  "total_steps_executed": 2,
+  "checkpoint_every": 2,
+  "parameter_counts": {
+   "total_params": 306685830,
+   "trainable_params": 2799494,
+   "decoder_params": 2766726,
+   "lora_params": 32768,
+   "trainable_percentage": 0.9128214368430391
+  },
+  "best_val_mean_iou": 0.06816822130366385,
+  "best_step": 2,
+  "best_checkpoint_path": "/Users/siva/Documents/Major project/dssa/artifacts/phase2d/gate0/smoke/p2d_oracle_L12_s3000/p2d_oracle_L12_s3000_best.pt",
+  "training_wall_clock_seconds": 5.1383280754089355,
+  "hardware": {
+   "platform": "macOS-26.7.1-arm64-arm-64bit",
+   "processor": "arm",
+   "python_version": "3.12.13",
+   "torch_version": "2.14.0",
+   "mps_available": true,
+   "cuda_available": false
+  }
+ },
+ "validation_history": [
+  {
+   "step": 2,
+   "train_loss": 2.4504332542419434,
+   "lr": 0.001,
+   "val_mean_iou": 0.06816822130366385,
+   "val_macro_f1": 0.09253731292872198,
+   "val_pixel_accuracy": 0.18467494419642858,
+   "val_per_class_iou": [
+    0.0,
+    0.2744257412338102,
+    0.06641536528450906,
+    0.0,
+    0.0,
+    null
+   ]
+  }
+ ],
+ "evals": [
+  {
+   "step": 2,
+   "seconds": 0.661351203918457,
+   "mean_iou": 0.06816822130366385,
+   "val_ce": 1.6594792580117985,
+   "tiles": {
+    "top_mosaic_09cm_area34.tif": [
+     [
+      0,
+      68137,
+      40145,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      30405,
+      10265,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      104,
+      6660,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1025,
+      37068,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      859,
+      6036,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    ]
+   },
+   "per_class_iou": [
+    0.0,
+    0.2744257412338102,
+    0.06641536528450906,
+    0.0,
+    0.0,
+    null
+   ]
+  }
+ ],
+ "pre_run_checks": {
+  "decoder_hash": "27deed08616aff18a9753e70362619f6f7fecbffdb641b2ab1a0e7ced27ac5c9",
+  "torch_rng_hash": "b0ccbb1fe72afd3c1e2adcc86128ce71e395f9879ccfc2d9cb2b608358aa62ac",
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff"
+ },
+ "post_run_checks": {
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "data_stream_ok": true,
+  "tiles_opened": [
+   "top_mosaic_09cm_area1.tif",
+   "top_mosaic_09cm_area12.tif",
+   "top_mosaic_09cm_area13.tif",
+   "top_mosaic_09cm_area14.tif",
+   "top_mosaic_09cm_area15.tif",
+   "top_mosaic_09cm_area2.tif",
+   "top_mosaic_09cm_area20.tif",
+   "top_mosaic_09cm_area22.tif",
+   "top_mosaic_09cm_area26.tif",
+   "top_mosaic_09cm_area28.tif",
+   "top_mosaic_09cm_area3.tif",
+   "top_mosaic_09cm_area34.tif"
+  ],
+  "steps": 2
+ },
+ "timing": {
+  "loop_seconds": 5.1383280754089355,
+  "validation_seconds": 0.661351203918457,
+  "training_seconds": 4.4769768714904785,
+  "process_seconds": 6.405924081802368
+ },
+ "memory": {
+  "kernel_lifetime_max_footprint_mb": 5901.408355712891,
+  "sampled_max": {
+   "driver_mb": 4198.125,
+   "current_mb": 2889.878173828125,
+   "phys_mb": 5876.486480712891,
+   "swap_growth_mb": 0.0,
+   "pressure": 1
+  },
+  "pressure_warn_samples": 0,
+  "samples": 24,
+  "swap_at_start_mb": 708.8125
+ },
+ "env": {
+  "torch": "2.14.0",
+  "hardware": {
+   "platform": "macOS-26.7.1-arm64-arm-64bit",
+   "processor": "arm",
+   "python_version": "3.12.13",
+   "torch_version": "2.14.0",
+   "mps_available": true,
+   "cuda_available": false
+  }
+ },
+ "reload_verification": {
+  "best": {
+   "sha256": "c67eab632f3df56cd061b66f6d0baa8de20f1d7fc516eb40982cf72e5a52417d",
+   "step": 2,
+   "cm_diff": 0,
+   "size": 11206745
+  },
+  "final": {
+   "sha256": "def7f1d294d7dbd3f432e4eddb9a8fca7a5423f723524cb918f06ee9d2814acc",
+   "step": 2,
+   "cm_diff": 0,
+   "size": 11206389
+  },
+  "result_sha256_before_verify": "a287da73bda16329b8f2b722b1de0d455268dac748ecfd8de1269b7969d2df18"
+ }
+}

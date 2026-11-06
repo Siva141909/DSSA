@@ -1,0 +1,6 @@
+[harness] sequence pid 66377
+[gate2-v12] 1/17 p2d_oracle_L05_s3000_a2 est 35.5 min
+ dummy p2d_oracle_L05_s3000_a2
+[gate2-v12] 2/17 p2d_oracle_L06_s3000 est 34.9 min
+[GATE 2 RECOVERY STOPPED] p2d_oracle_L06_s3000: safety guard stopped the run (training stalled (no optimizer step for 300 s at step 5)); see runs/p2d_oracle_L06_s3000/incident.json and logs/gate2_guard_v12.jsonl
+[harness] sequence exited 1

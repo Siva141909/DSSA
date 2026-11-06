@@ -17,3 +17,14 @@ dssa/data/
 # generated artifacts, not source. Run metrics/manifests/reports (JSON/.md)
 # are still tracked.
 dssa/artifacts/phase2c/**/*.pt
+
+# Phase 2D generated binaries (checkpoints, feature arrays). Run metrics,
+# manifests and reports (JSON/.md) stay tracked.
+dssa/artifacts/phase2d/**/*.pt
+dssa/artifacts/phase2d/**/*.npz
+
+# Image-bearing review deck (contains ISPRS Potsdam/Vaihingen crops; research use only, not to be distributed)
+DSSA_Mid_Phase_Review_Final.pptx
+
+# Phase 2D per-step training telemetry (generated; kept in the private release backup, not in Git)
+dssa/artifacts/phase2d/**/telemetry.jsonl

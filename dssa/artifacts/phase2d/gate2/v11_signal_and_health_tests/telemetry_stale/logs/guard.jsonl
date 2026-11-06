@@ -1,0 +1,11 @@
+{"t": 1793814654.8, "stage": "sequence start", "signals": {"pid": 52222, "ppid": 52220, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x102c10680>"}}}
+{"t": 1793814654.838, "run": "p2d_oracle_L20_s2000_a2", "stage": "preflight", "checks": {"charger_connected": true, "no_thermal_warning": true, "memory_pressure_normal": true, "free_disk_ge_10gb": true, "required_files_local": true, "no_other_phase2d_run": true}, "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "free_gb": 185.3, "missing_or_cloud_only": [], "virtual_machine_running_advisory": false, "lid_open_advisory": true}
+{"t": 1793814654.839, "run": "p2d_oracle_L20_s2000_a2", "stage": "train", "action": "child started", "child_pid": 52230}
+{"t": 1793814655.901, "run": "p2d_oracle_L20_s2000_a2", "stage": "train", "action": "child exited", "child_pid": 52230, "returncode": 0}
+{"t": 1793814655.903, "run": "p2d_oracle_L20_s2000_a2", "stage": "reload", "action": "child started", "child_pid": 52234}
+{"t": 1793814656.958, "run": "p2d_oracle_L20_s2000_a2", "stage": "reload", "action": "child exited", "child_pid": 52234, "returncode": 0}
+{"t": 1793814657.024, "run": "p2d_oracle_L21_s2000", "stage": "preflight", "checks": {"charger_connected": true, "no_thermal_warning": true, "memory_pressure_normal": true, "free_disk_ge_10gb": true, "required_files_local": true, "no_other_phase2d_run": true}, "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "free_gb": 185.3, "missing_or_cloud_only": [], "virtual_machine_running_advisory": false, "lid_open_advisory": true}
+{"t": 1793814657.025, "run": "p2d_oracle_L21_s2000", "stage": "train", "action": "child started", "child_pid": 52269}
+{"t": 1793814719.462, "run": "p2d_oracle_L21_s2000", "stage": "train", "hazard": "training process unresponsive (telemetry not updated for 61 s)", "state": {"pressure": 1, "ac": true, "lid_open": true, "thermal_ok": true}, "action": "SIGINT", "child_pid": 52269}
+{"t": 1793814899.478, "run": "p2d_oracle_L21_s2000", "stage": "train", "action": "SIGKILL after no exit in 180 s", "child_pid": 52269}
+{"t": 1793814899.479, "run": "p2d_oracle_L21_s2000", "stage": "train", "action": "child exited after interrupt", "child_pid": 52269, "returncode": -9, "incident_written": false}

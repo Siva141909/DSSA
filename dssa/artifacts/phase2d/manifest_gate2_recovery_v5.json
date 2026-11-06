@@ -1,0 +1,1640 @@
+{
+ "authorization": "PENDING research-lead approval. Gate 2 recovery: exactly these 62 runs (Layer 2 seed 1000 rerun + the 61 pending v4 runs), in v4 order. No other training.",
+ "version": 5,
+ "supersedes_for_remaining_runs": "manifest_gate2_v4.json (preserved unchanged)",
+ "manifest_v4_sha256": "b855b97241b72517b0ac4605e19d6bd76601406bbc64986d1e88c19f2a5d7639",
+ "manifest_v1_sha256": "5437ef3ae10e8a5ff39810846de9d06a4fc9ac6f7d810e264378725d553b1cd3",
+ "manifest_v2_sha256": "db5bac36cb9b0b6dccd347f8768a99d2db88408104298e9cc83e33153fdd0c55",
+ "manifest_v3_sha256": "3099ca82837a1959eea0a006edc8e8ae97ac1e8ad034cae4532d675d2f83d299",
+ "completed_pilot_runs": {
+  "K0_s1000": "p2d_ctrl_K0_s1000",
+  "K0_s2000": "p2d_ctrl_K0_s2000",
+  "K0_s3000": "p2d_ctrl_K0_s3000",
+  "L00_s1000": "p2d_oracle_L00_s1000_a3",
+  "L00_s2000": "p2d_oracle_L00_s2000",
+  "L00_s3000": "p2d_oracle_L00_s3000",
+  "L12_s1000": "p2d_oracle_L12_s1000",
+  "L12_s2000": "p2d_oracle_L12_s2000",
+  "L12_s3000": "p2d_oracle_L12_s3000",
+  "L23_s1000": "p2d_oracle_L23_s1000",
+  "L23_s2000": "p2d_oracle_L23_s2000",
+  "L23_s3000": "p2d_oracle_L23_s3000"
+ },
+ "pilot_hashes": {
+  "K0_s1000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "4f579ed3fdc5c7c1715cf1e919702b7cd9c293d51263da8e7684040796f105a6",
+     "step": 1600,
+     "cm_diff": 0,
+     "size": 11074517
+    },
+    "final": {
+     "sha256": "a20b2f7edd1883bf3a9685ebe6b90ab67756437ee69f5faab39359cf8d6a7629",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11074093
+    },
+    "result_sha256_before_verify": "dc9e4fe7e4388338da14c78929bed78a4200420c26e3acb8f2b4703843b77ade"
+   },
+   "result_sha256": "3fa745bab4e89f9d6dfbeaa646504fc51bb710abadbd1c4220d522fa7b00217d"
+  },
+  "K0_s2000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "c152b903cdac49469a08f6e67b9e0b5089cc72eca978825c31d51d19e84238b3",
+     "step": 1600,
+     "cm_diff": 0,
+     "size": 11074517
+    },
+    "final": {
+     "sha256": "dc3e7cd787e3a0b07fc573b9492c4edb4cfe6c6bb3090f40823e80c709194232",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11074093
+    },
+    "result_sha256_before_verify": "1e7bed728509b13d57174af8e089f22a692c52ed9a6269aec08fa303c63623e2"
+   },
+   "result_sha256": "6cf664a644b25d4b31383ebf635e5b165737b124ddb93fbbd4bc13e8082eabed"
+  },
+  "K0_s3000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "20f4fcd9b7e81f1a125f20a57fa528efd55254a7a3a97ac95f133a12b4f288d7",
+     "step": 1200,
+     "cm_diff": 0,
+     "size": 11074517
+    },
+    "final": {
+     "sha256": "c38ed8323ea03bb0d995421c58ec73f7e2e37914db32ab1cf0209b22ec43c788",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11074093
+    },
+    "result_sha256_before_verify": "69c0a63d2f4a6600fb9a14e42a670ec1259ad0561ba14c4c3f71db22715973aa"
+   },
+   "result_sha256": "7006394efaa2d600f14078cbd0a718983d48c4dcef00b2da828f6908296512eb"
+  },
+  "L00_s1000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "bc293b41825f46b72bd824d3345a850060338425e41d0e7849428d70b7f06207",
+     "step": 1600,
+     "cm_diff": 0,
+     "size": 11206893
+    },
+    "final": {
+     "sha256": "1be1d40a6f1846d73ba47dfb5cceb20b9824d624657b855dab746e789f0ec28f",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206473
+    },
+    "result_sha256_before_verify": "7e914679a66f0ab37fd9cdbb876c23d7b906afc2664bb0712dbfa3c96b19e507"
+   },
+   "result_sha256": "e98da22234491ca18dfb2493cd60623ca8a3eb1b550ec0e8956577060b428898"
+  },
+  "L00_s2000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "821e6f3d1ed87f77e6c157de6cd21130057cfd3ea35ac0105332a8497b32b659",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "2c28a57883b933382872688cc2ab7bff5be9c7c6648400c4ed335e8be3533733",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "f630f1d466b28bf3e0fb3769fa641105140d429d5ce087b9f15947d4e699c85c"
+   },
+   "result_sha256": "8c5201745983269b9b83526a3f337defc942867c21b4a524e43e971e97eb82d9"
+  },
+  "L00_s3000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "7b6307d0d7eb83123c7077ae0f74a1f2a82f83c10f27bec41ed0bb75ca099bbd",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "fefde1a86d35f920d1a7131d067bf75d90538a8e3391fac27fea3d343b73a654",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "cc2c9d6e8395a934f0cb562913c04864654fbf0eb18854591f6ff1ba468ad6a0"
+   },
+   "result_sha256": "edb9366eecf33d8c7d1383c3451ab50a6f24a6721ca44ff94064bc6af1187da6"
+  },
+  "L12_s1000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "fd0bfc48881a74bd9f5ddd8ca58956d47a4976c8011b0513288259d3b8faaa4c",
+     "step": 1600,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "4275b2f7d4ed88bcaec004983129fd70cd1b8f1752e4a996cc0947c9f16f9f74",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "4356cfc2eda836e3698be5050a5e859a53a0a9767940f481045de63b23be26b6"
+   },
+   "result_sha256": "ce60263f5b51406fd87a8c67bae767ab9602f627b49ca1ec136dd5baec26bca5"
+  },
+  "L12_s2000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "e3c9c95485cf31d4b8e218a0d9e3144ca6ef5b21d4551a48787886f87ec31443",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "d05827168b5c934cce875dc75aa4147542ec2abdfb8dc99ff65e46f5800cfd92",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "8bff3efd6c437e86c08e856433b04f3146e9f4cccb6babe771432297d8616736"
+   },
+   "result_sha256": "53a58ebde0dec385974c3521a95659ac0683865b6bd82f007bda10b853fcf9af"
+  },
+  "L12_s3000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "a27bd94e2bb9dbc2c7cc4ce5b80f7ff41feda9caab2d36a2694b6877cb07e3dc",
+     "step": 1600,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "a09c759ef4e75bbbbfcc1d4d613236d5e90a6ad542cfc4ce6f78e75b553e11a7",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "41ef6661061061c79f6649da7ff7603deb0e7af6bc73613ffb77a97b1104d67c"
+   },
+   "result_sha256": "ed1a6cabf0410301870c30a0892a33941df08a618f40c2dea3040d84c3529472"
+  },
+  "L23_s1000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "2c76f72ffb5309760468955f1127ce8579e26e94410f75e009eb13df42f64f3f",
+     "step": 1600,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "cb8801d15f74b98f613585f23d07881c6bd660bb9ed231a8a520c303b1f8cad6",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "6a77cd08e986ffae9689273b098e8c12a1a17a895d6f6799e753606f2aa90522"
+   },
+   "result_sha256": "cb817d1e705938d9739233e0e35601925b02ba1b8ec3023c1032a9b0953f11ab"
+  },
+  "L23_s2000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "1269488ce344e9840d530d7a8583412004fda61c0cb873c03170fc273c486368",
+     "step": 1800,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "b1adb2dd858a03efa7fc9e8ef1c841221f3dd4875eccb7336d2300cc2ab6c233",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "e9068c6935ce92d2a6c69fa3468a29b85aa45ac65b61033558704ffb3d29debb"
+   },
+   "result_sha256": "d788e7093c79db7fc8c4fd557b55d559659872fa12c77828e95eb13d5545d48f"
+  },
+  "L23_s3000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "21defd48e5364e9502ac1eaa7528a30fd19c40562e2f2accafb0903dee5bb532",
+     "step": 1600,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "4f062c252a87312ceb887933d5c7e0fd94167acab62c87d0e58fdca77ad1938d",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "57663251bc4f7ff3eb1872f7e178599da4fff3e35862a960d6882b72381faab9"
+   },
+   "result_sha256": "47f9d06da173c05eac420b0d9cccb426a93b29e27fc8fa479b1f73332ae269ce"
+  }
+ },
+ "completed_gate2_runs_kept": {
+  "p2d_oracle_L01_s1000": {
+   "checkpoints": {
+    "best": {
+     "sha256": "8078eca013ff3fade17974ab6d8caed32efaa31e951b2ef9328f628b343a6f47",
+     "step": 1600,
+     "cm_diff": 0,
+     "size": 11206809
+    },
+    "final": {
+     "sha256": "fc2557730a9222c957870b14edcc8371787cfac7bc05a7d210d182c453af2ddf",
+     "step": 2000,
+     "cm_diff": 0,
+     "size": 11206389
+    },
+    "result_sha256_before_verify": "554661b9fcb48833671e07ff31712b1e6b2b56ea53e0fa7ad8ef52813a0d2d9f"
+   },
+   "result_sha256": "8272b8393f26b7bc401c3ae78dd2f209c787e2daced380636fde83cc485c9a39"
+  }
+ },
+ "preserved_interrupted_run": {
+  "run_id": "p2d_oracle_L02_s1000",
+  "file_sha256": {
+   "IN_PROGRESS": "612a4d8b187fa69d8f7b49f5ac22239c4a0c370368ea993b8c5267b99a1974ef",
+   "incident.json": "3c3f2e5e1b6a3c1a9b010bcd5a269abadd5775e1d8642314b01cfaac136ee713",
+   "p2d_oracle_L02_s1000_best.pt": "cf24e1f1e1f44a59fe1391b37fc43aacf5c11048d84c3169dc3ca8e611e5013e",
+   "telemetry.jsonl": "b0c539b0c3b3c3bad805b0b2ce20c74d9bd66ad2565c2f1704d26a36f7c9d0d4"
+  },
+  "replaced_by": "p2d_oracle_L02_s1000_a2",
+  "incident_report": "INCIDENT_003_gate2_runtime_stop_system_sleep.md",
+  "incident_report_sha256": "ab2fdd37e29881d1a76b1452bda55ab724946574354d6086c66e98f69d48c307",
+  "partial_results_sha256": "8f5b41ea161315d46350b1c055d35ab10d8c2b0e5538a592ea9e39da5f7e6f8a"
+ },
+ "analysis": "gate2_analysis_v5.py: the frozen gate2_analysis.py with Layer 2 seed 1000 mapped to p2d_oracle_L02_s1000_a2",
+ "code_hash": {
+  "PHASE2D_ADDENDUM.md": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+  "PHASE2D_ADDENDUM_V2.md": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+  "common.py": "082622147ee899c8660e78bc777e18a799c7af2b4f8f5f7e9f44bf3ac02acb8e",
+  "dataset_u8.py": "55744d1325fcb29a6dd1084133a0140c7c1c50518abf63ee68ac5cfd6b8717bf",
+  "evaluation.py": "21b56f052e3f213a07179adac2df5eaa778bf5d00489dbb32646cdc3c6d2ea6e",
+  "gate0_dss.py": "4681e66965eeac6e9cd04cf4c37c9921b709162047f235bebd907a286d536c23",
+  "gate0_setup.py": "b214529b79591e9f379249d12d6d95947d6bd81753d35126f784b6dbd194daf4",
+  "gate2_analysis.py": "a687d57632d0e0289469c0126b5d8c847a3a4e333d7b7557bf1182cd6d175cba",
+  "gate2_analysis_v5.py": "0335856c2cec4a2d3a94da4bb3d7508aed2b8bb44b1bb3d6b5b31085e8dda963",
+  "gate2_setup.py": "25f3463409127c01f59f7da1e95c28641d6ae40b357e103a183974047730f182",
+  "gate_v2.py": "eac87e97f349b9761deee58532f173e8ab6f7ea24eebb935c2dab6498a28a32b",
+  "gate_v3.py": "5c64bfb1677193b174118bcd52623a78d26ed3058c9217ba3593f75369d5c489",
+  "gate_v5.py": "618db818b97a3c6e6a724c78d8d41cd327ffaec2952e2a14be2fe118c7558e2d",
+  "models.py": "0b317077978334ea4f4ec2381d076051fc157a1c085ee04287aa0579e2428cba",
+  "oracle_analysis.py": "31ede6fec9f0a958dc4e53510dbf3c8079261c861374c5848d593addbf413e7e",
+  "pilot_analysis.py": "e37cf9beb3ed60f12f0a92ffb46aaebaf4e7119e04b48e6af3be66b29dfd8776",
+  "pilot_analysis_v3.py": "644243cfb179f68d764c60c24ea8192ad12f684b06549c96cced0b4b765b9bb5",
+  "pilot_stats_audit.py": "fcf91876077c1bdb6566d30a43ce338a1ecc5914599c1d01734d899ba1c69835",
+  "run_gate2.py": "151a653935dcacd7a9b08ce7a39bb19a8d90791503bf3059ee6dedf3fee59acf",
+  "run_gate2_v5.py": "091bf3c06a8eff95fdee92dfc225f9b03769edb040538463a6a32ccefb85c4b4",
+  "run_one.py": "53d305c12b0abb6ae9b51bd3153645714470c2924b36acee5e4e13b82062a7f7",
+  "run_one_v2.py": "62484988dba47cf29e35ac64c5011082c207164681c0e59bb80e4b5ebe8ea70a",
+  "run_one_v3.py": "029d9f8413346189e8c3c1470400b29dc5bb79f3c184b044e943fd9159028205",
+  "run_one_v4.py": "96ec14400509588191b18942f69253a42dcad8b912a82bc4c2661078905b016e",
+  "run_one_v5.py": "a05c9e3237c87dad75930df2e6c7f927bd8a33728f3fe24231b42cc90cff5499",
+  "run_pilot.py": "07a785521780be900a9936450ef4cbc9e7a0e52f1330c863af06f8c239f4ff25",
+  "run_pilot_v3.py": "3fdf084f8b1b4c526103f091adf530a4f831958987af6891816535a5767517f6",
+  "tstat.py": "52435adff181bac21c8095ade04d933a1a45156c7c100f2b27517b7843d180d9",
+  "verify_reload.py": "a6ddbe412c4c9d90e3f08e8c53b8d9c611b2027a378ba3d03ddd5aa445196e9a"
+ },
+ "train_and_sanity_code_hash": {
+  "checkpoint.py": "a882cd65e99ec187c01b30a251a81aead500aaa95afff13fe07aac2107995ad5",
+  "dataset.py": "39e5ffbae0e23c1d45959837a9dd2cc9820ee792111b7e14afea973d7f66b0ba",
+  "decoder.py": "0dcdc7546c8a8eeb62652fa81cceaf304a0e1fc02987e005c7d39f060d4077d6",
+  "efficiency.py": "d5956db8bec871a4f2ba1990b81c9c486805531311a01ab75dd350f8634f0aff",
+  "lora.py": "6ad93abf4684d5cc08eb347b2b031aac93b11d32bb7a75fe4dd926c2932aea8f",
+  "losses.py": "8f180872db2a9f60ad4edb45cc91518615f3b4e6235e2c19fc0ae04192b251c5",
+  "manifest.py": "beb18f4db31f4cdf3f68b3c3e3e37420ddcd6de942124993ace6a98aa39c805d",
+  "metrics.py": "4c65914971d44008acc5256dcfa769cb554168130bcc57661f79a1426cadf480",
+  "model_wrapper.py": "f183dc79aa02d1eb4e1ab334a2a62aee0748a6060803f831973fb98390c72acd",
+  "preflight.py": "754708876786c867af988e1c2cae74ad42832b9dd6f6bd82b7e9b213c8141db8",
+  "run_matrix.py": "5533de00950548b2e819358dfbee7756d4953c13366aaff0b77e6ed0a2b834a7",
+  "tiling.py": "01211c3892fc85ce79975861c4b8632d15d1748dbbdd2327e3728b3ad31a8731",
+  "train.py": "4e13465c228cd7ac1df7de5a01e9f56ddfb8c5405b6f1b2286235b7ffbda7df0",
+  "sanity/diagnostics.py": "89e60362d608beb12b7bfcd833888759d1b601fa0afee5f90b864505d6f37826",
+  "sanity/mmd.py": "e89c9b327eda85d33ebfb2605ea39c676a474351e8d480f16938c13f98f4ba96",
+  "sanity/model.py": "4a8756b4b6d084c47adab3f6810f3843e1c7e13b5b597fc67e3386fdce77be52",
+  "sanity/preprocessing.py": "1805b88094d6afd30c7e2354cc320881a83d348bd88a27ae0185b76aa5047da2",
+  "sanity/run_phase2a_dss.py": "7b20b1754e53d620c85e881acb3cde2ddf897deffe1a091f94bc1df67f7251b8",
+  "sanity/run_phase2b_final_dss.py": "0f71141f35d1f03871c06fe0460753dbf50970fea82aaba8f0711336953e96b1",
+  "sanity/run_real_data_sanity.py": "198d645feb81fa57779bffd140f092f9f893c713ebf5c7438531d9cc52391611",
+  "sanity/run_repeatability_check.py": "9f17803cc46e36ddaea3fb98dd49747d1019ec6feb59477bfed4f0f709738026",
+  "sanity/run_sanity_check.py": "359c3a69be3f02698a5787bcad4190f61ca4744a336eb19350d01f1f07458c94"
+ },
+ "fingerprints": {
+  "protocol": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+  "addendum_v1": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+  "addendum_v2": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+  "frozen_rankings": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+  "equivalence_v2": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+  "equivalence_v4_recheck": "83f96d3816acfdab0732d91e00034d55fac77967409c1559c8c7223ee1d26eaf",
+  "split_manifest": "8b58c463d6c8ff1e33ebea6f4723ec974103f5d9babfce5e21eceea8f610c305",
+  "dataset_integrity": "495ab6bdebd9f341c8fa08022795ecc04e870aaefe376ec9355070139bb1fbbe",
+  "radiometric_transform": "a51f00526f758e58ed9011f07bc380d75e1ba70b8c93af21fb0bef35a55c1ea5",
+  "backbone_weights": "faab2c8b776f0723f93431747603a7ec586a54fc45473613b4322c29752486e7",
+  "prithvi_mae_py": "9cee9a8cb17c3859d6365a7e58f723e0f4c08e3e29aa4b8e6523506db70321da",
+  "pilot_completion_record_v3": "90d477b2d91909e621493ea0db4bf9946a03f38644e62cb863702bd6db79ae0a",
+  "layer_mapping_check": "7b62ea4765c7b7983947b0a1e2eb76136cc55be4f98c6d0713e3b23cbef41ca4",
+  "backup_restore_recheck": "7b11bd7ce5fbbf174cbcbeb8b8df2d2d8bfe5f4a5ea2a69866a6c04a630242b6",
+  "pilot_statistical_audit": "de4df246a96434d3bad4002fa90051586dd1f65042a4d783ff5e3535c943af64"
+ },
+ "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+ "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff",
+ "per_seed_expected": {
+  "1000": {
+   "decoder_hash": "ac1d85437aef511a3c7a97136ae440f90558d2d39036ed1a1879bcbdf18405f9",
+   "torch_rng_hash": "cb54b917a1a168a9bfa69d0b431b43ab10a62ad19e5d6e319d2a06c277b90947",
+   "lora_A_hash": "6c2a50e8e74ffccd7b9119c7722a53f5b64d781a37efd7897d60c1a157a72109",
+   "data_stream_final": "a387f38494ff17cea85223c353f4e968d3dab4c87377ae29051145623820a229"
+  },
+  "2000": {
+   "decoder_hash": "940541d75cc2c5f4b6cf1dd1e22e989d1c2097f324881dea43f8f7c11278e28b",
+   "torch_rng_hash": "e56fcdcb0b8149f49d4217d3eed8f4f2a057380aa29cba7444dd48fd3af8d899",
+   "lora_A_hash": "8c6e72b6e3bec4f31ab501da976c99dad1d3cc87219ee8d83cfb1efc4572fcc6",
+   "data_stream_final": "98af1a1b7eaa883e8d3360ac7adaee4474c3fc7768dd3fbb20a20a32fc9e0623"
+  },
+  "3000": {
+   "decoder_hash": "27deed08616aff18a9753e70362619f6f7fecbffdb641b2ab1a0e7ced27ac5c9",
+   "torch_rng_hash": "b0ccbb1fe72afd3c1e2adcc86128ce71e395f9879ccfc2d9cb2b608358aa62ac",
+   "lora_A_hash": "1a3cd5f6276b696066662c9b9e3c06c010e4dbf1069ce5fc2aaa5c8b6d00b989",
+   "data_stream_final": "56dd587a82b1db34b11a006ef0ea1b88a0dca79cfcf75c747c62c0ba827f950d"
+  }
+ },
+ "limits": {
+  "footprint_mb": 11776.0,
+  "swap_growth_mb": 512,
+  "runtime_factor": 1.5,
+  "pressure": "stop at critical"
+ },
+ "safety_additions": {
+  "preflight_before_each_run": [
+   "charger connected",
+   "lid open",
+   "no thermal or performance warning",
+   "memory pressure normal",
+   "free disk >= 10 GB",
+   "required files local, not cloud-only",
+   "no other Phase 2D run"
+  ],
+  "guard_during_each_run": {
+   "system_sleep_gap_s": 30,
+   "charger_disconnected_polls": 2,
+   "lid_closed": true,
+   "thermal_warning": true,
+   "pressure_critical": true,
+   "action": "SIGINT to the run (incident.json written), sequence stops, no retry"
+  }
+ },
+ "failure_policy": "Stop the whole sequence at the first failure, stop condition, guard stop or failed integrity check. No retry, no skip.",
+ "git_head": "3551dbff5083e2d67df6a01139e5d5a4ee84271a",
+ "est_hours": 32.71333333333333,
+ "runs": [
+  {
+   "run_id": "p2d_oracle_L02_s1000_a2",
+   "K": 1,
+   "layer_indices": [
+    2
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L02"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2233,
+   "config_hash": "9a3cc28b84ffd35c8fae2489cdd9490adfa393a0af9502f7795780bf03f83e86",
+   "rerun_of": "p2d_oracle_L02_s1000"
+  },
+  {
+   "run_id": "p2d_oracle_L03_s1000",
+   "K": 1,
+   "layer_indices": [
+    3
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L03"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2199,
+   "config_hash": "6f5c6b0e2a52ddd098352c582eeded1c4e8ac30b34f90900f325a1348ac42248"
+  },
+  {
+   "run_id": "p2d_oracle_L04_s1000",
+   "K": 1,
+   "layer_indices": [
+    4
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L04"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2164,
+   "config_hash": "2f278a11b1562f00b1e7c3fc04a18599f490906e04255dec603e2c33ae60fcce"
+  },
+  {
+   "run_id": "p2d_oracle_L05_s1000",
+   "K": 1,
+   "layer_indices": [
+    5
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L05"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2129,
+   "config_hash": "9a1c71581ab9d1218302a2fdaa6cb48a84ffa1617c2035d639b72a868cda0811"
+  },
+  {
+   "run_id": "p2d_oracle_L06_s1000",
+   "K": 1,
+   "layer_indices": [
+    6
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L06"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2095,
+   "config_hash": "554cf8c1558aad6140c0c528422b96dfdb59742ce6124efd9f9f1df76cc957cb"
+  },
+  {
+   "run_id": "p2d_oracle_L07_s1000",
+   "K": 1,
+   "layer_indices": [
+    7
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L07"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2060,
+   "config_hash": "e14d0ab5419a74dcd4531cdad33f9256aec54412b220ba340867e6b4dac49942"
+  },
+  {
+   "run_id": "p2d_oracle_L08_s1000",
+   "K": 1,
+   "layer_indices": [
+    8
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L08"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2026,
+   "config_hash": "b6d8e070f4f721f8b7317a0ea58649071cd13cbafdf374db6d470db1e64f1c33"
+  },
+  {
+   "run_id": "p2d_oracle_L09_s1000",
+   "K": 1,
+   "layer_indices": [
+    9
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L09"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1991,
+   "config_hash": "f95defc7e7ae9b49021baa4337e66bbf2ef17c8844568a95d80e4f5801732fb5"
+  },
+  {
+   "run_id": "p2d_oracle_L10_s1000",
+   "K": 1,
+   "layer_indices": [
+    10
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L10"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1956,
+   "config_hash": "337e7d5931cde9023ab5d0cb753f7cc08606726f1339e7358e2259674b9ec6b8"
+  },
+  {
+   "run_id": "p2d_oracle_L11_s1000",
+   "K": 1,
+   "layer_indices": [
+    11
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L11"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1922,
+   "config_hash": "bb5125cdb51c0a5f9e2e4de10cbf35ba4b32d3b2cb7511c2c779ce06609718da"
+  },
+  {
+   "run_id": "p2d_oracle_L13_s1000",
+   "K": 1,
+   "layer_indices": [
+    13
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L13"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1853,
+   "config_hash": "938e3b3a566504dc40b6b51621d6abf50705ca0a8271e1293d204f51134974f1"
+  },
+  {
+   "run_id": "p2d_oracle_L14_s1000",
+   "K": 1,
+   "layer_indices": [
+    14
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L14"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1818,
+   "config_hash": "403822c77df6f390df442b00cad9f30b41f15b9eebf7a15fc65c50e0c0e7d3d0"
+  },
+  {
+   "run_id": "p2d_oracle_L15_s1000",
+   "K": 1,
+   "layer_indices": [
+    15
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L15"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1783,
+   "config_hash": "b8fb1b3729c16906ecde9dba95766bca2c834cca4f50d48df804e74d6251abeb"
+  },
+  {
+   "run_id": "p2d_oracle_L16_s1000",
+   "K": 1,
+   "layer_indices": [
+    16
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L16"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1749,
+   "config_hash": "29158e9ea703c6881de9dc4cbd41328f67a358005c034ebe09ff59af5d3f8930"
+  },
+  {
+   "run_id": "p2d_oracle_L17_s1000",
+   "K": 1,
+   "layer_indices": [
+    17
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L17"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1714,
+   "config_hash": "2495499f981ad3b384b79af70ce092c412d30e9b019e4bf64ddfbff6b3756ac3"
+  },
+  {
+   "run_id": "p2d_oracle_L18_s1000",
+   "K": 1,
+   "layer_indices": [
+    18
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L18"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1680,
+   "config_hash": "9b04b9e99b3b5fbf206c546131d92b1b32d73f03728531daed83f94a0d171f20"
+  },
+  {
+   "run_id": "p2d_oracle_L19_s1000",
+   "K": 1,
+   "layer_indices": [
+    19
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L19"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1645,
+   "config_hash": "394f84f72ba435339a5229bd97b1accf9ab7ae31ea6d0d68a25224b6b90a3433"
+  },
+  {
+   "run_id": "p2d_oracle_L20_s1000",
+   "K": 1,
+   "layer_indices": [
+    20
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L20"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1610,
+   "config_hash": "b72c24caf5c5efc91647e692ab658a4738595c0c27131d1aa23316b9f18ca645"
+  },
+  {
+   "run_id": "p2d_oracle_L21_s1000",
+   "K": 1,
+   "layer_indices": [
+    21
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L21"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1576,
+   "config_hash": "5dcbeada44db9ebdef0afc7d4ad14eb4424f4e98af3f68487cc4b8e202d11fab"
+  },
+  {
+   "run_id": "p2d_oracle_L22_s1000",
+   "K": 1,
+   "layer_indices": [
+    22
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L22"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1541,
+   "config_hash": "f60d74267e496f75b444e0e6931be85f9bb8974fe7415607fa72dbe33d1748ec"
+  },
+  {
+   "run_id": "p2d_oracle_L01_s2000",
+   "K": 1,
+   "layer_indices": [
+    1
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L01"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2268,
+   "config_hash": "258a7d2ffc6f2a851bfa18022448b9031bd4d2385fbaa44acbd3f4285cff44dd"
+  },
+  {
+   "run_id": "p2d_oracle_L02_s2000",
+   "K": 1,
+   "layer_indices": [
+    2
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L02"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2233,
+   "config_hash": "aaf0605da8fc8c6ef96e1e527cd74cdb6c65ac8cfccc14dc05ef9240db0fbec7"
+  },
+  {
+   "run_id": "p2d_oracle_L03_s2000",
+   "K": 1,
+   "layer_indices": [
+    3
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L03"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2199,
+   "config_hash": "8ec1c0f9ef7cce8faa15390cdeb9d1758d18ff0a82a5c9cffe83216590651b42"
+  },
+  {
+   "run_id": "p2d_oracle_L04_s2000",
+   "K": 1,
+   "layer_indices": [
+    4
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L04"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2164,
+   "config_hash": "d259f94279d322cda14ad7298995cabf6385ce2c5cca49025c6daeaefbad4cca"
+  },
+  {
+   "run_id": "p2d_oracle_L05_s2000",
+   "K": 1,
+   "layer_indices": [
+    5
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L05"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2129,
+   "config_hash": "606767991d25de6791ff33f2290c05b66aaa31238830e6fbcc834ce098672209"
+  },
+  {
+   "run_id": "p2d_oracle_L06_s2000",
+   "K": 1,
+   "layer_indices": [
+    6
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L06"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2095,
+   "config_hash": "5e713ad5e62383e0ca1ad934602611cfa54da15c832d31447226293304ab3339"
+  },
+  {
+   "run_id": "p2d_oracle_L07_s2000",
+   "K": 1,
+   "layer_indices": [
+    7
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L07"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2060,
+   "config_hash": "b4e02511ce6b65cd2fee0a6bc68259f9d8f0ab27bfffc76fa534865d97b3ff54"
+  },
+  {
+   "run_id": "p2d_oracle_L08_s2000",
+   "K": 1,
+   "layer_indices": [
+    8
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L08"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2026,
+   "config_hash": "76eece314bc3a776444e9e7924e90a783bd70af7ed5d77d39441bc42f55254ba"
+  },
+  {
+   "run_id": "p2d_oracle_L09_s2000",
+   "K": 1,
+   "layer_indices": [
+    9
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L09"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1991,
+   "config_hash": "85619afb30c620a9fb69dc90fa76e105e46965ecf8175ee8591e5a9c68e3db6f"
+  },
+  {
+   "run_id": "p2d_oracle_L10_s2000",
+   "K": 1,
+   "layer_indices": [
+    10
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L10"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1956,
+   "config_hash": "ed72181c9facb912ba6c3ef1a1a932d9d1501446e97b7a99cad0c26b1fe9a6ea"
+  },
+  {
+   "run_id": "p2d_oracle_L11_s2000",
+   "K": 1,
+   "layer_indices": [
+    11
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L11"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1922,
+   "config_hash": "ef3045695a771e39df3ee67c6bdf82567b93562df2a5ebc56dfe0c9ff815f7f9"
+  },
+  {
+   "run_id": "p2d_oracle_L13_s2000",
+   "K": 1,
+   "layer_indices": [
+    13
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L13"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1853,
+   "config_hash": "dbefc71d95230d9923716360c36adb727b201e5d3fba20a513a6ccb7d3992b97"
+  },
+  {
+   "run_id": "p2d_oracle_L14_s2000",
+   "K": 1,
+   "layer_indices": [
+    14
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L14"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1818,
+   "config_hash": "14b73c7adb205d1281b34f867135467e8d5e35c942f6483576515d41987f4936"
+  },
+  {
+   "run_id": "p2d_oracle_L15_s2000",
+   "K": 1,
+   "layer_indices": [
+    15
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L15"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1783,
+   "config_hash": "928d7abb91b36136db1f1a193e18606233fb3ab108a5d2c272195411964ad79c"
+  },
+  {
+   "run_id": "p2d_oracle_L16_s2000",
+   "K": 1,
+   "layer_indices": [
+    16
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L16"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1749,
+   "config_hash": "a625cd3fee6989b605250b32a258d5454f40dd2f0e8c6071b1714d8818d1b47b"
+  },
+  {
+   "run_id": "p2d_oracle_L17_s2000",
+   "K": 1,
+   "layer_indices": [
+    17
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L17"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1714,
+   "config_hash": "ebc415d1e6ee5688bda21a6efb3a3a8945d431f874ba5cdfdd5e18ca28319e79"
+  },
+  {
+   "run_id": "p2d_oracle_L18_s2000",
+   "K": 1,
+   "layer_indices": [
+    18
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L18"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1680,
+   "config_hash": "4f6b9737aff48a1c7e97fdc7fc8b8fa69ac35ac92c64309e214d6e053e6227f7"
+  },
+  {
+   "run_id": "p2d_oracle_L19_s2000",
+   "K": 1,
+   "layer_indices": [
+    19
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L19"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1645,
+   "config_hash": "4e381b9fcb410245ba936df82551c872fe74db61f729d018bb6d71351f40c587"
+  },
+  {
+   "run_id": "p2d_oracle_L20_s2000",
+   "K": 1,
+   "layer_indices": [
+    20
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L20"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1610,
+   "config_hash": "7fa219be199033ef4656b438dce7953e2129a659ef9b8116a0f62fa5cf845bb2"
+  },
+  {
+   "run_id": "p2d_oracle_L21_s2000",
+   "K": 1,
+   "layer_indices": [
+    21
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L21"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1576,
+   "config_hash": "3818ab6f95597f327776ae9f30375d7e3f62105c5b2520c0e3fdc22ee0757a27"
+  },
+  {
+   "run_id": "p2d_oracle_L22_s2000",
+   "K": 1,
+   "layer_indices": [
+    22
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L22"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1541,
+   "config_hash": "69c6a532eb267da860ef330389479eed042c9945021a5dae964f56eaf15a560f"
+  },
+  {
+   "run_id": "p2d_oracle_L01_s3000",
+   "K": 1,
+   "layer_indices": [
+    1
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L01"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2268,
+   "config_hash": "931bab0b31b8bad8e7ba39d414db86a475b355e4519ca4ede5f99c250505ef17"
+  },
+  {
+   "run_id": "p2d_oracle_L02_s3000",
+   "K": 1,
+   "layer_indices": [
+    2
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L02"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2233,
+   "config_hash": "a09731d678650b9ea520a1b2e5681359d61e0cabdaf64dff04553353eff551b9"
+  },
+  {
+   "run_id": "p2d_oracle_L03_s3000",
+   "K": 1,
+   "layer_indices": [
+    3
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L03"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2199,
+   "config_hash": "6b2d4ba2f31ad51c281fa13ca9f0a62c9f000a5b2647925bd499b497d790f8e9"
+  },
+  {
+   "run_id": "p2d_oracle_L04_s3000",
+   "K": 1,
+   "layer_indices": [
+    4
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L04"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2164,
+   "config_hash": "7c987a0b0d67c989127e2ded1e74b333c602d98f6bb461e0eadef76689e16210"
+  },
+  {
+   "run_id": "p2d_oracle_L05_s3000",
+   "K": 1,
+   "layer_indices": [
+    5
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L05"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2129,
+   "config_hash": "e140b46a09fa0a0a72116c9a07a08451d56b9c01a6128d9e7f45ac5e4d561657"
+  },
+  {
+   "run_id": "p2d_oracle_L06_s3000",
+   "K": 1,
+   "layer_indices": [
+    6
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L06"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2095,
+   "config_hash": "876f104973cd552b0a37a0690339919796b77a9f49cfd55cb86c56340b3a9cc6"
+  },
+  {
+   "run_id": "p2d_oracle_L07_s3000",
+   "K": 1,
+   "layer_indices": [
+    7
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L07"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2060,
+   "config_hash": "d6e825bd5187b099063a9d0411e79139d3bfb5aed31a2572c0133e19f7ceff61"
+  },
+  {
+   "run_id": "p2d_oracle_L08_s3000",
+   "K": 1,
+   "layer_indices": [
+    8
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L08"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 2026,
+   "config_hash": "9f89a5c26311b44eb9cf0a8999a861ceceb16c8c0a44583b1d4c378dcf3a694b"
+  },
+  {
+   "run_id": "p2d_oracle_L09_s3000",
+   "K": 1,
+   "layer_indices": [
+    9
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L09"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1991,
+   "config_hash": "23c68883768e5268cea32746ec990c6626a4143de5150d7eb6708158571f79a8"
+  },
+  {
+   "run_id": "p2d_oracle_L10_s3000",
+   "K": 1,
+   "layer_indices": [
+    10
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L10"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1956,
+   "config_hash": "8af16437dcac25679bec86c8c805ffcf4cc4e6c5240b67c570e69efcfe01d616"
+  },
+  {
+   "run_id": "p2d_oracle_L11_s3000",
+   "K": 1,
+   "layer_indices": [
+    11
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L11"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1922,
+   "config_hash": "872dd6f15fec5f4ce5720c5e14f32014f1eed47da4c4f2abe2c67f7178c3fe55"
+  },
+  {
+   "run_id": "p2d_oracle_L13_s3000",
+   "K": 1,
+   "layer_indices": [
+    13
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L13"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1853,
+   "config_hash": "c5f1c02dafd94ebd9fcef09ea4e192d05b1dd398c0bf9461e9311fbc48f755a3"
+  },
+  {
+   "run_id": "p2d_oracle_L14_s3000",
+   "K": 1,
+   "layer_indices": [
+    14
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L14"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1818,
+   "config_hash": "285df3b1f39503d6aa57cc72458b734fcc230ea516154ccf0e72c8d30a71c061"
+  },
+  {
+   "run_id": "p2d_oracle_L15_s3000",
+   "K": 1,
+   "layer_indices": [
+    15
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L15"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1783,
+   "config_hash": "4371bd56e746bc4cb4eea964cfc7a75596d00b7bfa0e0ed6c8d6815ae3761b50"
+  },
+  {
+   "run_id": "p2d_oracle_L16_s3000",
+   "K": 1,
+   "layer_indices": [
+    16
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L16"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1749,
+   "config_hash": "3965729742ff330139d5ed895b7695ca30136c3223121badd70b700b81742a7f"
+  },
+  {
+   "run_id": "p2d_oracle_L17_s3000",
+   "K": 1,
+   "layer_indices": [
+    17
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L17"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1714,
+   "config_hash": "88407a2e61fcbde5cb23f0822db66a86a5776b71bf3684405ba8b08d7c1d680d"
+  },
+  {
+   "run_id": "p2d_oracle_L18_s3000",
+   "K": 1,
+   "layer_indices": [
+    18
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L18"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1680,
+   "config_hash": "df7a2d514635f3fa98335e9d609c816b68f04f0735d04b4ed7824e385c00c573"
+  },
+  {
+   "run_id": "p2d_oracle_L19_s3000",
+   "K": 1,
+   "layer_indices": [
+    19
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L19"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1645,
+   "config_hash": "389e78c4143a7ff6a1c5f250d22ee6eea0e588e0589b4c844d931a3bce008b7f"
+  },
+  {
+   "run_id": "p2d_oracle_L20_s3000",
+   "K": 1,
+   "layer_indices": [
+    20
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L20"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1610,
+   "config_hash": "4368bedb34c5e582b3a7057dade2fc6fa1306c64fafc0be493c7bc16eed76288"
+  },
+  {
+   "run_id": "p2d_oracle_L21_s3000",
+   "K": 1,
+   "layer_indices": [
+    21
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L21"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1576,
+   "config_hash": "01e8e7c7080e5dfb142c65ebcbba7adbd3a404fc4b5a9dadf50626a8f79fa9c7"
+  },
+  {
+   "run_id": "p2d_oracle_L22_s3000",
+   "K": 1,
+   "layer_indices": [
+    22
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L22"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "ca27c277489eb2138a2ff7183ab2add80210d1c4a196a9d5488503c606cbb298",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "equivalence_sha256": "58af9dce67ccfcea493a9c96cbcbf2c7f010dece14d6ae6f509ef560d77dc79f",
+   "cache": "TargetSegDatasetU8",
+   "phase": "2D-gate2-recovery-v5",
+   "est_seconds": 1541,
+   "config_hash": "d5aa6b022bf768cc62ddb1b71339b2f8b78b7aa194c3b27ebf316ce033e83e10"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+[p2d_oracle_L06_s1000] layers=[6] trainable=2799494 (decoder=2766726, lora=32768) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[p2d_oracle_L06_s1000] step=200 loss=1.1581 val_mIoU=0.4093
+[incident] RuntimeError('STOP: swap growth 513 MB above limit') at optimizer step 400 stage validation
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v5.py", line 10, in <module>
+    R.main()
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 171, in main
+    train_result, model, mods = T.run_training(spec, device="mps", out_dir=out, log=print, **kw)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/train/train.py", line 158, in run_training
+    val_metrics = evaluate(model, val_files, device, eval_max_size=eval_max_size)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 151, in p_eval
+    tick()
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 105, in tick
+    raise RuntimeError(f"STOP: {mon.fault}")
+RuntimeError: STOP: swap growth 513 MB above limit

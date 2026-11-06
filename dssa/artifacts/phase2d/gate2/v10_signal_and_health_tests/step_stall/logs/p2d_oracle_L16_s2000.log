@@ -1,0 +1,17 @@
+[dummy] inherited signals {"pid": 34823, "ppid": 34783, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "default", "python": "<Handlers.SIG_DFL: 0>"}}
+[signals] {"pid": 34823, "ppid": 34783, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x102524680>"}}
+[incident] KeyboardInterrupt() at optimizer step 5 stage train
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace2f9678da/scratchpad/v10test/code/run_one_v10.py", line 42, in <module>
+    runpy.run_path(str(Path(PH) / "run_one_v10.py"), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v10.py", line 17, in <module>
+    R.main()
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 171, in main
+    train_result, model, mods = T.run_training(spec, device="mps", out_dir=out, log=print, **kw)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace2f9678da/scratchpad/v10test/code/run_one_v10.py", line 32, in dummy_training
+    time.sleep(0.1)
+KeyboardInterrupt

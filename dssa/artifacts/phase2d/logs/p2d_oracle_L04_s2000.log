@@ -1,0 +1,19 @@
+[signals] {"pid": 13214, "ppid": 9020, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "caught", "python": "<function _term at 0x1012f0680>"}}
+[p2d_oracle_L04_s2000] layers=[4] trainable=2799494 (decoder=2766726, lora=32768) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[p2d_oracle_L04_s2000] step=200 loss=1.0279 val_mIoU=0.3850
+[p2d_oracle_L04_s2000] step=400 loss=1.3046 val_mIoU=0.4640
+[p2d_oracle_L04_s2000] step=600 loss=0.8747 val_mIoU=0.4889
+[p2d_oracle_L04_s2000] step=800 loss=0.8694 val_mIoU=0.4987
+[incident] KeyboardInterrupt() at optimizer step 850 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v8.py", line 17, in <module>
+    R.main()
+  File "/Users/siva/Documents/Major project/dssa/phase2d/run_one_v2.py", line 171, in main
+    train_result, model, mods = T.run_training(spec, device="mps", out_dir=out, log=print, **kw)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/train/train.py", line 154, in run_training
+    optimizer.step()
+  File "/Users/siva/Documents/Major project/dssa/venv/lib/python3.12/site-packages/torch/optim/optimizer.py", line 528, in wrapper
+    @functools.wraps(func)
+
+KeyboardInterrupt

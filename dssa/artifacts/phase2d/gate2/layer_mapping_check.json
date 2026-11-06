@@ -1,0 +1,406 @@
+{
+ "all_pass": true,
+ "layers": {
+  "1": {
+   "wrapped_blocks": [
+    1
+   ],
+   "encoder_trainable": [
+    "blocks.1.attn.qkv.lora_A_q",
+    "blocks.1.attn.qkv.lora_A_v",
+    "blocks.1.attn.qkv.lora_B_q",
+    "blocks.1.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.7,
+   "pass": true
+  },
+  "2": {
+   "wrapped_blocks": [
+    2
+   ],
+   "encoder_trainable": [
+    "blocks.2.attn.qkv.lora_A_q",
+    "blocks.2.attn.qkv.lora_A_v",
+    "blocks.2.attn.qkv.lora_B_q",
+    "blocks.2.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.1,
+   "pass": true
+  },
+  "3": {
+   "wrapped_blocks": [
+    3
+   ],
+   "encoder_trainable": [
+    "blocks.3.attn.qkv.lora_A_q",
+    "blocks.3.attn.qkv.lora_A_v",
+    "blocks.3.attn.qkv.lora_B_q",
+    "blocks.3.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.1,
+   "pass": true
+  },
+  "4": {
+   "wrapped_blocks": [
+    4
+   ],
+   "encoder_trainable": [
+    "blocks.4.attn.qkv.lora_A_q",
+    "blocks.4.attn.qkv.lora_A_v",
+    "blocks.4.attn.qkv.lora_B_q",
+    "blocks.4.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "5": {
+   "wrapped_blocks": [
+    5
+   ],
+   "encoder_trainable": [
+    "blocks.5.attn.qkv.lora_A_q",
+    "blocks.5.attn.qkv.lora_A_v",
+    "blocks.5.attn.qkv.lora_B_q",
+    "blocks.5.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "6": {
+   "wrapped_blocks": [
+    6
+   ],
+   "encoder_trainable": [
+    "blocks.6.attn.qkv.lora_A_q",
+    "blocks.6.attn.qkv.lora_A_v",
+    "blocks.6.attn.qkv.lora_B_q",
+    "blocks.6.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "7": {
+   "wrapped_blocks": [
+    7
+   ],
+   "encoder_trainable": [
+    "blocks.7.attn.qkv.lora_A_q",
+    "blocks.7.attn.qkv.lora_A_v",
+    "blocks.7.attn.qkv.lora_B_q",
+    "blocks.7.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "8": {
+   "wrapped_blocks": [
+    8
+   ],
+   "encoder_trainable": [
+    "blocks.8.attn.qkv.lora_A_q",
+    "blocks.8.attn.qkv.lora_A_v",
+    "blocks.8.attn.qkv.lora_B_q",
+    "blocks.8.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "9": {
+   "wrapped_blocks": [
+    9
+   ],
+   "encoder_trainable": [
+    "blocks.9.attn.qkv.lora_A_q",
+    "blocks.9.attn.qkv.lora_A_v",
+    "blocks.9.attn.qkv.lora_B_q",
+    "blocks.9.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "10": {
+   "wrapped_blocks": [
+    10
+   ],
+   "encoder_trainable": [
+    "blocks.10.attn.qkv.lora_A_q",
+    "blocks.10.attn.qkv.lora_A_v",
+    "blocks.10.attn.qkv.lora_B_q",
+    "blocks.10.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "11": {
+   "wrapped_blocks": [
+    11
+   ],
+   "encoder_trainable": [
+    "blocks.11.attn.qkv.lora_A_q",
+    "blocks.11.attn.qkv.lora_A_v",
+    "blocks.11.attn.qkv.lora_B_q",
+    "blocks.11.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "13": {
+   "wrapped_blocks": [
+    13
+   ],
+   "encoder_trainable": [
+    "blocks.13.attn.qkv.lora_A_q",
+    "blocks.13.attn.qkv.lora_A_v",
+    "blocks.13.attn.qkv.lora_B_q",
+    "blocks.13.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "14": {
+   "wrapped_blocks": [
+    14
+   ],
+   "encoder_trainable": [
+    "blocks.14.attn.qkv.lora_A_q",
+    "blocks.14.attn.qkv.lora_A_v",
+    "blocks.14.attn.qkv.lora_B_q",
+    "blocks.14.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "15": {
+   "wrapped_blocks": [
+    15
+   ],
+   "encoder_trainable": [
+    "blocks.15.attn.qkv.lora_A_q",
+    "blocks.15.attn.qkv.lora_A_v",
+    "blocks.15.attn.qkv.lora_B_q",
+    "blocks.15.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "16": {
+   "wrapped_blocks": [
+    16
+   ],
+   "encoder_trainable": [
+    "blocks.16.attn.qkv.lora_A_q",
+    "blocks.16.attn.qkv.lora_A_v",
+    "blocks.16.attn.qkv.lora_B_q",
+    "blocks.16.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "17": {
+   "wrapped_blocks": [
+    17
+   ],
+   "encoder_trainable": [
+    "blocks.17.attn.qkv.lora_A_q",
+    "blocks.17.attn.qkv.lora_A_v",
+    "blocks.17.attn.qkv.lora_B_q",
+    "blocks.17.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "18": {
+   "wrapped_blocks": [
+    18
+   ],
+   "encoder_trainable": [
+    "blocks.18.attn.qkv.lora_A_q",
+    "blocks.18.attn.qkv.lora_A_v",
+    "blocks.18.attn.qkv.lora_B_q",
+    "blocks.18.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "19": {
+   "wrapped_blocks": [
+    19
+   ],
+   "encoder_trainable": [
+    "blocks.19.attn.qkv.lora_A_q",
+    "blocks.19.attn.qkv.lora_A_v",
+    "blocks.19.attn.qkv.lora_B_q",
+    "blocks.19.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "20": {
+   "wrapped_blocks": [
+    20
+   ],
+   "encoder_trainable": [
+    "blocks.20.attn.qkv.lora_A_q",
+    "blocks.20.attn.qkv.lora_A_v",
+    "blocks.20.attn.qkv.lora_B_q",
+    "blocks.20.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "21": {
+   "wrapped_blocks": [
+    21
+   ],
+   "encoder_trainable": [
+    "blocks.21.attn.qkv.lora_A_q",
+    "blocks.21.attn.qkv.lora_A_v",
+    "blocks.21.attn.qkv.lora_B_q",
+    "blocks.21.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.0,
+   "pass": true
+  },
+  "22": {
+   "wrapped_blocks": [
+    22
+   ],
+   "encoder_trainable": [
+    "blocks.22.attn.qkv.lora_A_q",
+    "blocks.22.attn.qkv.lora_A_v",
+    "blocks.22.attn.qkv.lora_B_q",
+    "blocks.22.attn.qkv.lora_B_v"
+   ],
+   "lora_params": 32768,
+   "B_zero": true,
+   "A_hash_ok": true,
+   "backbone_fp_ok": true,
+   "probe_output_unchanged_with_B0": true,
+   "decoder_hash_ok": true,
+   "seconds": 1.1,
+   "pass": true
+  }
+ },
+ "seed_used": 1000,
+ "note": "Decoder and LoRA A hashes for seeds 2000 and 3000 are asserted again before every run."
+}

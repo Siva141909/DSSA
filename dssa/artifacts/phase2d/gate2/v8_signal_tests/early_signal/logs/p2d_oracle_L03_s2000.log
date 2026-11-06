@@ -1,0 +1,6 @@
+[dummy] inherited signals {"pid": 8671, "ppid": 8636, "SIGINT": {"os": "caught", "python": "<built-in function default_int_handler>"}, "SIGTERM": {"os": "default", "python": "<Handlers.SIG_DFL: 0>"}}
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-siva-Documents-Major-project/b517e0da-c822-48df-b276-3ace2f9678da/scratchpad/v8test/code/run_one_v8.py", line 19, in <module>
+    time.sleep(30)  # signal arrives here, before the real entry point runs
+    ^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,6 @@
+[harness] sequence pid 50667
+[gate2-v11] 1/24 p2d_oracle_L20_s2000_a2 est 26.8 min
+ dummy p2d_oracle_L20_s2000_a2
+[gate2-v11] 2/24 p2d_oracle_L21_s2000 est 26.3 min
+[GATE 2 RECOVERY STOPPED] p2d_oracle_L21_s2000: run failed; see runs/p2d_oracle_L21_s2000/incident.json
+[harness] sequence exited 1

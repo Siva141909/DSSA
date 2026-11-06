@@ -1,0 +1,1 @@
+{"t": 1793771155.611, "run": "p2d_oracle_L03_s2000", "cause": "p2d_oracle_L03_s2000: safety guard stopped the run (sequence process received SIGTERM (manual stop)); see runs/p2d_oracle_L03_s2000/incident.json and logs/gate2_guard_v8.jsonl", "error": "KeyboardInterrupt()", "stage": "train", "optimizer_steps_completed": 18, "incident_written": true, "completed_before": 1}

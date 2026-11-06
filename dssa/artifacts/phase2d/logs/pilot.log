@@ -1,0 +1,4 @@
+[pilot] 1/12 p2d_ctrl_K0_s1000 est 24.4 min
+ p2d_ctrl_K0_s1000 best=0.5272@1600 final=0.5264 loop=1667s val=831s peak=8132MB
+[pilot] 2/12 p2d_oracle_L00_s1000 est 38.4 min
+[PILOT STOPPED] p2d_oracle_L00_s1000: run_one failed; see logs/p2d_oracle_L00_s1000.log

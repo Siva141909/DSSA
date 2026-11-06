@@ -1,0 +1,234 @@
+{
+ "authorization": "Research lead conditional authorization: 12 pilot runs only",
+ "code_hash": {
+  "PHASE2D_ADDENDUM.md": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+  "common.py": "082622147ee899c8660e78bc777e18a799c7af2b4f8f5f7e9f44bf3ac02acb8e",
+  "evaluation.py": "21b56f052e3f213a07179adac2df5eaa778bf5d00489dbb32646cdc3c6d2ea6e",
+  "gate0_dss.py": "4681e66965eeac6e9cd04cf4c37c9921b709162047f235bebd907a286d536c23",
+  "gate0_setup.py": "b214529b79591e9f379249d12d6d95947d6bd81753d35126f784b6dbd194daf4",
+  "models.py": "0b317077978334ea4f4ec2381d076051fc157a1c085ee04287aa0579e2428cba",
+  "oracle_analysis.py": "31ede6fec9f0a958dc4e53510dbf3c8079261c861374c5848d593addbf413e7e",
+  "pilot_analysis.py": "e37cf9beb3ed60f12f0a92ffb46aaebaf4e7119e04b48e6af3be66b29dfd8776",
+  "run_one.py": "53d305c12b0abb6ae9b51bd3153645714470c2924b36acee5e4e13b82062a7f7",
+  "run_pilot.py": "07a785521780be900a9936450ef4cbc9e7a0e52f1330c863af06f8c239f4ff25",
+  "verify_reload.py": "a6ddbe412c4c9d90e3f08e8c53b8d9c611b2027a378ba3d03ddd5aa445196e9a"
+ },
+ "git_head": "3551dbff5083e2d67df6a01139e5d5a4ee84271a",
+ "git_dirty_paths_expected": [
+  ".gitignore",
+  "dssa/phase2d/",
+  "dssa/artifacts/phase2d/"
+ ],
+ "runs": [
+  {
+   "run_id": "p2d_ctrl_K0_s1000",
+   "K": 0,
+   "layer_indices": [],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "K0_control"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1467,
+   "config_hash": "d26f384c287adfbc82881a19f8cf8cad4223f59dd3cc44e205eef8d466186ab7"
+  },
+  {
+   "run_id": "p2d_oracle_L00_s1000",
+   "K": 1,
+   "layer_indices": [
+    0
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L00"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 2302,
+   "config_hash": "3b7a76f62b0fec9f1eafe4c7a2d571eeeeadf91eaa658f432121ffcb4245fe23"
+  },
+  {
+   "run_id": "p2d_oracle_L12_s1000",
+   "K": 1,
+   "layer_indices": [
+    12
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L12"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1887,
+   "config_hash": "03e4d821149a28cd0d61b9cad8091c7be2ba1a82ec7b4c412c56b4540c2c203b"
+  },
+  {
+   "run_id": "p2d_oracle_L23_s1000",
+   "K": 1,
+   "layer_indices": [
+    23
+   ],
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "Oracle_L23"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1507,
+   "config_hash": "0a76519c2fdda4a2e28e0017770a731e79684167720568d2971e42fcc52a219b"
+  },
+  {
+   "run_id": "p2d_ctrl_K0_s2000",
+   "K": 0,
+   "layer_indices": [],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "K0_control"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1467,
+   "config_hash": "dd56faa43020c5c8d8250d00fc3f26658038b6fdf76001ff1a41ed6330458049"
+  },
+  {
+   "run_id": "p2d_oracle_L00_s2000",
+   "K": 1,
+   "layer_indices": [
+    0
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L00"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 2302,
+   "config_hash": "ee8565a8137f36040133698663f97d9b1a7dc733d0ed84d2f35d22530db68531"
+  },
+  {
+   "run_id": "p2d_oracle_L12_s2000",
+   "K": 1,
+   "layer_indices": [
+    12
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L12"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1887,
+   "config_hash": "2dc6d04edd591ecf3b2b507945b3d3c397990a103e43279b38ea53cd445c5dd7"
+  },
+  {
+   "run_id": "p2d_oracle_L23_s2000",
+   "K": 1,
+   "layer_indices": [
+    23
+   ],
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "Oracle_L23"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1507,
+   "config_hash": "53ad6d542c73db2983a32ef0461aa668d66dc8076c18dd19954c4bd53240fe10"
+  },
+  {
+   "run_id": "p2d_ctrl_K0_s3000",
+   "K": 0,
+   "layer_indices": [],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "K0_control"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1467,
+   "config_hash": "a86d6ddca3e70bac20b415c53dfb5bbc6dbdc977020ff07112afbb66f2fa01f0"
+  },
+  {
+   "run_id": "p2d_oracle_L00_s3000",
+   "K": 1,
+   "layer_indices": [
+    0
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L00"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 2302,
+   "config_hash": "91bc1056fe0fe6425f005ff9fa2dc6ae853e42b45ca16cf147058af46808f8e2"
+  },
+  {
+   "run_id": "p2d_oracle_L12_s3000",
+   "K": 1,
+   "layer_indices": [
+    12
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L12"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1887,
+   "config_hash": "10342abee3a2c08a5275f68ff888b83b8ee596417de8faeb12f057fe77e01973"
+  },
+  {
+   "run_id": "p2d_oracle_L23_s3000",
+   "K": 1,
+   "layer_indices": [
+    23
+   ],
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "Oracle_L23"
+   ],
+   "protocol_file_hash": "0ed5b376032a602e842a06609bdba4ce8f35f93fde6acb6c5669e719292a97be",
+   "addendum_sha256": "836372d12f2e2113ff43fbc03eeea01888b86cafa1dab8769822150160e501aa",
+   "frozen_rankings_sha256": "55667a6707204fa9eba5ff8bf17c97fa2a2edf6d0e6bb9cf64da212df05af9b8",
+   "phase": "2D-pilot",
+   "est_seconds": 1507,
+   "config_hash": "c16cc0978a230057c2a5eb73691c5abfca35e0742e3bcc5fdb81f8de2f84342c"
+  }
+ ]
+}

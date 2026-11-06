@@ -1,0 +1,4 @@
+{"result":"PASS","date":"2026-11-02","repository":"Siva141909/DSSA","private":true,"anonymous_access":"404","collaborators":["Siva141909"],
+"release":{"id":431538319,"draft":true,"assets":5},"remote_git_refs":0,"restored_files":29,"mismatches":0,"frozen_files_matching_baseline":"15/15",
+"bundle":{"complete_history":true,"fsck":"pass","commits":"21/21","main":"3551dbf","research_red_team":"f56588b"},
+"sha256":{"phase2c_evidence.tgz":"2de9655e4109bc3047ccb5c2568acd29466bb31efac3cfebb79c9154c0bb9c74","frozen_config.tgz":"175aa785fc1295b54c67ed76942cc3fd12a18ccf6837a1324afd1a80d1f7d22d","phase2d_gate0.tgz":"50e2809f88773ae3534d783967e6eb37ba7af18591c847120c2352cb998c4ef1","repo_all_refs.bundle":"91d85a08d0ebf5ba884181fe7643029b07a63439e0c1ffe07deaf52979da975e","SHA256SUMS":"173c9be8b9284bd66aa68b453008db2b6b5fb3eab29657df00f01283d41fe97c"}}

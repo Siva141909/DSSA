@@ -1,0 +1,13 @@
+[p2d_ctrl_K0_s3000] layers=[] trainable=2766726 (decoder=2766726, lora=0) device=mps total_steps=2000 checkpoint_every=200 val_files=5
+[p2d_ctrl_K0_s3000] step=200 loss=1.2737 val_mIoU=0.3547
+[p2d_ctrl_K0_s3000] step=400 loss=1.0588 val_mIoU=0.4379
+[p2d_ctrl_K0_s3000] step=600 loss=1.1099 val_mIoU=0.4237
+[p2d_ctrl_K0_s3000] step=800 loss=0.9458 val_mIoU=0.4743
+[p2d_ctrl_K0_s3000] step=1000 loss=0.9648 val_mIoU=0.4930
+[p2d_ctrl_K0_s3000] step=1200 loss=1.1968 val_mIoU=0.5091
+[p2d_ctrl_K0_s3000] step=1400 loss=0.8507 val_mIoU=0.5090
+[p2d_ctrl_K0_s3000] step=1600 loss=1.0840 val_mIoU=0.5085
+[p2d_ctrl_K0_s3000] step=1800 loss=0.9284 val_mIoU=0.5016
+[p2d_ctrl_K0_s3000] step=2000 loss=0.8669 val_mIoU=0.5084
+[done] p2d_ctrl_K0_s3000 best=0.5091@1200 final=0.5084 loop=1439s val=714s peak=4536MB swapgrow=0MB
+[reload ok] p2d_ctrl_K0_s3000

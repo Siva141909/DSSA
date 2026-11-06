@@ -1,0 +1,1 @@
+../../../dssa/artifacts/phase2d/logs/INCIDENT_010_gate2_v11_lid_close_power_loss_sleep.md

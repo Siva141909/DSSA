@@ -1,0 +1,21 @@
+[pilot] 1/10 p2d_oracle_L12_s1000 est 31.4 min
+ p2d_oracle_L12_s1000 best=0.5451@1600 final=0.5446 loop=1832s val=713s peak=7028MB swapgrow=0MB
+[pilot] 2/10 p2d_oracle_L23_s1000 est 25.1 min
+ p2d_oracle_L23_s1000 best=0.5389@1600 final=0.5347 loop=1475s val=716s peak=5538MB swapgrow=0MB
+[pilot] 3/10 p2d_ctrl_K0_s2000 est 24.4 min
+ p2d_ctrl_K0_s2000 best=0.5237@1600 final=0.5194 loop=1437s val=714s peak=4628MB swapgrow=0MB
+[pilot] 4/10 p2d_oracle_L00_s2000 est 38.4 min
+ p2d_oracle_L00_s2000 best=0.5060@2000 final=0.5060 loop=2224s val=710s peak=8303MB swapgrow=0MB
+[pilot] 5/10 p2d_oracle_L12_s2000 est 31.4 min
+ p2d_oracle_L12_s2000 best=0.5499@2000 final=0.5499 loop=1829s val=712s peak=6666MB swapgrow=0MB
+[pilot] 6/10 p2d_oracle_L23_s2000 est 25.1 min
+ p2d_oracle_L23_s2000 best=0.5390@1800 final=0.5360 loop=1476s val=717s peak=5598MB swapgrow=0MB
+[pilot] 7/10 p2d_ctrl_K0_s3000 est 24.4 min
+ p2d_ctrl_K0_s3000 best=0.5091@1200 final=0.5084 loop=1439s val=714s peak=4536MB swapgrow=0MB
+[pilot] 8/10 p2d_oracle_L00_s3000 est 38.4 min
+ p2d_oracle_L00_s3000 best=0.5129@2000 final=0.5129 loop=2224s val=710s peak=8152MB swapgrow=0MB
+[pilot] 9/10 p2d_oracle_L12_s3000 est 31.4 min
+ p2d_oracle_L12_s3000 best=0.5411@1600 final=0.5386 loop=1829s val=712s peak=7012MB swapgrow=0MB
+[pilot] 10/10 p2d_oracle_L23_s3000 est 25.1 min
+ p2d_oracle_L23_s3000 best=0.5275@1600 final=0.5272 loop=1475s val=716s peak=5521MB swapgrow=0MB
+[PILOT COMPLETE] 10 of 10. Authorization ends here.
