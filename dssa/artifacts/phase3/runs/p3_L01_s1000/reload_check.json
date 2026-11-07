@@ -1,0 +1,10 @@
+{
+ "run_id": "p3_L01_s1000",
+ "checkpoint_sha256": "46e8f83d1ec8863e3379a9345124e673a419a44d47105ab66a4a57b97aa0a9df",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.5537750720977783,
+ "peak_mb": 4536.2524490356445
+}
