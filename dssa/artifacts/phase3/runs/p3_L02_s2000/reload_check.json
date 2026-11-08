@@ -1,0 +1,10 @@
+{
+ "run_id": "p3_L02_s2000",
+ "checkpoint_sha256": "6ef1b8d91bef9a098cb1ea5f899b4192549d6bf848cf31db5f08378882e47efc",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.4240660667419434,
+ "peak_mb": 4535.736869812012
+}

@@ -1,0 +1,10 @@
+{
+ "run_id": "p3_L22_s1000",
+ "checkpoint_sha256": "d8edc7626eebb3ff7b1857966afc7f2c7f2a46b6cfa61bb91a47c7d423b70017",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.3761050701141357,
+ "peak_mb": 4535.846267700195
+}
