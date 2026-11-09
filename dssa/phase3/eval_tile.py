@@ -25,6 +25,7 @@ import numpy as np  # noqa: E402
 import torch  # noqa: E402
 from checkpoint import load_checkpoint  # noqa: E402
 import models as M  # noqa: E402
+import p3models as P3  # noqa: E402
 import p3eval as P  # noqa: E402
 import p3run as R  # noqa: E402
 
@@ -57,7 +58,7 @@ def main():
         if sha != ck["sha256"]:
             raise RuntimeError("checkpoint SHA-256 changed")
         state["stage"] = "build"
-        model, mods = M.build(sorted(e["layer_indices"]), "mps", e["lora_init_seed"])
+        model, mods = P3.build(sorted(e["layer_indices"]), "mps", e["lora_init_seed"], e.get("rank", 8))
         load_checkpoint(p, model, mods, sorted(e["layer_indices"]))
         if R.trainable_hash(model) != ck["trainable_hash"]:
             raise RuntimeError("trainable hash mismatch after load")

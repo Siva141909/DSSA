@@ -1,0 +1,87 @@
+{
+ "created": 1794240216.157622,
+ "seeds": [
+  1000,
+  2000,
+  3000,
+  4000,
+  5000,
+  6000,
+  7000,
+  8000,
+  9000,
+  10000
+ ],
+ "expected": {
+  "1000": {
+   "decoder_hash": "ac1d85437aef511a3c7a97136ae440f90558d2d39036ed1a1879bcbdf18405f9",
+   "torch_rng_hash": "cb54b917a1a168a9bfa69d0b431b43ab10a62ad19e5d6e319d2a06c277b90947",
+   "lora_A_hash_r8": "6c2a50e8e74ffccd7b9119c7722a53f5b64d781a37efd7897d60c1a157a72109",
+   "lora_A_hash_r1": "1764e27c4fdce0da53abf7c7219a4fae1f05f3cd51ecc97988664b05e5114ec4",
+   "matches_phase2d": true
+  },
+  "2000": {
+   "decoder_hash": "940541d75cc2c5f4b6cf1dd1e22e989d1c2097f324881dea43f8f7c11278e28b",
+   "torch_rng_hash": "e56fcdcb0b8149f49d4217d3eed8f4f2a057380aa29cba7444dd48fd3af8d899",
+   "lora_A_hash_r8": "8c6e72b6e3bec4f31ab501da976c99dad1d3cc87219ee8d83cfb1efc4572fcc6",
+   "lora_A_hash_r1": "930afdb66b456e21854dbd4cffc18dede61b55cef742d2f15fc36c78052921a7",
+   "matches_phase2d": true
+  },
+  "3000": {
+   "decoder_hash": "27deed08616aff18a9753e70362619f6f7fecbffdb641b2ab1a0e7ced27ac5c9",
+   "torch_rng_hash": "b0ccbb1fe72afd3c1e2adcc86128ce71e395f9879ccfc2d9cb2b608358aa62ac",
+   "lora_A_hash_r8": "1a3cd5f6276b696066662c9b9e3c06c010e4dbf1069ce5fc2aaa5c8b6d00b989",
+   "lora_A_hash_r1": "97b4e30f59989cd6863aa68b65cdfde4d62200d4736e0be8d81a48aac26fac2b",
+   "matches_phase2d": true
+  },
+  "4000": {
+   "decoder_hash": "ddaadf36bdcafa29f926ac5776e7f1cb7729f93371392deb6bfde0c5265e0299",
+   "torch_rng_hash": "cfce72463f5cb5332d285fb4f941d04bd16ca393bd46db434e54826eaf889aee",
+   "lora_A_hash_r8": "b770f9a919eec97349c8188994a471879baf33bc9906fe4b16213f3b83641b31",
+   "lora_A_hash_r1": "720c9bb0c59c16934d3b552ccca0c54d125a9ae73ddecfa3ec9232b5f708d79c"
+  },
+  "5000": {
+   "decoder_hash": "be3e27c7220ee6c021f5a82eb2d3006a965babfa4a83ce57c1bd865bdced9f20",
+   "torch_rng_hash": "71b5f778ddcdb5cca70a67785a4c4f9fabe990ce7d2f99f133e870bc0664c9dc",
+   "lora_A_hash_r8": "bbb330c9765fc4629fde07ef64d4b12719ab8b603a8b1ce1d7d9bf3bfa79c8ae",
+   "lora_A_hash_r1": "bf126070052894a4467cb8f93d2b91ce1c39b25cfa23bfd0253a37ad035b7507"
+  },
+  "6000": {
+   "decoder_hash": "55025a605cf01c03722b5f7d373acdca2fe2bc81bf0610723f37d667cb82a9c9",
+   "torch_rng_hash": "a60b0c378a0f8b45a186b5795369f5b3c7fd62f50038c47bac2d037872481b39",
+   "lora_A_hash_r8": "6d7f5fcfc6694ee07471f7523e53b9febc3ebfc26a9eeaa8bb070978e855bf9e",
+   "lora_A_hash_r1": "5be480110cf312213a5c017716c58630464563c2a9f93745d89fadaa6f3aa87c"
+  },
+  "7000": {
+   "decoder_hash": "7d30b61785a6d2bc6972e6d968235b7fd0af1e5cb0834f11a00a84425c442e2f",
+   "torch_rng_hash": "c3d36d83f5f5738111b5a0e023ad95b349ca97d2ee2a55f9fb92288d8e268394",
+   "lora_A_hash_r8": "81b2562703fd6b0021047a368b7fdca96a9f4d58028577368ed58d2130ee4936",
+   "lora_A_hash_r1": "22fcf07b5b6916217598e54def50e51563048cf776cc2187cd0d0c55c7ee15bd"
+  },
+  "8000": {
+   "decoder_hash": "f80f675907d84aff02922b90a4988d8446871e792817f3ebccf3779df1fff668",
+   "torch_rng_hash": "277f2bb256d523fb3b9b7a1d8a6d2f48b2495379cf522222157d2f1343b87f0e",
+   "lora_A_hash_r8": "65488b0dbeb9cce77b8299eed1d2989c9bced3b94cceed0f640a6afd52338d9c",
+   "lora_A_hash_r1": "4b9786f4293103479b68272298d71ab45e4d20bc12dd4ae6205a94d626de83cf"
+  },
+  "9000": {
+   "decoder_hash": "0ab8db5864cea427ea05e8ca40b43c8cd00e88ab146e493aae4510fddcdbc0a6",
+   "torch_rng_hash": "b1131bc8077fc37f39c1c1653c957a051901431cd67b0c5775bd37170acb1cc1",
+   "lora_A_hash_r8": "c4a673ae95b0038038a42b78fd78ddaa2a56972d98fbda9ea7d83f2c683bcaed",
+   "lora_A_hash_r1": "8d4be8d7de6bd849a793a3c54b9e6e3dc5dfbfc0bf4fca7162e11f704dacee5c"
+  },
+  "10000": {
+   "decoder_hash": "7356638497509bd9634912cf78008af9fb469f8d8f3fa18f8408026700434ff1",
+   "torch_rng_hash": "d93ee88ca56273617f35f4a2253b70aa01cf7d34614ebb8abb4aad675a4f35f5",
+   "lora_A_hash_r8": "51263f20c67b7be2574e68b7346e4a0f484729bbbb5e950823c56e6850eb37e6",
+   "lora_A_hash_r1": "431c2decadefea5d80d39e45c1004689b355dad3ae761672a10faa64e5277dd1"
+  }
+ },
+ "expected_common": {
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff"
+ },
+ "phase2d_baseline_sha256": "390585e3043c1e574dd22f074ef5f3558585e6f801435d6c8cf453e484ed2d9e",
+ "rank1_alpha": 2,
+ "rank8_alpha": 16
+}

@@ -43,6 +43,17 @@ MANIFEST_V3 = ART / "manifest_stage_c_v3.json"  # v3: canary p3_L00_s1000 interr
 MANIFEST_V4 = ART / "manifest_stage_c_v4.json"  # v4: p3_L06_s2000 interrupted by the charger guard; restart as p3_L06_s2000_r1, resume
 MANIFEST = ART / "manifest_stage_c_v5.json"  # v5: p3_L10_s3000 interrupted by the charger guard; restart as p3_L10_s3000_r1, resume
 CANARY = "p3_L00_s1000_r1"
+MANIFEST_D_V1 = ART / "manifest_stage_d_v1.json"   # Stage D (scenario S2), approved by the user 2026-11-09
+MANIFEST_D_V2 = ART / "manifest_stage_d_v2.json"   # v2: p3d_PRIOR3_s1000 interrupted by the sleep guard (lid closed on battery); restart as p3d_PRIOR3_s1000_r1, resume
+MANIFEST_D_V3 = ART / "manifest_stage_d_v3.json"   # v3: p3d_UNIF1_s7000 interrupted by the swap guard (other apps in use); restart as p3d_UNIF1_s7000_r1, resume
+MANIFEST_D = ART / "manifest_stage_d_v4.json"   # v4: p3d_RAND3d09_s9000 stopped by the 1.5x runtime guard (GPU contention); restart as p3d_RAND3d09_s9000_r1, runtime limit raised to 2.5x, resume
+STAGE_D_BASELINE = ART / "stage_d" / "stage_d_baseline.json"
+STAGE_D_BASELINE_HASH = ART / "stage_d" / "stage_d_baseline.sha256"
+
+
+def manifest_for(run_id: str) -> Path:
+    """Stage D run IDs start with p3d_; everything else is a Stage C run."""
+    return MANIFEST_D if run_id.startswith("p3d_") else MANIFEST
 SCORES_FILE = ART / "stage_b" / "stage_b_scores_frozen.json"
 SCORES_HASH_FILE = ART / "stage_b" / "stage_b_scores_frozen.sha256"
 ALLOWED_WRITE = (ART, CODE)

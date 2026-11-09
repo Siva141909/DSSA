@@ -11,7 +11,12 @@ approved Phase 3 limits:
     verifies, and were frozen before any single-block run folder existed;
   - the first single-block run is the early-block canary (L00, seed 1000);
   - stop and review if the first K0 run's mIoU is below 0.30 (protocol v2 section 8).
-Modes: k0 | scores | canary | single | --check. Never overwrites a run folder.
+Modes: k0 | scores | canary | single | stage_d | --check. Never overwrites a run folder.
+stage_d (manifest_stage_d_v1, approved by the user 2026-11-09): the same per-run pipeline and
+guards, except the charger guard. At the user's request, unplugging the charger no longer stops
+a run: on battery the run continues and is stopped (SIGINT, incident, no retry) only if the
+battery is at or below BATTERY_MIN_PCT for 2 polls; a run starts on battery only at or above
+BATTERY_START_PCT. Plug and unplug events are logged. Resume skips completed runs.
 canary (manifest v3): runs only p3_L00_s1000_r1, launched only if memory pressure is normal
 and swap is not increasing over a 60 s observation (baseline recorded); then stops."""
 from __future__ import annotations
@@ -40,6 +45,8 @@ STATUS = C.ART / "sequence_status.json"
 GUARD_LOG = C.LOGS / "guard.jsonl"
 INTERRUPTIONS = C.LOGS / "interruptions.jsonl"
 SLEEP_GAP_S, POLL_S, SLOW_POLL_S, AC_GRACE_POLLS, KILL_WAIT_S = 30, 5, 15, 2, 180
+BATTERY_MIN_PCT, BATTERY_START_PCT = 25, 50   # stage_d only: battery floor during a run, minimum to start on battery
+BATTERY_MODE = {"on": False}
 TELEMETRY_STALE_S, STEP_STALL_S = 60, 300
 EVAL_HANG_S, RELOAD_HANG_S, SCORE_HANG_S = 400, 300, 3600   # watchdogs for non-training children (3x estimate)
 K0_FLOOR = 0.30
@@ -57,6 +64,8 @@ def env_state(full=True):
     s = {"pressure": C.pressure_level()}
     b = _cmd(["pmset", "-g", "batt"]).splitlines()
     s["ac"] = ("AC Power" in b[0]) if b else None
+    pct = [int(t.split("%")[0].split()[-1]) for t in b[1:2] if "%" in t]
+    s["battery_pct"] = pct[0] if pct else None
     if full:
         lid = _cmd(["ioreg", "-r", "-k", "AppleClamshellState", "-d", "4"])
         s["lid_open"] = None if "AppleClamshellState" not in lid else ('"AppleClamshellState" = No' in lid)
@@ -79,7 +88,8 @@ def preflight():
     free_gb = shutil.disk_usage(C.ROOT).free / 1e9
     dataless = [str(p) for p in required_files() if not p.exists() or os.lstat(p).st_flags & SF_DATALESS]
     others = [l for l in _cmd(["pgrep", "-fl", "run_one_v|run_train.py|eval_tile.py|reload_check.py|stage_b_"]).splitlines() if l.strip()]
-    checks = {"charger_connected": s["ac"] is True, "no_thermal_warning": s["thermal_ok"] is True,
+    power_ok = s["ac"] is True or (BATTERY_MODE["on"] and s["battery_pct"] is not None and s["battery_pct"] >= BATTERY_START_PCT)
+    checks = {("power_ok_charger_or_battery_ge_%d" % BATTERY_START_PCT if BATTERY_MODE["on"] else "charger_connected"): power_ok, "no_thermal_warning": s["thermal_ok"] is True,
               "memory_pressure_normal": s["pressure"] == 1, "free_disk_ge_10gb": free_gb >= 10, "required_files_local": not dataless,
               "no_other_training_or_eval_process": not others}
     vm = bool(_cmd(["pgrep", "-f", "Virtualization.VirtualMachine|com.docker.virtualization"]).strip())
@@ -133,12 +143,19 @@ def run_guarded(args, logf, rid, stage, hang_s=None):
                     if lid is not None or s["lid_open"] is False:
                         log_guard({"run": rid, "stage": stage, "event": f"lid {'opened' if s['lid_open'] else 'closed'} (logged only, not a stop condition)", "state": s})
                     lid = s["lid_open"]
-            ac_bad = ac_bad + 1 if s["ac"] is False else 0
+            if BATTERY_MODE["on"]:
+                if s["ac"] is not None and s["ac"] != prog.get("ac", s["ac"]):
+                    log_guard({"run": rid, "stage": stage, "event": f"charger {'connected' if s['ac'] else 'disconnected'} (logged only)", "state": s})
+                prog["ac"] = s["ac"]
+                low = s["ac"] is False and s.get("battery_pct") is not None and s["battery_pct"] <= BATTERY_MIN_PCT
+                ac_bad = ac_bad + 1 if low else 0
+            else:
+                ac_bad = ac_bad + 1 if s["ac"] is False else 0
             health = run_health(rid, w1, prog) if stage == "train" else None
             if slept > SLEEP_GAP_S:
                 hazard = f"system sleep detected ({slept:.0f} s suspended)"
             elif ac_bad >= AC_GRACE_POLLS:
-                hazard = "charger disconnected"
+                hazard = f"battery at {s.get('battery_pct')}% on battery power (floor {BATTERY_MIN_PCT}%)" if BATTERY_MODE["on"] else "charger disconnected"
             elif health:
                 hazard = health
             elif full and s.get("thermal_ok") is False:
@@ -274,9 +291,12 @@ def main():
         print(json.dumps({"checks": checks, **info}, indent=1))
         print("PREFLIGHT", "PASS" if all(checks.values()) else "FAIL")
         return
-    if mode not in ("k0", "single", "scores", "canary"):
-        raise SystemExit("usage: run_sequence.py k0|scores|canary|single|--check")
+    if mode not in ("k0", "single", "scores", "canary", "stage_d"):
+        raise SystemExit("usage: run_sequence.py k0|scores|canary|single|stage_d|--check")
     sigsafe.restore()
+    if mode == "stage_d":
+        BATTERY_MODE["on"] = True
+        return run_stage_d()
     m = json.load(open(C.MANIFEST))
     if C.code_hash() != m["code_hash"]:
         raise SystemExit("Phase 3 code differs from the manifest")
@@ -325,6 +345,35 @@ def main():
         stop(f"sequence process received {'SIGINT' if isinstance(ex, KeyboardInterrupt) else 'SIGTERM'} between runs (manual stop)", done)
     C.write_json_atomic(STATUS, {"state": f"complete_{mode}", "completed": done, "time": time.time()})
     print(f"[PHASE 3 {mode.upper()} COMPLETE] {len(done)} runs.", flush=True)
+
+
+def run_stage_d():
+    m = json.load(open(C.MANIFEST_D))
+    if C.code_hash() != m["code_hash"]:
+        raise SystemExit("Phase 3 code differs from the Stage D manifest")
+    if C.sha256_file(C.STAGE_D_BASELINE) != m["stage_d_baseline_sha256"]:
+        raise SystemExit("Stage D baseline differs from the manifest")
+    log_guard({"stage": "sequence start (stage_d)", "signals": sigsafe.report(), "battery_floor_pct": BATTERY_MIN_PCT, "battery_start_pct": BATTERY_START_PCT})
+    done = []
+    try:
+        ok, why = scores_frozen_ok()
+        if not ok:
+            stop(f"Stage D refused: {why}", done)
+        runs = m["runs"]
+        interrupted = set(m.get("interrupted_runs", {}))
+        completed = [e["run_id"] for e in runs if (C.RUNS / e["run_id"] / "summary.json").exists()]
+        partial = [e["run_id"] for e in runs if (C.RUNS / e["run_id"]).exists() and e["run_id"] not in completed and e["run_id"] not in interrupted]
+        if partial:
+            stop(f"partial Stage D run folders exist; refusing to resume: {partial}", done)
+        log_guard({"stage": "stage_d resume", "skipping_completed": completed})
+        print(f"[stage_d] {len(completed)} of {len(runs)} runs already complete", flush=True)
+        todo = [e for e in runs if e["run_id"] not in completed]
+        for i, e in enumerate(todo, 1):
+            run_one(e, i, len(todo), done, None)
+    except (KeyboardInterrupt, sigsafe.Terminated) as ex:
+        stop(f"sequence process received {'SIGINT' if isinstance(ex, KeyboardInterrupt) else 'SIGTERM'} between runs (manual stop)", done)
+    C.write_json_atomic(STATUS, {"state": "complete_stage_d", "completed": done, "time": time.time()})
+    print(f"[PHASE 3 STAGE D COMPLETE] {len(done)} runs.", flush=True)
 
 
 def swap_stability(seconds=60, dt=5):

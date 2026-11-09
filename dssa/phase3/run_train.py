@@ -37,7 +37,8 @@ def main():
     ap.add_argument("run_id")
     a = ap.parse_args()
     t_start = time.time()
-    manifest = json.load(open(C.MANIFEST))
+    mpath = C.manifest_for(a.run_id)
+    manifest = json.load(open(mpath))
     entry = next(r for r in manifest["runs"] if r["run_id"] == a.run_id)
     if C.config_hash(entry) != entry["config_hash"]:
         raise RuntimeError("config hash mismatch")
@@ -47,6 +48,7 @@ def main():
     if C.sha256_file(C.SPLIT_FILE) != manifest["split_sha256"]:
         raise RuntimeError("split hash differs from the manifest")
     seed, layers, lora_seed = entry["training_seed"], sorted(entry["layer_indices"]), entry["lora_init_seed"]
+    rank, stage_d = entry.get("rank", 8), a.run_id.startswith("p3d_")
     train_files = s["train"]
     out = C.RUNS / a.run_id
     C.check_write_path(out)
@@ -72,7 +74,7 @@ def main():
                 raise RuntimeError(f"STOP: runtime above 1.5x estimate ({limit_s:.0f}s)")
 
         state["stage"] = "build_model"
-        model, mods, pre = R.build_checked(layers, seed, lora_seed)
+        model, mods, pre = R.build_checked(layers, seed, lora_seed, rank=rank, stage_d=stage_d)
         total_params = sum(p.numel() for p in model.parameters())
         trainable = [p for p in model.parameters() if p.requires_grad]
         n_train = sum(p.numel() for p in trainable)
@@ -127,7 +129,7 @@ def main():
             raise RuntimeError("non-training label opened")
         mon.halt = True
         mon.join()
-        res = {"status": "trained_unverified", "entry": entry, "manifest_sha256": C.sha256_file(C.MANIFEST),
+        res = {"status": "trained_unverified", "entry": entry, "manifest_sha256": C.sha256_file(mpath),
                "pre_run_checks": pre,
                "post_run_checks": {"backbone_fp": fp_after, "data_stream_final": stream, "data_stream_ok": True, "steps": state["opt_steps"],
                                    "tiles_opened": sorted(C.OPENED["images"]), "labels_opened": sorted(C.OPENED["labels"]), "snapped_labels": C.SNAPPED},

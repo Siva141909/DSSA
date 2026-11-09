@@ -82,15 +82,28 @@ def baseline() -> dict:
     return json.load(open(C.P2D_BASELINE))
 
 
-def build_checked(layers: list[int], seed: int, lora_seed: int, device: str = "mps"):
+def stage_d_expected(seed: int, rank: int) -> dict:
+    """Stage D reference initialisation for a seed (stage_d_baseline.py); for seeds
+    1000-3000 it was verified equal to the Phase 2D values before it was frozen."""
+    b = json.load(open(C.STAGE_D_BASELINE))
+    if C.sha256_file(C.STAGE_D_BASELINE) != C.STAGE_D_BASELINE_HASH.read_text().split()[0]:
+        raise RuntimeError("Stage D baseline hash mismatch")
+    e = dict(b["expected"][str(seed)])
+    e["lora_A_hash"] = e[f"lora_A_hash_r{rank}"]
+    return e
+
+
+def build_checked(layers: list[int], seed: int, lora_seed: int, device: str = "mps", rank: int = 8, stage_d: bool = False):
     """Seeds the global RNG exactly as train.run_training does, builds, and asserts the
     initialisation equals the Phase 2D initialisation for the same seed (same decoder, same
-    RNG state, same LoRA A, unchanged backbone)."""
+    RNG state, same LoRA A, unchanged backbone). Stage D runs check against the frozen Stage D
+    baseline, which extends the Phase 2D values to seeds 4000-10000 and to rank 1."""
     import train as T
+    import p3models as P
     base = baseline()
-    exp = base["expected"][str(seed)]
+    exp = stage_d_expected(seed, rank) if stage_d else base["expected"][str(seed)]
     T.set_all_seeds(seed)
-    model, mods = M.build(list(layers), device, lora_seed)
+    model, mods = P.build(list(layers), device, lora_seed, rank)
     chk = {"decoder_hash": M.decoder_hash(model.decoder), "torch_rng_hash": M.tensor_hash([torch.get_rng_state()]),
            "backbone_fp": M.backbone_fingerprint(model), "probe_hash": M.probe_output_hash(model, device)}
     for k, want in (("decoder_hash", exp["decoder_hash"]), ("torch_rng_hash", exp["torch_rng_hash"]),
@@ -98,7 +111,7 @@ def build_checked(layers: list[int], seed: int, lora_seed: int, device: str = "m
         if chk[k] != want:
             raise RuntimeError(f"pre-run assertion failed: {k}")
     lora_mod.assert_only_intended_trainable(model.encoder, set(layers))
-    if sum(m.lora_param_count() for m in mods) != 32768 * len(layers):
+    if sum(m.lora_param_count() for m in mods) != P.lora_params(rank, len(layers)):
         raise RuntimeError("LoRA parameter count")
     for m in mods:
         if not (torch.count_nonzero(m.lora_B_q) == 0 and torch.count_nonzero(m.lora_B_v) == 0):

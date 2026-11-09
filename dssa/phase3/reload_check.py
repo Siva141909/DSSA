@@ -21,6 +21,7 @@ sigsafe.restore()
 import numpy as np  # noqa: E402
 from checkpoint import load_checkpoint  # noqa: E402
 import models as M  # noqa: E402
+import p3models as P  # noqa: E402
 import p3run as R  # noqa: E402
 
 
@@ -36,7 +37,7 @@ def main():
     sha = C.sha256_file(p)
     if sha != ck["sha256"]:
         raise RuntimeError("checkpoint SHA-256 changed")
-    model, mods = M.build(sorted(e["layer_indices"]), "mps", e["lora_init_seed"])
+    model, mods = P.build(sorted(e["layer_indices"]), "mps", e["lora_init_seed"], e.get("rank", 8))
     payload = load_checkpoint(p, model, mods, sorted(e["layer_indices"]))
     if payload["step"] != 2000:
         raise RuntimeError(f"checkpoint step {payload['step']}")
