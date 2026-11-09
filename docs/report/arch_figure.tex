@@ -1,0 +1,129 @@
+% DSSA architecture figure. Compile with: tectonic arch_figure.tex
+% then rasterise: pdftoppm -r 300 -png -singlefile arch_figure.pdf dssa_architecture
+\documentclass[border=8pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning, arrows.meta, calc, fit, backgrounds, shapes.misc}
+
+\definecolor{navy}{HTML}{1B2A4A}
+\definecolor{green}{HTML}{0E8A6A}
+\definecolor{lgreen}{HTML}{DFF3EC}
+\definecolor{lblue}{HTML}{E4ECF7}
+\definecolor{grey}{HTML}{9AA1AB}
+\definecolor{lgrey}{HTML}{EEF0F3}
+\definecolor{orange}{HTML}{D9822B}
+\definecolor{lorange}{HTML}{FBEBD9}
+
+\begin{document}
+\sffamily
+\begin{tikzpicture}[
+  font=\normalsize,
+  >={Stealth[length=6pt]},
+  arr/.style={->, very thick, navy},
+  box/.style={draw=navy, very thick, rounded corners=4pt, fill=lblue, align=center, inner sep=6pt, minimum height=1.25cm},
+  gbox/.style={draw=green!70!black, very thick, rounded corners=4pt, fill=lgreen, align=center, inner sep=6pt, minimum height=1.25cm},
+  frz/.style={draw=grey, very thick, rounded corners=4pt, fill=lgrey, align=center, inner sep=6pt},
+  blk/.style={draw=grey, fill=white, minimum width=0.42cm, minimum height=1.9cm, inner sep=0pt, font=\scriptsize},
+  blkL/.style={draw=orange!90!black, fill=lorange, line width=1.2pt, minimum width=0.42cm, minimum height=1.9cm, inner sep=0pt, font=\scriptsize},
+  panel/.style={draw=navy!40, rounded corners=8pt, line width=0.8pt, inner sep=10pt},
+  ptitle/.style={font=\bfseries\large, text=navy, anchor=west},
+]
+
+% ===================== PATH A =====================
+\node[inner sep=0pt] (potsdam) at (0,0) {\includegraphics[width=1.9cm]{potsdam_top_3_13.png}};
+\node[inner sep=0pt, below=0.25cm of potsdam] (vaih) {\includegraphics[width=1.9cm]{vaihingen_area12.png}};
+\node[font=\footnotesize, above=1pt of potsdam] {Potsdam (source, 5 cm)};
+\node[font=\footnotesize, below=1pt of vaih] {Vaihingen (target, 9 cm)};
+\coordinate (inA) at ($(potsdam.east)!0.5!(vaih.east)$);
+
+\node[box, right=0.9cm of inA, text width=3.1cm] (prepA) {\textbf{Fixed preprocessing}\\[2pt]\footnotesize radiometric transform\\fit on Potsdam only,\\IRRG band mapping};
+\node[frz, right=0.8cm of prepA, minimum height=2.9cm, text width=3.2cm] (bbA) {\textbf{Frozen}\\\textbf{Prithvi-EO-2.0-300M}\\[3pt]\footnotesize 24 transformer blocks\\features read from\\every block L0 to L23\\[3pt]\footnotesize\itshape no gradients};
+\node[box, right=0.8cm of bbA, text width=3.1cm] (dssA) {\textbf{DSS per block}\\[2pt]\footnotesize mean-pool 196 patches\\cosine distance to\\source centroid, z-score\\vs source-only null};
+
+% DSS bar chart
+\begin{scope}[shift={($(dssA.east)+(1.35cm,-1.55cm)$)}]
+\begin{axis}[
+  width=7.2cm, height=4.2cm, ybar, bar width=3.2pt,
+  xmin=-0.8, xmax=23.8, ymin=4.5, ymax=8.8,
+  xtick={0,4,8,12,16,19,22}, xticklabels={L0,L4,L8,L12,L16,L19,L22},
+  tick label style={font=\scriptsize},
+  title={\footnotesize\bfseries Real frozen DSS scores (R2), one bar per block}, title style={yshift=-4pt},
+  axis line style={grey}, major tick style={grey},
+  ymajorgrids, grid style={grey!25},
+]
+\addplot[fill=grey!70, draw=none] coordinates {(0,5.207) (1,5.926) (2,6.034) (3,5.784) (4,5.905) (5,6.232) (6,6.626) (7,6.722) (8,6.661) (9,6.865) (10,7.369) (11,7.310) (12,6.598) (13,6.808) (14,6.894) (15,7.067) (16,7.517) (17,7.716) (18,8.046) (20,8.152) (21,8.069) (23,8.074)};
+\addplot[fill=orange, draw=none] coordinates {(19,8.192) (22,8.326)};
+\end{axis}
+\end{scope}
+\node[gbox, right=8.9cm of dssA, text width=2.5cm] (topk) {\textbf{Rank blocks,}\\\textbf{keep Top-$K$}\\[2pt]\footnotesize e.g.\ $K = 2$:\\\textcolor{orange!90!black}{\textbf{L22, L19}}};
+
+\draw[arr] (inA) -- (prepA);
+\draw[arr] (prepA) -- (bbA);
+\draw[arr] (bbA) -- (dssA);
+\draw[arr] (dssA.east) -- ++(0.7,0);
+\draw[arr] ($(topk.west)+(-0.55,0)$) -- (topk.west);
+
+\begin{scope}[on background layer]
+\node[panel, fill=lblue!25, fit=(potsdam)(vaih)(prepA)(bbA)(dssA)(topk), inner ysep=22pt] (PA) {};
+\end{scope}
+\node[ptitle, anchor=south west] at ($(PA.north west)+(0.1,0.05)$) {A \quad DSS layer selection: once, before training, unlabelled images only};
+
+% ===================== PATH B =====================
+\node[inner sep=0pt, below=3.4cm of vaih.south, anchor=north] (crop) {\includegraphics[width=1.9cm]{vaihingen_area12.png}};
+\node[font=\footnotesize, above=1pt of crop, align=center] {Labelled Vaihingen\\training crops};
+\node[font=\footnotesize, below=1pt of crop, align=center] {20 tiles, $224 \times 224$,\\batch 8};
+
+\node[box, right=0.9cm of crop, text width=2.4cm, minimum height=1.6cm] (pe) {\textbf{Patch embed}\\[2pt]\footnotesize $16 \times 16$ patches\\196 tokens\\dim 1024};
+
+% transformer stack
+\def\bx{0.5}
+\coordinate (s0) at ($(pe.east)+(0.9cm,0)$);
+\foreach \i/\lab in {0/L0,1/L1,2/L2,3/,4/,5/,6/,7/,8/,9/,10/,11/,12/,13/,14/,15/,16/,17/,18/,19/L19,20/,21/,22/L22,23/L23} {
+  \ifnum\i=19
+    \node[blkL] (b\i) at ($(s0)+(\i*\bx,0)+(0.21,0)$) {};
+  \else\ifnum\i=22
+    \node[blkL] (b\i) at ($(s0)+(\i*\bx,0)+(0.21,0)$) {};
+  \else
+    \node[blk] (b\i) at ($(s0)+(\i*\bx,0)+(0.21,0)$) {};
+  \fi\fi
+  \node[font=\scriptsize, below=1pt of b\i] {\lab};
+}
+\node[font=\footnotesize\bfseries, text=navy, above=3pt of b11.north east] {Frozen Prithvi-EO-2.0-300M (303.9M parameters)};
+\foreach \i in {19,22} {\node[font=\scriptsize\bfseries, text=orange!90!black, rotate=90] at (b\i) {LoRA};}
+\draw[arr] (pe) -- (b0.west);
+
+% LoRA zoom
+\node[draw=orange!90!black, fill=lorange!60, rounded corners=4pt, line width=1pt, below=1.35cm of b20, text width=10cm, align=left, inner sep=6pt, font=\footnotesize] (zoom) {%
+\textbf{Inside a selected block}: fused \texttt{qkv} projection, LoRA on the Q and V slices only\\[3pt]
+$\;W_q = W_{q,0} + \tfrac{\alpha}{r} B_q A_q,\quad W_v = W_{v,0} + \tfrac{\alpha}{r} B_v A_v,\quad W_k \text{ frozen}$\\[2pt]
+$r = 8,\ \alpha = 16,\ B = 0$ at start $\Rightarrow$ 32{,}768 trainable parameters per block};
+\draw[orange!90!black, thick, dashed] (b19.south) -- (zoom.north -| b19.south);
+\draw[orange!90!black, thick, dashed] (b22.south) -- (zoom.north -| b22.south);
+
+% decoder
+\node[gbox, right=0.9cm of b23, text width=2.5cm, minimum height=1.9cm] (dec) {\textbf{Decoder}\\[2pt]\footnotesize L23 features\\$1024 \times 14 \times 14$\\4 $\times$ (conv, GN, ReLU,\\$2\times$ upsample)\\$1 \times 1$ conv, 6 classes};
+\draw[arr] (b23.east) -- (dec.west);
+\node[gbox, right=0.8cm of dec, text width=2.2cm] (out) {\textbf{6-class map}\\[2pt]\footnotesize $224 \times 224$\\loss: CE + Dice};
+\draw[arr] (dec) -- (out);
+\draw[arr] (crop) -- (pe);
+
+\begin{scope}[on background layer]
+\node[panel, fill=lgreen!35, fit=(crop)(pe)(b0)(b23)(zoom)(dec)(out), inner ysep=24pt] (PB) {};
+\end{scope}
+\node[ptitle, anchor=south west] at ($(PB.north west)+(0.1,0.05)$) {B \quad Target segmentation training: labelled Vaihingen tiles};
+
+% selection arrow between panels
+\draw[->, line width=1.6pt, orange!90!black, dashed] (topk.south) -- ($(PB.north -| topk.south)+(0,-0.05)$) node[pos=0.5, right, font=\footnotesize\bfseries, text=orange!90!black, align=left] {selected blocks\\receive LoRA};
+\draw[orange!90!black, line width=1.6pt, dashed, ->] ($(PB.north -| topk.south)+(0,-0.05)$) -- ++(0,-0.35) -| ($(b22.north)+(0,0.05)$);
+
+% legend
+\node[below=0.35cm of PB.south west, anchor=north west, font=\footnotesize, align=left] (leg) {%
+\tikz\node[draw=grey, fill=lgrey, minimum width=0.35cm, minimum height=0.25cm]{}; frozen\quad
+\tikz\node[draw=green!70!black, fill=lgreen, minimum width=0.35cm, minimum height=0.25cm]{}; trainable (decoder 2.77M)\quad
+\tikz\node[draw=orange!90!black, fill=lorange, minimum width=0.35cm, minimum height=0.25cm]{}; LoRA block (32{,}768 each; 0.91\% of all parameters at $K = 1$)\quad
+\tikz\node[draw=navy, fill=lblue, minimum width=0.35cm, minimum height=0.25cm]{}; fixed computation, no training};
+\end{tikzpicture}
+\end{document}
