@@ -1,0 +1,10 @@
+{
+ "run_id": "p3_L08_s3000",
+ "checkpoint_sha256": "2b5f403a1948cb354a8509dced8ab73d35c85c94ab76ae1fb9390fca692649f6",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.3733208179473877,
+ "peak_mb": 4535.768119812012
+}

@@ -1,0 +1,10 @@
+{
+ "run_id": "p3_L19_s3000",
+ "checkpoint_sha256": "50270b763deb7c68697455e15628702f34244bbf31d637d579c17e278ed05f90",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.4442830085754395,
+ "peak_mb": 4535.705619812012
+}

@@ -1,0 +1,85 @@
+{
+ "run_id": "p3_L16_s3000",
+ "tile": "top_potsdam_5_14_IRRG.tif",
+ "evaluator": "p3eval.eval_tile_u8",
+ "checkpoint_sha256": "2dc092bda29693b5caaa4c7dae3427387b56bb9dc3f2f89f805263f53e1674a0",
+ "confusion_matrix": [
+  [
+   8523513,
+   247708,
+   432629,
+   292137,
+   44488,
+   171328
+  ],
+  [
+   752134,
+   8085558,
+   68138,
+   62600,
+   3771,
+   93532
+  ],
+  [
+   480466,
+   132582,
+   6086959,
+   704035,
+   1406,
+   85962
+  ],
+  [
+   343432,
+   38832,
+   825065,
+   5068945,
+   26415,
+   36556
+  ],
+  [
+   85053,
+   20911,
+   3886,
+   13890,
+   567631,
+   17252
+  ],
+  [
+   690449,
+   513766,
+   516770,
+   310251,
+   39166,
+   612784
+  ]
+ ],
+ "ce_sum": 19886343.125,
+ "pixels": 36000000,
+ "snapped_label": null,
+ "timing": {
+  "model_s": 1.0163159370422363,
+  "io_s": 1.9186298847198486,
+  "eval_s": 116.93463706970215,
+  "process_s": 119.94047904014587
+ },
+ "memory": {
+  "kernel_lifetime_max_footprint_mb": 5443.48787689209,
+  "sampled_max": {
+   "driver_mb": 2123.84375,
+   "current_mb": 1343.060302734375,
+   "phys_mb": 5443.47225189209,
+   "swap_growth_mb": 0.0,
+   "pressure": 1
+  },
+  "samples": 461,
+  "pressure_warn_samples": 0,
+  "swap_at_start_mb": 554.1875,
+  "above_stop_rule": false
+ },
+ "labels_opened": [
+  "5_14"
+ ],
+ "images_opened": [
+  "5_14"
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "run_id": "p3_L14_s2000",
+ "checkpoint_sha256": "aee022ddd7c9313ae853af7cc400b175ca1f299cb7f0ad197028b47f10578a13",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.3938097953796387,
+ "peak_mb": 4535.439971923828
+}
