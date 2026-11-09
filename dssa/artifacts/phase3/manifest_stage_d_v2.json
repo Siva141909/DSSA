@@ -1,0 +1,1909 @@
+{
+ "stage": "D",
+ "scenario": "S2",
+ "version": 2,
+ "created": 1794245584.1138282,
+ "authorization": "Stage D (scenario S2), approved by the user 2026-11-09 after Stage C: 'okay start but don't interrupt when the charger is unplugged'. Measured budget 67 runs, about 43.1 h. No test opening, no LoveDA, no commit or push.",
+ "primary_analysis_note": "Protocol v3 section 6, S2: C3 = Prior-3 non-inferior to Uniform-r1 (margin 0.010) on the Potsdam test, paired by seed, n = 10; everything else descriptive. The test opening itself needs separate approval.",
+ "runs": [
+  {
+   "run_id": "p3d_UNIF8_s1000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "UNIF8"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "a1b6e7e26a1b0f2c4dc60361aad8f5cf9e0dbd95c7aa08b2e35fd10fcd4019ca"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s1000_r1",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "72848a05d831ed2870af340057fcf1e9e106ce3450b5de561aa6a45c4f37f03b",
+   "restart_of": "p3d_PRIOR3_s1000"
+  },
+  {
+   "run_id": "p3d_UNIF1_s1000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "2db99c1ce750d4cef57c277a8dafdbb7fadeb50b43b52d06f6a1fc1d5554b8e1"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s2000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "95d2353017adba4dc9a282eee0804b1ddaa874a198482d345cb961f999d4ca8d"
+  },
+  {
+   "run_id": "p3d_UNIF1_s2000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "d1e48b4c34a4f0b7bc101a8eca18341d7b1ff06e85ef645f7bdea99cd0a9dbc3"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s3000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "e9d3b2e04d04db9dd43bd167ce9561d46a719dfe4caea9491722131451f546a6"
+  },
+  {
+   "run_id": "p3d_UNIF1_s3000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "f252b8d351730b78c61677fc2d0346c1e37859660429d060efa93b2d2d1e7211"
+  },
+  {
+   "run_id": "p3d_K0_s4000",
+   "K": 0,
+   "layer_indices": [],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 920,
+   "config_hash": "b41dbb538169ec7ec1b51ff62e3f6beec4859667e99040d59270de9060ebace2"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s4000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "39688c7a97fbcc7683a86d2fc36a45b6a6c334e62b7c9be1bb9ea6f60665470e"
+  },
+  {
+   "run_id": "p3d_UNIF1_s4000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "1150e3480ee76418bc515ad002731729d613b58a49ffce72d8828369509dd26c"
+  },
+  {
+   "run_id": "p3d_K0_s5000",
+   "K": 0,
+   "layer_indices": [],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 920,
+   "config_hash": "41cea7011d04c758da0447f3d3bd980313456374a769564a4adc66256a0d5163"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s5000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "85be2d671dc3235576c8a7aea73cf7cbeb2587f5758d6c7ce6e60069f01c219f"
+  },
+  {
+   "run_id": "p3d_UNIF1_s5000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "f080beb6f8fe5c2cd20da467f134870c051904f66f4edce6c6f1b705c488c25f"
+  },
+  {
+   "run_id": "p3d_K0_s6000",
+   "K": 0,
+   "layer_indices": [],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 6000,
+   "lora_init_seed": 7006000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 920,
+   "config_hash": "aa2354fe8905333e25b1fd9e479ff96a305c72ed6558687f858259828d04d25d"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s6000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 6000,
+   "lora_init_seed": 7006000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "cc150d4fd15c5216a4dd1c5c191b77ee7767c19fc0e35efba4d687fe01926dec"
+  },
+  {
+   "run_id": "p3d_UNIF1_s6000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 6000,
+   "lora_init_seed": 7006000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "4ace4788b7078576bbc511596b39c1a8b10a7c7d2b86430945dcbf749cb8455c"
+  },
+  {
+   "run_id": "p3d_K0_s7000",
+   "K": 0,
+   "layer_indices": [],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 7000,
+   "lora_init_seed": 7007000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 920,
+   "config_hash": "19f30a150cca507b79f487c79b16f36eec29d29a6440fe710fc1a607f633fde0"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s7000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 7000,
+   "lora_init_seed": 7007000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "729a473c6029ea06c761e8e9194ac268beb232fa294dd6d647ef207a37c77e58"
+  },
+  {
+   "run_id": "p3d_UNIF1_s7000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 7000,
+   "lora_init_seed": 7007000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "e7b843474df03d5f995bf9da983ddf63275a4779c5e7aa746c616f4d30d9a5f4"
+  },
+  {
+   "run_id": "p3d_K0_s8000",
+   "K": 0,
+   "layer_indices": [],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 8000,
+   "lora_init_seed": 7008000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 920,
+   "config_hash": "95b4e8990b6b4714457daf0becf4e88162b4b9dba7e4a715e701d3dabdc6581e"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s8000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 8000,
+   "lora_init_seed": 7008000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "00fd635af84e99c35fb2dbe2e721043fc4e43d6144171b41f6feb52603d83e3d"
+  },
+  {
+   "run_id": "p3d_UNIF1_s8000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 8000,
+   "lora_init_seed": 7008000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "6d887ee0e3c8ed5512b32946a2a3778bcc98022ff48ea494e8457e01cbe77c11"
+  },
+  {
+   "run_id": "p3d_K0_s9000",
+   "K": 0,
+   "layer_indices": [],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 9000,
+   "lora_init_seed": 7009000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 920,
+   "config_hash": "a021b4580bead8bc1e24c4dc3dd8c0e1b4f9da18018623647c98bad9c042d2d4"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s9000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 9000,
+   "lora_init_seed": 7009000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "aabedbaabaf93c0155fbad98b463d96319c5173b358fdef391152bb3ce95daf5"
+  },
+  {
+   "run_id": "p3d_UNIF1_s9000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 9000,
+   "lora_init_seed": 7009000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "994e8efa089c73365e98ae2cf9d34bfd89e934bc53d59c01d7480c1162820a09"
+  },
+  {
+   "run_id": "p3d_K0_s10000",
+   "K": 0,
+   "layer_indices": [],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 10000,
+   "lora_init_seed": 7010000,
+   "condition_labels": [
+    "K0"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 920,
+   "config_hash": "d9b4f3bc1fe9586f3b7f729ecd22d97f6d2c782f725c4aee17a1a0ee3f3cd070"
+  },
+  {
+   "run_id": "p3d_PRIOR3_s10000",
+   "K": 3,
+   "layer_indices": [
+    13,
+    14,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 10000,
+   "lora_init_seed": 7010000,
+   "condition_labels": [
+    "PRIOR3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1285,
+   "config_hash": "1560e9b078aab668763aee8463695921eb64652070529966198ccbbef97a4e66"
+  },
+  {
+   "run_id": "p3d_UNIF1_s10000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 1,
+   "alpha": 2,
+   "training_seed": 10000,
+   "lora_init_seed": 7010000,
+   "condition_labels": [
+    "UNIF1"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "734d0f26dab9a8d0c9fa4edc7b7a36346c075ce0f7966107204b3aefd438314e"
+  },
+  {
+   "run_id": "p3d_MID3_s1000",
+   "K": 3,
+   "layer_indices": [
+    10,
+    11,
+    12
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "MID3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1400,
+   "config_hash": "476f11d42113ba2c9054a8448c1a7774a916b899571aebce168c4864f1a290c7"
+  },
+  {
+   "run_id": "p3d_MID3_s2000",
+   "K": 3,
+   "layer_indices": [
+    10,
+    11,
+    12
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "MID3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1400,
+   "config_hash": "1360057629fcfeb51a0522953b37d4b5f4ff25f6edb50be681d48e7d1784c02d"
+  },
+  {
+   "run_id": "p3d_MID3_s3000",
+   "K": 3,
+   "layer_indices": [
+    10,
+    11,
+    12
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "MID3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1400,
+   "config_hash": "a2e1a4e51695fb6d2a137bf63ae19faaee72f21296974880d7d67a5e43288991"
+  },
+  {
+   "run_id": "p3d_MID3_s4000",
+   "K": 3,
+   "layer_indices": [
+    10,
+    11,
+    12
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "MID3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1400,
+   "config_hash": "b4004a9970bbfb47d3b2190832bab91277fea78950b5717a943d489c969a8f66"
+  },
+  {
+   "run_id": "p3d_MID3_s5000",
+   "K": 3,
+   "layer_indices": [
+    10,
+    11,
+    12
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "MID3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1400,
+   "config_hash": "937b4bc79919316e23a4547ae74d3646345586ceb22c9694cc7f7ec3d3ea8f34"
+  },
+  {
+   "run_id": "p3d_LATE3_s1000",
+   "K": 3,
+   "layer_indices": [
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "LATE3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1032,
+   "config_hash": "2808df85d49f78e732cebd49ed471a7bb37a3d4dfcbd90e12337ba3e9be8ca98"
+  },
+  {
+   "run_id": "p3d_LATE3_s2000",
+   "K": 3,
+   "layer_indices": [
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "LATE3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1032,
+   "config_hash": "770e289dd6c95967ee657578aff8d8400943e5daab74ba9520ad25f7403493d0"
+  },
+  {
+   "run_id": "p3d_LATE3_s3000",
+   "K": 3,
+   "layer_indices": [
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "LATE3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1032,
+   "config_hash": "3b5bd1af05b76cf055e67294aa2e8061d594db723a2732c8fbed0fa5bc54b48f"
+  },
+  {
+   "run_id": "p3d_LATE3_s4000",
+   "K": 3,
+   "layer_indices": [
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "LATE3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1032,
+   "config_hash": "fc48f8ee3993743fe3f9d6a947ce7c0a2b831d0754327acbc182989322890cb0"
+  },
+  {
+   "run_id": "p3d_LATE3_s5000",
+   "K": 3,
+   "layer_indices": [
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "LATE3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1032,
+   "config_hash": "6741701f74d6845d7bf8b1d0f8360524e685417599c8c1154fbdbe63045f6f60"
+  },
+  {
+   "run_id": "p3d_DSS3_s1000",
+   "K": 3,
+   "layer_indices": [
+    3,
+    4,
+    5
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "DSS3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1630,
+   "config_hash": "5c91b54feb23ffa4b85006bf2c5bc5c1e47fe0bf9729bc1ec276764066e53bfd"
+  },
+  {
+   "run_id": "p3d_DSS3_s2000",
+   "K": 3,
+   "layer_indices": [
+    3,
+    4,
+    5
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "DSS3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1630,
+   "config_hash": "58fa650b31f4fab4d215df16c524c5fdf452ff8263b88bd89b876577e0ce1ff7"
+  },
+  {
+   "run_id": "p3d_DSS3_s3000",
+   "K": 3,
+   "layer_indices": [
+    3,
+    4,
+    5
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "DSS3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1630,
+   "config_hash": "1ce6a4a026ff60bc3dc65c73ad7687958d684bf39a38d499df68164c5b190828"
+  },
+  {
+   "run_id": "p3d_DSS3_s4000",
+   "K": 3,
+   "layer_indices": [
+    3,
+    4,
+    5
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "DSS3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1630,
+   "config_hash": "cf8ab48ec28d60e1f050e5357e5af977869d752aae0ae6b1f91a10efce625e45"
+  },
+  {
+   "run_id": "p3d_DSS3_s5000",
+   "K": 3,
+   "layer_indices": [
+    3,
+    4,
+    5
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "DSS3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1630,
+   "config_hash": "52e377c379a7fbf40c26b8a97e5467bf6c9799e3509b035c7a4d43f584a31359"
+  },
+  {
+   "run_id": "p3d_FISH3_s1000",
+   "K": 3,
+   "layer_indices": [
+    12,
+    18,
+    21
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "FISH3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1320,
+   "config_hash": "929429b73aec25171439ff886b7aa8cd65dd8b54eef3f6afa61b259167896bf0"
+  },
+  {
+   "run_id": "p3d_FISH3_s2000",
+   "K": 3,
+   "layer_indices": [
+    12,
+    18,
+    21
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "FISH3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1320,
+   "config_hash": "7716f58336733f9fc0a4d2eb60b9b94e4deea1e29c6eb405f644f2452ff57dd6"
+  },
+  {
+   "run_id": "p3d_FISH3_s3000",
+   "K": 3,
+   "layer_indices": [
+    12,
+    18,
+    21
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "FISH3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1320,
+   "config_hash": "56f057fed046db59d4af0b61ab75f8914c2ac198d0d6a8118bf1681ab0abc26d"
+  },
+  {
+   "run_id": "p3d_FISH3_s4000",
+   "K": 3,
+   "layer_indices": [
+    12,
+    18,
+    21
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "FISH3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1320,
+   "config_hash": "f16ea17118636e03dc458d9b13e49b728644e9cd46c859a6f9beab30f6fcb6d3"
+  },
+  {
+   "run_id": "p3d_FISH3_s5000",
+   "K": 3,
+   "layer_indices": [
+    12,
+    18,
+    21
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "FISH3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1320,
+   "config_hash": "aa1a840dd675912206b63c6fe40ac098d040b321bd64ffc634e3cf091d1f464a"
+  },
+  {
+   "run_id": "p3d_LOGME3_s1000",
+   "K": 3,
+   "layer_indices": [
+    6,
+    7,
+    8
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "LOGME3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1520,
+   "config_hash": "f65e9b6b695fdafb2e6aa13123d176d7074e3aceaaa38fb1ce34c8ea107fb80f"
+  },
+  {
+   "run_id": "p3d_LOGME3_s2000",
+   "K": 3,
+   "layer_indices": [
+    6,
+    7,
+    8
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "LOGME3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1520,
+   "config_hash": "27b075700eacb1f3a4d4dbd439f7c24dfbf3843b08f776bcd9d103c463147393"
+  },
+  {
+   "run_id": "p3d_LOGME3_s3000",
+   "K": 3,
+   "layer_indices": [
+    6,
+    7,
+    8
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "LOGME3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1520,
+   "config_hash": "6fdb0c8cc8c487f9658dc43e22c7eaff019dfc13c294dd9cc1772971a60cbe2d"
+  },
+  {
+   "run_id": "p3d_LOGME3_s4000",
+   "K": 3,
+   "layer_indices": [
+    6,
+    7,
+    8
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "LOGME3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1520,
+   "config_hash": "df284b920958db9de85ece90a7e374bf12897eddd15ee08aa252a12f3cef201b"
+  },
+  {
+   "run_id": "p3d_LOGME3_s5000",
+   "K": 3,
+   "layer_indices": [
+    6,
+    7,
+    8
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "LOGME3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1520,
+   "config_hash": "60e6f97dea63923ea78c4db5d15426535189c7e5d670817eb9dc595e1668a0d5"
+  },
+  {
+   "run_id": "p3d_RAND3d01_s1000",
+   "K": 3,
+   "layer_indices": [
+    7,
+    11,
+    15
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 1000,
+   "lora_init_seed": 7001000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1501,
+   "config_hash": "9ec0f40b9bb6f10c3ef58f240cd033cd11ad757ee5454fa9c5500098259d995a"
+  },
+  {
+   "run_id": "p3d_RAND3d02_s2000",
+   "K": 3,
+   "layer_indices": [
+    9,
+    21,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1416,
+   "config_hash": "ac7adc44265a9206780509e345d2b20534d2c211ddb70195b293a5d047c9bbb2"
+  },
+  {
+   "run_id": "p3d_RAND3d03_s3000",
+   "K": 3,
+   "layer_indices": [
+    7,
+    18,
+    22
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1501,
+   "config_hash": "582d6d6010e7e00bbfcd20c79247f7a493e27c38c04e6362eb4fb9face4950fa"
+  },
+  {
+   "run_id": "p3d_RAND3d04_s4000",
+   "K": 3,
+   "layer_indices": [
+    7,
+    15,
+    21
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1501,
+   "config_hash": "2864ae6469dd2871c01dfe90778734978da95cf3f46f61f38cf6206b6e028e63"
+  },
+  {
+   "run_id": "p3d_RAND3d05_s5000",
+   "K": 3,
+   "layer_indices": [
+    0,
+    1,
+    20
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1721,
+   "config_hash": "4d1a9f75b827e00de56e8edd9dc53bdfbadd16a1f2ab149bfb40e30e8ae93dac"
+  },
+  {
+   "run_id": "p3d_RAND3d06_s6000",
+   "K": 3,
+   "layer_indices": [
+    15,
+    16,
+    19
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 6000,
+   "lora_init_seed": 7006000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1233,
+   "config_hash": "fc0cdc124ed9f923af24cdf0020372529f683d64e881994783dc7e18ea9be3df"
+  },
+  {
+   "run_id": "p3d_RAND3d07_s7000",
+   "K": 3,
+   "layer_indices": [
+    8,
+    15,
+    17
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 7000,
+   "lora_init_seed": 7007000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1449,
+   "config_hash": "7f43019b3b09b588cd3668f2e2eed001808545f1bc87b9ba879cf5c55c632ec7"
+  },
+  {
+   "run_id": "p3d_RAND3d08_s8000",
+   "K": 3,
+   "layer_indices": [
+    8,
+    17,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 8000,
+   "lora_init_seed": 7008000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1449,
+   "config_hash": "bf43553913aa7fd92a578907e4e7b1235246baa253b857c0467ad116dd6ed276"
+  },
+  {
+   "run_id": "p3d_RAND3d09_s9000",
+   "K": 3,
+   "layer_indices": [
+    4,
+    11,
+    13
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 9000,
+   "lora_init_seed": 7009000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1601,
+   "config_hash": "eb175e4eced3a22949c07dcf2632507b21360d3707e2d29cd51be0fd48d0afd0"
+  },
+  {
+   "run_id": "p3d_RAND3d10_s10000",
+   "K": 3,
+   "layer_indices": [
+    4,
+    5,
+    12
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 10000,
+   "lora_init_seed": 7010000,
+   "condition_labels": [
+    "RAND3"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1601,
+   "config_hash": "8f1fb73d7f4afd295e043a9c67f7ca31aedb45f7a3a3cc5ee785f28d11c52c00"
+  },
+  {
+   "run_id": "p3d_UNIF8_s2000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 2000,
+   "lora_init_seed": 7002000,
+   "condition_labels": [
+    "UNIF8"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "9c5dac36ea74b1d1c3d9cca2a7ebd33a4fb249fe3754ccc75a759a7e6b97e9af"
+  },
+  {
+   "run_id": "p3d_UNIF8_s3000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 3000,
+   "lora_init_seed": 7003000,
+   "condition_labels": [
+    "UNIF8"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "0e43d8806ca1f93a2f5113d528e9edc085c5140d84181edc00b50065b41e9958"
+  },
+  {
+   "run_id": "p3d_UNIF8_s4000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 4000,
+   "lora_init_seed": 7004000,
+   "condition_labels": [
+    "UNIF8"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "e679ca8e67de6752efc13ef9186391ad1da7d7dc1b9429d4ac77a0f0a156f8eb"
+  },
+  {
+   "run_id": "p3d_UNIF8_s5000",
+   "K": 24,
+   "layer_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "rank": 8,
+   "alpha": 16,
+   "training_seed": 5000,
+   "lora_init_seed": 7005000,
+   "condition_labels": [
+    "UNIF8"
+   ],
+   "steps": 2000,
+   "batch": 8,
+   "crop": 224,
+   "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+   "est_seconds": 1867,
+   "config_hash": "3b1a4adbac644fcad6d6f16e4e5c8312310a5e71f112b0741ca74ca0a2da6514"
+  }
+ ],
+ "arm_counts": {
+  "UNIF8": 5,
+  "PRIOR3": 10,
+  "UNIF1": 10,
+  "K0": 7,
+  "MID3": 5,
+  "LATE3": 5,
+  "DSS3": 5,
+  "FISH3": 5,
+  "LOGME3": 5,
+  "RAND3": 10
+ },
+ "reused_stage_c_runs": [
+  "p3_K0_s1000",
+  "p3_K0_s2000",
+  "p3_K0_s3000"
+ ],
+ "random_draws": {
+  "rng": "numpy.random.default_rng(20261109).choice(24, 3, replace=False), 10 times, sorted",
+  "draws": [
+   [
+    7,
+    11,
+    15
+   ],
+   [
+    9,
+    21,
+    23
+   ],
+   [
+    7,
+    18,
+    22
+   ],
+   [
+    7,
+    15,
+    21
+   ],
+   [
+    0,
+    1,
+    20
+   ],
+   [
+    15,
+    16,
+    19
+   ],
+   [
+    8,
+    15,
+    17
+   ],
+   [
+    8,
+    17,
+    23
+   ],
+   [
+    4,
+    11,
+    13
+   ],
+   [
+    4,
+    5,
+    12
+   ]
+  ],
+  "seed_rule": "draw j trains with seed 1000 j"
+ },
+ "implementation_decisions": [
+  "Uniform rank 1 uses alpha = 2 (alpha = 2 x rank, the frozen Phase 2B-B convention; alpha/r = 2.0 as for rank 8 with alpha 16). Rank 1 on all 24 blocks = 98,304 LoRA parameters = K = 3 at rank 8 (exact budget match).",
+  "New seeds 4-10 are 4000-10000 (seed j = 1000 j, matching seeds 1-3 = 1000-3000). LoRA A seed = seed + 7,000,000.",
+  "Random-3 draws fixed by numpy default_rng(20261109) before any Stage D run.",
+  "Pre-run initialisation checks use stage_d_baseline.json (seeds 1000-3000 verified identical to Phase 2D; K0, rank-8 and rank-1 builds give the same decoder and RNG state for each seed).",
+  "Uniform r8 seed 1000 runs first as the memory canary for the highest-memory arm.",
+  "Charger guard replaced at the user's request: unplugging no longer stops a run; a run is stopped only if the battery falls to 25% on battery power, and a run starts on battery only at 50% or more. All other guards and limits unchanged."
+ ],
+ "code_hash": {
+  "eval_tile.py": "5e2a3d585f605fa952ec82180731f8ebb6bd23d32c20548fb470875d4169fd60",
+  "make_manifest.py": "a53b6799f69126e2828b234717f0231bf2f81fdd24f692eec6758b2f48abd943",
+  "make_manifest_d.py": "b2e2859a90b284c96fa41f1b8815227b0bab7a503ab8b35d22402161d9d982ba",
+  "make_manifest_d_v2.py": "ed1e6337a1de5592af43466ee3ec04bd201494e717fc570742a3826ea304a83e",
+  "p3common.py": "714eacc9660157bf84cc4e940c1c8720d20c2dbadf0a82df1f656c036bebdac5",
+  "p3eval.py": "0e8328271700b12fcfd34082bb0856509ddaddc7ade4795670f4977cb982d880",
+  "p3models.py": "2f2b339572669951da6f54d2b3f17b44915b5cfb7d910914f99f8771022d88c3",
+  "p3run.py": "03f7e1784391899cee594eb94c5fc740ba5e1db72d213ba5d2fe0c1ed1662ff6",
+  "reload_check.py": "fc4d556003cd6833a780f2cc5b3867f53dc0c77e5c11c9205749c1937e553420",
+  "run_sequence.py": "cb67b85dd46b3eb55b3bd32a056b28515693f6e9f93efd16919f80952de8874d",
+  "run_train.py": "e11a2a434937928e0eb6be0b91e5c696e8f2bc0b39cbc4ec4ccbc9e739eefe81",
+  "stage_a.py": "4cf375be15eab879375222b58581e65d727ee4bf81eb8731a661320a78eaddab",
+  "stage_b_scores.py": "b887fa0092bda0e174b504ccb20421c9fa68b3b36cbcfdaf22e11775968d0253",
+  "stage_d_baseline.py": "78756286655717b271d38e613065fb27933dc531905588fcc22ab575dccdf81f",
+  "verify_eval.py": "347a5257904bbb50f3e852cdbe53d0aedaff2d29c183eda42130089a9ffd60d8"
+ },
+ "stage_c_code_snapshot_sha256sums": "ff67c249b840095584384439851ca1d2851759e898819662d5b34c721eb59a85",
+ "split_sha256": "37043c5357c81187ec0a84fc14df265002e9cb6b649824cad588a1c1e069ef8b",
+ "transform_sha256": "8bb7102c9fe2038cab404d6a2ac939e8429bcf7ee8b670c4c60324a790644517",
+ "frozen_scores_sha256": "6fbd3238c4d40c76e3aa03353ebe289523629a5d53599cb3859b4119169361d1",
+ "stage_c_analysis_sha256": "dfd1f07ffb3c388ff1429eb76622e703df066afac578102bfef4dcff5bc74d55",
+ "stage_c_manifest_v5_sha256": "2e883d2bc094a689df4ae979e97ed7560427de9453a9d12815be0f65537959cd",
+ "stage_d_baseline_sha256": "6a00230d44d5fa6a3aeed9bdcbdc6d432f29cba168f0575d1f0bc5c63116ad50",
+ "limits": {
+  "stop_rule_mb": 10752.0,
+  "early_abort_mb": 11264.0,
+  "hard_guard_mb": 11776.0,
+  "swap_growth_mb": 512,
+  "runtime": "1.5 x est_seconds (training)",
+  "eval_watchdog_s": 400,
+  "reload_watchdog_s": 300,
+  "guards": "sleep 30 s, battery floor 25% on battery (2 polls), start on battery >= 50%, thermal, critical pressure, telemetry stale 60 s, no optimizer step 300 s; no retry"
+ },
+ "budget_hours": {
+  "stage_d": 43.1181259198969
+ },
+ "interrupted_runs": {
+  "p3d_PRIOR3_s1000": {
+   "files": {
+    "IN_PROGRESS": "fe626489219d3bf4780f9f814e9ee4b43d5861d0492a99138dbae57a7ef11574",
+    "incident.json": "360d2fc1173fd06777c5471622b28ad3ba1018e5a5e6b223df1f111f94ef473f",
+    "telemetry.jsonl": "12503959427e1ba2455a689ace8aaff915ee43e45c1646070f2f65a6582e5f60"
+   },
+   "error": "KeyboardInterrupt()",
+   "cause": "system sleep (Clamshell Sleep on battery, lid closed), 577 s suspended; sequence sleep guard",
+   "stage": "train",
+   "optimizer_steps_completed": 1556,
+   "preserved": "never overwritten or reused"
+  }
+ },
+ "previous_manifest_sha256": "da1b38561af1f65732703c971bcdaabd02a097a0043e9752d347be8583ed8fce",
+ "completed_before_v2": [
+  "p3d_UNIF8_s1000"
+ ],
+ "authorization_v2": "Approved by the user 2026-11-09 after the sleep stop: 'yeah even lid was closed it should run'. Restart p3d_PRIOR3_s1000 as p3d_PRIOR3_s1000_r1 and resume; system sleep disabled by the user for the remainder."
+}
