@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_MID3_s4000",
+ "checkpoint_sha256": "aa121df0123898c64ab8e9b485edc07921d803021f421f10cadc67499da8c6da",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.4155552387237549,
+ "peak_mb": 4535.752517700195
+}

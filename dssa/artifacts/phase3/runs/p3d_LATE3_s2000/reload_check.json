@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_LATE3_s2000",
+ "checkpoint_sha256": "b968dc9059d71a7f4c7b9c511997801338b2488709099b8ef4d6ed57d4df4f40",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.4288921356201172,
+ "peak_mb": 4535.643096923828
+}
