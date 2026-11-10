@@ -1,0 +1,187 @@
+{
+ "status": "trained_unverified",
+ "entry": {
+  "run_id": "p3d_PRIOR3_s5000",
+  "K": 3,
+  "layer_indices": [
+   13,
+   14,
+   15
+  ],
+  "rank": 8,
+  "alpha": 16,
+  "training_seed": 5000,
+  "lora_init_seed": 7005000,
+  "condition_labels": [
+   "PRIOR3"
+  ],
+  "steps": 2000,
+  "batch": 8,
+  "crop": 224,
+  "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+  "est_seconds": 1285,
+  "config_hash": "85be2d671dc3235576c8a7aea73cf7cbeb2587f5758d6c7ce6e60069f01c219f"
+ },
+ "manifest_sha256": "0229fed0774d86e79d323d8c6cfbf5a566ae401df46a964de8fb015abd294a8a",
+ "pre_run_checks": {
+  "decoder_hash": "be3e27c7220ee6c021f5a82eb2d3006a965babfa4a83ce57c1bd865bdced9f20",
+  "torch_rng_hash": "71b5f778ddcdb5cca70a67785a4c4f9fabe990ce7d2f99f133e870bc0664c9dc",
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff"
+ },
+ "post_run_checks": {
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "data_stream_final": "918236ba65e93d82b80da578a0fca02827f9175348e3584818efeeeebaaf147b",
+  "data_stream_ok": true,
+  "steps": 2000,
+  "tiles_opened": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "labels_opened": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "snapped_labels": {
+   "4_12": {
+    "pixels": 36000000,
+    "exact_pixels": 0,
+    "max_nearest_distance": 70.44,
+    "min_margin": 151.09,
+    "class_counts": [
+     11976195,
+     12069654,
+     7267176,
+     2752612,
+     914098,
+     1020265
+    ]
+   }
+  }
+ },
+ "checkpoint": {
+  "path": "p3d_PRIOR3_s5000_final.pt",
+  "sha256": "32132f3d06073ded34c1ea145ff41c9d893763c72eb2ffda184d0baa004bdeeb",
+  "size": 11470629,
+  "step": 2000,
+  "trainable_hash": "20324bfe273a6aaf72fcbaf6aba112c653c7f70e7d3876c3cac594c182bdb608",
+  "probe_logits_hash": "6b62e97911af4c904863fb4c4e8f14ae6c017a68a160b81ed38228ae97827ba9",
+  "probe_logits_file_sha256": "47b862faeb54d4490af4db30b572f4a49de4c5bf76f4bccac1f03214033ba89f"
+ },
+ "parameter_counts": {
+  "total": 306751366,
+  "trainable": 2865030,
+  "decoder": 2766726,
+  "lora": 98304
+ },
+ "loss_history": [
+  {
+   "step": 200,
+   "train_loss": 1.5886332988739014,
+   "lr": 0.000993316053564413
+  },
+  {
+   "step": 400,
+   "train_loss": 1.7624495029449463,
+   "lr": 0.0009401297566366318
+  },
+  {
+   "step": 600,
+   "train_loss": 1.3497157096862793,
+   "lr": 0.0008392485712604482
+  },
+  {
+   "step": 800,
+   "train_loss": 0.7099510431289673,
+   "lr": 0.0007016045392042452
+  },
+  {
+   "step": 1000,
+   "train_loss": 1.553817629814148,
+   "lr": 0.0005421135271085249
+  },
+  {
+   "step": 1200,
+   "train_loss": 1.2724864482879639,
+   "lr": 0.0003780588608918947
+  },
+  {
+   "step": 1400,
+   "train_loss": 1.2270922660827637,
+   "lr": 0.00022721840920935187
+  },
+  {
+   "step": 1600,
+   "train_loss": 1.057204246520996,
+   "lr": 0.00010593807553146128
+  },
+  {
+   "step": 1800,
+   "train_loss": 1.1203880310058594,
+   "lr": 2.73604658704939e-05
+  },
+  {
+   "step": 2000,
+   "train_loss": 1.039527177810669,
+   "lr": 6.834904537900144e-10
+  }
+ ],
+ "timing": {
+  "training_seconds": 1131.876737833023,
+  "process_seconds": 1133.3444867134094,
+  "startup_seconds": 1.3055939674377441
+ },
+ "memory": {
+  "kernel_lifetime_max_footprint_mb": 9140.09814453125,
+  "sampled_max": {
+   "driver_mb": 4199.296875,
+   "current_mb": 2773.109130859375,
+   "phys_mb": 9140.08251953125,
+   "swap_growth_mb": 0.0,
+   "pressure": 1
+  },
+  "samples": 4346,
+  "pressure_warn_samples": 0,
+  "swap_at_start_mb": 474.1875,
+  "above_stop_rule": false
+ },
+ "env": {
+  "torch": "2.14.0"
+ }
+}

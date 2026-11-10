@@ -1,0 +1,208 @@
+{
+ "status": "trained_unverified",
+ "entry": {
+  "run_id": "p3d_UNIF1_s4000",
+  "K": 24,
+  "layer_indices": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "rank": 1,
+  "alpha": 2,
+  "training_seed": 4000,
+  "lora_init_seed": 7004000,
+  "condition_labels": [
+   "UNIF1"
+  ],
+  "steps": 2000,
+  "batch": 8,
+  "crop": 224,
+  "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+  "est_seconds": 1867,
+  "config_hash": "1150e3480ee76418bc515ad002731729d613b58a49ffce72d8828369509dd26c"
+ },
+ "manifest_sha256": "0229fed0774d86e79d323d8c6cfbf5a566ae401df46a964de8fb015abd294a8a",
+ "pre_run_checks": {
+  "decoder_hash": "ddaadf36bdcafa29f926ac5776e7f1cb7729f93371392deb6bfde0c5265e0299",
+  "torch_rng_hash": "cfce72463f5cb5332d285fb4f941d04bd16ca393bd46db434e54826eaf889aee",
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff"
+ },
+ "post_run_checks": {
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "data_stream_final": "bb0503baa45c7bcfe8670fd4ea6354d368a02d6887baeaf59e2e8d80a69f6709",
+  "data_stream_ok": true,
+  "steps": 2000,
+  "tiles_opened": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "labels_opened": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "snapped_labels": {
+   "4_12": {
+    "pixels": 36000000,
+    "exact_pixels": 0,
+    "max_nearest_distance": 70.44,
+    "min_margin": 151.09,
+    "class_counts": [
+     11976195,
+     12069654,
+     7267176,
+     2752612,
+     914098,
+     1020265
+    ]
+   }
+  }
+ },
+ "checkpoint": {
+  "path": "p3d_UNIF1_s4000_final.pt",
+  "sha256": "1304f09ad5f47b8013e8098e8f90ec7c692e67f8a12af5d3b2b4443ea4f2b073",
+  "size": 11494507,
+  "step": 2000,
+  "trainable_hash": "9786e4e62cc311076cab809f844197ebe61993f9161fbd367b6e3bdc389bd5b9",
+  "probe_logits_hash": "ef433d701bdeb332069f87cff61c4e8828dbb59de4a5db3cda8a01c84fd5b6c4",
+  "probe_logits_file_sha256": "294e4393719ee48831d6eb5de13971b260dfee1b51c0b636e17f6e191c7f5d37"
+ },
+ "parameter_counts": {
+  "total": 306751366,
+  "trainable": 2865030,
+  "decoder": 2766726,
+  "lora": 98304
+ },
+ "loss_history": [
+  {
+   "step": 200,
+   "train_loss": 1.6295108795166016,
+   "lr": 0.000993316053564413
+  },
+  {
+   "step": 400,
+   "train_loss": 0.8582030534744263,
+   "lr": 0.0009401297566366318
+  },
+  {
+   "step": 600,
+   "train_loss": 0.925714373588562,
+   "lr": 0.0008392485712604482
+  },
+  {
+   "step": 800,
+   "train_loss": 0.944200336933136,
+   "lr": 0.0007016045392042452
+  },
+  {
+   "step": 1000,
+   "train_loss": 0.6845643520355225,
+   "lr": 0.0005421135271085249
+  },
+  {
+   "step": 1200,
+   "train_loss": 1.0355279445648193,
+   "lr": 0.0003780588608918947
+  },
+  {
+   "step": 1400,
+   "train_loss": 0.604138195514679,
+   "lr": 0.00022721840920935187
+  },
+  {
+   "step": 1600,
+   "train_loss": 1.1509265899658203,
+   "lr": 0.00010593807553146128
+  },
+  {
+   "step": 1800,
+   "train_loss": 0.6347228288650513,
+   "lr": 2.73604658704939e-05
+  },
+  {
+   "step": 2000,
+   "train_loss": 0.5591394901275635,
+   "lr": 6.834904537900144e-10
+  }
+ ],
+ "timing": {
+  "training_seconds": 1654.6100568771362,
+  "process_seconds": 1656.239341020584,
+  "startup_seconds": 1.1736540794372559
+ },
+ "memory": {
+  "kernel_lifetime_max_footprint_mb": 10349.285736083984,
+  "sampled_max": {
+   "driver_mb": 5383.296875,
+   "current_mb": 4421.116943359375,
+   "phys_mb": 10349.270111083984,
+   "swap_growth_mb": 0.0,
+   "pressure": 1
+  },
+  "samples": 6356,
+  "pressure_warn_samples": 0,
+  "swap_at_start_mb": 474.1875,
+  "above_stop_rule": false
+ },
+ "env": {
+  "torch": "2.14.0"
+ }
+}

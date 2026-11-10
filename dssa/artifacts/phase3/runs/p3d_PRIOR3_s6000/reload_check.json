@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_PRIOR3_s6000",
+ "checkpoint_sha256": "caedace2509cba11bd09ecf5b9c5796a2ec8b2097a87da7293c2fde69831bf6d",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.4060380458831787,
+ "peak_mb": 4535.846221923828
+}

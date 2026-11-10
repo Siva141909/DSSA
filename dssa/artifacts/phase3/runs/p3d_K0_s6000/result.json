@@ -1,0 +1,183 @@
+{
+ "status": "trained_unverified",
+ "entry": {
+  "run_id": "p3d_K0_s6000",
+  "K": 0,
+  "layer_indices": [],
+  "rank": 8,
+  "alpha": 16,
+  "training_seed": 6000,
+  "lora_init_seed": 7006000,
+  "condition_labels": [
+   "K0"
+  ],
+  "steps": 2000,
+  "batch": 8,
+  "crop": 224,
+  "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+  "est_seconds": 920,
+  "config_hash": "aa2354fe8905333e25b1fd9e479ff96a305c72ed6558687f858259828d04d25d"
+ },
+ "manifest_sha256": "0229fed0774d86e79d323d8c6cfbf5a566ae401df46a964de8fb015abd294a8a",
+ "pre_run_checks": {
+  "decoder_hash": "55025a605cf01c03722b5f7d373acdca2fe2bc81bf0610723f37d667cb82a9c9",
+  "torch_rng_hash": "a60b0c378a0f8b45a186b5795369f5b3c7fd62f50038c47bac2d037872481b39",
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff"
+ },
+ "post_run_checks": {
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "data_stream_final": "74e338736f1ce26c39d5386a51bcaef3391f5da50cdb9b4eb424536d39776e3c",
+  "data_stream_ok": true,
+  "steps": 2000,
+  "tiles_opened": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "labels_opened": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "snapped_labels": {
+   "4_12": {
+    "pixels": 36000000,
+    "exact_pixels": 0,
+    "max_nearest_distance": 70.44,
+    "min_margin": 151.09,
+    "class_counts": [
+     11976195,
+     12069654,
+     7267176,
+     2752612,
+     914098,
+     1020265
+    ]
+   }
+  }
+ },
+ "checkpoint": {
+  "path": "p3d_K0_s6000_final.pt",
+  "sha256": "dc9035d7af7ba588757b16991b70394c08c7f6d2772205919eaca12dec8fcc16",
+  "size": 11073909,
+  "step": 2000,
+  "trainable_hash": "283122cc9088e86aa44962072733bf73a5e1c56dccdd8ea5b028be954e26ae85",
+  "probe_logits_hash": "7df17a91d4fb381631176b37fe8816c28d2c9337f9e01a47f8507903b18e7b18",
+  "probe_logits_file_sha256": "76b2341bc955b3c4162dde21d5b3e35a3156d01fca3ea4388bb69fac8bab47a8"
+ },
+ "parameter_counts": {
+  "total": 306653062,
+  "trainable": 2766726,
+  "decoder": 2766726,
+  "lora": 0
+ },
+ "loss_history": [
+  {
+   "step": 200,
+   "train_loss": 1.5547800064086914,
+   "lr": 0.000993316053564413
+  },
+  {
+   "step": 400,
+   "train_loss": 1.4737098217010498,
+   "lr": 0.0009401297566366318
+  },
+  {
+   "step": 600,
+   "train_loss": 1.613380789756775,
+   "lr": 0.0008392485712604482
+  },
+  {
+   "step": 800,
+   "train_loss": 1.254580020904541,
+   "lr": 0.0007016045392042452
+  },
+  {
+   "step": 1000,
+   "train_loss": 1.4265860319137573,
+   "lr": 0.0005421135271085249
+  },
+  {
+   "step": 1200,
+   "train_loss": 1.4819927215576172,
+   "lr": 0.0003780588608918947
+  },
+  {
+   "step": 1400,
+   "train_loss": 1.0354135036468506,
+   "lr": 0.00022721840920935187
+  },
+  {
+   "step": 1600,
+   "train_loss": 0.9248372316360474,
+   "lr": 0.00010593807553146128
+  },
+  {
+   "step": 1800,
+   "train_loss": 0.8438795804977417,
+   "lr": 2.73604658704939e-05
+  },
+  {
+   "step": 2000,
+   "train_loss": 1.1168636083602905,
+   "lr": 6.834904537900144e-10
+  }
+ ],
+ "timing": {
+  "training_seconds": 762.6698200702667,
+  "process_seconds": 764.2522568702698,
+  "startup_seconds": 1.1661148071289062
+ },
+ "memory": {
+  "kernel_lifetime_max_footprint_mb": 7057.098190307617,
+  "sampled_max": {
+   "driver_mb": 2151.234375,
+   "current_mb": 1586.988037109375,
+   "phys_mb": 7057.082565307617,
+   "swap_growth_mb": 0.0,
+   "pressure": 1
+  },
+  "samples": 2928,
+  "pressure_warn_samples": 0,
+  "swap_at_start_mb": 474.1875,
+  "above_stop_rule": false
+ },
+ "env": {
+  "torch": "2.14.0"
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_K0_s6000",
+ "checkpoint_sha256": "dc9035d7af7ba588757b16991b70394c08c7f6d2772205919eaca12dec8fcc16",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.3866651058197021,
+ "peak_mb": 4536.236869812012
+}

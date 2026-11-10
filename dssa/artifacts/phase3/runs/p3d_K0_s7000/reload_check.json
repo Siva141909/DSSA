@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_K0_s7000",
+ "checkpoint_sha256": "b4a0b2f9096911b3d1dad802fc733c7290e5f2d8d782459d0591be06dd0e60d8",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.380784034729004,
+ "peak_mb": 4535.768119812012
+}

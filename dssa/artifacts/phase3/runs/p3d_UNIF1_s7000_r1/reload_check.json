@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_UNIF1_s7000_r1",
+ "checkpoint_sha256": "f6d0d6e44eed15cf049c7a2561ec27b948481d361ca8395e97dba4346d29c086",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.5482468605041504,
+ "peak_mb": 4535.689994812012
+}
