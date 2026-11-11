@@ -3,7 +3,7 @@
 this process; the step-2000 checkpoint is evaluated afterwards, one fresh process per tile.
 Loop body, order of RNG use, optimiser, schedule, loss and clipping are those of
 train.run_training. Telemetry every 0.25 s; 11.5 GB fault, 11.0 GB early abort, swap and
-pressure faults, 1.5x runtime limit; incident.json on any failure; never overwrites."""
+pressure faults, runtime limit (manifest runtime_factor x est_seconds, default 1.5x); incident.json on any failure; never overwrites."""
 from __future__ import annotations
 
 import argparse
@@ -63,7 +63,8 @@ def main():
     state = {"opt_steps": 0, "stage": "startup", "batches": 0}
     mon = C.Telemetry(out / "telemetry.jsonl", state, out)
     mon.start()
-    limit_s = entry["est_seconds"] * 1.5
+    factor = manifest.get("runtime_factor", 1.5)
+    limit_s = entry["est_seconds"] * factor
     try:
         optimizer_module.register_optimizer_step_post_hook(lambda o, ar, kw: state.__setitem__("opt_steps", state["opt_steps"] + 1))
 
@@ -71,7 +72,7 @@ def main():
             if mon.fault:
                 raise RuntimeError(f"STOP: {mon.fault}")
             if time.time() - t_start > limit_s:
-                raise RuntimeError(f"STOP: runtime above 1.5x estimate ({limit_s:.0f}s)")
+                raise RuntimeError(f"STOP: runtime above {factor}x estimate ({limit_s:.0f}s)")
 
         state["stage"] = "build_model"
         model, mods, pre = R.build_checked(layers, seed, lora_seed, rank=rank, stage_d=stage_d)
