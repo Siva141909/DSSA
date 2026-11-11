@@ -142,6 +142,11 @@ def write_json_atomic(path: Path, obj) -> None:
     os.replace(tmp, path)
 
 
+# Potsdam test opening (approved by the user 2026-11-11 after Stage D): only test_tile.py sets
+# this, for the one test tile its process evaluates. Every other process keeps the hard stop.
+TEST_ALLOW: set = set()
+
+
 def install_guards() -> None:
     """Audit hook: hard stops for test access, early label access and stray writes."""
     proj = str(PROJECT)
@@ -160,7 +165,7 @@ def install_guards() -> None:
         base = os.path.basename(s)
         if base in V_FORBIDDEN:
             raise PermissionError(f"VAIHINGEN TEST/VALIDATION ACCESS ATTEMPTED: {s}")
-        if base.startswith(_TEST_KEYS):
+        if base.startswith(_TEST_KEYS) and not any(base.startswith(f"top_potsdam_{t}_") for t in TEST_ALLOW):
             raise PermissionError(f"POTSDAM TEST ACCESS ATTEMPTED: {s}")
         low = s.lower()
         if low.startswith(vlabel):
@@ -190,7 +195,7 @@ def potsdam_image(name: str):
     import tifffile
     tid = potsdam_tile_id(name)
     s = split()
-    if name not in s["train"] + s["validation"]:
+    if name not in s["train"] + s["validation"] and not (name in s["test"] and tid in TEST_ALLOW):
         raise PermissionError(f"Potsdam image not in train or validation: {name}")
     OPENED["images"].add(tid)
     return tifffile.imread(str(POTSDAM_IMG_DIR / name))
@@ -203,7 +208,7 @@ def potsdam_label(name: str):
     import dataset as ds
     tid = potsdam_tile_id(name)
     s = split()
-    if name in s["test"] or tid not in LABEL_ALLOW:
+    if (name in s["test"] and tid not in TEST_ALLOW) or tid not in LABEL_ALLOW:
         raise PermissionError(f"Potsdam label not allowed in this process: {name}")
     OPENED["labels"].add(tid)
     with zipfile.ZipFile(POTSDAM_LABEL_ZIP) as z:
