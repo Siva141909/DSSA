@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_FISH3_s2000",
+ "checkpoint_sha256": "e4ed9071d683f8679dc356747971acbc407b1be0c280029fc08e2a6b933e553a",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.3926260471343994,
+ "peak_mb": 4535.564971923828
+}

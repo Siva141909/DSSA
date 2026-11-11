@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_DSS3_s5000",
+ "checkpoint_sha256": "95004b931a553bf338d57f9f71bb5f6a69905f2e65e88b977d9ae2e33c93167f",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.4008021354675293,
+ "peak_mb": 4535.689971923828
+}

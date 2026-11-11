@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_LOGME3_s1000",
+ "checkpoint_sha256": "f48c3be59049b3c24907da8f7517b3a40604785a07414ba2f89543f412d4ad8b",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.5791728496551514,
+ "peak_mb": 4535.643119812012
+}
