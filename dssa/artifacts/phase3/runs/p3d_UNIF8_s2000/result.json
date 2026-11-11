@@ -1,0 +1,208 @@
+{
+ "status": "trained_unverified",
+ "entry": {
+  "run_id": "p3d_UNIF8_s2000",
+  "K": 24,
+  "layer_indices": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "rank": 8,
+  "alpha": 16,
+  "training_seed": 2000,
+  "lora_init_seed": 7002000,
+  "condition_labels": [
+   "UNIF8"
+  ],
+  "steps": 2000,
+  "batch": 8,
+  "crop": 224,
+  "eval": "step 2000 only, final checkpoint, 8 Potsdam validation tiles, one process per tile",
+  "est_seconds": 1867,
+  "config_hash": "9c5dac36ea74b1d1c3d9cca2a7ebd33a4fb249fe3754ccc75a759a7e6b97e9af"
+ },
+ "manifest_sha256": "ca3b76b31cd6579a42d66c23ed2d0cc853f7b07ef9f03b7797a1ae585267969b",
+ "pre_run_checks": {
+  "decoder_hash": "940541d75cc2c5f4b6cf1dd1e22e989d1c2097f324881dea43f8f7c11278e28b",
+  "torch_rng_hash": "e56fcdcb0b8149f49d4217d3eed8f4f2a057380aa29cba7444dd48fd3af8d899",
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "probe_hash": "649c88bb8678cd2526b044e4a6d8e9ecbe419bae02fff1498bceb7f7921a74ff"
+ },
+ "post_run_checks": {
+  "backbone_fp": "2d31df5dd8a9e98662f2d3687b2a4ace23bdebee4759a89a4afa5ffaa872edca",
+  "data_stream_final": "687c463be353ffe1a3c1588e44f17a90df08704f03b61a1c55793f12065513e5",
+  "data_stream_ok": true,
+  "steps": 2000,
+  "tiles_opened": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "labels_opened": [
+   "2_10",
+   "2_11",
+   "2_12",
+   "2_13",
+   "2_14",
+   "3_10",
+   "3_11",
+   "3_12",
+   "3_13",
+   "3_14",
+   "4_10",
+   "4_11",
+   "4_12",
+   "4_13",
+   "4_14",
+   "4_15",
+   "5_10",
+   "5_11",
+   "5_12",
+   "5_13"
+  ],
+  "snapped_labels": {
+   "4_12": {
+    "pixels": 36000000,
+    "exact_pixels": 0,
+    "max_nearest_distance": 70.44,
+    "min_margin": 151.09,
+    "class_counts": [
+     11976195,
+     12069654,
+     7267176,
+     2752612,
+     914098,
+     1020265
+    ]
+   }
+  }
+ },
+ "checkpoint": {
+  "path": "p3d_UNIF8_s2000_final.pt",
+  "sha256": "96e9b572ca1e058b490c529d2871680c2353cce7cb4ffee1a73f061328619b0b",
+  "size": 14247019,
+  "step": 2000,
+  "trainable_hash": "71fc4d0c02332225eadbb20b55725e990d0b22c6a9f7b48694af4ed727d88b11",
+  "probe_logits_hash": "ae53136c31cd60ca5dbcf45b04fbc9128558e4d3935eddf462de493e6ed24fde",
+  "probe_logits_file_sha256": "db829f67fa9d92d0f6e2fbd91d4ddae28c45c22cf62f7ebb9bb4039a00426671"
+ },
+ "parameter_counts": {
+  "total": 307439494,
+  "trainable": 3553158,
+  "decoder": 2766726,
+  "lora": 786432
+ },
+ "loss_history": [
+  {
+   "step": 200,
+   "train_loss": 1.787075400352478,
+   "lr": 0.000993316053564413
+  },
+  {
+   "step": 400,
+   "train_loss": 1.4852478504180908,
+   "lr": 0.0009401297566366318
+  },
+  {
+   "step": 600,
+   "train_loss": 1.1083958148956299,
+   "lr": 0.0008392485712604482
+  },
+  {
+   "step": 800,
+   "train_loss": 0.8049694299697876,
+   "lr": 0.0007016045392042452
+  },
+  {
+   "step": 1000,
+   "train_loss": 0.7072747945785522,
+   "lr": 0.0005421135271085249
+  },
+  {
+   "step": 1200,
+   "train_loss": 1.2805310487747192,
+   "lr": 0.0003780588608918947
+  },
+  {
+   "step": 1400,
+   "train_loss": 0.9872255921363831,
+   "lr": 0.00022721840920935187
+  },
+  {
+   "step": 1600,
+   "train_loss": 0.7933099865913391,
+   "lr": 0.00010593807553146128
+  },
+  {
+   "step": 1800,
+   "train_loss": 0.8839372396469116,
+   "lr": 2.73604658704939e-05
+  },
+  {
+   "step": 2000,
+   "train_loss": 0.6646047830581665,
+   "lr": 6.834904537900144e-10
+  }
+ ],
+ "timing": {
+  "training_seconds": 1715.8674659729004,
+  "process_seconds": 1717.646597146988,
+  "startup_seconds": 1.2026851177215576
+ },
+ "memory": {
+  "kernel_lifetime_max_footprint_mb": 10179.488815307617,
+  "sampled_max": {
+   "driver_mb": 5351.296875,
+   "current_mb": 4402.290771484375,
+   "phys_mb": 10170.301315307617,
+   "swap_growth_mb": 273.75,
+   "pressure": 2
+  },
+  "samples": 6713,
+  "pressure_warn_samples": 11,
+  "swap_at_start_mb": 0.0,
+  "above_stop_rule": false
+ },
+ "env": {
+  "torch": "2.14.0"
+ }
+}

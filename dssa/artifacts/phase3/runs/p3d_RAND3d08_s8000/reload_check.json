@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_RAND3d08_s8000",
+ "checkpoint_sha256": "7ec516161b736020bd5517af9c94c305d0d02711ebfba2f733dd608541ffa861",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.415207862854004,
+ "peak_mb": 4535.502494812012
+}

@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_RAND3d06_s6000",
+ "checkpoint_sha256": "70617f363f78d918906a161b153055dd9c913dfb1a70bf5e8f16d3e881d07db9",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.4247169494628906,
+ "peak_mb": 4535.689994812012
+}

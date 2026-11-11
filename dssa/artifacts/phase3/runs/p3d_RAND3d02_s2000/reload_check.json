@@ -1,0 +1,10 @@
+{
+ "run_id": "p3d_RAND3d02_s2000",
+ "checkpoint_sha256": "034d43511934d1f51c3148103a5cec642be3063ba80eb12759073f2eb67dfc39",
+ "trainable_hash_match": true,
+ "probe_logits_exact": true,
+ "probe_logits_max_abs_diff": 0.0,
+ "pass": true,
+ "seconds": 1.3805131912231445,
+ "peak_mb": 4535.783744812012
+}
