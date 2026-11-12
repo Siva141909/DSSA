@@ -1,0 +1,10 @@
+[p3d_UNIF1_s7000] layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] trainable=2865030 (decoder=2766726, lora=98304) seed=7000
+[incident] RuntimeError('STOP: swap growth 596 MB above limit') at optimizer step 3 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 159, in <module>
+    main()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 96, in main
+    tick()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 72, in tick
+    raise RuntimeError(f"STOP: {mon.fault}")
+RuntimeError: STOP: swap growth 596 MB above limit

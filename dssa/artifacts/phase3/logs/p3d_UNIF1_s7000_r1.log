@@ -1,0 +1,21 @@
+[p3d_UNIF1_s7000_r1] layers=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] trainable=2865030 (decoder=2766726, lora=98304) seed=7000
+[p3d_UNIF1_s7000_r1] step=200 loss=1.2258 t=210s
+[p3d_UNIF1_s7000_r1] step=400 loss=1.3271 t=377s
+[p3d_UNIF1_s7000_r1] step=600 loss=1.2551 t=540s
+[p3d_UNIF1_s7000_r1] step=800 loss=0.8850 t=709s
+[p3d_UNIF1_s7000_r1] step=1000 loss=0.9273 t=881s
+[p3d_UNIF1_s7000_r1] step=1200 loss=0.9447 t=1049s
+[p3d_UNIF1_s7000_r1] step=1400 loss=0.6217 t=1217s
+[p3d_UNIF1_s7000_r1] step=1600 loss=0.8866 t=1378s
+[p3d_UNIF1_s7000_r1] step=1800 loss=0.8561 t=1540s
+[p3d_UNIF1_s7000_r1] step=2000 loss=0.6678 t=1702s
+[done] p3d_UNIF1_s7000_r1 train=1702s peak=10348MB swapgrow=96MB final_loss=0.6678
+[reload] {"run_id": "p3d_UNIF1_s7000_r1", "checkpoint_sha256": "f6d0d6e44eed15cf049c7a2561ec27b948481d361ca8395e97dba4346d29c086", "trainable_hash_match": true, "probe_logits_exact": true, "probe_logits_max_abs_diff": 0.0, "pass": true, "seconds": 1.5482468605041504, "peak_mb": 4535.689994812012}
+[tile] p3d_UNIF1_s7000_r1 top_potsdam_5_14_IRRG.tif eval=125.3s total=128.4s peak=5438MB
+[tile] p3d_UNIF1_s7000_r1 top_potsdam_5_15_IRRG.tif eval=125.2s total=128.4s peak=5418MB
+[tile] p3d_UNIF1_s7000_r1 top_potsdam_6_10_IRRG.tif eval=124.8s total=127.8s peak=5444MB
+[tile] p3d_UNIF1_s7000_r1 top_potsdam_6_11_IRRG.tif eval=125.4s total=128.5s peak=5372MB
+[tile] p3d_UNIF1_s7000_r1 top_potsdam_6_12_IRRG.tif eval=125.8s total=128.9s peak=5536MB
+[tile] p3d_UNIF1_s7000_r1 top_potsdam_6_13_IRRG.tif eval=125.1s total=128.1s peak=5540MB
+[tile] p3d_UNIF1_s7000_r1 top_potsdam_6_14_IRRG.tif eval=125.0s total=128.2s peak=5520MB
+[tile] p3d_UNIF1_s7000_r1 top_potsdam_6_15_IRRG.tif eval=125.4s total=128.5s peak=5496MB

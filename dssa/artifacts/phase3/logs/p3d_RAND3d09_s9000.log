@@ -1,0 +1,19 @@
+[p3d_RAND3d09_s9000] layers=[4, 11, 13] trainable=2865030 (decoder=2766726, lora=98304) seed=9000
+[p3d_RAND3d09_s9000] step=200 loss=1.4660 t=459s
+[p3d_RAND3d09_s9000] step=400 loss=1.3465 t=1098s
+[p3d_RAND3d09_s9000] step=600 loss=1.2984 t=1522s
+[p3d_RAND3d09_s9000] step=800 loss=1.7640 t=1666s
+[p3d_RAND3d09_s9000] step=1000 loss=1.3640 t=1806s
+[p3d_RAND3d09_s9000] step=1200 loss=1.4173 t=1949s
+[p3d_RAND3d09_s9000] step=1400 loss=1.1772 t=2090s
+[p3d_RAND3d09_s9000] step=1600 loss=0.6453 t=2233s
+[p3d_RAND3d09_s9000] step=1800 loss=0.6775 t=2376s
+[incident] RuntimeError('STOP: runtime above 1.5x estimate (2402s)') at optimizer step 1835 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 159, in <module>
+    main()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 96, in main
+    tick()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 74, in tick
+    raise RuntimeError(f"STOP: runtime above 1.5x estimate ({limit_s:.0f}s)")
+RuntimeError: STOP: runtime above 1.5x estimate (2402s)

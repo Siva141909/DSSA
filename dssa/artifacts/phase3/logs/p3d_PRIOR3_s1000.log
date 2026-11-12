@@ -1,0 +1,18 @@
+[p3d_PRIOR3_s1000] layers=[13, 14, 15] trainable=2865030 (decoder=2766726, lora=98304) seed=1000
+[p3d_PRIOR3_s1000] step=200 loss=1.5403 t=153s
+[p3d_PRIOR3_s1000] step=400 loss=1.7221 t=262s
+[p3d_PRIOR3_s1000] step=600 loss=1.0675 t=371s
+[p3d_PRIOR3_s1000] step=800 loss=1.4248 t=480s
+[p3d_PRIOR3_s1000] step=1000 loss=0.8201 t=590s
+[p3d_PRIOR3_s1000] step=1200 loss=0.9896 t=700s
+[p3d_PRIOR3_s1000] step=1400 loss=0.9151 t=809s
+[incident] KeyboardInterrupt() at optimizer step 1556 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 159, in <module>
+    main()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 105, in main
+    loss.backward()
+  File "/Users/siva/Documents/Major project/dssa/venv/lib/python3.12/site-packages/torch/_tensor.py", line 566, in backward
+    def backward(
+
+KeyboardInterrupt

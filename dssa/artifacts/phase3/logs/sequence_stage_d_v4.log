@@ -1,0 +1,14 @@
+[stage_d] 61 of 67 runs already complete
+[phase3] 1/6 p3d_RAND3d09_s9000_r1 est train 26.7 min
+[done] p3d_RAND3d09_s9000_r1 mIoU=0.6338 train=1438s run_wall=2469s peaks train=10240 max_eval=5983 MB
+[phase3] 2/6 p3d_RAND3d10_s10000 est train 26.7 min
+[done] p3d_RAND3d10_s10000 mIoU=0.6402 train=1454s run_wall=2475s peaks train=9826 max_eval=5560 MB
+[phase3] 3/6 p3d_UNIF8_s2000 est train 31.1 min
+[done] p3d_UNIF8_s2000 mIoU=0.6749 train=1716s run_wall=2796s peaks train=10179 max_eval=5551 MB
+[phase3] 4/6 p3d_UNIF8_s3000 est train 31.1 min
+[done] p3d_UNIF8_s3000 mIoU=0.6863 train=1694s run_wall=2752s peaks train=9677 max_eval=5575 MB
+[phase3] 5/6 p3d_UNIF8_s4000 est train 31.1 min
+[done] p3d_UNIF8_s4000 mIoU=0.6846 train=1748s run_wall=2806s peaks train=10317 max_eval=5559 MB
+[phase3] 6/6 p3d_UNIF8_s5000 est train 31.1 min
+[done] p3d_UNIF8_s5000 mIoU=0.6771 train=1683s run_wall=2775s peaks train=10181 max_eval=5554 MB
+[PHASE 3 STAGE D COMPLETE] 6 runs.

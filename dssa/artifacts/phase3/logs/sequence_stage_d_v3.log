@@ -1,0 +1,89 @@
+[stage_d] 18 of 67 runs already complete
+[phase3] 1/49 p3d_UNIF1_s7000_r1 est train 31.1 min
+[done] p3d_UNIF1_s7000_r1 mIoU=0.6662 train=1702s run_wall=2755s peaks train=10348 max_eval=5540 MB
+[phase3] 2/49 p3d_K0_s8000 est train 15.3 min
+[done] p3d_K0_s8000 mIoU=0.5662 train=766s run_wall=1782s peaks train=7057 max_eval=5561 MB
+[phase3] 3/49 p3d_PRIOR3_s8000 est train 21.4 min
+[done] p3d_PRIOR3_s8000 mIoU=0.6294 train=1141s run_wall=2153s peaks train=9120 max_eval=5585 MB
+[phase3] 4/49 p3d_UNIF1_s8000 est train 31.1 min
+[done] p3d_UNIF1_s8000 mIoU=0.6631 train=1706s run_wall=2781s peaks train=9872 max_eval=5566 MB
+[phase3] 5/49 p3d_K0_s9000 est train 15.3 min
+[done] p3d_K0_s9000 mIoU=0.5741 train=763s run_wall=1778s peaks train=7060 max_eval=5565 MB
+[phase3] 6/49 p3d_PRIOR3_s9000 est train 21.4 min
+[done] p3d_PRIOR3_s9000 mIoU=0.6286 train=1149s run_wall=2169s peaks train=9137 max_eval=5548 MB
+[phase3] 7/49 p3d_UNIF1_s9000 est train 31.1 min
+[done] p3d_UNIF1_s9000 mIoU=0.6618 train=1710s run_wall=2806s peaks train=10090 max_eval=5987 MB
+[phase3] 8/49 p3d_K0_s10000 est train 15.3 min
+[done] p3d_K0_s10000 mIoU=0.5685 train=774s run_wall=1792s peaks train=7054 max_eval=5563 MB
+[phase3] 9/49 p3d_PRIOR3_s10000 est train 21.4 min
+[done] p3d_PRIOR3_s10000 mIoU=0.6315 train=1140s run_wall=2154s peaks train=9139 max_eval=5570 MB
+[phase3] 10/49 p3d_UNIF1_s10000 est train 31.1 min
+[done] p3d_UNIF1_s10000 mIoU=0.6669 train=1659s run_wall=2712s peaks train=9706 max_eval=5567 MB
+[phase3] 11/49 p3d_MID3_s1000 est train 23.3 min
+[done] p3d_MID3_s1000 mIoU=0.6340 train=1252s run_wall=2265s peaks train=9137 max_eval=5542 MB
+[phase3] 12/49 p3d_MID3_s2000 est train 23.3 min
+[done] p3d_MID3_s2000 mIoU=0.6339 train=1242s run_wall=2255s peaks train=9010 max_eval=5565 MB
+[phase3] 13/49 p3d_MID3_s3000 est train 23.3 min
+[done] p3d_MID3_s3000 mIoU=0.6274 train=1248s run_wall=2264s peaks train=9143 max_eval=5537 MB
+[phase3] 14/49 p3d_MID3_s4000 est train 23.3 min
+[done] p3d_MID3_s4000 mIoU=0.6234 train=1249s run_wall=2279s peaks train=9148 max_eval=5544 MB
+[phase3] 15/49 p3d_MID3_s5000 est train 23.3 min
+[done] p3d_MID3_s5000 mIoU=0.6297 train=1275s run_wall=2289s peaks train=9130 max_eval=5990 MB
+[phase3] 16/49 p3d_LATE3_s1000 est train 17.2 min
+[done] p3d_LATE3_s1000 mIoU=0.6143 train=873s run_wall=1889s peaks train=8111 max_eval=5563 MB
+[phase3] 17/49 p3d_LATE3_s2000 est train 17.2 min
+[done] p3d_LATE3_s2000 mIoU=0.6215 train=874s run_wall=1889s peaks train=8110 max_eval=5567 MB
+[phase3] 18/49 p3d_LATE3_s3000 est train 17.2 min
+[done] p3d_LATE3_s3000 mIoU=0.6149 train=888s run_wall=1908s peaks train=8104 max_eval=5574 MB
+[phase3] 19/49 p3d_LATE3_s4000 est train 17.2 min
+[done] p3d_LATE3_s4000 mIoU=0.6149 train=889s run_wall=1922s peaks train=8061 max_eval=5985 MB
+[phase3] 20/49 p3d_LATE3_s5000 est train 17.2 min
+[done] p3d_LATE3_s5000 mIoU=0.6188 train=889s run_wall=1932s peaks train=8130 max_eval=5986 MB
+[phase3] 21/49 p3d_DSS3_s1000 est train 27.2 min
+[done] p3d_DSS3_s1000 mIoU=0.6285 train=1501s run_wall=2525s peaks train=9775 max_eval=5980 MB
+[phase3] 22/49 p3d_DSS3_s2000 est train 27.2 min
+[done] p3d_DSS3_s2000 mIoU=0.6212 train=1890s run_wall=2908s peaks train=10095 max_eval=5569 MB
+[phase3] 23/49 p3d_DSS3_s3000 est train 27.2 min
+[done] p3d_DSS3_s3000 mIoU=0.6281 train=1466s run_wall=2481s peaks train=10243 max_eval=5565 MB
+[phase3] 24/49 p3d_DSS3_s4000 est train 27.2 min
+[done] p3d_DSS3_s4000 mIoU=0.6274 train=1464s run_wall=2481s peaks train=10249 max_eval=5565 MB
+[phase3] 25/49 p3d_DSS3_s5000 est train 27.2 min
+[done] p3d_DSS3_s5000 mIoU=0.6282 train=1461s run_wall=2476s peaks train=10248 max_eval=5565 MB
+[phase3] 26/49 p3d_FISH3_s1000 est train 22.0 min
+[done] p3d_FISH3_s1000 mIoU=0.6366 train=1165s run_wall=2180s peaks train=9178 max_eval=5567 MB
+[phase3] 27/49 p3d_FISH3_s2000 est train 22.0 min
+[done] p3d_FISH3_s2000 mIoU=0.6325 train=1165s run_wall=2180s peaks train=9173 max_eval=5579 MB
+[phase3] 28/49 p3d_FISH3_s3000 est train 22.0 min
+[done] p3d_FISH3_s3000 mIoU=0.6295 train=1166s run_wall=2180s peaks train=9174 max_eval=5565 MB
+[phase3] 29/49 p3d_FISH3_s4000 est train 22.0 min
+[done] p3d_FISH3_s4000 mIoU=0.6355 train=1165s run_wall=2180s peaks train=9176 max_eval=5565 MB
+[phase3] 30/49 p3d_FISH3_s5000 est train 22.0 min
+[done] p3d_FISH3_s5000 mIoU=0.6333 train=1166s run_wall=2180s peaks train=9174 max_eval=5566 MB
+[phase3] 31/49 p3d_LOGME3_s1000 est train 25.3 min
+[done] p3d_LOGME3_s1000 mIoU=0.6314 train=1363s run_wall=2381s peaks train=9251 max_eval=5566 MB
+[phase3] 32/49 p3d_LOGME3_s2000 est train 25.3 min
+[done] p3d_LOGME3_s2000 mIoU=0.6305 train=1362s run_wall=2376s peaks train=9249 max_eval=5565 MB
+[phase3] 33/49 p3d_LOGME3_s3000 est train 25.3 min
+[done] p3d_LOGME3_s3000 mIoU=0.6359 train=1361s run_wall=2376s peaks train=9251 max_eval=5569 MB
+[phase3] 34/49 p3d_LOGME3_s4000 est train 25.3 min
+[done] p3d_LOGME3_s4000 mIoU=0.6280 train=1363s run_wall=2376s peaks train=9251 max_eval=5566 MB
+[phase3] 35/49 p3d_LOGME3_s5000 est train 25.3 min
+[done] p3d_LOGME3_s5000 mIoU=0.6353 train=1362s run_wall=2376s peaks train=9250 max_eval=5568 MB
+[phase3] 36/49 p3d_RAND3d01_s1000 est train 25.0 min
+[done] p3d_RAND3d01_s1000 mIoU=0.6466 train=1328s run_wall=2340s peaks train=9185 max_eval=5569 MB
+[phase3] 37/49 p3d_RAND3d02_s2000 est train 23.6 min
+[done] p3d_RAND3d02_s2000 mIoU=0.6381 train=1263s run_wall=2280s peaks train=9240 max_eval=5568 MB
+[phase3] 38/49 p3d_RAND3d03_s3000 est train 25.0 min
+[done] p3d_RAND3d03_s3000 mIoU=0.6422 train=1330s run_wall=2346s peaks train=9180 max_eval=5569 MB
+[phase3] 39/49 p3d_RAND3d04_s4000 est train 25.0 min
+[done] p3d_RAND3d04_s4000 mIoU=0.6421 train=1330s run_wall=2345s peaks train=9185 max_eval=5566 MB
+[phase3] 40/49 p3d_RAND3d05_s5000 est train 28.7 min
+[done] p3d_RAND3d05_s5000 mIoU=0.6307 train=1565s run_wall=2582s peaks train=9763 max_eval=5569 MB
+[phase3] 41/49 p3d_RAND3d06_s6000 est train 20.6 min
+[done] p3d_RAND3d06_s6000 mIoU=0.6356 train=1068s run_wall=2085s peaks train=8146 max_eval=5567 MB
+[phase3] 42/49 p3d_RAND3d07_s7000 est train 24.1 min
+[done] p3d_RAND3d07_s7000 mIoU=0.6406 train=1296s run_wall=2311s peaks train=9243 max_eval=5562 MB
+[phase3] 43/49 p3d_RAND3d08_s8000 est train 24.1 min
+[done] p3d_RAND3d08_s8000 mIoU=0.6425 train=1297s run_wall=2361s peaks train=9248 max_eval=5568 MB
+[phase3] 44/49 p3d_RAND3d09_s9000 est train 26.7 min
+[PHASE 3 SEQUENCE STOPPED] p3d_RAND3d09_s9000: training failed (rc 1); see runs/p3d_RAND3d09_s9000/incident.json

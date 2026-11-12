@@ -1,0 +1,7 @@
+[phase3] 1/3 p3_K0_s1000 est train 15.2 min
+[done] p3_K0_s1000 mIoU=0.5729 train=770s run_wall=1782s peaks train=7056 max_eval=9161 MB
+[phase3] 2/3 p3_K0_s2000 est train 15.2 min
+[done] p3_K0_s2000 mIoU=0.5698 train=778s run_wall=1792s peaks train=6472 max_eval=10145 MB
+[phase3] 3/3 p3_K0_s3000 est train 15.2 min
+[done] p3_K0_s3000 mIoU=0.5646 train=763s run_wall=1778s peaks train=7054 max_eval=10146 MB
+[PHASE 3 K0 COMPLETE] 3 runs.

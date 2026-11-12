@@ -1,0 +1,10 @@
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_6_7_IRRG.tif eval=132.8s total=140.1s peak=5357MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_6_8_IRRG.tif eval=132.9s total=135.9s peak=5532MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_6_9_IRRG.tif eval=132.9s total=136.0s peak=5418MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_7_10_IRRG.tif eval=133.0s total=136.0s peak=5506MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_7_11_IRRG.tif eval=133.0s total=136.1s peak=5538MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_7_12_IRRG.tif eval=132.7s total=135.8s peak=5477MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_7_13_IRRG.tif eval=132.9s total=136.0s peak=5536MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_7_7_IRRG.tif eval=132.9s total=136.1s peak=5412MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_7_8_IRRG.tif eval=132.9s total=136.0s peak=5537MB
+[test] p3d_RAND3d09_s9000_r1 top_potsdam_7_9_IRRG.tif eval=132.8s total=135.9s peak=5474MB

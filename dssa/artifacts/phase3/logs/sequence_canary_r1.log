@@ -1,0 +1,4 @@
+[phase3] 1/1 p3_L00_s1000_r1 est train 27.9 min
+[done] p3_L00_s1000_r1 mIoU=0.5945 train=1566s run_wall=2574s peaks train=10182 max_eval=6013 MB
+[canary] passed: all process peaks below 10.5 GB
+[PHASE 3 CANARY COMPLETE] 1 runs.

@@ -1,0 +1,23 @@
+[test] p3d_UNIF1_s4000 top_potsdam_6_7_IRRG.tif eval=147.1s total=155.0s peak=5352MB
+[test] p3d_UNIF1_s4000 top_potsdam_6_8_IRRG.tif eval=146.0s total=149.1s peak=5537MB
+[test] p3d_UNIF1_s4000 top_potsdam_6_9_IRRG.tif eval=147.7s total=151.0s peak=5417MB
+[test] p3d_UNIF1_s4000 top_potsdam_7_10_IRRG.tif eval=147.1s total=150.4s peak=5511MB
+[test] p3d_UNIF1_s4000 top_potsdam_7_11_IRRG.tif eval=143.2s total=146.4s peak=5537MB
+[test] p3d_UNIF1_s4000 top_potsdam_7_12_IRRG.tif eval=148.9s total=151.9s peak=5477MB
+[test] p3d_UNIF1_s4000 top_potsdam_7_13_IRRG.tif eval=216.3s total=219.3s peak=5538MB
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase3/test_tile.py", line 114, in <module>
+    main()
+  File "/Users/siva/Documents/Major project/dssa/phase3/test_tile.py", line 88, in main
+    cm, ce = P.eval_tile_u8(model, img, co, lab, "mps")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/phase3/p3eval.py", line 44, in eval_tile_u8
+    lg = window_logits_u8(model, img_u8, coeffs, device)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/siva/Documents/Major project/dssa/phase3/p3eval.py", line 33, in window_logits_u8
+    lg = model(xb).detach().cpu()
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[test] p3d_UNIF1_s4000 top_potsdam_7_7_IRRG.tif eval=136.7s total=139.8s peak=5440MB
+[test] p3d_UNIF1_s4000 top_potsdam_7_8_IRRG.tif eval=143.3s total=146.5s peak=5563MB
+[test] p3d_UNIF1_s4000 top_potsdam_7_9_IRRG.tif eval=144.6s total=147.7s peak=5500MB

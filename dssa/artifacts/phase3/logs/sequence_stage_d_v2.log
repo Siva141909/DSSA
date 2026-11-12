@@ -1,0 +1,37 @@
+[stage_d] 1 of 67 runs already complete
+[phase3] 1/66 p3d_PRIOR3_s1000_r1 est train 21.4 min
+[done] p3d_PRIOR3_s1000_r1 mIoU=0.6289 train=1147s run_wall=2170s peaks train=9148 max_eval=5564 MB
+[phase3] 2/66 p3d_UNIF1_s1000 est train 31.1 min
+[done] p3d_UNIF1_s1000 mIoU=0.6619 train=1700s run_wall=2793s peaks train=10348 max_eval=5568 MB
+[phase3] 3/66 p3d_PRIOR3_s2000 est train 21.4 min
+[done] p3d_PRIOR3_s2000 mIoU=0.6275 train=1132s run_wall=2150s peaks train=9142 max_eval=5566 MB
+[phase3] 4/66 p3d_UNIF1_s2000 est train 31.1 min
+[done] p3d_UNIF1_s2000 mIoU=0.6643 train=1652s run_wall=2707s peaks train=10335 max_eval=5567 MB
+[phase3] 5/66 p3d_PRIOR3_s3000 est train 21.4 min
+[done] p3d_PRIOR3_s3000 mIoU=0.6262 train=1130s run_wall=2145s peaks train=9139 max_eval=5569 MB
+[phase3] 6/66 p3d_UNIF1_s3000 est train 31.1 min
+[done] p3d_UNIF1_s3000 mIoU=0.6637 train=1652s run_wall=2707s peaks train=10335 max_eval=5570 MB
+[phase3] 7/66 p3d_K0_s4000 est train 15.3 min
+[done] p3d_K0_s4000 mIoU=0.5659 train=762s run_wall=1778s peaks train=7056 max_eval=5559 MB
+[phase3] 8/66 p3d_PRIOR3_s4000 est train 21.4 min
+[done] p3d_PRIOR3_s4000 mIoU=0.6240 train=1132s run_wall=2150s peaks train=9140 max_eval=5564 MB
+[phase3] 9/66 p3d_UNIF1_s4000 est train 31.1 min
+[done] p3d_UNIF1_s4000 mIoU=0.6602 train=1655s run_wall=2712s peaks train=10349 max_eval=5563 MB
+[phase3] 10/66 p3d_K0_s5000 est train 15.3 min
+[done] p3d_K0_s5000 mIoU=0.5705 train=762s run_wall=1778s peaks train=7057 max_eval=5557 MB
+[phase3] 11/66 p3d_PRIOR3_s5000 est train 21.4 min
+[done] p3d_PRIOR3_s5000 mIoU=0.6305 train=1132s run_wall=2145s peaks train=9140 max_eval=5567 MB
+[phase3] 12/66 p3d_UNIF1_s5000 est train 31.1 min
+[done] p3d_UNIF1_s5000 mIoU=0.6646 train=1654s run_wall=2707s peaks train=10345 max_eval=5563 MB
+[phase3] 13/66 p3d_K0_s6000 est train 15.3 min
+[done] p3d_K0_s6000 mIoU=0.5804 train=763s run_wall=1778s peaks train=7057 max_eval=5564 MB
+[phase3] 14/66 p3d_PRIOR3_s6000 est train 21.4 min
+[done] p3d_PRIOR3_s6000 mIoU=0.6371 train=1133s run_wall=2150s peaks train=9142 max_eval=5564 MB
+[phase3] 15/66 p3d_UNIF1_s6000 est train 31.1 min
+[done] p3d_UNIF1_s6000 mIoU=0.6743 train=1651s run_wall=2706s peaks train=10346 max_eval=5560 MB
+[phase3] 16/66 p3d_K0_s7000 est train 15.3 min
+[done] p3d_K0_s7000 mIoU=0.5608 train=762s run_wall=1778s peaks train=6973 max_eval=5560 MB
+[phase3] 17/66 p3d_PRIOR3_s7000 est train 21.4 min
+[done] p3d_PRIOR3_s7000 mIoU=0.6282 train=1348s run_wall=2399s peaks train=9133 max_eval=5988 MB
+[phase3] 18/66 p3d_UNIF1_s7000 est train 31.1 min
+[PHASE 3 SEQUENCE STOPPED] p3d_UNIF1_s7000: training failed (rc 1); see runs/p3d_UNIF1_s7000/incident.json

@@ -1,0 +1,21 @@
+[p3_L19_s1000] layers=[19] trainable=2799494 (decoder=2766726, lora=32768) seed=1000
+[p3_L19_s1000] step=200 loss=1.6507 t=131s
+[p3_L19_s1000] step=400 loss=1.5970 t=219s
+[p3_L19_s1000] step=600 loss=1.2416 t=308s
+[p3_L19_s1000] step=800 loss=1.3397 t=396s
+[p3_L19_s1000] step=1000 loss=0.8405 t=485s
+[p3_L19_s1000] step=1200 loss=0.9952 t=573s
+[p3_L19_s1000] step=1400 loss=1.1095 t=662s
+[p3_L19_s1000] step=1600 loss=0.7938 t=750s
+[p3_L19_s1000] step=1800 loss=1.0729 t=838s
+[p3_L19_s1000] step=2000 loss=0.6176 t=927s
+[done] p3_L19_s1000 train=927s peak=8107MB swapgrow=0MB final_loss=0.6176
+[reload] {"run_id": "p3_L19_s1000", "checkpoint_sha256": "99a5217f986f92a7c413ff814e8cd8bddc73eacd462826a6f17e907bedc006d3", "trainable_hash_match": true, "probe_logits_exact": true, "probe_logits_max_abs_diff": 0.0, "pass": true, "seconds": 1.4027891159057617, "peak_mb": 4535.643119812012}
+[tile] p3_L19_s1000 top_potsdam_5_14_IRRG.tif eval=117.0s total=120.0s peak=5435MB
+[tile] p3_L19_s1000 top_potsdam_5_15_IRRG.tif eval=117.1s total=120.2s peak=5437MB
+[tile] p3_L19_s1000 top_potsdam_6_10_IRRG.tif eval=117.1s total=120.2s peak=5507MB
+[tile] p3_L19_s1000 top_potsdam_6_11_IRRG.tif eval=117.1s total=120.2s peak=5414MB
+[tile] p3_L19_s1000 top_potsdam_6_12_IRRG.tif eval=117.2s total=120.2s peak=5564MB
+[tile] p3_L19_s1000 top_potsdam_6_13_IRRG.tif eval=117.2s total=120.3s peak=5563MB
+[tile] p3_L19_s1000 top_potsdam_6_14_IRRG.tif eval=117.1s total=120.2s peak=5534MB
+[tile] p3_L19_s1000 top_potsdam_6_15_IRRG.tif eval=117.1s total=120.1s peak=5529MB

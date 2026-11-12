@@ -1,0 +1,60 @@
+[phase3] 1/71 p3_L01_s1000 est train 27.2 min
+[done] p3_L01_s1000 mIoU=0.6000 train=1678s run_wall=2736s peaks train=10277 max_eval=6008 MB
+[phase3] 2/71 p3_L02_s1000 est train 26.9 min
+[done] p3_L02_s1000 mIoU=0.6021 train=1601s run_wall=2645s peaks train=9620 max_eval=5988 MB
+[phase3] 3/71 p3_L03_s1000 est train 26.3 min
+[done] p3_L03_s1000 mIoU=0.6045 train=1502s run_wall=2515s peaks train=9943 max_eval=6007 MB
+[phase3] 4/71 p3_L04_s1000 est train 25.9 min
+[done] p3_L04_s1000 mIoU=0.6079 train=1472s run_wall=2490s peaks train=9830 max_eval=5984 MB
+[phase3] 5/71 p3_L05_s1000 est train 25.4 min
+[done] p3_L05_s1000 mIoU=0.6151 train=1427s run_wall=2444s peaks train=9222 max_eval=6008 MB
+[phase3] 6/71 p3_L06_s1000 est train 25.1 min
+[done] p3_L06_s1000 mIoU=0.6179 train=1354s run_wall=2370s peaks train=9232 max_eval=5564 MB
+[phase3] 7/71 p3_L07_s1000 est train 24.0 min
+[done] p3_L07_s1000 mIoU=0.6214 train=1371s run_wall=2385s peaks train=9093 max_eval=5984 MB
+[phase3] 8/71 p3_L08_s1000 est train 23.4 min
+[done] p3_L08_s1000 mIoU=0.6171 train=1286s run_wall=2290s peaks train=9244 max_eval=5565 MB
+[phase3] 9/71 p3_L09_s1000 est train 22.8 min
+[done] p3_L09_s1000 mIoU=0.6183 train=1254s run_wall=2265s peaks train=9245 max_eval=5569 MB
+[phase3] 10/71 p3_L10_s1000 est train 22.2 min
+[done] p3_L10_s1000 mIoU=0.6187 train=1222s run_wall=2235s peaks train=9143 max_eval=5564 MB
+[phase3] 11/71 p3_L11_s1000 est train 21.8 min
+[done] p3_L11_s1000 mIoU=0.6160 train=1190s run_wall=2205s peaks train=9146 max_eval=5570 MB
+[phase3] 12/71 p3_L12_s1000 est train 21.1 min
+[done] p3_L12_s1000 mIoU=0.6126 train=1158s run_wall=2175s peaks train=9168 max_eval=5567 MB
+[phase3] 13/71 p3_L13_s1000 est train 20.8 min
+[done] p3_L13_s1000 mIoU=0.6092 train=1124s run_wall=2140s peaks train=9146 max_eval=5566 MB
+[phase3] 14/71 p3_L14_s1000 est train 20.2 min
+[done] p3_L14_s1000 mIoU=0.6167 train=1090s run_wall=2104s peaks train=8114 max_eval=5568 MB
+[phase3] 15/71 p3_L15_s1000 est train 19.8 min
+[done] p3_L15_s1000 mIoU=0.6150 train=1057s run_wall=2074s peaks train=8145 max_eval=5564 MB
+[phase3] 16/71 p3_L16_s1000 est train 19.1 min
+[done] p3_L16_s1000 mIoU=0.6169 train=1024s run_wall=2039s peaks train=8144 max_eval=5565 MB
+[phase3] 17/71 p3_L17_s1000 est train 18.6 min
+[done] p3_L17_s1000 mIoU=0.6075 train=992s run_wall=2004s peaks train=8110 max_eval=5560 MB
+[phase3] 18/71 p3_L18_s1000 est train 18.1 min
+[done] p3_L18_s1000 mIoU=0.6039 train=960s run_wall=1974s peaks train=8110 max_eval=5565 MB
+[phase3] 19/71 p3_L19_s1000 est train 17.5 min
+[done] p3_L19_s1000 mIoU=0.6120 train=927s run_wall=1944s peaks train=8107 max_eval=5564 MB
+[phase3] 20/71 p3_L20_s1000 est train 16.9 min
+[done] p3_L20_s1000 mIoU=0.6002 train=894s run_wall=1909s peaks train=8108 max_eval=5565 MB
+[phase3] 21/71 p3_L21_s1000 est train 16.3 min
+[done] p3_L21_s1000 mIoU=0.6042 train=862s run_wall=1879s peaks train=8103 max_eval=5567 MB
+[phase3] 22/71 p3_L22_s1000 est train 15.8 min
+[done] p3_L22_s1000 mIoU=0.5917 train=828s run_wall=1843s peaks train=7082 max_eval=5569 MB
+[phase3] 23/71 p3_L23_s1000 est train 15.2 min
+[done] p3_L23_s1000 mIoU=0.5971 train=797s run_wall=1813s peaks train=7081 max_eval=5564 MB
+[phase3] 24/71 p3_L00_s2000 est train 27.9 min
+[done] p3_L00_s2000 mIoU=0.5884 train=1553s run_wall=2531s peaks train=10167 max_eval=5566 MB
+[phase3] 25/71 p3_L01_s2000 est train 27.2 min
+[done] p3_L01_s2000 mIoU=0.5979 train=1514s run_wall=2501s peaks train=10270 max_eval=5563 MB
+[phase3] 26/71 p3_L02_s2000 est train 26.9 min
+[done] p3_L02_s2000 mIoU=0.5996 train=1484s run_wall=2481s peaks train=10200 max_eval=5566 MB
+[phase3] 27/71 p3_L03_s2000 est train 26.3 min
+[done] p3_L03_s2000 mIoU=0.5993 train=1449s run_wall=2451s peaks train=10226 max_eval=5567 MB
+[phase3] 28/71 p3_L04_s2000 est train 25.9 min
+[done] p3_L04_s2000 mIoU=0.6056 train=1417s run_wall=2416s peaks train=10244 max_eval=5563 MB
+[phase3] 29/71 p3_L05_s2000 est train 25.4 min
+[done] p3_L05_s2000 mIoU=0.6092 train=1385s run_wall=2395s peaks train=9250 max_eval=5990 MB
+[phase3] 30/71 p3_L06_s2000 est train 25.1 min
+[PHASE 3 SEQUENCE STOPPED] p3_L06_s2000: safety guard stopped the run (charger disconnected); see runs/p3_L06_s2000/incident.json

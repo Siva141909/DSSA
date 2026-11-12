@@ -1,0 +1,25 @@
+[verify] p3_K0_s1000 5_14 cm_diff=0 ce_rel=5.04e-08 peak 6003 MB (was 8283) pass=True
+[verify] p3_K0_s1000 5_15 cm_diff=0 ce_rel=1.19e-07 peak 5438 MB (was 9155) pass=True
+[verify] p3_K0_s1000 6_10 cm_diff=0 ce_rel=3.63e-08 peak 5484 MB (was 9161) pass=True
+[verify] p3_K0_s1000 6_11 cm_diff=0 ce_rel=1.88e-08 peak 5403 MB (was 8105) pass=True
+[verify] p3_K0_s1000 6_12 cm_diff=0 ce_rel=2.15e-08 peak 5985 MB (was 8098) pass=True
+[verify] p3_K0_s1000 6_13 cm_diff=0 ce_rel=1.86e-08 peak 5538 MB (was 8101) pass=True
+[verify] p3_K0_s1000 6_14 cm_diff=0 ce_rel=1.33e-07 peak 5505 MB (was 8101) pass=True
+[verify] p3_K0_s1000 6_15 cm_diff=0 ce_rel=6.55e-08 peak 5527 MB (was 8108) pass=True
+[verify] p3_K0_s2000 5_14 cm_diff=0 ce_rel=1.68e-08 peak 5428 MB (was 8101) pass=True
+[verify] p3_K0_s2000 5_15 cm_diff=0 ce_rel=2.97e-08 peak 5423 MB (was 8934) pass=True
+[verify] p3_K0_s2000 6_10 cm_diff=0 ce_rel=7.45e-08 peak 5980 MB (was 10140) pass=True
+[verify] p3_K0_s2000 6_11 cm_diff=0 ce_rel=6.32e-08 peak 5430 MB (was 10145) pass=True
+[verify] p3_K0_s2000 6_12 cm_diff=0 ce_rel=1.14e-07 peak 5551 MB (was 10144) pass=True
+[verify] p3_K0_s2000 6_13 cm_diff=0 ce_rel=2.51e-08 peak 6007 MB (was 10144) pass=True
+[verify] p3_K0_s2000 6_14 cm_diff=0 ce_rel=1.70e-07 peak 5474 MB (was 10144) pass=True
+[verify] p3_K0_s2000 6_15 cm_diff=0 ce_rel=1.35e-07 peak 5983 MB (was 8281) pass=True
+[verify] p3_K0_s3000 5_14 cm_diff=0 ce_rel=2.77e-08 peak 5443 MB (was 10146) pass=True
+[verify] p3_K0_s3000 5_15 cm_diff=0 ce_rel=4.84e-09 peak 5428 MB (was 10144) pass=True
+[verify] p3_K0_s3000 6_10 cm_diff=0 ce_rel=6.78e-08 peak 5485 MB (was 10143) pass=True
+[verify] p3_K0_s3000 6_11 cm_diff=0 ce_rel=3.41e-08 peak 5983 MB (was 10139) pass=True
+[verify] p3_K0_s3000 6_12 cm_diff=0 ce_rel=5.19e-08 peak 5557 MB (was 10139) pass=True
+[verify] p3_K0_s3000 6_13 cm_diff=0 ce_rel=5.07e-08 peak 5543 MB (was 10145) pass=True
+[verify] p3_K0_s3000 6_14 cm_diff=0 ce_rel=3.65e-08 peak 5496 MB (was 10143) pass=True
+[verify] p3_K0_s3000 6_15 cm_diff=0 ce_rel=4.95e-09 peak 5983 MB (was 10144) pass=True
+ALL_DONE

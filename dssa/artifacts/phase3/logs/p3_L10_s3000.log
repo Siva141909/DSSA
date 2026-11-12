@@ -1,0 +1,12 @@
+[p3_L10_s3000] layers=[10] trainable=2799494 (decoder=2766726, lora=32768) seed=3000
+[p3_L10_s3000] step=200 loss=1.3570 t=164s
+[incident] KeyboardInterrupt() at optimizer step 241 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 157, in <module>
+    main()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 103, in main
+    loss.backward()
+  File "/Users/siva/Documents/Major project/dssa/venv/lib/python3.12/site-packages/torch/_tensor.py", line 566, in backward
+    def backward(
+
+KeyboardInterrupt

@@ -1,0 +1,30 @@
+[resume] skipping 57 completed runs
+[phase3] 1/14 p3_L10_s3000_r1 est train 22.2 min
+[done] p3_L10_s3000_r1 mIoU=0.6165 train=1275s run_wall=2299s peaks train=9151 max_eval=5986 MB
+[phase3] 2/14 p3_L11_s3000 est train 21.8 min
+[done] p3_L11_s3000 mIoU=0.6128 train=1211s run_wall=2225s peaks train=8335 max_eval=6006 MB
+[phase3] 3/14 p3_L12_s3000 est train 21.1 min
+[done] p3_L12_s3000 mIoU=0.6108 train=1164s run_wall=2179s peaks train=8516 max_eval=5983 MB
+[phase3] 4/14 p3_L13_s3000 est train 20.8 min
+[done] p3_L13_s3000 mIoU=0.6085 train=1129s run_wall=2143s peaks train=9131 max_eval=5562 MB
+[phase3] 5/14 p3_L14_s3000 est train 20.2 min
+[done] p3_L14_s3000 mIoU=0.6123 train=1106s run_wall=2128s peaks train=8110 max_eval=5985 MB
+[phase3] 6/14 p3_L15_s3000 est train 19.8 min
+[done] p3_L15_s3000 mIoU=0.6131 train=1107s run_wall=2134s peaks train=8004 max_eval=6010 MB
+[phase3] 7/14 p3_L16_s3000 est train 19.1 min
+[done] p3_L16_s3000 mIoU=0.6098 train=1027s run_wall=2045s peaks train=8149 max_eval=5565 MB
+[phase3] 8/14 p3_L17_s3000 est train 18.6 min
+[done] p3_L17_s3000 mIoU=0.6159 train=1014s run_wall=2028s peaks train=7979 max_eval=6006 MB
+[phase3] 9/14 p3_L18_s3000 est train 18.1 min
+[done] p3_L18_s3000 mIoU=0.6023 train=971s run_wall=1988s peaks train=7971 max_eval=6006 MB
+[phase3] 10/14 p3_L19_s3000 est train 17.5 min
+[done] p3_L19_s3000 mIoU=0.6100 train=930s run_wall=1944s peaks train=8094 max_eval=6005 MB
+[phase3] 11/14 p3_L20_s3000 est train 16.9 min
+[done] p3_L20_s3000 mIoU=0.6050 train=895s run_wall=1909s peaks train=8109 max_eval=6008 MB
+[phase3] 12/14 p3_L21_s3000 est train 16.3 min
+[done] p3_L21_s3000 mIoU=0.6057 train=897s run_wall=1948s peaks train=7950 max_eval=5988 MB
+[phase3] 13/14 p3_L22_s3000 est train 15.8 min
+[done] p3_L22_s3000 mIoU=0.5928 train=843s run_wall=1857s peaks train=6930 max_eval=5982 MB
+[phase3] 14/14 p3_L23_s3000 est train 15.2 min
+[done] p3_L23_s3000 mIoU=0.5936 train=801s run_wall=1817s peaks train=7072 max_eval=6006 MB
+[PHASE 3 SINGLE COMPLETE] 14 runs.

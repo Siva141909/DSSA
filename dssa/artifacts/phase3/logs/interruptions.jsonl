@@ -1,0 +1,7 @@
+{"t": 1793979832.098, "run": "p3_L00_s1000", "cause": "p3_L00_s1000: training failed (rc 1); see runs/p3_L00_s1000/incident.json", "completed_before": 0}
+{"t": 1794114762.618, "run": "p3_L06_s2000", "cause": "p3_L06_s2000: safety guard stopped the run (charger disconnected); see runs/p3_L06_s2000/incident.json", "completed_before": 29}
+{"t": 1794208833.146, "run": "p3_L10_s3000", "cause": "p3_L10_s3000: safety guard stopped the run (charger disconnected); see runs/p3_L10_s3000/incident.json", "completed_before": 28}
+{"t": 1794244561.383, "run": "p3d_PRIOR3_s1000", "cause": "p3d_PRIOR3_s1000: safety guard stopped the run (system sleep detected (577 s suspended)); see runs/p3d_PRIOR3_s1000/incident.json", "completed_before": 1}
+{"t": 1794284397.05, "run": "p3d_UNIF1_s7000", "cause": "p3d_UNIF1_s7000: training failed (rc 1); see runs/p3d_UNIF1_s7000/incident.json", "completed_before": 17}
+{"t": 1794385065.31, "run": "p3d_RAND3d09_s9000", "cause": "p3d_RAND3d09_s9000: training failed (rc 1); see runs/p3d_RAND3d09_s9000/incident.json", "completed_before": 43}
+{"t": 1794417770.76, "run": "p3d_UNIF1_s4000", "cause": "p3d_UNIF1_s4000: test of top_potsdam_7_7_IRRG.tif interrupted: test 7_7 process above its 400 s watchdog", "completed_before": 9}

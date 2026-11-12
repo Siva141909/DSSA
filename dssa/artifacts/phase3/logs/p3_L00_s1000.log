@@ -1,0 +1,10 @@
+[p3_L00_s1000] layers=[0] trainable=2799494 (decoder=2766726, lora=32768) seed=1000
+[incident] RuntimeError('STOP: swap growth 717 MB above limit') at optimizer step 4 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 157, in <module>
+    main()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 94, in main
+    tick()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 70, in tick
+    raise RuntimeError(f"STOP: {mon.fault}")
+RuntimeError: STOP: swap growth 717 MB above limit

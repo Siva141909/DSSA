@@ -1,0 +1,5 @@
+[stage_d] 0 of 67 runs already complete
+[phase3] 1/67 p3d_UNIF8_s1000 est train 31.1 min
+[done] p3d_UNIF8_s1000 mIoU=0.6823 train=1693s run_wall=2751s peaks train=10193 max_eval=5571 MB
+[phase3] 2/67 p3d_PRIOR3_s1000 est train 21.4 min
+[PHASE 3 SEQUENCE STOPPED] p3d_PRIOR3_s1000: safety guard stopped the run (system sleep detected (577 s suspended)); see runs/p3d_PRIOR3_s1000/incident.json

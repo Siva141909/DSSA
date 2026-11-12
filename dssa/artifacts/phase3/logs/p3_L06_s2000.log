@@ -1,0 +1,18 @@
+[p3_L06_s2000] layers=[6] trainable=2799494 (decoder=2766726, lora=32768) seed=2000
+[p3_L06_s2000] step=200 loss=1.6826 t=179s
+[p3_L06_s2000] step=400 loss=1.2823 t=312s
+[p3_L06_s2000] step=600 loss=1.2825 t=445s
+[p3_L06_s2000] step=800 loss=0.9500 t=579s
+[p3_L06_s2000] step=1000 loss=0.6927 t=714s
+[p3_L06_s2000] step=1200 loss=1.3847 t=848s
+[p3_L06_s2000] step=1400 loss=1.1254 t=984s
+[incident] KeyboardInterrupt() at optimizer step 1583 stage train
+Traceback (most recent call last):
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 157, in <module>
+    main()
+  File "/Users/siva/Documents/Major project/dssa/phase3/run_train.py", line 107, in main
+    optimizer.step()
+  File "/Users/siva/Documents/Major project/dssa/venv/lib/python3.12/site-packages/torch/optim/optimizer.py", line 528, in wrapper
+    @functools.wraps(func)
+
+KeyboardInterrupt
